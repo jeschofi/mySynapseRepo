@@ -1,0 +1,24 @@
+{
+	"name": "ConsumerGoods_45h",
+	"properties": {
+		"Name": "ConsumerGoods_45h",
+		"EntityType": "DATABASE",
+		"Description": "",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"ConsumerGoods\",\"Version\":\"1.1.0\"}}}",
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/ConsumerGoods_45h",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
