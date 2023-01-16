@@ -1,0 +1,24 @@
+{
+	"name": "Retail_c7j",
+	"properties": {
+		"Name": "Retail_c7j",
+		"EntityType": "DATABASE",
+		"Description": "",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"Retail\",\"Version\":\"0.1.0\"}}}",
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_c7j",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
