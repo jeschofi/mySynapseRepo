@@ -1,0 +1,26 @@
+{
+	"name": "relationship-gtmoxdotcu",
+	"properties": {
+		"Name": "relationship-gtmoxdotcu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SetOfFinancialStatements",
+		"ToTableName": "RelatedSetOfFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PeriodEndDate",
+				"ToColumnName": "PeriodEndDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"toEntity\":\"RelatedSetOfFinancialStatements.cdm.json/RelatedSetOfFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"PeriodEndDate\",\"toAttribute\":\"PeriodEndDate\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

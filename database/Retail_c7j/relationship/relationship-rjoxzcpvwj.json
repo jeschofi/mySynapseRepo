@@ -1,0 +1,26 @@
+{
+	"name": "relationship-rjoxzcpvwj",
+	"properties": {
+		"Name": "relationship-rjoxzcpvwj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalTransaction",
+		"ToTableName": "WriteOffRelatedTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TransactionId",
+				"ToColumnName": "TransactionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"toEntity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"joinPairs\":[{\"fromAttribute\":\"TransactionId\",\"toAttribute\":\"TransactionId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

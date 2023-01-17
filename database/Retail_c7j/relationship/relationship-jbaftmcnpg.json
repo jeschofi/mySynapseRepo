@@ -1,0 +1,26 @@
+{
+	"name": "relationship-jbaftmcnpg",
+	"properties": {
+		"Name": "relationship-jbaftmcnpg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerAccount",
+		"ToTableName": "RelatedLedgerAccount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerId",
+				"ToColumnName": "LedgerId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"toEntity\":\"RelatedLedgerAccount.cdm.json/RelatedLedgerAccount\",\"joinPairs\":[{\"fromAttribute\":\"LedgerId\",\"toAttribute\":\"LedgerId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

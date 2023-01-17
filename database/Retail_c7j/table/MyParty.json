@@ -16,6 +16,10 @@
 				{
 					"Name": "MyPartyId",
 					"Description": "The unique identifier of a Party.",
+					"BaseAttributeReference": {
+						"Entity": "Party.cdm.json/Party",
+						"Name": "PartyId"
+					},
 					"OriginDataTypeName": {
 						"TypeName": "long",
 						"IsComplexType": false,
@@ -24,15 +28,15 @@
 							"HIVE_TYPE_STRING": "long"
 						}
 					},
-					"BaseAttributeReference": {
-						"Entity": "Party.cdm.json/Party",
-						"Name": "PartyId"
-					},
 					"DeltaFormatInvalidMessages": []
 				},
 				{
 					"Name": "PartyName",
 					"Description": "The name of the Party.",
+					"BaseAttributeReference": {
+						"Entity": "Party.cdm.json/Party",
+						"Name": "PartyName"
+					},
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -42,15 +46,15 @@
 							"HIVE_TYPE_STRING": "string"
 						}
 					},
-					"BaseAttributeReference": {
-						"Entity": "Party.cdm.json/Party",
-						"Name": "PartyName"
-					},
 					"DeltaFormatInvalidMessages": []
 				},
 				{
 					"Name": "PartyTypeId",
 					"Description": "The unique identifier of a Party Type.",
+					"BaseAttributeReference": {
+						"Entity": "Party.cdm.json/Party",
+						"Name": "PartyTypeId"
+					},
 					"OriginDataTypeName": {
 						"TypeName": "binary",
 						"IsComplexType": false,
@@ -59,15 +63,15 @@
 							"HIVE_TYPE_STRING": "binary"
 						}
 					},
-					"BaseAttributeReference": {
-						"Entity": "Party.cdm.json/Party",
-						"Name": "PartyTypeId"
-					},
 					"DeltaFormatInvalidMessages": []
 				},
 				{
 					"Name": "GlobalLocationNumber",
 					"Description": "The Global Location Number (GLN) is a simple tool used to uniquely identify locations. It can be used to identify physical locations such as a warehouse, legal entities, or a function / department within a legal entity. The GLN is part of the GS1 system of standards.",
+					"BaseAttributeReference": {
+						"Entity": "Party.cdm.json/Party",
+						"Name": "GlobalLocationNumber"
+					},
 					"OriginDataTypeName": {
 						"TypeName": "decimal",
 						"IsComplexType": false,
@@ -77,10 +81,6 @@
 						"Properties": {
 							"HIVE_TYPE_STRING": "decimal"
 						}
-					},
-					"BaseAttributeReference": {
-						"Entity": "Party.cdm.json/Party",
-						"Name": "GlobalLocationNumber"
 					},
 					"DeltaFormatInvalidMessages": []
 				}
@@ -112,7 +112,7 @@
 			},
 			"Properties": {
 				"textinputformat.record.delimiter": ",",
-				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"compression": "",
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"MyPartyId\":{\"entity\":\"Party.cdm.json/Party\",\"name\":\"PartyId\"},\"PartyName\":{\"entity\":\"Party.cdm.json/Party\",\"name\":\"PartyName\"},\"PartyTypeId\":{\"entity\":\"Party.cdm.json/Party\",\"name\":\"PartyTypeId\"},\"GlobalLocationNumber\":{\"entity\":\"Party.cdm.json/Party\",\"name\":\"GlobalLocationNumber\"}}}"
 			},
 			"Compressed": false,

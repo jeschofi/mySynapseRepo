@@ -1,0 +1,26 @@
+{
+	"name": "relationship-cxrsjrumko",
+	"properties": {
+		"Name": "relationship-cxrsjrumko",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MyParty",
+		"ToTableName": "JournalTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MyPartyId",
+				"ToColumnName": "TransactionCounterPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"joinPairs\":[{\"fromAttribute\":\"MyPartyId\",\"toAttribute\":\"TransactionCounterPartyId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

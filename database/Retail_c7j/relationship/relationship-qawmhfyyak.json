@@ -1,0 +1,26 @@
+{
+	"name": "relationship-qawmhfyyak",
+	"properties": {
+		"Name": "relationship-qawmhfyyak",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerAccountBalance",
+		"ToTableName": "RelatedLedgerAccountBalance",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerId",
+				"ToColumnName": "LedgerId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerAccountBalance.cdm.json/LedgerAccountBalance\",\"toEntity\":\"RelatedLedgerAccountBalance.cdm.json/RelatedLedgerAccountBalance\",\"joinPairs\":[{\"fromAttribute\":\"LedgerId\",\"toAttribute\":\"LedgerId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

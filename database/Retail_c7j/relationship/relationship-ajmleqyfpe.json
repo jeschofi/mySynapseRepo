@@ -1,0 +1,26 @@
+{
+	"name": "relationship-ajmleqyfpe",
+	"properties": {
+		"Name": "relationship-ajmleqyfpe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalEntry",
+		"ToTableName": "RelatedJournalEntry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalEntryId",
+				"ToColumnName": "JournalEntryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalEntry.cdm.json/JournalEntry\",\"toEntity\":\"RelatedJournalEntry.cdm.json/RelatedJournalEntry\",\"joinPairs\":[{\"fromAttribute\":\"JournalEntryId\",\"toAttribute\":\"JournalEntryId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

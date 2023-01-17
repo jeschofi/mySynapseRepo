@@ -1,0 +1,26 @@
+{
+	"name": "relationship-uyctrkqbns",
+	"properties": {
+		"Name": "relationship-uyctrkqbns",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialStatementDurationType",
+		"ToTableName": "SetOfFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialStatementDurationTypeId",
+				"ToColumnName": "FinancialStatementDurationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"toEntity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"FinancialStatementDurationTypeId\",\"toAttribute\":\"FinancialStatementDurationTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

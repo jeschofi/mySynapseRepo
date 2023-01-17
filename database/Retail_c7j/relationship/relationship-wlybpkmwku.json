@@ -1,0 +1,26 @@
+{
+	"name": "relationship-wlybpkmwku",
+	"properties": {
+		"Name": "relationship-wlybpkmwku",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "InventoryValuationMethod",
+		"ToTableName": "LegalEntityAccountingPolicy",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "InventoryValuationMethodId",
+				"ToColumnName": "InventoryValuationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"InventoryValuationMethod.cdm.json/InventoryValuationMethod\",\"toEntity\":\"LegalEntityAccountingPolicy.cdm.json/LegalEntityAccountingPolicy\",\"joinPairs\":[{\"fromAttribute\":\"InventoryValuationMethodId\",\"toAttribute\":\"InventoryValuationMethodId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

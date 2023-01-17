@@ -1,0 +1,26 @@
+{
+	"name": "relationship-lwvkhwrrsm",
+	"properties": {
+		"Name": "relationship-lwvkhwrrsm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ResponsibilityCenter",
+		"ToTableName": "Customer",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ResponsibilityCenterId",
+				"ToColumnName": "ResponsibilityCenterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"toEntity\":\"Customer.cdm.json/Customer\",\"joinPairs\":[{\"fromAttribute\":\"ResponsibilityCenterId\",\"toAttribute\":\"ResponsibilityCenterId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

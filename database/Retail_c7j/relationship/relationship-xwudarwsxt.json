@@ -1,0 +1,26 @@
+{
+	"name": "relationship-xwudarwsxt",
+	"properties": {
+		"Name": "relationship-xwudarwsxt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BadDebtWriteOff",
+		"ToTableName": "WriteOffRelatedTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "WriteOffDate",
+				"ToColumnName": "WriteOffDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BadDebtWriteOff.cdm.json/BadDebtWriteOff\",\"toEntity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"joinPairs\":[{\"fromAttribute\":\"WriteOffDate\",\"toAttribute\":\"WriteOffDate\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

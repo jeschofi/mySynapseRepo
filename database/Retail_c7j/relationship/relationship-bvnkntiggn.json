@@ -1,0 +1,26 @@
+{
+	"name": "relationship-bvnkntiggn",
+	"properties": {
+		"Name": "relationship-bvnkntiggn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingProcedureType",
+		"ToTableName": "JournalTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingProcedureTypeId",
+				"ToColumnName": "AccountingProcedureTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingProcedureType.cdm.json/AccountingProcedureType\",\"toEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"joinPairs\":[{\"fromAttribute\":\"AccountingProcedureTypeId\",\"toAttribute\":\"AccountingProcedureTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

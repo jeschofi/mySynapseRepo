@@ -1,0 +1,26 @@
+{
+	"name": "relationship-copjjjerak",
+	"properties": {
+		"Name": "relationship-copjjjerak",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalEntryRelationshipType",
+		"ToTableName": "RelatedJournalEntry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalEntryRelationshipTypeId",
+				"ToColumnName": "JournalEntryRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalEntryRelationshipType.cdm.json/JournalEntryRelationshipType\",\"toEntity\":\"RelatedJournalEntry.cdm.json/RelatedJournalEntry\",\"joinPairs\":[{\"fromAttribute\":\"JournalEntryRelationshipTypeId\",\"toAttribute\":\"JournalEntryRelationshipTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

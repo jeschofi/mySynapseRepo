@@ -1,0 +1,26 @@
+{
+	"name": "relationship-ezakfpfaxe",
+	"properties": {
+		"Name": "relationship-ezakfpfaxe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingFramework",
+		"ToTableName": "Ledger",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingFrameworkId",
+				"ToColumnName": "AccountingFrameworkId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingFramework.cdm.json/AccountingFramework\",\"toEntity\":\"Ledger.cdm.json/Ledger\",\"joinPairs\":[{\"fromAttribute\":\"AccountingFrameworkId\",\"toAttribute\":\"AccountingFrameworkId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

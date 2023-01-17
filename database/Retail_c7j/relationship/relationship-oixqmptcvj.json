@@ -1,0 +1,26 @@
+{
+	"name": "relationship-oixqmptcvj",
+	"properties": {
+		"Name": "relationship-oixqmptcvj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MyParty",
+		"ToTableName": "Auditor",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MyPartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Auditor.cdm.json/Auditor\",\"joinPairs\":[{\"fromAttribute\":\"MyPartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

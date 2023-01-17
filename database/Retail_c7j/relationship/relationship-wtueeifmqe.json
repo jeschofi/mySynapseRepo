@@ -1,0 +1,26 @@
+{
+	"name": "relationship-wtueeifmqe",
+	"properties": {
+		"Name": "relationship-wtueeifmqe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerType",
+		"ToTableName": "Ledger",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerTypeId",
+				"ToColumnName": "LedgerTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerType.cdm.json/LedgerType\",\"toEntity\":\"Ledger.cdm.json/Ledger\",\"joinPairs\":[{\"fromAttribute\":\"LedgerTypeId\",\"toAttribute\":\"LedgerTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

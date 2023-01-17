@@ -1,0 +1,26 @@
+{
+	"name": "relationship-dawtpvacfb",
+	"properties": {
+		"Name": "relationship-dawtpvacfb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ResponsibilityCenter",
+		"ToTableName": "JournalTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ResponsibilityCenterId",
+				"ToColumnName": "ResponsibilityCenterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"toEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"joinPairs\":[{\"fromAttribute\":\"ResponsibilityCenterId\",\"toAttribute\":\"ResponsibilityCenterId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

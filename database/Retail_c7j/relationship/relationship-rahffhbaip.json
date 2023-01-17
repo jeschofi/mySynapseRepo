@@ -1,0 +1,26 @@
+{
+	"name": "relationship-rahffhbaip",
+	"properties": {
+		"Name": "relationship-rahffhbaip",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalTransaction",
+		"ToTableName": "JournalEntry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TransactionId",
+				"ToColumnName": "TransactionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"toEntity\":\"JournalEntry.cdm.json/JournalEntry\",\"joinPairs\":[{\"fromAttribute\":\"TransactionId\",\"toAttribute\":\"TransactionId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

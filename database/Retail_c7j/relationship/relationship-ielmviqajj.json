@@ -1,0 +1,26 @@
+{
+	"name": "relationship-ielmviqajj",
+	"properties": {
+		"Name": "relationship-ielmviqajj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NotesToFinancialStatements",
+		"ToTableName": "FinancialStatementLineNoteCrossReference",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialStatementNoteId",
+				"ToColumnName": "FinancialStatementNoteId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NotesToFinancialStatements.cdm.json/NotesToFinancialStatements\",\"toEntity\":\"FinancialStatementLineNoteCrossReference.cdm.json/FinancialStatementLineNoteCrossReference\",\"joinPairs\":[{\"fromAttribute\":\"FinancialStatementNoteId\",\"toAttribute\":\"FinancialStatementNoteId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

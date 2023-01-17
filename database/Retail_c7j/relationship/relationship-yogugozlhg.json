@@ -1,0 +1,26 @@
+{
+	"name": "relationship-yogugozlhg",
+	"properties": {
+		"Name": "relationship-yogugozlhg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LevelOfPrecision",
+		"ToTableName": "FinancialStatementColumn",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LevelOfPrecisionId",
+				"ToColumnName": "LevelOfPrecisionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LevelOfPrecision.cdm.json/LevelOfPrecision\",\"toEntity\":\"FinancialStatementColumn.cdm.json/FinancialStatementColumn\",\"joinPairs\":[{\"fromAttribute\":\"LevelOfPrecisionId\",\"toAttribute\":\"LevelOfPrecisionId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

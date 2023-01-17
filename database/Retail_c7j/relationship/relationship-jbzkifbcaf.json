@@ -1,0 +1,26 @@
+{
+	"name": "relationship-jbzkifbcaf",
+	"properties": {
+		"Name": "relationship-jbzkifbcaf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingBasis",
+		"ToTableName": "LegalEntityAccountingPeriodAccountingBasis",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingBasisId",
+				"ToColumnName": "AccountingBasisId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingBasis.cdm.json/AccountingBasis\",\"toEntity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"joinPairs\":[{\"fromAttribute\":\"AccountingBasisId\",\"toAttribute\":\"AccountingBasisId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

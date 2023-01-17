@@ -1,0 +1,26 @@
+{
+	"name": "relationship-rqkrxpymzy",
+	"properties": {
+		"Name": "relationship-rqkrxpymzy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SourceDocumentInputType",
+		"ToTableName": "SourceDocument",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SourceDocumentInputTypeId",
+				"ToColumnName": "SourceDocumentInputTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SourceDocumentInputType.cdm.json/SourceDocumentInputType\",\"toEntity\":\"SourceDocument.cdm.json/SourceDocument\",\"joinPairs\":[{\"fromAttribute\":\"SourceDocumentInputTypeId\",\"toAttribute\":\"SourceDocumentInputTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

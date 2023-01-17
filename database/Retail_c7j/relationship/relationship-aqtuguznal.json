@@ -1,0 +1,26 @@
+{
+	"name": "relationship-aqtuguznal",
+	"properties": {
+		"Name": "relationship-aqtuguznal",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MyParty",
+		"ToTableName": "AccountingFramework",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MyPartyId",
+				"ToColumnName": "GoverningPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"AccountingFramework.cdm.json/AccountingFramework\",\"joinPairs\":[{\"fromAttribute\":\"MyPartyId\",\"toAttribute\":\"GoverningPartyId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

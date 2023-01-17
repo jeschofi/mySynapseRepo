@@ -1,0 +1,26 @@
+{
+	"name": "relationship-tpkfpgyuok",
+	"properties": {
+		"Name": "relationship-tpkfpgyuok",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ResponsibilityCenterRelationshipType",
+		"ToTableName": "RelatedResponsibilityCenter",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ResponsibilityCenterRelationshipTypeId",
+				"ToColumnName": "ResponsibilityCenterRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ResponsibilityCenterRelationshipType.cdm.json/ResponsibilityCenterRelationshipType\",\"toEntity\":\"RelatedResponsibilityCenter.cdm.json/RelatedResponsibilityCenter\",\"joinPairs\":[{\"fromAttribute\":\"ResponsibilityCenterRelationshipTypeId\",\"toAttribute\":\"ResponsibilityCenterRelationshipTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

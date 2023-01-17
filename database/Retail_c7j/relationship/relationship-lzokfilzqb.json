@@ -1,0 +1,26 @@
+{
+	"name": "relationship-lzokfilzqb",
+	"properties": {
+		"Name": "relationship-lzokfilzqb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MyParty",
+		"ToTableName": "LineOfCredit",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MyPartyId",
+				"ToColumnName": "LineOfCreditProvidingPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"joinPairs\":[{\"fromAttribute\":\"MyPartyId\",\"toAttribute\":\"LineOfCreditProvidingPartyId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

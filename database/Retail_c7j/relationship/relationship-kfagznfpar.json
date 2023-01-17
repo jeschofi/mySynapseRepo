@@ -1,0 +1,26 @@
+{
+	"name": "relationship-kfagznfpar",
+	"properties": {
+		"Name": "relationship-kfagznfpar",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingFrameworkStandard",
+		"ToTableName": "NotesToFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingFrameworkStandardId",
+				"ToColumnName": "AccountingFrameworkStandardId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingFrameworkStandard.cdm.json/AccountingFrameworkStandard\",\"toEntity\":\"NotesToFinancialStatements.cdm.json/NotesToFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"AccountingFrameworkStandardId\",\"toAttribute\":\"AccountingFrameworkStandardId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

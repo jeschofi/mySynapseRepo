@@ -1,0 +1,26 @@
+{
+	"name": "relationship-mumixxysos",
+	"properties": {
+		"Name": "relationship-mumixxysos",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerAccountBalanceType",
+		"ToTableName": "LedgerAccountBalance",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerAccountBalanceTypeId",
+				"ToColumnName": "LedgerAccountBalanceTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerAccountBalanceType.cdm.json/LedgerAccountBalanceType\",\"toEntity\":\"LedgerAccountBalance.cdm.json/LedgerAccountBalance\",\"joinPairs\":[{\"fromAttribute\":\"LedgerAccountBalanceTypeId\",\"toAttribute\":\"LedgerAccountBalanceTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

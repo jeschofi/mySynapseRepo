@@ -1,0 +1,26 @@
+{
+	"name": "relationship-ewisklctjm",
+	"properties": {
+		"Name": "relationship-ewisklctjm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "WriteOffMethod",
+		"ToTableName": "BadDebtWriteOff",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "WriteOffMethodId",
+				"ToColumnName": "WriteOffMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"toEntity\":\"BadDebtWriteOff.cdm.json/BadDebtWriteOff\",\"joinPairs\":[{\"fromAttribute\":\"WriteOffMethodId\",\"toAttribute\":\"WriteOffMethodId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

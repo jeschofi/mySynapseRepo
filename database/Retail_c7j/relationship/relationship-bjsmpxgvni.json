@@ -1,0 +1,26 @@
+{
+	"name": "relationship-bjsmpxgvni",
+	"properties": {
+		"Name": "relationship-bjsmpxgvni",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MyParty",
+		"ToTableName": "SetOfFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MyPartyId",
+				"ToColumnName": "PreparedByPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"MyPartyId\",\"toAttribute\":\"PreparedByPartyId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

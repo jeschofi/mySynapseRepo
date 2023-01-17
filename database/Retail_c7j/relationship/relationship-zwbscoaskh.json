@@ -1,0 +1,26 @@
+{
+	"name": "relationship-zwbscoaskh",
+	"properties": {
+		"Name": "relationship-zwbscoaskh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_c7j"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SourceDocumentType",
+		"ToTableName": "SourceDocument",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SourceDocumentTypeId",
+				"ToColumnName": "SourceDocumentTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SourceDocumentType.cdm.json/SourceDocumentType\",\"toEntity\":\"SourceDocument.cdm.json/SourceDocument\",\"joinPairs\":[{\"fromAttribute\":\"SourceDocumentTypeId\",\"toAttribute\":\"SourceDocumentTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}
