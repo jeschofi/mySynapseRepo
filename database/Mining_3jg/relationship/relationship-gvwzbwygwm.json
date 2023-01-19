@@ -1,0 +1,26 @@
+{
+	"name": "relationship-gvwzbwygwm",
+	"properties": {
+		"Name": "relationship-gvwzbwygwm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Mining_3jg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MiningProduct",
+		"ToTableName": "Item",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MiningProduct.cdm.json/MiningProduct\",\"toEntity\":\"Item.cdm.json/Item\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}
