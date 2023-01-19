@@ -1,0 +1,22 @@
+{
+	"name": "Database3",
+	"properties": {
+		"Name": "Database3",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Database3",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
