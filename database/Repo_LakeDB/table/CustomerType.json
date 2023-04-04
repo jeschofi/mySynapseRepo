@@ -16,10 +16,6 @@
 				{
 					"Name": "CustomerTypeId",
 					"Description": "The unique identifier of a Customer Type.",
-					"BaseAttributeReference": {
-						"Entity": "CustomerType.cdm.json/CustomerType",
-						"Name": "CustomerTypeId"
-					},
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
@@ -28,15 +24,15 @@
 							"HIVE_TYPE_STRING": "integer"
 						}
 					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerType.cdm.json/CustomerType",
+						"Name": "CustomerTypeId"
+					},
 					"DeltaFormatInvalidMessages": []
 				},
 				{
 					"Name": "CustomerTypeName",
 					"Description": "The name of the Customer Type.",
-					"BaseAttributeReference": {
-						"Entity": "CustomerType.cdm.json/CustomerType",
-						"Name": "CustomerTypeName"
-					},
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
@@ -46,20 +42,38 @@
 							"HIVE_TYPE_STRING": "string"
 						}
 					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerType.cdm.json/CustomerType",
+						"Name": "CustomerTypeName"
+					},
 					"DeltaFormatInvalidMessages": []
 				},
 				{
 					"Name": "CustomerTypeDescription",
 					"Description": "The description of the Customer Type.",
-					"BaseAttributeReference": {
-						"Entity": "CustomerType.cdm.json/CustomerType",
-						"Name": "CustomerTypeDescription"
-					},
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 2048,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerType.cdm.json/CustomerType",
+						"Name": "CustomerTypeDescription"
+					},
+					"DeltaFormatInvalidMessages": []
+				},
+				{
+					"Name": "Column_1",
+					"Description": "",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsNullable": false,
+						"IsComplexType": false,
+						"Length": 256,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
@@ -101,12 +115,11 @@
 			"IsStoredAsSubdirectories": false
 		},
 		"Properties": {
-			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerType\",\"path\":\"CustomerType.cdm.json/CustomerType\"},\"description\":\"A categorization of customers based upon common characteristics or similar criteria.\\n\\nEx:\\n- Individual\\n- Legal Entity\",\"primaryKey\":[\"CustomerTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Customer Type.\",\"isNullable\":false,\"name\":\"CustomerTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeDescription\"}]}}}",
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"name\":\"CustomerType\",\"description\":\"A categorization of customers based upon common characteristics or similar criteria.\\n\\nEx:\\n- Individual\\n- Legal Entity\",\"baseEntityReference\":{\"name\":\"CustomerType\",\"path\":\"CustomerType.cdm.json/CustomerType\"},\"primaryKey\":[\"CustomerTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Customer Type.\",\"isNullable\":false,\"name\":\"CustomerTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeDescription\"},{\"type\":\"New\",\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"\",\"isNullable\":false,\"name\":\"Column_1\"}]}}}",
 			"Description": "A categorization of customers based upon common characteristics or similar criteria.\n\nEx:\n- Individual\n- Legal Entity",
 			"DisplayFolderInfo": "{\"name\":\"Customer\",\"colorCode\":\"#022F22\"}",
 			"PrimaryKeys": "CustomerTypeId",
-			"spark.sql.sources.provider": "csv",
-			"sql:IsAppendOnly": false
+			"spark.sql.sources.provider": "csv"
 		},
 		"Retention": 0,
 		"Temporary": false,
