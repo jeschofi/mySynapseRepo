@@ -1,0 +1,23 @@
+{
+	"name": "Repo_LakeDB",
+	"properties": {
+		"Name": "Repo_LakeDB",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true,
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"HealthcareProviders\",\"Version\":\"1.1.0\"}}}"
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Repo_LakeDB",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
