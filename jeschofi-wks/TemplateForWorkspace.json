@@ -1,0 +1,241 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"type": "string",
+			"metadata": "Workspace name",
+			"defaultValue": "jeschofi-wks"
+		},
+		"jeschofi-wks-WorkspaceDefaultSqlServer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'jeschofi-wks-WorkspaceDefaultSqlServer'",
+			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:jeschofi-wks.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"jeschofi-wks-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jeschofi.dfs.core.windows.net"
+		}
+	},
+	"variables": {
+		"workspaceId": "[concat('Microsoft.Synapse/workspaces/', parameters('workspaceName'))]"
+	},
+	"resources": [
+		{
+			"name": "[concat(parameters('workspaceName'), '/jeschofi-wks-WorkspaceDefaultSqlServer')]",
+			"type": "Microsoft.Synapse/workspaces/linkedServices",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"parameters": {
+					"DBName": {
+						"type": "String"
+					}
+				},
+				"annotations": [],
+				"type": "AzureSqlDW",
+				"typeProperties": {
+					"connectionString": "[parameters('jeschofi-wks-WorkspaceDefaultSqlServer_connectionString')]"
+				},
+				"connectVia": {
+					"referenceName": "AutoResolveIntegrationRuntime",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/jeschofi-wks-WorkspaceDefaultStorage')]",
+			"type": "Microsoft.Synapse/workspaces/linkedServices",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobFS",
+				"typeProperties": {
+					"url": "[parameters('jeschofi-wks-WorkspaceDefaultStorage_properties_typeProperties_url')]"
+				},
+				"connectVia": {
+					"referenceName": "AutoResolveIntegrationRuntime",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('workspaceId'), '/integrationRuntimes/AutoResolveIntegrationRuntime')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/AutoResolveIntegrationRuntime')]",
+			"type": "Microsoft.Synapse/workspaces/integrationRuntimes",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"type": "Managed",
+				"typeProperties": {
+					"computeProperties": {
+						"location": "AutoResolve",
+						"dataFlowProperties": {
+							"computeType": "General",
+							"coreCount": 8,
+							"timeToLive": 0
+						}
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Repo_LakeDB')]",
+			"type": "Microsoft.Synapse/workspaces/databases",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"Ddls": [
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "Repo_LakeDB",
+							"EntityType": "DATABASE",
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"Properties": {
+								"IsSyMSCDMDatabase": true,
+								"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"HealthcareProviders\",\"Version\":\"1.1.0\"}}}"
+							},
+							"Source": {
+								"Provider": "ADLS",
+								"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Repo_LakeDB",
+								"Properties": {
+									"FormatType": "csv",
+									"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
+								}
+							}
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
+							"Name": "CustomerType",
+							"EntityType": "TABLE",
+							"Namespace": {
+								"DatabaseName": "Repo_LakeDB"
+							},
+							"Description": "A categorization of customers based upon common characteristics or similar criteria.\n\nEx:\n- Individual\n- Legal Entity",
+							"TableType": "EXTERNAL",
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"StorageDescriptor": {
+								"Columns": [
+									{
+										"Name": "CustomerTypeId",
+										"Description": "The unique identifier of a Customer Type.",
+										"OriginDataTypeName": {
+											"TypeName": "integer",
+											"IsComplexType": false,
+											"IsNullable": false,
+											"Properties": {
+												"HIVE_TYPE_STRING": "integer"
+											}
+										},
+										"BaseAttributeReference": {
+											"Entity": "CustomerType.cdm.json/CustomerType",
+											"Name": "CustomerTypeId"
+										},
+										"DeltaFormatInvalidMessages": []
+									},
+									{
+										"Name": "CustomerTypeName",
+										"Description": "The name of the Customer Type.",
+										"OriginDataTypeName": {
+											"TypeName": "string",
+											"IsComplexType": false,
+											"IsNullable": true,
+											"Length": 256,
+											"Properties": {
+												"HIVE_TYPE_STRING": "string"
+											}
+										},
+										"BaseAttributeReference": {
+											"Entity": "CustomerType.cdm.json/CustomerType",
+											"Name": "CustomerTypeName"
+										},
+										"DeltaFormatInvalidMessages": []
+									},
+									{
+										"Name": "CustomerTypeDescription",
+										"Description": "The description of the Customer Type.",
+										"OriginDataTypeName": {
+											"TypeName": "string",
+											"IsComplexType": false,
+											"IsNullable": true,
+											"Length": 2048,
+											"Properties": {
+												"HIVE_TYPE_STRING": "string"
+											}
+										},
+										"BaseAttributeReference": {
+											"Entity": "CustomerType.cdm.json/CustomerType",
+											"Name": "CustomerTypeDescription"
+										},
+										"DeltaFormatInvalidMessages": []
+									}
+								],
+								"Format": {
+									"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+									"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+									"FormatType": "csv",
+									"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+									"Properties": {
+										"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Repo_LakeDB/CustomerType",
+										"delimiter": ",",
+										"multiLine": "false",
+										"firstRowAsHeader": "false",
+										"serialization.format": "1",
+										"escape": "\\",
+										"quote": "\"",
+										"FormatTypeSetToDatabaseDefault": true,
+										"header": "false"
+									}
+								},
+								"Source": {
+									"Provider": "ADLS",
+									"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Repo_LakeDB/CustomerType",
+									"Properties": {
+										"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+										"LocationSetToDatabaseDefault": true
+									}
+								},
+								"Properties": {
+									"textinputformat.record.delimiter": ",",
+									"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+									"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerTypeId\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeId\"},\"CustomerTypeName\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeName\"},\"CustomerTypeDescription\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeDescription\"}}}"
+								},
+								"Compressed": false,
+								"IsStoredAsSubdirectories": false
+							},
+							"Properties": {
+								"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerType\",\"path\":\"CustomerType.cdm.json/CustomerType\"},\"description\":\"A categorization of customers based upon common characteristics or similar criteria.\\n\\nEx:\\n- Individual\\n- Legal Entity\",\"primaryKey\":[\"CustomerTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Customer Type.\",\"isNullable\":false,\"name\":\"CustomerTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerType.cdm.json/CustomerType\",\"name\":\"CustomerTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Customer Type.\",\"isNullable\":true,\"name\":\"CustomerTypeDescription\"}]}}}",
+								"Description": "A categorization of customers based upon common characteristics or similar criteria.\n\nEx:\n- Individual\n- Legal Entity",
+								"DisplayFolderInfo": "{\"name\":\"Customer\",\"colorCode\":\"#022F22\"}",
+								"PrimaryKeys": "CustomerTypeId",
+								"spark.sql.sources.provider": "csv"
+							},
+							"Retention": 0,
+							"Temporary": false,
+							"IsRewriteEnabled": false
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					}
+				]
+			},
+			"dependsOn": []
+		}
+	]
+}
