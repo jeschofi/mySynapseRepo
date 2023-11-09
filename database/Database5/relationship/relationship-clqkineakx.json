@@ -1,0 +1,26 @@
+{
+	"name": "relationship-clqkineakx",
+	"properties": {
+		"Name": "relationship-clqkineakx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Database5"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AnimalEventType",
+		"ToTableName": "AnimalEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AnimalEventTypeId",
+				"ToColumnName": "AnimalEventTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"toEntity\":\"AnimalEvent.cdm.json/AnimalEvent\",\"joinPairs\":[{\"fromAttribute\":\"AnimalEventTypeId\",\"toAttribute\":\"AnimalEventTypeId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}

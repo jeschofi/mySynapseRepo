@@ -1,0 +1,23 @@
+{
+	"name": "Database5",
+	"properties": {
+		"Name": "Database5",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true,
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"Agriculture\",\"Version\":\"1.3.0\"}}}"
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Database5",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
