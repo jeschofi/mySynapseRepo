@@ -1,0 +1,176 @@
+{
+	"name": "CountryCurrency",
+	"properties": {
+		"Name": "CountryCurrency",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CountryCurrency.cdm.json/CountryCurrency",
+						"Name": "CountryId"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CountryCurrency.cdm.json/CountryCurrency",
+						"Name": "IsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the relationship is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CountryCurrency.cdm.json/CountryCurrency",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the relationship is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CountryCurrency.cdm.json/CountryCurrency",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CountryCurrencyNote",
+					"Description": "A note, comment or additional information regarding the country currency.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CountryCurrency.cdm.json/CountryCurrency",
+						"Name": "CountryCurrencyNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "564aa79b-73bd-4ac3-9206-ebb372c4959c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/CountryCurrency",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/CountryCurrency",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CountryId\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"CountryId\"},\"IsoCurrencyCode\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"IsoCurrencyCode\"},\"PeriodStartDate\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"PeriodEndDate\"},\"CountryCurrencyNote\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"CountryCurrencyNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CountryCurrency\",\"path\":\"CountryCurrency.cdm.json/CountryCurrency\"},\"description\":\"The currency used by a country.\",\"primaryKey\":[\"CountryId\",\"IsoCurrencyCode\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":false,\"name\":\"CountryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":false,\"name\":\"IsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the relationship is defined.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the relationship is defined.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CountryCurrency.cdm.json/CountryCurrency\",\"name\":\"CountryCurrencyNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the country currency.\",\"isNullable\":true,\"name\":\"CountryCurrencyNote\"}]}}}",
+			"Description": "The currency used by a country.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "CountryId,IsoCurrencyCode,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryCurrencyNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c83591b2-f28f-4a86-bda9-0e7f1092d490",
+		"Description": "The currency used by a country."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pogtvlswxj",
+	"properties": {
+		"Name": "relationship-pogtvlswxj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelType",
+		"ToTableName": "ChannelTypeAssortment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelTypeId",
+				"ToColumnName": "ChannelTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelType.cdm.json/ChannelType\",\"toEntity\":\"ChannelTypeAssortment.cdm.json/ChannelTypeAssortment\",\"joinPairs\":[{\"fromAttribute\":\"ChannelTypeId\",\"toAttribute\":\"ChannelTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7ce35c46-d8df-4cde-a2ca-99fa8aefc51b"
+	},
+	"type": "RELATIONSHIP"
+}

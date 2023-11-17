@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nhvbbmosep",
+	"properties": {
+		"Name": "relationship-nhvbbmosep",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Brand",
+		"ToTableName": "Channel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BrandId",
+				"ToColumnName": "BrandId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Brand.cdm.json/Brand\",\"toEntity\":\"Channel.cdm.json/Channel\",\"joinPairs\":[{\"fromAttribute\":\"BrandId\",\"toAttribute\":\"BrandId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "aa7bc335-0a17-46a0-a13a-17999eae197f"
+	},
+	"type": "RELATIONSHIP"
+}

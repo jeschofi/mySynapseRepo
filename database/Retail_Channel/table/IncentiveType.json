@@ -1,0 +1,130 @@
+{
+	"name": "IncentiveType",
+	"properties": {
+		"Name": "IncentiveType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IncentiveTypeId",
+					"Description": "The unique identifier of an Incentive Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncentiveType.cdm.json/IncentiveType",
+						"Name": "IncentiveTypeId"
+					}
+				},
+				{
+					"Name": "IncentiveTypeName",
+					"Description": "The name of an Incentive Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncentiveType.cdm.json/IncentiveType",
+						"Name": "IncentiveTypeName"
+					}
+				},
+				{
+					"Name": "IncentiveTypeDescription",
+					"Description": "The description of an Incentive Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncentiveType.cdm.json/IncentiveType",
+						"Name": "IncentiveTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "779a1283-3384-4aca-a649-5b5ea20816da",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/IncentiveType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/IncentiveType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IncentiveTypeId\":{\"entity\":\"IncentiveType.cdm.json/IncentiveType\",\"name\":\"IncentiveTypeId\"},\"IncentiveTypeName\":{\"entity\":\"IncentiveType.cdm.json/IncentiveType\",\"name\":\"IncentiveTypeName\"},\"IncentiveTypeDescription\":{\"entity\":\"IncentiveType.cdm.json/IncentiveType\",\"name\":\"IncentiveTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"IncentiveType\",\"path\":\"IncentiveType.cdm.json/IncentiveType\"},\"description\":\"A classification of Incentives based upon common characteristics or objectives.\\n\\nEx:\\n- FINANCIAL\\n- Profit Sharing\\n- Project Bonus\\n- Stock Bonus\\n- Sales Commission\\n- NON-FINANCIAL\\n- Service Recognition\\n- Merchandise\\n- Gift Card\",\"primaryKey\":[\"IncentiveTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncentiveType.cdm.json/IncentiveType\",\"name\":\"IncentiveTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Incentive Type.\",\"isNullable\":false,\"name\":\"IncentiveTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncentiveType.cdm.json/IncentiveType\",\"name\":\"IncentiveTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Incentive Type.\",\"isNullable\":true,\"name\":\"IncentiveTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncentiveType.cdm.json/IncentiveType\",\"name\":\"IncentiveTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Incentive Type.\",\"isNullable\":true,\"name\":\"IncentiveTypeDescription\"}]}}}",
+			"Description": "A classification of Incentives based upon common characteristics or objectives.\n\nEx:\n- FINANCIAL\n- Profit Sharing\n- Project Bonus\n- Stock Bonus\n- Sales Commission\n- NON-FINANCIAL\n- Service Recognition\n- Merchandise\n- Gift Card",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "IncentiveTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IncentiveTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IncentiveTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "caf7ab1a-d216-4f57-892f-e07b331d4511",
+		"Description": "A classification of Incentives based upon common characteristics or objectives.\n\nEx:\n- FINANCIAL\n- Profit Sharing\n- Project Bonus\n- Stock Bonus\n- Sales Commission\n- NON-FINANCIAL\n- Service Recognition\n- Merchandise\n- Gift Card"
+	},
+	"type": "TABLE"
+}

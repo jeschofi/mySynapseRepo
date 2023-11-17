@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dbmzjqjfel",
+	"properties": {
+		"Name": "relationship-dbmzjqjfel",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Coupon",
+		"ToTableName": "StoreCoupon",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CouponId",
+				"ToColumnName": "CouponId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Coupon.cdm.json/Coupon\",\"toEntity\":\"StoreCoupon.cdm.json/StoreCoupon\",\"joinPairs\":[{\"fromAttribute\":\"CouponId\",\"toAttribute\":\"CouponId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "577e701e-fa79-4983-923d-d25185bec2c3"
+	},
+	"type": "RELATIONSHIP"
+}

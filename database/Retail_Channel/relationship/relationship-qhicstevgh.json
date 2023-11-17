@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qhicstevgh",
+	"properties": {
+		"Name": "relationship-qhicstevgh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StorageContainer",
+		"ToTableName": "StorageTank",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StorageContainerId",
+				"ToColumnName": "StorageTankId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StorageContainer.cdm.json/StorageContainer\",\"toEntity\":\"StorageTank.cdm.json/StorageTank\",\"joinPairs\":[{\"fromAttribute\":\"StorageContainerId\",\"toAttribute\":\"StorageTankId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d66c3640-cf1e-4d92-9020-6c7cea2349b7"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,136 @@
+{
+	"name": "BondStatus",
+	"properties": {
+		"Name": "BondStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BondStatusId",
+					"Description": "The unique identifier of a bond status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondStatus.cdm.json/BondStatus",
+						"Name": "BondStatusId"
+					}
+				},
+				{
+					"Name": "BondStatusName",
+					"Description": "The name of a bond status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondStatus.cdm.json/BondStatus",
+						"Name": "BondStatusName"
+					}
+				},
+				{
+					"Name": "BondStatusDescription",
+					"Description": "The description of a bond status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondStatus.cdm.json/BondStatus",
+						"Name": "BondStatusDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3ce5060f-efa4-48f5-822d-4d2b2b22e2b8",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondStatus",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondStatus",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BondStatusId\":{\"entity\":\"BondStatus.cdm.json/BondStatus\",\"name\":\"BondStatusId\"},\"BondStatusName\":{\"entity\":\"BondStatus.cdm.json/BondStatus\",\"name\":\"BondStatusName\"},\"BondStatusDescription\":{\"entity\":\"BondStatus.cdm.json/BondStatus\",\"name\":\"BondStatusDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BondStatus\",\"path\":\"BondStatus.cdm.json/BondStatus\"},\"description\":\"The current status of the bond.\\n\\nEx:  \\n\\nIn Default\\nA bond that ceases to pay interest (because the issuer has financial problems) is in default of the terms of the bond agreement, and is said to be in default.\\n\\nPerforming\\nIn compliance with bond terms and conditions.\",\"primaryKey\":[\"BondStatusId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondStatus.cdm.json/BondStatus\",\"name\":\"BondStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a bond status.\",\"isNullable\":false,\"name\":\"BondStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondStatus.cdm.json/BondStatus\",\"name\":\"BondStatusName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a bond status.\",\"isNullable\":true,\"name\":\"BondStatusName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondStatus.cdm.json/BondStatus\",\"name\":\"BondStatusDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a bond status.\",\"isNullable\":true,\"name\":\"BondStatusDescription\"}]}}}",
+			"Description": "The current status of the bond.\n\nEx:  \n\nIn Default\nA bond that ceases to pay interest (because the issuer has financial problems) is in default of the terms of the bond agreement, and is said to be in default.\n\nPerforming\nIn compliance with bond terms and conditions.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "BondStatusId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BondStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BondStatusName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BondStatusDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "67dec97a-0590-47d6-ae09-2302d98e3319",
+		"Description": "The current status of the bond.\n\nEx:  \n\nIn Default\nA bond that ceases to pay interest (because the issuer has financial problems) is in default of the terms of the bond agreement, and is said to be in default.\n\nPerforming\nIn compliance with bond terms and conditions."
+	},
+	"type": "TABLE"
+}

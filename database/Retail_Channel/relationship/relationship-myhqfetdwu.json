@@ -1,0 +1,29 @@
+{
+	"name": "relationship-myhqfetdwu",
+	"properties": {
+		"Name": "relationship-myhqfetdwu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Brand",
+		"ToTableName": "RelatedBrand",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BrandId",
+				"ToColumnName": "BrandId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Brand.cdm.json/Brand\",\"toEntity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"joinPairs\":[{\"fromAttribute\":\"BrandId\",\"toAttribute\":\"BrandId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4408d430-e637-476f-a031-e4fc8af32dd5"
+	},
+	"type": "RELATIONSHIP"
+}

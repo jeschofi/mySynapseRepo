@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wyqbplnovd",
+	"properties": {
+		"Name": "relationship-wyqbplnovd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialInstitution",
+		"ToTableName": "Branch",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialInstitutionId",
+				"ToColumnName": "FinancialInstitutionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialInstitution.cdm.json/FinancialInstitution\",\"toEntity\":\"Branch.cdm.json/Branch\",\"joinPairs\":[{\"fromAttribute\":\"FinancialInstitutionId\",\"toAttribute\":\"FinancialInstitutionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "30bd6313-2895-4348-9e7b-7159edc420f2"
+	},
+	"type": "RELATIONSHIP"
+}

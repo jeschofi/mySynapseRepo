@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wwhyxyvowl",
+	"properties": {
+		"Name": "relationship-wwhyxyvowl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Store",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "OperatedByPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Store.cdm.json/Store\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"OperatedByPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "38ee0314-4bfc-4c7a-95e7-feb2a298d7b9"
+	},
+	"type": "RELATIONSHIP"
+}

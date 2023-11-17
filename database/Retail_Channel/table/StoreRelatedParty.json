@@ -1,0 +1,189 @@
+{
+	"name": "StoreRelatedParty",
+	"properties": {
+		"Name": "StoreRelatedParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreRelatedParty.cdm.json/StoreRelatedParty",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreRelatedParty.cdm.json/StoreRelatedParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "StorePartyRelationshipTypeId",
+					"Description": "The unique identifier of a party relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreRelatedParty.cdm.json/StoreRelatedParty",
+						"Name": "StorePartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated party/store relationship is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreRelatedParty.cdm.json/StoreRelatedParty",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated party/dining facility relationship is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreRelatedParty.cdm.json/StoreRelatedParty",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "StorePartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding the store party relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreRelatedParty.cdm.json/StoreRelatedParty",
+						"Name": "StorePartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ff5465a6-2fc9-4d74-9d71-19b29104703a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreRelatedParty",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreRelatedParty",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"StoreId\"},\"PartyId\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"PartyId\"},\"StorePartyRelationshipTypeId\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"StorePartyRelationshipTypeId\"},\"PeriodStartDate\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"PeriodEndDate\"},\"StorePartyRelationshipNote\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"StorePartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreRelatedParty\",\"path\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\"},\"description\":\"The party(s) associated with the store.\\n\\nEx:\\n- Owning legal entity\\n- Franchisee\",\"primaryKey\":[\"StoreId\",\"PartyId\",\"StorePartyRelationshipTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"StorePartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a party relationship.\",\"isNullable\":false,\"name\":\"StorePartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated party/store relationship is valid.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated party/dining facility relationship is valid.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreRelatedParty.cdm.json/StoreRelatedParty\",\"name\":\"StorePartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the store party relationship.\",\"isNullable\":true,\"name\":\"StorePartyRelationshipNote\"}]}}}",
+			"Description": "The party(s) associated with the store.\n\nEx:\n- Owning legal entity\n- Franchisee",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,PartyId,StorePartyRelationshipTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StorePartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StorePartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "471414c6-89c8-4d2d-a203-0ff253a8222b",
+		"Description": "The party(s) associated with the store.\n\nEx:\n- Owning legal entity\n- Franchisee"
+	},
+	"type": "TABLE"
+}

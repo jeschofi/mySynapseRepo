@@ -1,0 +1,193 @@
+{
+	"name": "ResponsibilityCenter",
+	"properties": {
+		"Name": "ResponsibilityCenter",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ResponsibilityCenterId",
+					"Description": "The unique identifier of a Responsibility Center.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterId"
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterDescription",
+					"Description": "A description of the responsibility center.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterDescription"
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterNote",
+					"Description": "A note, comment or additional information regarding the responsibility center.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterNote"
+					}
+				},
+				{
+					"Name": "OrganizationId",
+					"Description": "The unique identifier of an organization.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "OrganizationId"
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterTypeId",
+					"Description": "The unique identifier of a Responsibility Center Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "ResponsibilityCenterTypeId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenter.cdm.json/ResponsibilityCenter",
+						"Name": "PartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "84ed9629-e068-4c7c-a343-67cf37ee87f2",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/ResponsibilityCenter",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/ResponsibilityCenter",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ResponsibilityCenterId\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterId\"},\"ResponsibilityCenterDescription\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterDescription\"},\"ResponsibilityCenterNote\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterNote\"},\"OrganizationId\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"OrganizationId\"},\"ResponsibilityCenterTypeId\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterTypeId\"},\"PartyId\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"PartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ResponsibilityCenter\",\"path\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\"},\"description\":\"A responsibility center is a department or organizational unit that is assigned responsibility of costs, expenses, revenues, profit and/or investments.\\n\\nThe responsibility center id is quite often incorporated into the Ledger Account Number.\",\"primaryKey\":[\"ResponsibilityCenterId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Responsibility Center.\",\"isNullable\":false,\"name\":\"ResponsibilityCenterId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the responsibility center.\",\"isNullable\":true,\"name\":\"ResponsibilityCenterDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the responsibility center.\",\"isNullable\":true,\"name\":\"ResponsibilityCenterNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"OrganizationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an organization.\",\"isNullable\":true,\"name\":\"OrganizationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"ResponsibilityCenterTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Responsibility Center Type.\",\"isNullable\":true,\"name\":\"ResponsibilityCenterTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PartyId\"}]}}}",
+			"Description": "A responsibility center is a department or organizational unit that is assigned responsibility of costs, expenses, revenues, profit and/or investments.\n\nThe responsibility center id is quite often incorporated into the Ledger Account Number.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "ResponsibilityCenterId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ResponsibilityCenterId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ResponsibilityCenterDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResponsibilityCenterNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OrganizationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResponsibilityCenterTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "03b80636-da17-4d07-b35f-40ae802e631b",
+		"Description": "A responsibility center is a department or organizational unit that is assigned responsibility of costs, expenses, revenues, profit and/or investments.\n\nThe responsibility center id is quite often incorporated into the Ledger Account Number."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,303 @@
+{
+	"name": "Tax",
+	"properties": {
+		"Name": "Tax",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TaxId",
+					"Description": "The unique identifier of a Tax.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxId"
+					}
+				},
+				{
+					"Name": "TaxName",
+					"Description": "The name of a tax.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxName"
+					}
+				},
+				{
+					"Name": "TaxDescription",
+					"Description": "The description of a tax.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxDescription"
+					}
+				},
+				{
+					"Name": "TaxEffectiveTimestamp",
+					"Description": "The timestamp that the Tax was effective.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxEffectiveTimestamp"
+					}
+				},
+				{
+					"Name": "TaxDiscontinuedTimestamp",
+					"Description": "The timestamp that the Tax was discontinued.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxDiscontinuedTimestamp"
+					}
+				},
+				{
+					"Name": "TaxRate",
+					"Description": "The applicable tax rate.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxRate"
+					}
+				},
+				{
+					"Name": "TaxAmount",
+					"Description": "The applicable tax amount. To be used where the amount of tax is a flat rate rather than a percentage.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxAmount"
+					}
+				},
+				{
+					"Name": "MinimumTaxableAmount",
+					"Description": "The minimum transaction or transaction line amount for which tax is applicable. For example a product with a minimum taxable amount of $5.00 and a maximum taxable amount of $10.00, tax would only be applied to the product at the tax rate for any value of the product between $5 and $10. If the product is less than $5 no tax would be incurred, if the product is > $10 tax would only be incurred on (10-5=5) the amount between the minimum and maximum taxable amounts.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "MinimumTaxableAmount"
+					}
+				},
+				{
+					"Name": "MaximumTaxableAmount",
+					"Description": "The maximum transaction or transaction line amount for which tax is applicable. For example a product with a minimum taxable amount of $5.00 and a maximum taxable amount of $10.00, tax would only be applied to the product at the tax rate for any value of the product between $5 and $10. If the product is less than $5 no tax would be incurred, if the product is > $10 tax would only be incurred on (10-5=5) the amount between the minimum and maximum taxable amounts.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "MaximumTaxableAmount"
+					}
+				},
+				{
+					"Name": "TaxTypeId",
+					"Description": "The unique identifier of a tax type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxTypeId"
+					}
+				},
+				{
+					"Name": "TaxingAuthorityPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxingAuthorityPartyId"
+					}
+				},
+				{
+					"Name": "TaxResponsiblePartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Tax.cdm.json/Tax",
+						"Name": "TaxResponsiblePartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e86ef3c8-bef0-45fd-b44a-fd4ee1807d56",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Tax",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Tax",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TaxId\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxId\"},\"TaxName\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxName\"},\"TaxDescription\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxDescription\"},\"TaxEffectiveTimestamp\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxEffectiveTimestamp\"},\"TaxDiscontinuedTimestamp\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxDiscontinuedTimestamp\"},\"TaxRate\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxRate\"},\"TaxAmount\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxAmount\"},\"MinimumTaxableAmount\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"MinimumTaxableAmount\"},\"MaximumTaxableAmount\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"MaximumTaxableAmount\"},\"TaxTypeId\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxTypeId\"},\"TaxingAuthorityPartyId\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxingAuthorityPartyId\"},\"TaxResponsiblePartyId\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxResponsiblePartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Tax\",\"path\":\"Tax.cdm.json/Tax\"},\"description\":\"A tax that may be applied to a bill.\",\"primaryKey\":[\"TaxId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Tax.\",\"isNullable\":false,\"name\":\"TaxId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a tax.\",\"isNullable\":true,\"name\":\"TaxName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a tax.\",\"isNullable\":true,\"name\":\"TaxDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxEffectiveTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the Tax was effective.\",\"isNullable\":false,\"name\":\"TaxEffectiveTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxDiscontinuedTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the Tax was discontinued.\",\"isNullable\":false,\"name\":\"TaxDiscontinuedTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxRate\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The applicable tax rate.\",\"isNullable\":true,\"scale\":8,\"name\":\"TaxRate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The applicable tax amount. To be used where the amount of tax is a flat rate rather than a percentage.\",\"isNullable\":true,\"scale\":2,\"name\":\"TaxAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"MinimumTaxableAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum transaction or transaction line amount for which tax is applicable. For example a product with a minimum taxable amount of $5.00 and a maximum taxable amount of $10.00, tax would only be applied to the product at the tax rate for any value of the product between $5 and $10. If the product is less than $5 no tax would be incurred, if the product is > $10 tax would only be incurred on (10-5=5) the amount between the minimum and maximum taxable amounts.\",\"isNullable\":true,\"scale\":2,\"name\":\"MinimumTaxableAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"MaximumTaxableAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The maximum transaction or transaction line amount for which tax is applicable. For example a product with a minimum taxable amount of $5.00 and a maximum taxable amount of $10.00, tax would only be applied to the product at the tax rate for any value of the product between $5 and $10. If the product is less than $5 no tax would be incurred, if the product is > $10 tax would only be incurred on (10-5=5) the amount between the minimum and maximum taxable amounts.\",\"isNullable\":true,\"scale\":2,\"name\":\"MaximumTaxableAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a tax type.\",\"isNullable\":false,\"name\":\"TaxTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxingAuthorityPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"TaxingAuthorityPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Tax.cdm.json/Tax\",\"name\":\"TaxResponsiblePartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"TaxResponsiblePartyId\"}]}}}",
+			"Description": "A tax that may be applied to a bill.",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "TaxId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TaxId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TaxName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxEffectiveTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TaxDiscontinuedTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TaxRate\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MinimumTaxableAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MaximumTaxableAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TaxingAuthorityPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxResponsiblePartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "e991099c-6d4a-4654-815b-ae6771e7f670",
+		"Description": "A tax that may be applied to a bill."
+	},
+	"type": "TABLE"
+}

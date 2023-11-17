@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xakufywuax",
+	"properties": {
+		"Name": "relationship-xakufywuax",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Currency",
+		"ToTableName": "BalanceSheet",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IsoCurrencyCode",
+				"ToColumnName": "IsoCurrencyCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Currency.cdm.json/Currency\",\"toEntity\":\"BalanceSheet.cdm.json/BalanceSheet\",\"joinPairs\":[{\"fromAttribute\":\"IsoCurrencyCode\",\"toAttribute\":\"IsoCurrencyCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "82dc56e8-d65e-4941-b3aa-b0bf91583338"
+	},
+	"type": "RELATIONSHIP"
+}

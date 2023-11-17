@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ugfrvfqgeo",
+	"properties": {
+		"Name": "relationship-ugfrvfqgeo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ResponsibilityCenter",
+		"ToTableName": "CustomerAccount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ResponsibilityCenterId",
+				"ToColumnName": "ResponsibilityCenterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"toEntity\":\"CustomerAccount.cdm.json/CustomerAccount\",\"joinPairs\":[{\"fromAttribute\":\"ResponsibilityCenterId\",\"toAttribute\":\"ResponsibilityCenterId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f238247f-4853-4a83-9129-06f60344add0"
+	},
+	"type": "RELATIONSHIP"
+}

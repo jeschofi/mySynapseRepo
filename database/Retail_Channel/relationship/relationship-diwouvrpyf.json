@@ -1,0 +1,29 @@
+{
+	"name": "relationship-diwouvrpyf",
+	"properties": {
+		"Name": "relationship-diwouvrpyf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayBin",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BinId",
+				"ToColumnName": "BinId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"BinId\",\"toAttribute\":\"BinId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fa696bac-3f5e-44ac-9082-ad31e73cefa6"
+	},
+	"type": "RELATIONSHIP"
+}

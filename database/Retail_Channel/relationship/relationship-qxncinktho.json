@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qxncinktho",
+	"properties": {
+		"Name": "relationship-qxncinktho",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SatisfactionRating",
+		"ToTableName": "ProductChannelSatisfactionRating",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SatisfactionRatingId",
+				"ToColumnName": "SatisfactionRatingId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SatisfactionRating.cdm.json/SatisfactionRating\",\"toEntity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"joinPairs\":[{\"fromAttribute\":\"SatisfactionRatingId\",\"toAttribute\":\"SatisfactionRatingId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "51d64eda-c67c-4849-bc81-2daa2332ea1d"
+	},
+	"type": "RELATIONSHIP"
+}

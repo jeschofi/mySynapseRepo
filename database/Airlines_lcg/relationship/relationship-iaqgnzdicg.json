@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iaqgnzdicg",
+	"properties": {
+		"Name": "relationship-iaqgnzdicg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Order",
+		"ToTableName": "Invoice",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "OrderId",
+				"ToColumnName": "OrderId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Order.cdm.json/Order\",\"toEntity\":\"Invoice.cdm.json/Invoice\",\"joinPairs\":[{\"fromAttribute\":\"OrderId\",\"toAttribute\":\"OrderId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cb6cb96d-36db-4c79-a9e8-2c86ea43692b"
+	},
+	"type": "RELATIONSHIP"
+}

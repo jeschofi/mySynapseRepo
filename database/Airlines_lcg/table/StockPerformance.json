@@ -1,0 +1,442 @@
+{
+	"name": "StockPerformance",
+	"properties": {
+		"Name": "StockPerformance",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StockId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "StockId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start date for which the associated performance measures are calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp for which the associated performance measures are calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodLowPriceAmount",
+					"Description": "The lowest common stock share price during the associated period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PeriodLowPriceAmount"
+					}
+				},
+				{
+					"Name": "PeriodHighPriceAmount",
+					"Description": "The highest common stock share price during the associated period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PeriodHighPriceAmount"
+					}
+				},
+				{
+					"Name": "PeriodClosePriceAmount",
+					"Description": "The period closing price of the stock.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PeriodClosePriceAmount"
+					}
+				},
+				{
+					"Name": "DividendYield",
+					"Description": "Indicated yield represents annual dividends divided by current stock price. \n\nThe yield, based on the most recent quarterly rate times four. To determine the yield, divide the\nannual dividend by the price of the stock. The resulting number is represented as a percentage.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "DividendYield"
+					}
+				},
+				{
+					"Name": "52WeekLowPriceAmount",
+					"Description": "The lowest prices at which a stock has traded over the previous 52 weeks (one year) from the current date.\n\nThis typically does not include the previous day's trading.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "52WeekLowPriceAmount"
+					}
+				},
+				{
+					"Name": "52WeekHighPriceAmount",
+					"Description": "The highest prices at which a stock has traded over the previous 52 weeks (one year) from the current date.\n\nThis typically does not include the previous day's trading.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "52WeekHighPriceAmount"
+					}
+				},
+				{
+					"Name": "TradingVolume",
+					"Description": "This figure shows the total number of shares traded for the day, listed in hundreds.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "TradingVolume"
+					}
+				},
+				{
+					"Name": "PriceEarningsRatio",
+					"Description": "This is calculated by dividing the current stock price by earnings per share from the last four quarters.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PriceEarningsRatio"
+					}
+				},
+				{
+					"Name": "NetChangeAmountFromPreviousTradingDate",
+					"Description": "This is the dollar value change in the stock price from the previous day's closing price.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "NetChangeAmountFromPreviousTradingDate"
+					}
+				},
+				{
+					"Name": "NetChangePercentageFromPreviousTradingDate",
+					"Description": "This is the percentage value change in the stock price from the previous day's closing price.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "NetChangePercentageFromPreviousTradingDate"
+					}
+				},
+				{
+					"Name": "PeriodMedianPriceAmount",
+					"Description": "The median common stock share price during the associated period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PeriodMedianPriceAmount"
+					}
+				},
+				{
+					"Name": "PeriodAveragePriceAmount",
+					"Description": "The average common stock share price during the associated period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "PeriodAveragePriceAmount"
+					}
+				},
+				{
+					"Name": "ShareholderEquity",
+					"Description": "The company's total assets minus total liabilities.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "ShareholderEquity"
+					}
+				},
+				{
+					"Name": "BookValue",
+					"Description": "A companies book value is its total assets minimum intangible assets and liabilities such as debt.\n\nA companies book value might be more or less than its market value.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "BookValue"
+					}
+				},
+				{
+					"Name": "StockAlpha",
+					"Description": "A coefficient measuring the portion of an investment's return arising from specific nonmarket risk criteria during the associated period.  It is a mathematical estimate of the return expected from an investment's inherent values.\n\nEx:  An alpha of 1.25 indicates that a stock is projected to rise 25% in price in one year when the return on the market and the stock's beta are both 0.\n\nIt is different and distinct from the amount of return caused by volatility, which is the Beta coefficient.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "StockAlpha"
+					}
+				},
+				{
+					"Name": "StockBeta",
+					"Description": "A coefficient for measuring a stock's relative volatility in relation to the rest of the stock market  during the associated period. .\n\nThe S&P 500 has a beta coefficient of 1.    Any stock with a greater beta is considered more volatile than the market and any stock with a lesser beta is considered less volatile.\n\nThe measure of a fund's or stocks risk in relation to the market. A beta of 0.7 means the fund's\ntotal return is likely to move up or down 70% of the market change; 1.3 means total return is\nlikely to move up or down 30% more than the market. Beta is referred to as an index of the systematic risk due to general market conditions that cannot be diversified away. \n\nThe beta of a stock is determined as follows:\n                          [(n) (sum of (xy)) ]-[(sum of x) (sum of y)] \n                          [(n) (sum of (xx)) ]-[(sum of x) (sum of x)] \n                          where: n = # of observations (24-60 months) \n                          x = rate of return for the S&P 500 Index \n                          y = rate of return for the stock",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockPerformance.cdm.json/StockPerformance",
+						"Name": "StockBeta"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3cf33167-a04e-4f0e-aaac-e0a477e365bb",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/StockPerformance",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/StockPerformance",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StockId\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"StockId\"},\"PeriodStartTimestamp\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodEndTimestamp\"},\"PeriodLowPriceAmount\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodLowPriceAmount\"},\"PeriodHighPriceAmount\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodHighPriceAmount\"},\"PeriodClosePriceAmount\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodClosePriceAmount\"},\"DividendYield\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"DividendYield\"},\"52WeekLowPriceAmount\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"52WeekLowPriceAmount\"},\"52WeekHighPriceAmount\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"52WeekHighPriceAmount\"},\"TradingVolume\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"TradingVolume\"},\"PriceEarningsRatio\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PriceEarningsRatio\"},\"NetChangeAmountFromPreviousTradingDate\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"NetChangeAmountFromPreviousTradingDate\"},\"NetChangePercentageFromPreviousTradingDate\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"NetChangePercentageFromPreviousTradingDate\"},\"PeriodMedianPriceAmount\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodMedianPriceAmount\"},\"PeriodAveragePriceAmount\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodAveragePriceAmount\"},\"ShareholderEquity\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"ShareholderEquity\"},\"BookValue\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"BookValue\"},\"StockAlpha\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"StockAlpha\"},\"StockBeta\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"StockBeta\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StockPerformance\",\"path\":\"StockPerformance.cdm.json/StockPerformance\"},\"description\":\"The performance of the associated Stock on the indicated exchange for the indicated date.\",\"primaryKey\":[\"StockId\",\"PeriodStartTimestamp\",\"PeriodEndTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"StockId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"StockId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start date for which the associated performance measures are calculated.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp for which the associated performance measures are calculated.\",\"isNullable\":false,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodLowPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The lowest common stock share price during the associated period.\",\"isNullable\":true,\"scale\":2,\"name\":\"PeriodLowPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodHighPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The highest common stock share price during the associated period.\",\"isNullable\":true,\"scale\":2,\"name\":\"PeriodHighPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodClosePriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The period closing price of the stock.\",\"isNullable\":true,\"scale\":2,\"name\":\"PeriodClosePriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"DividendYield\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Indicated yield represents annual dividends divided by current stock price. \\n\\nThe yield, based on the most recent quarterly rate times four. To determine the yield, divide the\\nannual dividend by the price of the stock. The resulting number is represented as a percentage.\",\"isNullable\":true,\"scale\":8,\"name\":\"DividendYield\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"52WeekLowPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The lowest prices at which a stock has traded over the previous 52 weeks (one year) from the current date.\\n\\nThis typically does not include the previous day's trading.\",\"isNullable\":true,\"scale\":2,\"name\":\"52WeekLowPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"52WeekHighPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The highest prices at which a stock has traded over the previous 52 weeks (one year) from the current date.\\n\\nThis typically does not include the previous day's trading.\",\"isNullable\":true,\"scale\":2,\"name\":\"52WeekHighPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"TradingVolume\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"This figure shows the total number of shares traded for the day, listed in hundreds.\",\"isNullable\":true,\"scale\":8,\"name\":\"TradingVolume\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PriceEarningsRatio\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"This is calculated by dividing the current stock price by earnings per share from the last four quarters.\",\"isNullable\":true,\"scale\":8,\"name\":\"PriceEarningsRatio\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"NetChangeAmountFromPreviousTradingDate\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"This is the dollar value change in the stock price from the previous day's closing price.\",\"isNullable\":true,\"scale\":2,\"name\":\"NetChangeAmountFromPreviousTradingDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"NetChangePercentageFromPreviousTradingDate\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"This is the percentage value change in the stock price from the previous day's closing price.\",\"isNullable\":true,\"scale\":8,\"name\":\"NetChangePercentageFromPreviousTradingDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodMedianPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The median common stock share price during the associated period.\",\"isNullable\":true,\"scale\":2,\"name\":\"PeriodMedianPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"PeriodAveragePriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The average common stock share price during the associated period.\",\"isNullable\":true,\"scale\":2,\"name\":\"PeriodAveragePriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"ShareholderEquity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The company's total assets minus total liabilities.\",\"isNullable\":true,\"scale\":2,\"name\":\"ShareholderEquity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"BookValue\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"A companies book value is its total assets minimum intangible assets and liabilities such as debt.\\n\\nA companies book value might be more or less than its market value.\",\"isNullable\":true,\"scale\":2,\"name\":\"BookValue\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"StockAlpha\"},\"dataType\":\"integer\",\"description\":\"A coefficient measuring the portion of an investment's return arising from specific nonmarket risk criteria during the associated period.  It is a mathematical estimate of the return expected from an investment's inherent values.\\n\\nEx:  An alpha of 1.25 indicates that a stock is projected to rise 25% in price in one year when the return on the market and the stock's beta are both 0.\\n\\nIt is different and distinct from the amount of return caused by volatility, which is the Beta coefficient.\",\"isNullable\":true,\"name\":\"StockAlpha\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockPerformance.cdm.json/StockPerformance\",\"name\":\"StockBeta\"},\"dataType\":\"integer\",\"description\":\"A coefficient for measuring a stock's relative volatility in relation to the rest of the stock market  during the associated period. .\\n\\nThe S&P 500 has a beta coefficient of 1.    Any stock with a greater beta is considered more volatile than the market and any stock with a lesser beta is considered less volatile.\\n\\nThe measure of a fund's or stocks risk in relation to the market. A beta of 0.7 means the fund's\\ntotal return is likely to move up or down 70% of the market change; 1.3 means total return is\\nlikely to move up or down 30% more than the market. Beta is referred to as an index of the systematic risk due to general market conditions that cannot be diversified away. \\n\\nThe beta of a stock is determined as follows:\\n                          [(n) (sum of (xy)) ]-[(sum of x) (sum of y)] \\n                          [(n) (sum of (xx)) ]-[(sum of x) (sum of x)] \\n                          where: n = # of observations (24-60 months) \\n                          x = rate of return for the S&P 500 Index \\n                          y = rate of return for the stock\",\"isNullable\":true,\"name\":\"StockBeta\"}]}}}",
+			"Description": "The performance of the associated Stock on the indicated exchange for the indicated date.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "StockId,PeriodStartTimestamp,PeriodEndTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StockId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodLowPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PeriodHighPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PeriodClosePriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DividendYield\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"52WeekLowPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"52WeekHighPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TradingVolume\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PriceEarningsRatio\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NetChangeAmountFromPreviousTradingDate\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NetChangePercentageFromPreviousTradingDate\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PeriodMedianPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PeriodAveragePriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShareholderEquity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BookValue\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StockAlpha\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StockBeta\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "6350dec2-f5de-49ac-8476-42ef8c847858",
+		"Description": "The performance of the associated Stock on the indicated exchange for the indicated date."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xixigjswed",
+	"properties": {
+		"Name": "relationship-xixigjswed",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SicDivision",
+		"ToTableName": "SicMajorGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SicDivisionCode",
+				"ToColumnName": "SicDivisionCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SicDivision.cdm.json/SicDivision\",\"toEntity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"joinPairs\":[{\"fromAttribute\":\"SicDivisionCode\",\"toAttribute\":\"SicDivisionCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bc3a1c11-92ac-4e1c-a612-ab38219ddb79"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ibhvhlubzn",
+	"properties": {
+		"Name": "relationship-ibhvhlubzn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Store",
+		"ToTableName": "StoreLanguageUsage",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreId",
+				"ToColumnName": "StoreId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Store.cdm.json/Store\",\"toEntity\":\"StoreLanguageUsage.cdm.json/StoreLanguageUsage\",\"joinPairs\":[{\"fromAttribute\":\"StoreId\",\"toAttribute\":\"StoreId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "97f3257f-f34e-4ac6-9d49-a491b6a07f87"
+	},
+	"type": "RELATIONSHIP"
+}

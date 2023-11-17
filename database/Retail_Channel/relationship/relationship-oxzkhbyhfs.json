@@ -1,0 +1,29 @@
+{
+	"name": "relationship-oxzkhbyhfs",
+	"properties": {
+		"Name": "relationship-oxzkhbyhfs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RetailProduct",
+		"ToTableName": "CustomerAccountProductSalesChannel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RetailProduct.cdm.json/RetailProduct\",\"toEntity\":\"CustomerAccountProductSalesChannel.cdm.json/CustomerAccountProductSalesChannel\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "279ace7c-57fd-47b7-9a8a-59bdd1b0c398"
+	},
+	"type": "RELATIONSHIP"
+}

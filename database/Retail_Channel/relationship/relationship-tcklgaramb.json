@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tcklgaramb",
+	"properties": {
+		"Name": "relationship-tcklgaramb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Calendar",
+		"ToTableName": "CalendarWeek",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Calendar.cdm.json/Calendar\",\"toEntity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "777915a5-0c44-4f81-aa4b-786f9bd69e2b"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wlzzrzxqgh",
+	"properties": {
+		"Name": "relationship-wlzzrzxqgh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Bond",
+		"ToTableName": "BondInterestPaymentDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondId",
+				"ToColumnName": "BondId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Bond.cdm.json/Bond\",\"toEntity\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\",\"joinPairs\":[{\"fromAttribute\":\"BondId\",\"toAttribute\":\"BondId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1a0640fe-828c-4244-97bb-420e9de30798"
+	},
+	"type": "RELATIONSHIP"
+}

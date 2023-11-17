@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jjimytsqmv",
+	"properties": {
+		"Name": "relationship-jjimytsqmv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreCategory",
+		"ToTableName": "Store",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreCategoryId",
+				"ToColumnName": "StoreCategoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreCategory.cdm.json/StoreCategory\",\"toEntity\":\"Store.cdm.json/Store\",\"joinPairs\":[{\"fromAttribute\":\"StoreCategoryId\",\"toAttribute\":\"StoreCategoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1ae1484a-d080-4782-8379-9f4b279848e1"
+	},
+	"type": "RELATIONSHIP"
+}

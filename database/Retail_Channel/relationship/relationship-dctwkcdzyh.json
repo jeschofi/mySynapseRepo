@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dctwkcdzyh",
+	"properties": {
+		"Name": "relationship-dctwkcdzyh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "UnitOfMeasure",
+		"ToTableName": "StorageContainerActualStorage",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "UnitOfMeasureId",
+				"ToColumnName": "ActualStorageUomId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"UnitOfMeasure.cdm.json/UnitOfMeasure\",\"toEntity\":\"StorageContainerActualStorage.cdm.json/StorageContainerActualStorage\",\"joinPairs\":[{\"fromAttribute\":\"UnitOfMeasureId\",\"toAttribute\":\"ActualStorageUomId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1a938dd1-0e4d-4af5-b518-6f7c196c400c"
+	},
+	"type": "RELATIONSHIP"
+}

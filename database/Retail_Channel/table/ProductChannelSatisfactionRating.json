@@ -1,0 +1,208 @@
+{
+	"name": "ProductChannelSatisfactionRating",
+	"properties": {
+		"Name": "ProductChannelSatisfactionRating",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "RatingCriteriaId",
+					"Description": "The unique identifier of a Rating Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating",
+						"Name": "RatingCriteriaId"
+					}
+				},
+				{
+					"Name": "SatisfactionRatingId",
+					"Description": "The unique identifier of a Satisfaction Rating.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating",
+						"Name": "SatisfactionRatingId"
+					}
+				},
+				{
+					"Name": "RatingPeriodStartDate",
+					"Description": "The period start date for which the associated Satisfaction Rating is provided.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating",
+						"Name": "RatingPeriodStartDate"
+					}
+				},
+				{
+					"Name": "RatingPeriodEndDate",
+					"Description": "The period end date for which the associated Satisfaction Rating is provided.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating",
+						"Name": "RatingPeriodEndDate"
+					}
+				},
+				{
+					"Name": "NumberOfCustomerResponses",
+					"Description": "The number of customer responses indicating the associated product satisfaction rating.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating",
+						"Name": "NumberOfCustomerResponses"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3df0f35b-310d-42db-89f0-52679c590b26",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductChannelSatisfactionRating",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductChannelSatisfactionRating",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductId\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"ProductId\"},\"ChannelId\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"ChannelId\"},\"RatingCriteriaId\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"RatingCriteriaId\"},\"SatisfactionRatingId\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"SatisfactionRatingId\"},\"RatingPeriodStartDate\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"RatingPeriodStartDate\"},\"RatingPeriodEndDate\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"RatingPeriodEndDate\"},\"NumberOfCustomerResponses\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"NumberOfCustomerResponses\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductChannelSatisfactionRating\",\"path\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\"},\"description\":\"The Channel Product satisfaction rating for the associated period.\",\"primaryKey\":[\"ProductId\",\"ChannelId\",\"RatingCriteriaId\",\"SatisfactionRatingId\",\"RatingPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"RatingCriteriaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Rating Criteria.\",\"isNullable\":false,\"name\":\"RatingCriteriaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"SatisfactionRatingId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Satisfaction Rating.\",\"isNullable\":false,\"name\":\"SatisfactionRatingId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"RatingPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated Satisfaction Rating is provided.\",\"isNullable\":false,\"name\":\"RatingPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"RatingPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated Satisfaction Rating is provided.\",\"isNullable\":false,\"name\":\"RatingPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"name\":\"NumberOfCustomerResponses\"},\"dataType\":\"integer\",\"description\":\"The number of customer responses indicating the associated product satisfaction rating.\",\"isNullable\":true,\"name\":\"NumberOfCustomerResponses\"}]}}}",
+			"Description": "The Channel Product satisfaction rating for the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ProductId,ChannelId,RatingCriteriaId,SatisfactionRatingId,RatingPeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RatingCriteriaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SatisfactionRatingId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RatingPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RatingPeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NumberOfCustomerResponses\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "bd697e80-2e0b-4201-9773-36f3fa322b9a",
+		"Description": "The Channel Product satisfaction rating for the associated period."
+	},
+	"type": "TABLE"
+}

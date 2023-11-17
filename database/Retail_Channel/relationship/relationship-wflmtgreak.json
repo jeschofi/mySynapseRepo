@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wflmtgreak",
+	"properties": {
+		"Name": "relationship-wflmtgreak",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarQuarter",
+		"ToTableName": "CalendarWeek",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"toEntity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "86ed5d79-0719-40c4-9b90-f4691c239c46"
+	},
+	"type": "RELATIONSHIP"
+}

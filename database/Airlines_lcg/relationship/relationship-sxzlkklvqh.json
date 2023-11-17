@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sxzlkklvqh",
+	"properties": {
+		"Name": "relationship-sxzlkklvqh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LegalEntity",
+		"ToTableName": "FinancialProductIssuedByLegalEntity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LegalEntityId",
+				"ToColumnName": "LegalEntityId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LegalEntity.cdm.json/LegalEntity\",\"toEntity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"joinPairs\":[{\"fromAttribute\":\"LegalEntityId\",\"toAttribute\":\"LegalEntityId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "da4e8519-3d99-42a9-8ae1-fb4a9a36e19f"
+	},
+	"type": "RELATIONSHIP"
+}

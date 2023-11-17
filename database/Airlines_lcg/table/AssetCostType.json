@@ -1,0 +1,136 @@
+{
+	"name": "AssetCostType",
+	"properties": {
+		"Name": "AssetCostType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetCostTypeId",
+					"Description": "The unique identifier of an Asset Cost Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCostType.cdm.json/AssetCostType",
+						"Name": "AssetCostTypeId"
+					}
+				},
+				{
+					"Name": "AssetCostTypeName",
+					"Description": "The name of an Asset Cost Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCostType.cdm.json/AssetCostType",
+						"Name": "AssetCostTypeName"
+					}
+				},
+				{
+					"Name": "AssetCostTypeDescription",
+					"Description": "The description of an Asset Cost Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCostType.cdm.json/AssetCostType",
+						"Name": "AssetCostTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "cc1a62b6-a8dd-4c06-b945-2068b1ec5278",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetCostType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetCostType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetCostTypeId\":{\"entity\":\"AssetCostType.cdm.json/AssetCostType\",\"name\":\"AssetCostTypeId\"},\"AssetCostTypeName\":{\"entity\":\"AssetCostType.cdm.json/AssetCostType\",\"name\":\"AssetCostTypeName\"},\"AssetCostTypeDescription\":{\"entity\":\"AssetCostType.cdm.json/AssetCostType\",\"name\":\"AssetCostTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetCostType\",\"path\":\"AssetCostType.cdm.json/AssetCostType\"},\"description\":\"A type of cost that may be assigned to applied to an Asset for the associated period.\\n\\nEx:\\n- Freight-in cost\\n- Installation cost\\n- Acquisition cost\\n- Book cost\\n- Net Purchase cost\",\"primaryKey\":[\"AssetCostTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCostType.cdm.json/AssetCostType\",\"name\":\"AssetCostTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Asset Cost Type.\",\"isNullable\":false,\"name\":\"AssetCostTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCostType.cdm.json/AssetCostType\",\"name\":\"AssetCostTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Asset Cost Type.\",\"isNullable\":true,\"name\":\"AssetCostTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCostType.cdm.json/AssetCostType\",\"name\":\"AssetCostTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Asset Cost Type.\",\"isNullable\":true,\"name\":\"AssetCostTypeDescription\"}]}}}",
+			"Description": "A type of cost that may be assigned to applied to an Asset for the associated period.\n\nEx:\n- Freight-in cost\n- Installation cost\n- Acquisition cost\n- Book cost\n- Net Purchase cost",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetCostTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetCostTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetCostTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetCostTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "f1250237-1f0b-4e68-91d7-80385d3b349b",
+		"Description": "A type of cost that may be assigned to applied to an Asset for the associated period.\n\nEx:\n- Freight-in cost\n- Installation cost\n- Acquisition cost\n- Book cost\n- Net Purchase cost"
+	},
+	"type": "TABLE"
+}

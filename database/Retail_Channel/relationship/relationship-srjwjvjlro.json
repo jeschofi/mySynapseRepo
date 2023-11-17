@@ -1,0 +1,29 @@
+{
+	"name": "relationship-srjwjvjlro",
+	"properties": {
+		"Name": "relationship-srjwjvjlro",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Store",
+		"ToTableName": "StoreDisplayShelf",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreId",
+				"ToColumnName": "StoreId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Store.cdm.json/Store\",\"toEntity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"joinPairs\":[{\"fromAttribute\":\"StoreId\",\"toAttribute\":\"StoreId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fd99fbec-77b9-4c38-b7c0-4f7f4e4738b7"
+	},
+	"type": "RELATIONSHIP"
+}

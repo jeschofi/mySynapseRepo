@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mnxgfjfges",
+	"properties": {
+		"Name": "relationship-mnxgfjfges",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RetailProduct",
+		"ToTableName": "ProductStoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RetailProduct.cdm.json/RetailProduct\",\"toEntity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fbce40eb-63e7-4477-b140-f9e9ca6240dc"
+	},
+	"type": "RELATIONSHIP"
+}

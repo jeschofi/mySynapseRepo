@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sotupxovjv",
+	"properties": {
+		"Name": "relationship-sotupxovjv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DividendPeriod",
+		"ToTableName": "Dividend",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DividendPeriodId",
+				"ToColumnName": "DividendPeriodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DividendPeriod.cdm.json/DividendPeriod\",\"toEntity\":\"Dividend.cdm.json/Dividend\",\"joinPairs\":[{\"fromAttribute\":\"DividendPeriodId\",\"toAttribute\":\"DividendPeriodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f866d7a1-8efc-47fb-9289-89cb51a19bae"
+	},
+	"type": "RELATIONSHIP"
+}

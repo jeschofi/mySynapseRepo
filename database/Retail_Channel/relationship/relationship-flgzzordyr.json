@@ -1,0 +1,29 @@
+{
+	"name": "relationship-flgzzordyr",
+	"properties": {
+		"Name": "relationship-flgzzordyr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShopperPosition",
+		"ToTableName": "ShopperPositionReading",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShopperPositionId",
+				"ToColumnName": "ShopperPositionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"toEntity\":\"ShopperPositionReading.cdm.json/ShopperPositionReading\",\"joinPairs\":[{\"fromAttribute\":\"ShopperPositionId\",\"toAttribute\":\"ShopperPositionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f5591a06-15ae-4542-b05f-6667a0887627"
+	},
+	"type": "RELATIONSHIP"
+}

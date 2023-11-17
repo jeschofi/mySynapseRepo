@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pbnmsjlkdl",
+	"properties": {
+		"Name": "relationship-pbnmsjlkdl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PointOfSale",
+		"ToTableName": "Transaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PointOfSaleId",
+				"ToColumnName": "PointOfSaleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PointOfSale.cdm.json/PointOfSale\",\"toEntity\":\"Transaction.cdm.json/Transaction\",\"joinPairs\":[{\"fromAttribute\":\"PointOfSaleId\",\"toAttribute\":\"PointOfSaleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "682a6a42-b690-474b-b7aa-20efb0988daa"
+	},
+	"type": "RELATIONSHIP"
+}

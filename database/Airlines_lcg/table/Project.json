@@ -1,0 +1,447 @@
+{
+	"name": "Project",
+	"properties": {
+		"Name": "Project",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProjectId",
+					"Description": "The unique identifier of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectId"
+					}
+				},
+				{
+					"Name": "ProjectName",
+					"Description": "The name of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectName"
+					}
+				},
+				{
+					"Name": "ProjectDescription",
+					"Description": "The description of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectDescription"
+					}
+				},
+				{
+					"Name": "ProjectTypeId",
+					"Description": "The unique identifier of a Project Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectTypeId"
+					}
+				},
+				{
+					"Name": "ProjectPlannedStartTimestamp",
+					"Description": "The planned start timestamp of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectPlannedStartTimestamp"
+					}
+				},
+				{
+					"Name": "ProjectPlannedEndTimestamp",
+					"Description": "The planned end timestamp of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectPlannedEndTimestamp"
+					}
+				},
+				{
+					"Name": "ProjectEarliestStartTimestamp",
+					"Description": "The earliest start timestamp of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectEarliestStartTimestamp"
+					}
+				},
+				{
+					"Name": "ProjectEarliestEndTimestamp",
+					"Description": "The earliest end timestamp of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectEarliestEndTimestamp"
+					}
+				},
+				{
+					"Name": "ProjectLatestStartTimestamp",
+					"Description": "The latest start timestamp of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectLatestStartTimestamp"
+					}
+				},
+				{
+					"Name": "ProjectLatestEndTimestamp",
+					"Description": "The latest end timestamp of a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectLatestEndTimestamp"
+					}
+				},
+				{
+					"Name": "ProjectClosingTimestamp",
+					"Description": "The closing timestamp of the project.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectClosingTimestamp"
+					}
+				},
+				{
+					"Name": "ProjectRiskAssessmentStatement",
+					"Description": "A statement in which planners identify potential risks and describe them, usually in terms of their symptoms, causes, probability of occurrence and potential impact.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectRiskAssessmentStatement"
+					}
+				},
+				{
+					"Name": "ProjectWorkStatement",
+					"Description": "A description of the scope of a project centered on the major deliverables and constraints.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectWorkStatement"
+					}
+				},
+				{
+					"Name": "ProjectCharterStatement",
+					"Description": "A document that describes the project at a high level of detail and is used to authorize the project management to begin work.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectCharterStatement"
+					}
+				},
+				{
+					"Name": "BusinessCaseStatement",
+					"Description": "The information that describes the justification for the project. The project is justified if the expected benefits outweigh estimated costs and risks. The business case is often complex and may require financial analysis, technical analysis, organization impact analysis and a feasibility study.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "BusinessCaseStatement"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "ProjectGlAccountNumber",
+					"Description": "The GL Account Number assigned to a Project.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 20,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectGlAccountNumber"
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterId",
+					"Description": "The unique identifier of a Responsibility Center.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ResponsibilityCenterId"
+					}
+				},
+				{
+					"Name": "ProjectResponsiblePartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Project.cdm.json/Project",
+						"Name": "ProjectResponsiblePartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a673d744-267d-4b30-86fb-047fda47b29f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/Project",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/Project",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProjectId\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectId\"},\"ProjectName\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectName\"},\"ProjectDescription\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectDescription\"},\"ProjectTypeId\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectTypeId\"},\"ProjectPlannedStartTimestamp\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectPlannedStartTimestamp\"},\"ProjectPlannedEndTimestamp\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectPlannedEndTimestamp\"},\"ProjectEarliestStartTimestamp\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectEarliestStartTimestamp\"},\"ProjectEarliestEndTimestamp\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectEarliestEndTimestamp\"},\"ProjectLatestStartTimestamp\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectLatestStartTimestamp\"},\"ProjectLatestEndTimestamp\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectLatestEndTimestamp\"},\"ProjectClosingTimestamp\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectClosingTimestamp\"},\"ProjectRiskAssessmentStatement\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectRiskAssessmentStatement\"},\"ProjectWorkStatement\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectWorkStatement\"},\"ProjectCharterStatement\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectCharterStatement\"},\"BusinessCaseStatement\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"BusinessCaseStatement\"},\"LocationId\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"LocationId\"},\"ProjectGlAccountNumber\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectGlAccountNumber\"},\"ResponsibilityCenterId\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ResponsibilityCenterId\"},\"ProjectResponsiblePartyId\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectResponsiblePartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Project\",\"path\":\"Project.cdm.json/Project\"},\"description\":\"A project is a temporary activity with a starting date, specific goals and conditions, defined responsibilities, a budget, a planning, a fixed end date and multiple parties involved.\",\"primaryKey\":[\"ProjectId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Project.\",\"isNullable\":false,\"name\":\"ProjectId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Project.\",\"isNullable\":true,\"name\":\"ProjectName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Project.\",\"isNullable\":true,\"name\":\"ProjectDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Project Type.\",\"isNullable\":true,\"name\":\"ProjectTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectPlannedStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The planned start timestamp of a Project.\",\"isNullable\":true,\"name\":\"ProjectPlannedStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectPlannedEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The planned end timestamp of a Project.\",\"isNullable\":true,\"name\":\"ProjectPlannedEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectEarliestStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The earliest start timestamp of a Project.\",\"isNullable\":true,\"name\":\"ProjectEarliestStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectEarliestEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The earliest end timestamp of a Project.\",\"isNullable\":true,\"name\":\"ProjectEarliestEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectLatestStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The latest start timestamp of a Project.\",\"isNullable\":true,\"name\":\"ProjectLatestStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectLatestEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The latest end timestamp of a Project.\",\"isNullable\":true,\"name\":\"ProjectLatestEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectClosingTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The closing timestamp of the project.\",\"isNullable\":true,\"name\":\"ProjectClosingTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectRiskAssessmentStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement in which planners identify potential risks and describe them, usually in terms of their symptoms, causes, probability of occurrence and potential impact.\",\"isNullable\":true,\"name\":\"ProjectRiskAssessmentStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectWorkStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the scope of a project centered on the major deliverables and constraints.\",\"isNullable\":true,\"name\":\"ProjectWorkStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectCharterStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A document that describes the project at a high level of detail and is used to authorize the project management to begin work.\",\"isNullable\":true,\"name\":\"ProjectCharterStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"BusinessCaseStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The information that describes the justification for the project. The project is justified if the expected benefits outweigh estimated costs and risks. The business case is often complex and may require financial analysis, technical analysis, organization impact analysis and a feasibility study.\",\"isNullable\":true,\"name\":\"BusinessCaseStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectGlAccountNumber\"},\"dataType\":\"string\",\"dataTypeLength\":20,\"description\":\"The GL Account Number assigned to a Project.\",\"isNullable\":true,\"name\":\"ProjectGlAccountNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ResponsibilityCenterId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Responsibility Center.\",\"isNullable\":true,\"name\":\"ResponsibilityCenterId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Project.cdm.json/Project\",\"name\":\"ProjectResponsiblePartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"ProjectResponsiblePartyId\"}]}}}",
+			"Description": "A project is a temporary activity with a starting date, specific goals and conditions, defined responsibilities, a budget, a planning, a fixed end date and multiple parties involved.",
+			"DisplayFolderInfo": "{\"name\":\"Project Management\",\"colorCode\":\"#00188F\"}",
+			"PrimaryKeys": "ProjectId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProjectId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProjectName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectPlannedStartTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectPlannedEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectEarliestStartTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectEarliestEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectLatestStartTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectLatestEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectClosingTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectRiskAssessmentStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectWorkStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectCharterStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BusinessCaseStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectGlAccountNumber\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResponsibilityCenterId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProjectResponsiblePartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "da4bd4ba-e637-4fca-af97-c881d2cd4a8b",
+		"Description": "A project is a temporary activity with a starting date, specific goals and conditions, defined responsibilities, a budget, a planning, a fixed end date and multiple parties involved."
+	},
+	"type": "TABLE"
+}

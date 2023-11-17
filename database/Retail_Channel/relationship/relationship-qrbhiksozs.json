@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qrbhiksozs",
+	"properties": {
+		"Name": "relationship-qrbhiksozs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Incentive",
+		"ToTableName": "ChannelIncentive",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IncentiveId",
+				"ToColumnName": "IncentiveId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Incentive.cdm.json/Incentive\",\"toEntity\":\"ChannelIncentive.cdm.json/ChannelIncentive\",\"joinPairs\":[{\"fromAttribute\":\"IncentiveId\",\"toAttribute\":\"IncentiveId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "362585d1-741a-49ee-a5d8-0b0a867738e5"
+	},
+	"type": "RELATIONSHIP"
+}

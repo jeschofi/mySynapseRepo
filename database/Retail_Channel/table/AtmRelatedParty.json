@@ -1,0 +1,189 @@
+{
+	"name": "AtmRelatedParty",
+	"properties": {
+		"Name": "AtmRelatedParty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AtmId",
+					"Description": "The unique identifier of an ATM.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmRelatedParty.cdm.json/AtmRelatedParty",
+						"Name": "AtmId"
+					}
+				},
+				{
+					"Name": "AtmPartyRelationshipTypeId",
+					"Description": "The unique identifier of a Channel Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmRelatedParty.cdm.json/AtmRelatedParty",
+						"Name": "AtmPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmRelatedParty.cdm.json/AtmRelatedParty",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the channel party relationship is valid of defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmRelatedParty.cdm.json/AtmRelatedParty",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the channel party relationship is valid of defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmRelatedParty.cdm.json/AtmRelatedParty",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "AtmPartyRelationshipNote",
+					"Description": "A note, comment or additional information regarding an ATM related party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmRelatedParty.cdm.json/AtmRelatedParty",
+						"Name": "AtmPartyRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "13afe366-bfd7-4388-9dd3-bae5ff620dca",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmRelatedParty",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmRelatedParty",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AtmId\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"AtmId\"},\"AtmPartyRelationshipTypeId\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"AtmPartyRelationshipTypeId\"},\"PartyId\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"PartyId\"},\"PeriodStartDate\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"PeriodEndDate\"},\"AtmPartyRelationshipNote\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"AtmPartyRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AtmRelatedParty\",\"path\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\"},\"description\":\"A party that has a relationship with an ATM for the associated period.\",\"primaryKey\":[\"AtmId\",\"AtmPartyRelationshipTypeId\",\"PartyId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"AtmId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an ATM.\",\"isNullable\":false,\"name\":\"AtmId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"AtmPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel Relationship Type.\",\"isNullable\":false,\"name\":\"AtmPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the channel party relationship is valid of defined.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the channel party relationship is valid of defined.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"name\":\"AtmPartyRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding an ATM related party.\",\"isNullable\":true,\"name\":\"AtmPartyRelationshipNote\"}]}}}",
+			"Description": "A party that has a relationship with an ATM for the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "AtmId,AtmPartyRelationshipTypeId,PartyId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AtmId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AtmPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AtmPartyRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "e9034212-cd38-4c24-aa1d-ca6dc2807057",
+		"Description": "A party that has a relationship with an ATM for the associated period."
+	},
+	"type": "TABLE"
+}

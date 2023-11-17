@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bvrezevnwb",
+	"properties": {
+		"Name": "relationship-bvrezevnwb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayAisle",
+		"ToTableName": "StoreDisplaySection",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AislePeriodStartDate",
+				"ToColumnName": "AislePeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayAisle.cdm.json/StoreDisplayAisle\",\"toEntity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"joinPairs\":[{\"fromAttribute\":\"AislePeriodStartDate\",\"toAttribute\":\"AislePeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c37fea7a-1c1c-49fc-9544-6cfeafe64f3e"
+	},
+	"type": "RELATIONSHIP"
+}

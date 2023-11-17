@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mxxfaddnqj",
+	"properties": {
+		"Name": "relationship-mxxfaddnqj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingFrameworkStandard",
+		"ToTableName": "NotesToFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingFrameworkStandardId",
+				"ToColumnName": "AccountingFrameworkStandardId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingFrameworkStandard.cdm.json/AccountingFrameworkStandard\",\"toEntity\":\"NotesToFinancialStatements.cdm.json/NotesToFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"AccountingFrameworkStandardId\",\"toAttribute\":\"AccountingFrameworkStandardId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4d8faafa-91a6-4764-91dd-61cd79b53396"
+	},
+	"type": "RELATIONSHIP"
+}

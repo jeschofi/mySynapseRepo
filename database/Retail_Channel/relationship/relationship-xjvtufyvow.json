@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xjvtufyvow",
+	"properties": {
+		"Name": "relationship-xjvtufyvow",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialInstitution",
+		"ToTableName": "PhoneBanking",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialInstitutionId",
+				"ToColumnName": "FinancialInstitutionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialInstitution.cdm.json/FinancialInstitution\",\"toEntity\":\"PhoneBanking.cdm.json/PhoneBanking\",\"joinPairs\":[{\"fromAttribute\":\"FinancialInstitutionId\",\"toAttribute\":\"FinancialInstitutionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2bfe1224-1095-4068-9e76-2baf9c587a4c"
+	},
+	"type": "RELATIONSHIP"
+}

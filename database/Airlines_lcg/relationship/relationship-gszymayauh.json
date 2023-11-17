@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gszymayauh",
+	"properties": {
+		"Name": "relationship-gszymayauh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyOrganizationRelationshipType",
+		"ToTableName": "PartyOrganizationRelationship",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyOrganizationRelationshipTypeId",
+				"ToColumnName": "PartyOrganizationRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyOrganizationRelationshipType.cdm.json/PartyOrganizationRelationshipType\",\"toEntity\":\"PartyOrganizationRelationship.cdm.json/PartyOrganizationRelationship\",\"joinPairs\":[{\"fromAttribute\":\"PartyOrganizationRelationshipTypeId\",\"toAttribute\":\"PartyOrganizationRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "924b1e55-d98e-4017-ae99-ef59997bb0cf"
+	},
+	"type": "RELATIONSHIP"
+}

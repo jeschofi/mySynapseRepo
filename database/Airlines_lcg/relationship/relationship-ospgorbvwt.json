@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ospgorbvwt",
+	"properties": {
+		"Name": "relationship-ospgorbvwt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyOrganizationType",
+		"ToTableName": "PartyOrganization",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyOrganizationTypeId",
+				"ToColumnName": "PartyOrganizationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyOrganizationType.cdm.json/PartyOrganizationType\",\"toEntity\":\"PartyOrganization.cdm.json/PartyOrganization\",\"joinPairs\":[{\"fromAttribute\":\"PartyOrganizationTypeId\",\"toAttribute\":\"PartyOrganizationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4091041a-ff82-4360-aab1-a2c1380c5927"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dgvtmzrdkg",
+	"properties": {
+		"Name": "relationship-dgvtmzrdkg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BalanceType",
+		"ToTableName": "CustomerAccountBalance",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BalanceTypeId",
+				"ToColumnName": "BalanceTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BalanceType.cdm.json/BalanceType\",\"toEntity\":\"CustomerAccountBalance.cdm.json/CustomerAccountBalance\",\"joinPairs\":[{\"fromAttribute\":\"BalanceTypeId\",\"toAttribute\":\"BalanceTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "07531263-4938-4db0-baa9-fc83f1af6a00"
+	},
+	"type": "RELATIONSHIP"
+}

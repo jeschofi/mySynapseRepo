@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qqqrgnkbpg",
+	"properties": {
+		"Name": "relationship-qqqrgnkbpg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Asset",
+		"ToTableName": "AssetAccountingRateOfReturn",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetId",
+				"ToColumnName": "AssetId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Asset.cdm.json/Asset\",\"toEntity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"joinPairs\":[{\"fromAttribute\":\"AssetId\",\"toAttribute\":\"AssetId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "818e5463-b06e-41af-bccd-a5def6ac9c82"
+	},
+	"type": "RELATIONSHIP"
+}

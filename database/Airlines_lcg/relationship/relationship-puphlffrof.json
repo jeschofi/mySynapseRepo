@@ -1,0 +1,29 @@
+{
+	"name": "relationship-puphlffrof",
+	"properties": {
+		"Name": "relationship-puphlffrof",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TransactionType",
+		"ToTableName": "Transaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TransactionTypeId",
+				"ToColumnName": "TransactionTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TransactionType.cdm.json/TransactionType\",\"toEntity\":\"Transaction.cdm.json/Transaction\",\"joinPairs\":[{\"fromAttribute\":\"TransactionTypeId\",\"toAttribute\":\"TransactionTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ff023e68-7d09-4ec4-b83c-ac7bbad9fb22"
+	},
+	"type": "RELATIONSHIP"
+}

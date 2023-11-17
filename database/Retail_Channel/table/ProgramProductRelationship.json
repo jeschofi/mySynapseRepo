@@ -1,0 +1,189 @@
+{
+	"name": "ProgramProductRelationship",
+	"properties": {
+		"Name": "ProgramProductRelationship",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "MarketingProgramId",
+					"Description": "The unique identifier of a Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationship.cdm.json/ProgramProductRelationship",
+						"Name": "MarketingProgramId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationship.cdm.json/ProgramProductRelationship",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "ProgramProductRelationshipTypeId",
+					"Description": "The unique identifier of a Program Product Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationship.cdm.json/ProgramProductRelationship",
+						"Name": "ProgramProductRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date that the associated relationship is effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationship.cdm.json/ProgramProductRelationship",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date that the associated relationship is effective.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationship.cdm.json/ProgramProductRelationship",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "ProgramProductNote",
+					"Description": "A note, comment or additional information regarding a program product.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationship.cdm.json/ProgramProductRelationship",
+						"Name": "ProgramProductNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "5e8969ae-5a52-4a3c-a81e-279eb35cc6f7",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProgramProductRelationship",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProgramProductRelationship",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"MarketingProgramId\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"MarketingProgramId\"},\"ProductId\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"ProductId\"},\"ProgramProductRelationshipTypeId\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"ProgramProductRelationshipTypeId\"},\"PeriodStartDate\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"PeriodEndDate\"},\"ProgramProductNote\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"ProgramProductNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProgramProductRelationship\",\"path\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\"},\"description\":\"Product available or offered in conjunction with the associated Program for the indicated period.\",\"primaryKey\":[\"MarketingProgramId\",\"ProductId\",\"ProgramProductRelationshipTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"MarketingProgramId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Marketing Program.\",\"isNullable\":false,\"name\":\"MarketingProgramId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"ProgramProductRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Program Product Relationship Type.\",\"isNullable\":false,\"name\":\"ProgramProductRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date that the associated relationship is effective.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date that the associated relationship is effective.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"name\":\"ProgramProductNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding a program product.\",\"isNullable\":true,\"name\":\"ProgramProductNote\"}]}}}",
+			"Description": "Product available or offered in conjunction with the associated Program for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "MarketingProgramId,ProductId,ProgramProductRelationshipTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"MarketingProgramId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProgramProductRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProgramProductNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "c4322def-742e-45c5-83aa-7fc78e3bb98b",
+		"Description": "Product available or offered in conjunction with the associated Program for the indicated period."
+	},
+	"type": "TABLE"
+}

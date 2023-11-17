@@ -1,0 +1,176 @@
+{
+	"name": "LineOfCredit",
+	"properties": {
+		"Name": "LineOfCredit",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.\n\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCredit.cdm.json/LineOfCredit",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "LineOfCreditProvidingPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCredit.cdm.json/LineOfCredit",
+						"Name": "LineOfCreditProvidingPartyId"
+					}
+				},
+				{
+					"Name": "LineOfCreditPeriodStartDate",
+					"Description": "The period starting date for which the line of credit is established.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCredit.cdm.json/LineOfCredit",
+						"Name": "LineOfCreditPeriodStartDate"
+					}
+				},
+				{
+					"Name": "LineOfCreditPeriodEndDate",
+					"Description": "The period ending date for which the line of credit is established.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCredit.cdm.json/LineOfCredit",
+						"Name": "LineOfCreditPeriodEndDate"
+					}
+				},
+				{
+					"Name": "LineOfCreditAmount",
+					"Description": "The amount of the line of credit.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCredit.cdm.json/LineOfCredit",
+						"Name": "LineOfCreditAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "12a524a2-d25b-43bf-bf43-52831a6be2c9",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LineOfCredit",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LineOfCredit",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LegalEntityId\"},\"LineOfCreditProvidingPartyId\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditProvidingPartyId\"},\"LineOfCreditPeriodStartDate\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditPeriodStartDate\"},\"LineOfCreditPeriodEndDate\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditPeriodEndDate\"},\"LineOfCreditAmount\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LineOfCredit\",\"path\":\"LineOfCredit.cdm.json/LineOfCredit\"},\"description\":\"An agreement with a financial institution in which the financial institution agrees to loan money to the legal entity on demand up to a specific amount and for a specific period.\",\"primaryKey\":[\"LegalEntityId\",\"LineOfCreditProvidingPartyId\",\"LineOfCreditPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\\n\\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditProvidingPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"LineOfCreditProvidingPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period starting date for which the line of credit is established.\",\"isNullable\":false,\"name\":\"LineOfCreditPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period ending date for which the line of credit is established.\",\"isNullable\":false,\"name\":\"LineOfCreditPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"name\":\"LineOfCreditAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the line of credit.\",\"isNullable\":true,\"scale\":2,\"name\":\"LineOfCreditAmount\"}]}}}",
+			"Description": "An agreement with a financial institution in which the financial institution agrees to loan money to the legal entity on demand up to a specific amount and for a specific period.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,LineOfCreditProvidingPartyId,LineOfCreditPeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LineOfCreditProvidingPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LineOfCreditPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LineOfCreditPeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LineOfCreditAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "17a38ba8-8e55-49b9-9184-279d6d723261",
+		"Description": "An agreement with a financial institution in which the financial institution agrees to loan money to the legal entity on demand up to a specific amount and for a specific period."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-svsydedvpd",
+	"properties": {
+		"Name": "relationship-svsydedvpd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDepartment",
+		"ToTableName": "StoreDepartmentLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepartmentId",
+				"ToColumnName": "DepartmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDepartment.cdm.json/StoreDepartment\",\"toEntity\":\"StoreDepartmentLocation.cdm.json/StoreDepartmentLocation\",\"joinPairs\":[{\"fromAttribute\":\"DepartmentId\",\"toAttribute\":\"DepartmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7c774314-b4c6-4747-9655-dd921d5c4dd2"
+	},
+	"type": "RELATIONSHIP"
+}

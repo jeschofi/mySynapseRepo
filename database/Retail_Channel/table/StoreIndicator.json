@@ -1,0 +1,189 @@
+{
+	"name": "StoreIndicator",
+	"properties": {
+		"Name": "StoreIndicator",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreIndicatorTypeId",
+					"Description": "The unique identifier of a Product Indicator Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreIndicator.cdm.json/StoreIndicator",
+						"Name": "StoreIndicatorTypeId"
+					}
+				},
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreIndicator.cdm.json/StoreIndicator",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "StoreIndicatorPeriodStartDate",
+					"Description": "The period start date for which the associated Store Indicator is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreIndicator.cdm.json/StoreIndicator",
+						"Name": "StoreIndicatorPeriodStartDate"
+					}
+				},
+				{
+					"Name": "StoreIndicatorPeriodEndDate",
+					"Description": "The period end date for which the associated Store Indicator is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreIndicator.cdm.json/StoreIndicator",
+						"Name": "StoreIndicatorPeriodEndDate"
+					}
+				},
+				{
+					"Name": "StoreIndicator",
+					"Description": "The Store Indicator.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreIndicator.cdm.json/StoreIndicator",
+						"Name": "StoreIndicator"
+					}
+				},
+				{
+					"Name": "StoreIndicatorNote",
+					"Description": "A note, comment or additional information regarding the Store Indicator.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreIndicator.cdm.json/StoreIndicator",
+						"Name": "StoreIndicatorNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "84fecca7-e67f-45ed-807e-2057eae5f5fc",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreIndicator",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreIndicator",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreIndicatorTypeId\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorTypeId\"},\"StoreId\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreId\"},\"StoreIndicatorPeriodStartDate\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorPeriodStartDate\"},\"StoreIndicatorPeriodEndDate\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorPeriodEndDate\"},\"StoreIndicator\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicator\"},\"StoreIndicatorNote\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreIndicator\",\"path\":\"StoreIndicator.cdm.json/StoreIndicator\"},\"description\":\"The Store Indicator for the Store Indicator Type.\",\"primaryKey\":[\"StoreIndicatorTypeId\",\"StoreId\",\"StoreIndicatorPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Indicator Type.\",\"isNullable\":false,\"name\":\"StoreIndicatorTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated Store Indicator is valid.\",\"isNullable\":false,\"name\":\"StoreIndicatorPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated Store Indicator is valid.\",\"isNullable\":true,\"name\":\"StoreIndicatorPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicator\"},\"dataType\":\"boolean\",\"description\":\"The Store Indicator.\",\"isNullable\":false,\"name\":\"StoreIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"name\":\"StoreIndicatorNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Store Indicator.\",\"isNullable\":true,\"name\":\"StoreIndicatorNote\"}]}}}",
+			"Description": "The Store Indicator for the Store Indicator Type.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreIndicatorTypeId,StoreId,StoreIndicatorPeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreIndicatorTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreIndicatorPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreIndicatorPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreIndicator\",\"type\":\"boolean\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreIndicatorNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "3b4f8657-2932-43ad-b61d-692247443902",
+		"Description": "The Store Indicator for the Store Indicator Type."
+	},
+	"type": "TABLE"
+}

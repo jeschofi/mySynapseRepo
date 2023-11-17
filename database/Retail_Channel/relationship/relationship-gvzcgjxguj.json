@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gvzcgjxguj",
+	"properties": {
+		"Name": "relationship-gvzcgjxguj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Currency",
+		"ToTableName": "ChannelAggregateProductAllocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IsoCurrencyCode",
+				"ToColumnName": "IsoCurrencyCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Currency.cdm.json/Currency\",\"toEntity\":\"ChannelAggregateProductAllocation.cdm.json/ChannelAggregateProductAllocation\",\"joinPairs\":[{\"fromAttribute\":\"IsoCurrencyCode\",\"toAttribute\":\"IsoCurrencyCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b4e06ed9-73b6-496a-9ed8-85595a7ce131"
+	},
+	"type": "RELATIONSHIP"
+}

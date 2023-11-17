@@ -1,0 +1,360 @@
+{
+	"name": "StoreProductQuantityRangePriceList",
+	"properties": {
+		"Name": "StoreProductQuantityRangePriceList",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "PriceListTypeId",
+					"Description": "The unique identifier of a Price List Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "PriceListTypeId"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "IsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "PricingUomId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "PricingUomId"
+					}
+				},
+				{
+					"Name": "MinimumQuantity",
+					"Description": "The minimum quantity for which the price is applicable.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "MinimumQuantity"
+					}
+				},
+				{
+					"Name": "MaximumQuantity",
+					"Description": "The maximum quantity for which the price is applicable.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "MaximumQuantity"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp for which the Product Quantity Range Price List is defined. This is usually for a short-term sale or special.\n\nNote: Timestamp is used rather than Date to accommodate situations where the product price can vary throughout the day.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp for which the Product Quantity Range Price List is defined. This is usually for a short-term sale or special.\n\nNote: Timestamp is used rather than Date to accommodate situations where the product price can vary throughout the day.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "SuggestedRetailPrice",
+					"Description": "The Standard, or default, price charged by retailers to the public for the Product.\n\nThe price of a Product published in a catalog, advertisement or printed list from which discounts, if any, may be subtracted. \n\nThis is the price that normally appears in catalogs, on purchase orders and invoices.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "SuggestedRetailPrice"
+					}
+				},
+				{
+					"Name": "ListPrice",
+					"Description": "The Standard retail price of the Product before the application of any discount.\n\nThe price of a Product published in a catalog, advertisement or printed list from which discounts, if any, may be subtracted. \n\nThis is the price that normally appears in catalogs, on purchase orders and invoices.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "ListPrice"
+					}
+				},
+				{
+					"Name": "TargetReturnPrice",
+					"Description": "A price established as part of a strategy to yield a specific return on investment.\n\nTarget-Return Price = (unit cost) + ((desired return)*(invested capital))/unit sales\n\nThe Target-Return Price ignores competitor's pricing and price elasticity.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "TargetReturnPrice"
+					}
+				},
+				{
+					"Name": "StandardCost",
+					"Description": "The estimated or calculated cost to manufacture or produce the Product.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "StandardCost"
+					}
+				},
+				{
+					"Name": "MarginAmount",
+					"Description": "The difference between the price of a Product and the cost to produce it.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "MarginAmount"
+					}
+				},
+				{
+					"Name": "BreakEventPointAmount",
+					"Description": "Identifies the relationship between a Product's fixed and variable costs and revenue-profits based on the number of products sold or \"how many units must be sold to make a profit\".\n\nBreak Even Point = (Fixed Cost/(Unit Price - Unit Variable Cost))\n\nExample:\n\nA company invests $250,000 (fixed costs) into developing a new Product that sells for $10 per Product.   Variable costs are determined to be $5 per unit.\n\nThe Break Even Point is 50,000.    50,000 products must be sold for the company to recover its investment and begin to realize profits.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList",
+						"Name": "BreakEventPointAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4c117630-346e-4346-8b69-eede7682622a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreProductQuantityRangePriceList",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreProductQuantityRangePriceList",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"StoreId\"},\"ProductId\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"ProductId\"},\"PriceListTypeId\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PriceListTypeId\"},\"IsoCurrencyCode\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"IsoCurrencyCode\"},\"PricingUomId\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PricingUomId\"},\"MinimumQuantity\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"MinimumQuantity\"},\"MaximumQuantity\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"MaximumQuantity\"},\"PeriodStartTimestamp\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PeriodEndTimestamp\"},\"SuggestedRetailPrice\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"SuggestedRetailPrice\"},\"ListPrice\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"ListPrice\"},\"TargetReturnPrice\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"TargetReturnPrice\"},\"StandardCost\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"StandardCost\"},\"MarginAmount\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"MarginAmount\"},\"BreakEventPointAmount\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"BreakEventPointAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreProductQuantityRangePriceList\",\"path\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\"},\"description\":\"The Price List specific to a Quantity Range for a Product as defined for a Store for a specific period.\\n\\nThis is usually for a short-term sale or special.\\n\\nFor example: \\nRegular Price represented in STORE PRODUCT PRICE LIST is 1.99.\\nSale price is 0.99 for the first 3 items purchased, and 1.49 thereafter during the sales period.\",\"primaryKey\":[\"StoreId\",\"ProductId\",\"PriceListTypeId\",\"IsoCurrencyCode\",\"PricingUomId\",\"MinimumQuantity\",\"MaximumQuantity\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PriceListTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Price List Type.\",\"isNullable\":false,\"name\":\"PriceListTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":false,\"name\":\"IsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PricingUomId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":false,\"name\":\"PricingUomId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"MinimumQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum quantity for which the price is applicable.\",\"isNullable\":false,\"scale\":2,\"name\":\"MinimumQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"MaximumQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The maximum quantity for which the price is applicable.\",\"isNullable\":false,\"scale\":2,\"name\":\"MaximumQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the Product Quantity Range Price List is defined. This is usually for a short-term sale or special.\\n\\nNote: Timestamp is used rather than Date to accommodate situations where the product price can vary throughout the day.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp for which the Product Quantity Range Price List is defined. This is usually for a short-term sale or special.\\n\\nNote: Timestamp is used rather than Date to accommodate situations where the product price can vary throughout the day.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"SuggestedRetailPrice\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Standard, or default, price charged by retailers to the public for the Product.\\n\\nThe price of a Product published in a catalog, advertisement or printed list from which discounts, if any, may be subtracted. \\n\\nThis is the price that normally appears in catalogs, on purchase orders and invoices.\",\"isNullable\":true,\"scale\":2,\"name\":\"SuggestedRetailPrice\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"ListPrice\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Standard retail price of the Product before the application of any discount.\\n\\nThe price of a Product published in a catalog, advertisement or printed list from which discounts, if any, may be subtracted. \\n\\nThis is the price that normally appears in catalogs, on purchase orders and invoices.\",\"isNullable\":true,\"scale\":2,\"name\":\"ListPrice\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"TargetReturnPrice\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"A price established as part of a strategy to yield a specific return on investment.\\n\\nTarget-Return Price = (unit cost) + ((desired return)*(invested capital))/unit sales\\n\\nThe Target-Return Price ignores competitor's pricing and price elasticity.\",\"isNullable\":true,\"scale\":2,\"name\":\"TargetReturnPrice\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"StandardCost\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The estimated or calculated cost to manufacture or produce the Product.\",\"isNullable\":true,\"scale\":2,\"name\":\"StandardCost\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"MarginAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The difference between the price of a Product and the cost to produce it.\",\"isNullable\":true,\"scale\":2,\"name\":\"MarginAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreProductQuantityRangePriceList.cdm.json/StoreProductQuantityRangePriceList\",\"name\":\"BreakEventPointAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Identifies the relationship between a Product's fixed and variable costs and revenue-profits based on the number of products sold or \\\"how many units must be sold to make a profit\\\".\\n\\nBreak Even Point = (Fixed Cost/(Unit Price - Unit Variable Cost))\\n\\nExample:\\n\\nA company invests $250,000 (fixed costs) into developing a new Product that sells for $10 per Product.   Variable costs are determined to be $5 per unit.\\n\\nThe Break Even Point is 50,000.    50,000 products must be sold for the company to recover its investment and begin to realize profits.\",\"isNullable\":true,\"scale\":2,\"name\":\"BreakEventPointAmount\"}]}}}",
+			"Description": "The Price List specific to a Quantity Range for a Product as defined for a Store for a specific period.\n\nThis is usually for a short-term sale or special.\n\nFor example: \nRegular Price represented in STORE PRODUCT PRICE LIST is 1.99.\nSale price is 0.99 for the first 3 items purchased, and 1.49 thereafter during the sales period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,ProductId,PriceListTypeId,IsoCurrencyCode,PricingUomId,MinimumQuantity,MaximumQuantity,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PriceListTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PricingUomId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MinimumQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MaximumQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SuggestedRetailPrice\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ListPrice\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TargetReturnPrice\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StandardCost\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarginAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BreakEventPointAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "57a0eb9d-7f35-4745-beab-319f7aca6d46",
+		"Description": "The Price List specific to a Quantity Range for a Product as defined for a Store for a specific period.\n\nThis is usually for a short-term sale or special.\n\nFor example: \nRegular Price represented in STORE PRODUCT PRICE LIST is 1.99.\nSale price is 0.99 for the first 3 items purchased, and 1.49 thereafter during the sales period."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fxwhteloom",
+	"properties": {
+		"Name": "relationship-fxwhteloom",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ResponsibilityCenterRelationshipType",
+		"ToTableName": "RelatedResponsibilityCenter",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ResponsibilityCenterRelationshipTypeId",
+				"ToColumnName": "ResponsibilityCenterRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ResponsibilityCenterRelationshipType.cdm.json/ResponsibilityCenterRelationshipType\",\"toEntity\":\"RelatedResponsibilityCenter.cdm.json/RelatedResponsibilityCenter\",\"joinPairs\":[{\"fromAttribute\":\"ResponsibilityCenterRelationshipTypeId\",\"toAttribute\":\"ResponsibilityCenterRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "01c53046-6de9-4834-80e6-5234fc04eb22"
+	},
+	"type": "RELATIONSHIP"
+}

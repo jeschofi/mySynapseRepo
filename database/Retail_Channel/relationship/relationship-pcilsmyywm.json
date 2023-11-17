@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pcilsmyywm",
+	"properties": {
+		"Name": "relationship-pcilsmyywm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Visit",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "VisitingPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Visit.cdm.json/Visit\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"VisitingPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c0aedda7-7aba-4a86-a73e-90802c976631"
+	},
+	"type": "RELATIONSHIP"
+}

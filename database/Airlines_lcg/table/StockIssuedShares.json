@@ -1,0 +1,137 @@
+{
+	"name": "StockIssuedShares",
+	"properties": {
+		"Name": "StockIssuedShares",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StockId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockIssuedShares.cdm.json/StockIssuedShares",
+						"Name": "StockId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date associated with the authorized number of shares.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockIssuedShares.cdm.json/StockIssuedShares",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "NumberOfShares",
+					"Description": "The total number of shares the company has issued as of the associated date.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StockIssuedShares.cdm.json/StockIssuedShares",
+						"Name": "NumberOfShares"
+					}
+				}
+			],
+			"ColumnSetEntityName": "cd40f25f-1b16-4c40-8391-87857f2a55ac",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/StockIssuedShares",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/StockIssuedShares",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StockId\":{\"entity\":\"StockIssuedShares.cdm.json/StockIssuedShares\",\"name\":\"StockId\"},\"Date\":{\"entity\":\"StockIssuedShares.cdm.json/StockIssuedShares\",\"name\":\"Date\"},\"NumberOfShares\":{\"entity\":\"StockIssuedShares.cdm.json/StockIssuedShares\",\"name\":\"NumberOfShares\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StockIssuedShares\",\"path\":\"StockIssuedShares.cdm.json/StockIssuedShares\"},\"description\":\"The total number of shares the company has issued as of the associated date.\",\"primaryKey\":[\"StockId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockIssuedShares.cdm.json/StockIssuedShares\",\"name\":\"StockId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"StockId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockIssuedShares.cdm.json/StockIssuedShares\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date associated with the authorized number of shares.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StockIssuedShares.cdm.json/StockIssuedShares\",\"name\":\"NumberOfShares\"},\"dataType\":\"integer\",\"description\":\"The total number of shares the company has issued as of the associated date.\",\"isNullable\":true,\"name\":\"NumberOfShares\"}]}}}",
+			"Description": "The total number of shares the company has issued as of the associated date.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "StockId,Date",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StockId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NumberOfShares\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "ffe7e9d1-f0a6-4fd0-9d79-a31b1b77a1b0",
+		"Description": "The total number of shares the company has issued as of the associated date."
+	},
+	"type": "TABLE"
+}

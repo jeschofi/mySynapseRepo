@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kfibpfknjc",
+	"properties": {
+		"Name": "relationship-kfibpfknjc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocation",
+		"ToTableName": "FuelPump",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PeriodStartTimestamp",
+				"ToColumnName": "PeriodStartTimestamp"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"toEntity\":\"FuelPump.cdm.json/FuelPump\",\"joinPairs\":[{\"fromAttribute\":\"PeriodStartTimestamp\",\"toAttribute\":\"PeriodStartTimestamp\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1bb91d5c-97fc-4310-8703-b3886ee6ccad"
+	},
+	"type": "RELATIONSHIP"
+}

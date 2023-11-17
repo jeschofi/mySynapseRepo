@@ -1,0 +1,175 @@
+{
+	"name": "WriteOffRelatedTransaction",
+	"properties": {
+		"Name": "WriteOffRelatedTransaction",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "WriteOffDate",
+					"Description": "The date of the write-off.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction",
+						"Name": "WriteOffDate"
+					}
+				},
+				{
+					"Name": "TransactionId",
+					"Description": "The unique identifier of a Transaction.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction",
+						"Name": "TransactionId"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction",
+						"Name": "IsoCurrencyCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "cd441de0-1cea-4abe-84ff-489b70aaa117",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/WriteOffRelatedTransaction",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/WriteOffRelatedTransaction",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"LegalEntityId\"},\"PartyId\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"PartyId\"},\"WriteOffDate\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"WriteOffDate\"},\"TransactionId\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"TransactionId\"},\"IsoCurrencyCode\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"IsoCurrencyCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"WriteOffRelatedTransaction\",\"path\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\"},\"description\":\"The transaction(s) associated with the Bad Debt Write-off.\",\"primaryKey\":[\"LegalEntityId\",\"PartyId\",\"WriteOffDate\",\"TransactionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"WriteOffDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of the write-off.\",\"isNullable\":false,\"name\":\"WriteOffDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"TransactionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Transaction.\",\"isNullable\":false,\"name\":\"TransactionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffRelatedTransaction.cdm.json/WriteOffRelatedTransaction\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":true,\"name\":\"IsoCurrencyCode\"}]}}}",
+			"Description": "The transaction(s) associated with the Bad Debt Write-off.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,PartyId,WriteOffDate,TransactionId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"WriteOffDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TransactionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "cb0fc769-2152-4fb7-aab8-7e66e73d5cff",
+		"Description": "The transaction(s) associated with the Bad Debt Write-off."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xndqsfvvmr",
+	"properties": {
+		"Name": "relationship-xndqsfvvmr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Website",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "WebsiteOwningPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Website.cdm.json/Website\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"WebsiteOwningPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "df64a35b-3532-4d98-870c-1c45fede1fca"
+	},
+	"type": "RELATIONSHIP"
+}

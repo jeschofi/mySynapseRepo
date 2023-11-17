@@ -1,0 +1,170 @@
+{
+	"name": "FuelPumpPos",
+	"properties": {
+		"Name": "FuelPumpPos",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FuelPumpId",
+					"Description": "The unique identifier of a Fuel Pump.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpPos.cdm.json/FuelPumpPos",
+						"Name": "FuelPumpId"
+					}
+				},
+				{
+					"Name": "PointOfSaleId",
+					"Description": "The unique identifier of a POS.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpPos.cdm.json/FuelPumpPos",
+						"Name": "PointOfSaleId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp for which the pos is available for purchases at the fuel pump.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpPos.cdm.json/FuelPumpPos",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp for which the pos is available for purchases at the fuel pump.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpPos.cdm.json/FuelPumpPos",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "FuelPumpPosNote",
+					"Description": "A note, comment or additional information regarding the Fuel Pump POS.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpPos.cdm.json/FuelPumpPos",
+						"Name": "FuelPumpPosNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "88c3c1fb-a73d-4413-9271-bd45bd4307f4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FuelPumpPos",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FuelPumpPos",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FuelPumpId\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"FuelPumpId\"},\"PointOfSaleId\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"PointOfSaleId\"},\"PeriodStartTimestamp\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"PeriodEndTimestamp\"},\"FuelPumpPosNote\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"FuelPumpPosNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FuelPumpPos\",\"path\":\"FuelPumpPos.cdm.json/FuelPumpPos\"},\"description\":\"The Point Of Sale that can be used to purchase fuel purchased at a  Fuel Pump.\",\"primaryKey\":[\"FuelPumpId\",\"PointOfSaleId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"FuelPumpId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Fuel Pump.\",\"isNullable\":false,\"name\":\"FuelPumpId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"PointOfSaleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a POS.\",\"isNullable\":false,\"name\":\"PointOfSaleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the pos is available for purchases at the fuel pump.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp for which the pos is available for purchases at the fuel pump.\",\"isNullable\":false,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"name\":\"FuelPumpPosNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Fuel Pump POS.\",\"isNullable\":true,\"name\":\"FuelPumpPosNote\"}]}}}",
+			"Description": "The Point Of Sale that can be used to purchase fuel purchased at a  Fuel Pump.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "FuelPumpId,PointOfSaleId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FuelPumpId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PointOfSaleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FuelPumpPosNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "02dabbad-4702-4469-816a-52be58e1d564",
+		"Description": "The Point Of Sale that can be used to purchase fuel purchased at a  Fuel Pump."
+	},
+	"type": "TABLE"
+}

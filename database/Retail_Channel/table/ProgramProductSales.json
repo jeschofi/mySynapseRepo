@@ -1,0 +1,189 @@
+{
+	"name": "ProgramProductSales",
+	"properties": {
+		"Name": "ProgramProductSales",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "MarketingProgramId",
+					"Description": "The unique identifier of a Program.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductSales.cdm.json/ProgramProductSales",
+						"Name": "MarketingProgramId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductSales.cdm.json/ProgramProductSales",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductSales.cdm.json/ProgramProductSales",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductSales.cdm.json/ProgramProductSales",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "ProductUnitSales",
+					"Description": "The total number of Product unit sales for the period defined.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductSales.cdm.json/ProgramProductSales",
+						"Name": "ProductUnitSales"
+					}
+				},
+				{
+					"Name": "ProductTotalSalesRevenue",
+					"Description": "The total Product sales revenue realized during the period defined.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductSales.cdm.json/ProgramProductSales",
+						"Name": "ProductTotalSalesRevenue"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8b2324c7-75a0-42d0-b987-87addf052fd5",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProgramProductSales",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProgramProductSales",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"MarketingProgramId\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"MarketingProgramId\"},\"ProductId\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"ProductId\"},\"PeriodStartDate\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"PeriodEndDate\"},\"ProductUnitSales\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"ProductUnitSales\"},\"ProductTotalSalesRevenue\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"ProductTotalSalesRevenue\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProgramProductSales\",\"path\":\"ProgramProductSales.cdm.json/ProgramProductSales\"},\"description\":\"The Products/Services associated with a Program as well as their unit and total sales revenues for a defined period of time.\",\"primaryKey\":[\"MarketingProgramId\",\"ProductId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"MarketingProgramId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Program.\",\"isNullable\":false,\"name\":\"MarketingProgramId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"ProductUnitSales\"},\"dataType\":\"integer\",\"description\":\"The total number of Product unit sales for the period defined.\",\"isNullable\":true,\"name\":\"ProductUnitSales\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductSales.cdm.json/ProgramProductSales\",\"name\":\"ProductTotalSalesRevenue\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total Product sales revenue realized during the period defined.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProductTotalSalesRevenue\"}]}}}",
+			"Description": "The Products/Services associated with a Program as well as their unit and total sales revenues for a defined period of time.",
+			"DisplayFolderInfo": "{\"name\":\"Marketing & Advertising\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "MarketingProgramId,ProductId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"MarketingProgramId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductUnitSales\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductTotalSalesRevenue\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "ceeabec8-768d-4b72-a789-54843d80bf61",
+		"Description": "The Products/Services associated with a Program as well as their unit and total sales revenues for a defined period of time."
+	},
+	"type": "TABLE"
+}

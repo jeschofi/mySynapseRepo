@@ -1,0 +1,341 @@
+{
+	"name": "ChannelProductPriceList",
+	"properties": {
+		"Name": "ChannelProductPriceList",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "PriceListTypeId",
+					"Description": "The unique identifier of a Price List Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "PriceListTypeId"
+					}
+				},
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "CountryId"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "IsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "PricingUomId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "PricingUomId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the Product Price List is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the Product Price List is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "ProductPriceListId",
+					"Description": "The unique identifier of a Product Price List.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "ProductPriceListId"
+					}
+				},
+				{
+					"Name": "SuggestedRetailPrice",
+					"Description": "The Standard, or default, price charged by retailers to the public for the Product.\n\nThe price of a Product published in a catalog, advertisement or printed list from which discounts, if any, may be subtracted. \n\nThis is the price that normally appears in catalogs, on purchase orders and invoices.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "SuggestedRetailPrice"
+					}
+				},
+				{
+					"Name": "TargetReturnPrice",
+					"Description": "A price established as part of a strategy to yield a specific return on investment.\n\nTarget-Return Price = (unit cost) + ((desired return)*(invested capital))/unit sales\n\nThe Target-Return Price ignores competitor's pricing and price elasticity.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "TargetReturnPrice"
+					}
+				},
+				{
+					"Name": "StandardCost",
+					"Description": "The estimated or calculated cost to manufacture or produce the Product.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "StandardCost"
+					}
+				},
+				{
+					"Name": "MarginAmount",
+					"Description": "The difference between the price of a Product and the cost to produce it.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "MarginAmount"
+					}
+				},
+				{
+					"Name": "BreakEventPointAmount",
+					"Description": "Identifies the relationship between a Product's fixed and variable costs and revenue-profits based on the number of products sold or \"how many units must be sold to make a profit\".\n\nBreak Even Point = (Fixed Cost/(Unit Price - Unit Variable Cost))\n\nExample:\n\nA company invests $250,000 (fixed costs) into developing a new Product that sells for $10 per Product.   Variable costs are determined to be $5 per unit.\n\nThe Break Even Point is 50,000.    50,000 products must be sold for the company to recover its investment and begin to realize profits.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductPriceList.cdm.json/ChannelProductPriceList",
+						"Name": "BreakEventPointAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "dbc1cb0c-749a-431b-824f-f043fee5cae8",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelProductPriceList",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelProductPriceList",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"ChannelId\"},\"ProductId\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"ProductId\"},\"PriceListTypeId\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PriceListTypeId\"},\"CountryId\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"CountryId\"},\"IsoCurrencyCode\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"IsoCurrencyCode\"},\"PricingUomId\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PricingUomId\"},\"PeriodStartDate\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PeriodEndDate\"},\"ProductPriceListId\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"ProductPriceListId\"},\"SuggestedRetailPrice\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"SuggestedRetailPrice\"},\"TargetReturnPrice\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"TargetReturnPrice\"},\"StandardCost\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"StandardCost\"},\"MarginAmount\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"MarginAmount\"},\"BreakEventPointAmount\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"BreakEventPointAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelProductPriceList\",\"path\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\"},\"description\":\"The Price List for a Product as defined for a Country for a specific Channel for a specific period.\",\"primaryKey\":[\"ChannelId\",\"ProductId\",\"PriceListTypeId\",\"CountryId\",\"IsoCurrencyCode\",\"PricingUomId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PriceListTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Price List Type.\",\"isNullable\":false,\"name\":\"PriceListTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":false,\"name\":\"CountryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":false,\"name\":\"IsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PricingUomId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":false,\"name\":\"PricingUomId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Product Price List is defined.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the Product Price List is defined.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"ProductPriceListId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Price List.\",\"isNullable\":false,\"name\":\"ProductPriceListId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"SuggestedRetailPrice\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Standard, or default, price charged by retailers to the public for the Product.\\n\\nThe price of a Product published in a catalog, advertisement or printed list from which discounts, if any, may be subtracted. \\n\\nThis is the price that normally appears in catalogs, on purchase orders and invoices.\",\"isNullable\":true,\"scale\":2,\"name\":\"SuggestedRetailPrice\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"TargetReturnPrice\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"A price established as part of a strategy to yield a specific return on investment.\\n\\nTarget-Return Price = (unit cost) + ((desired return)*(invested capital))/unit sales\\n\\nThe Target-Return Price ignores competitor's pricing and price elasticity.\",\"isNullable\":true,\"scale\":2,\"name\":\"TargetReturnPrice\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"StandardCost\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The estimated or calculated cost to manufacture or produce the Product.\",\"isNullable\":true,\"scale\":2,\"name\":\"StandardCost\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"MarginAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The difference between the price of a Product and the cost to produce it.\",\"isNullable\":true,\"scale\":2,\"name\":\"MarginAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"name\":\"BreakEventPointAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Identifies the relationship between a Product's fixed and variable costs and revenue-profits based on the number of products sold or \\\"how many units must be sold to make a profit\\\".\\n\\nBreak Even Point = (Fixed Cost/(Unit Price - Unit Variable Cost))\\n\\nExample:\\n\\nA company invests $250,000 (fixed costs) into developing a new Product that sells for $10 per Product.   Variable costs are determined to be $5 per unit.\\n\\nThe Break Even Point is 50,000.    50,000 products must be sold for the company to recover its investment and begin to realize profits.\",\"isNullable\":true,\"scale\":2,\"name\":\"BreakEventPointAmount\"}]}}}",
+			"Description": "The Price List for a Product as defined for a Country for a specific Channel for a specific period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,ProductId,PriceListTypeId,CountryId,IsoCurrencyCode,PricingUomId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PriceListTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PricingUomId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductPriceListId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SuggestedRetailPrice\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TargetReturnPrice\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StandardCost\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarginAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BreakEventPointAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "f7e257a4-456f-4585-a8a5-d7cf00fe000f",
+		"Description": "The Price List for a Product as defined for a Country for a specific Channel for a specific period."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,248 @@
+{
+	"name": "ItemDisplayInteraction",
+	"properties": {
+		"Name": "ItemDisplayInteraction",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ItemDisplayInteractionId",
+					"Description": "The unique identifier of an Item Display Interaction.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "ItemDisplayInteractionId"
+					}
+				},
+				{
+					"Name": "ShopperItemInteractionStartTimestamp",
+					"Description": "The start timestamp for which the Item Display Interaction is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "ShopperItemInteractionStartTimestamp"
+					}
+				},
+				{
+					"Name": "ShopperItemInteractionEndTimestamp",
+					"Description": "The end timestamp for which the Item Display Interaction is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "ShopperItemInteractionEndTimestamp"
+					}
+				},
+				{
+					"Name": "ShopperProductInteractionTypeId",
+					"Description": "The unique identifier of a Shopper Product Interaction Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "ShopperProductInteractionTypeId"
+					}
+				},
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "DisplayLocationId",
+					"Description": "The unique identifier of a location within a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "DisplayLocationId"
+					}
+				},
+				{
+					"Name": "DisplayLocationPeriodStartDate",
+					"Description": "The period start date for which the Store Display Location is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "DisplayLocationPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ItemSku",
+					"Description": "The Stock Keeping Unit identifier, which is typically used for inventory-related activities.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 40,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "ItemSku"
+					}
+				},
+				{
+					"Name": "StoreDisplayLocationItemInventoryTimestamp",
+					"Description": "The timestamp of the Store Display Location Item Inventory.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ItemDisplayInteraction.cdm.json/ItemDisplayInteraction",
+						"Name": "StoreDisplayLocationItemInventoryTimestamp"
+					}
+				}
+			],
+			"ColumnSetEntityName": "74aaf67b-459e-4c70-8145-a06eaab02d4c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ItemDisplayInteraction",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ItemDisplayInteraction",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ItemDisplayInteractionId\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ItemDisplayInteractionId\"},\"ShopperItemInteractionStartTimestamp\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ShopperItemInteractionStartTimestamp\"},\"ShopperItemInteractionEndTimestamp\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ShopperItemInteractionEndTimestamp\"},\"ShopperProductInteractionTypeId\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ShopperProductInteractionTypeId\"},\"StoreId\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"StoreId\"},\"DisplayLocationId\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"DisplayLocationId\"},\"DisplayLocationPeriodStartDate\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"DisplayLocationPeriodStartDate\"},\"ItemSku\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ItemSku\"},\"StoreDisplayLocationItemInventoryTimestamp\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"StoreDisplayLocationItemInventoryTimestamp\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ItemDisplayInteraction\",\"path\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\"},\"description\":\"A shopper may have different types of interactions with displayed (stocked) items as the shopper makes their journey through the store.  There can be many interactions of the same type with the same item and display, for the same time interval.\",\"primaryKey\":[\"ItemDisplayInteractionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ItemDisplayInteractionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Item Display Interaction.\",\"isNullable\":false,\"name\":\"ItemDisplayInteractionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ShopperItemInteractionStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The start timestamp for which the Item Display Interaction is in-effect.\",\"isNullable\":true,\"name\":\"ShopperItemInteractionStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ShopperItemInteractionEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The end timestamp for which the Item Display Interaction is in-effect.\",\"isNullable\":true,\"name\":\"ShopperItemInteractionEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ShopperProductInteractionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Shopper Product Interaction Type.\",\"isNullable\":true,\"name\":\"ShopperProductInteractionTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"DisplayLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a location within a Store.\",\"isNullable\":false,\"name\":\"DisplayLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"DisplayLocationPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Store Display Location is available for merchandising.\",\"isNullable\":false,\"name\":\"DisplayLocationPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"ItemSku\"},\"dataType\":\"string\",\"dataTypeLength\":40,\"description\":\"The Stock Keeping Unit identifier, which is typically used for inventory-related activities.\",\"isNullable\":false,\"name\":\"ItemSku\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"name\":\"StoreDisplayLocationItemInventoryTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the Store Display Location Item Inventory.\",\"isNullable\":false,\"name\":\"StoreDisplayLocationItemInventoryTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"}]}}}",
+			"Description": "A shopper may have different types of interactions with displayed (stocked) items as the shopper makes their journey through the store.  There can be many interactions of the same type with the same item and display, for the same time interval.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ItemDisplayInteractionId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ItemDisplayInteractionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShopperItemInteractionStartTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperItemInteractionEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperProductInteractionTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DisplayLocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DisplayLocationPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ItemSku\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreDisplayLocationItemInventoryTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "03387c74-202a-45ee-969e-62e29f7146c2",
+		"Description": "A shopper may have different types of interactions with displayed (stocked) items as the shopper makes their journey through the store.  There can be many interactions of the same type with the same item and display, for the same time interval."
+	},
+	"type": "TABLE"
+}

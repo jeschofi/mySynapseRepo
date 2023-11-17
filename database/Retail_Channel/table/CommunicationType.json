@@ -1,0 +1,130 @@
+{
+	"name": "CommunicationType",
+	"properties": {
+		"Name": "CommunicationType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommunicationTypeId",
+					"Description": "The unique identifier of a communication type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationType.cdm.json/CommunicationType",
+						"Name": "CommunicationTypeId"
+					}
+				},
+				{
+					"Name": "CommunicationTypeName",
+					"Description": "The name of a communication type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationType.cdm.json/CommunicationType",
+						"Name": "CommunicationTypeName"
+					}
+				},
+				{
+					"Name": "CommunicationTypeDescription",
+					"Description": "The description of a communication type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationType.cdm.json/CommunicationType",
+						"Name": "CommunicationTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "826a6121-f252-49ff-9347-6b5e154e154f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommunicationType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommunicationType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommunicationTypeId\":{\"entity\":\"CommunicationType.cdm.json/CommunicationType\",\"name\":\"CommunicationTypeId\"},\"CommunicationTypeName\":{\"entity\":\"CommunicationType.cdm.json/CommunicationType\",\"name\":\"CommunicationTypeName\"},\"CommunicationTypeDescription\":{\"entity\":\"CommunicationType.cdm.json/CommunicationType\",\"name\":\"CommunicationTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CommunicationType\",\"path\":\"CommunicationType.cdm.json/CommunicationType\"},\"description\":\"A classification or categorization of communications based on common characteristics or functions.\\n\\nEx:\\n- Scheduling Notification\\n- Schedule Confirmation Request\\n- Overdue Payment Notice\\n- Test Results\\n- Bill/Invoice\\n- Marketing\\n- Shipment Status\\n- Service Request Update / Notice\\n- Service Request Resolution Statement\\n- Breach of Personal Information Notification\\n- Application Review\\n- Contract Negotiation\",\"primaryKey\":[\"CommunicationTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationType.cdm.json/CommunicationType\",\"name\":\"CommunicationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a communication type.\",\"isNullable\":false,\"name\":\"CommunicationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationType.cdm.json/CommunicationType\",\"name\":\"CommunicationTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a communication type.\",\"isNullable\":true,\"name\":\"CommunicationTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationType.cdm.json/CommunicationType\",\"name\":\"CommunicationTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a communication type.\",\"isNullable\":true,\"name\":\"CommunicationTypeDescription\"}]}}}",
+			"Description": "A classification or categorization of communications based on common characteristics or functions.\n\nEx:\n- Scheduling Notification\n- Schedule Confirmation Request\n- Overdue Payment Notice\n- Test Results\n- Bill/Invoice\n- Marketing\n- Shipment Status\n- Service Request Update / Notice\n- Service Request Resolution Statement\n- Breach of Personal Information Notification\n- Application Review\n- Contract Negotiation",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#502006\"}",
+			"PrimaryKeys": "CommunicationTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommunicationTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommunicationTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommunicationTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "96fcdb25-2711-45ff-befe-a9fa435892f0",
+		"Description": "A classification or categorization of communications based on common characteristics or functions.\n\nEx:\n- Scheduling Notification\n- Schedule Confirmation Request\n- Overdue Payment Notice\n- Test Results\n- Bill/Invoice\n- Marketing\n- Shipment Status\n- Service Request Update / Notice\n- Service Request Resolution Statement\n- Breach of Personal Information Notification\n- Application Review\n- Contract Negotiation"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,189 @@
+{
+	"name": "ShopperSession",
+	"properties": {
+		"Name": "ShopperSession",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ShopperSessionId",
+					"Description": "The unique identifier of a Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperSession.cdm.json/ShopperSession",
+						"Name": "ShopperSessionId"
+					}
+				},
+				{
+					"Name": "SessionStartTimestamp",
+					"Description": "The start timestamp for which the session is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperSession.cdm.json/ShopperSession",
+						"Name": "SessionStartTimestamp"
+					}
+				},
+				{
+					"Name": "SessionEndTimestamp",
+					"Description": "The end timestamp for which the session is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperSession.cdm.json/ShopperSession",
+						"Name": "SessionEndTimestamp"
+					}
+				},
+				{
+					"Name": "VisitId",
+					"Description": "The unique identifier of a Visit.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperSession.cdm.json/ShopperSession",
+						"Name": "VisitId"
+					}
+				},
+				{
+					"Name": "CustomerId",
+					"Description": "The unique identifier of a Customer.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperSession.cdm.json/ShopperSession",
+						"Name": "CustomerId"
+					}
+				},
+				{
+					"Name": "ShopperSessionNote",
+					"Description": "A note, comment or additional information regarding the Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperSession.cdm.json/ShopperSession",
+						"Name": "ShopperSessionNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f49df54a-b14e-4f8f-99c8-6824966d8342",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperSession",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperSession",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ShopperSessionId\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"ShopperSessionId\"},\"SessionStartTimestamp\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"SessionStartTimestamp\"},\"SessionEndTimestamp\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"SessionEndTimestamp\"},\"VisitId\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"VisitId\"},\"CustomerId\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"CustomerId\"},\"ShopperSessionNote\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"ShopperSessionNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ShopperSession\",\"path\":\"ShopperSession.cdm.json/ShopperSession\"},\"description\":\"A shopper session occurs when a person enters a store and ends when that person leaves the store.  It may be part of a visit, which includes 1 or more individuals in a group.  The shopper might be identifiable as a specific customer.  The ability to correlate a shopper to a customer is also subject to privacy regulations.\",\"primaryKey\":[\"ShopperSessionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"ShopperSessionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Shopper Session.\",\"isNullable\":false,\"name\":\"ShopperSessionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"SessionStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The start timestamp for which the session is in-effect.\",\"isNullable\":false,\"name\":\"SessionStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"SessionEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The end timestamp for which the session is in-effect.\",\"isNullable\":true,\"name\":\"SessionEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"VisitId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Visit.\",\"isNullable\":true,\"name\":\"VisitId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"CustomerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer.\",\"isNullable\":true,\"name\":\"CustomerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperSession.cdm.json/ShopperSession\",\"name\":\"ShopperSessionNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Shopper Session.\",\"isNullable\":true,\"name\":\"ShopperSessionNote\"}]}}}",
+			"Description": "A shopper session occurs when a person enters a store and ends when that person leaves the store.  It may be part of a visit, which includes 1 or more individuals in a group.  The shopper might be identifiable as a specific customer.  The ability to correlate a shopper to a customer is also subject to privacy regulations.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ShopperSessionId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ShopperSessionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SessionStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SessionEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VisitId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperSessionNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "591f9f51-c3e8-4e80-8db3-82fe17e87b04",
+		"Description": "A shopper session occurs when a person enters a store and ends when that person leaves the store.  It may be part of a visit, which includes 1 or more individuals in a group.  The shopper might be identifiable as a specific customer.  The ability to correlate a shopper to a customer is also subject to privacy regulations."
+	},
+	"type": "TABLE"
+}

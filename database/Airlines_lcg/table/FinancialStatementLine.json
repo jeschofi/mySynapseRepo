@@ -1,0 +1,252 @@
+{
+	"name": "FinancialStatementLine",
+	"properties": {
+		"Name": "FinancialStatementLine",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "FinancialStatementId",
+					"Description": "The unique identifier of a Financial Statement.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "FinancialStatementId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the financial statement is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the financial statement is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "FinancialStatementLineId",
+					"Description": "The unique identifier of a Financial Statement Line.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "FinancialStatementLineId"
+					}
+				},
+				{
+					"Name": "FinancialStatementLineText",
+					"Description": "The text that appears in the first column of each line.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "FinancialStatementLineText"
+					}
+				},
+				{
+					"Name": "TextIndicator",
+					"Description": "Indicates whether the values presented on the line will contain text.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "TextIndicator"
+					}
+				},
+				{
+					"Name": "NumericIndicator",
+					"Description": "Indicates whether the values presented on the line will be numeric.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "NumericIndicator"
+					}
+				},
+				{
+					"Name": "PercentageIndicator",
+					"Description": "Indicates whether the values presented on the line will contain percentages.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementLine.cdm.json/FinancialStatementLine",
+						"Name": "PercentageIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c2d6d914-5137-4c84-8da7-2a80479914d7",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialStatementLine",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialStatementLine",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"LegalEntityId\"},\"FinancialStatementId\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"FinancialStatementId\"},\"PeriodStartDate\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"PeriodEndDate\"},\"FinancialStatementLineId\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"FinancialStatementLineId\"},\"FinancialStatementLineText\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"FinancialStatementLineText\"},\"TextIndicator\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"TextIndicator\"},\"NumericIndicator\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"NumericIndicator\"},\"PercentageIndicator\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"PercentageIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FinancialStatementLine\",\"path\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\"},\"description\":\"A line (row) of a financial statement. Each row will contain values that are representative of the attributes associated with the line.\",\"primaryKey\":[\"LegalEntityId\",\"FinancialStatementId\",\"PeriodStartDate\",\"PeriodEndDate\",\"FinancialStatementLineId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"FinancialStatementId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Financial Statement.\",\"isNullable\":false,\"name\":\"FinancialStatementId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the financial statement is prepared.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the financial statement is prepared.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"FinancialStatementLineId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Financial Statement Line.\",\"isNullable\":false,\"name\":\"FinancialStatementLineId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"FinancialStatementLineText\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The text that appears in the first column of each line.\",\"isNullable\":true,\"name\":\"FinancialStatementLineText\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"TextIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the values presented on the line will contain text.\",\"isNullable\":true,\"name\":\"TextIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"NumericIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the values presented on the line will be numeric.\",\"isNullable\":true,\"name\":\"NumericIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementLine.cdm.json/FinancialStatementLine\",\"name\":\"PercentageIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the values presented on the line will contain percentages.\",\"isNullable\":true,\"name\":\"PercentageIndicator\"}]}}}",
+			"Description": "A line (row) of a financial statement. Each row will contain values that are representative of the attributes associated with the line.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,FinancialStatementId,PeriodStartDate,PeriodEndDate,FinancialStatementLineId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialStatementId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialStatementLineId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialStatementLineText\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TextIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NumericIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PercentageIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5342f380-54ea-45d3-8e86-731e79b8c83a",
+		"Description": "A line (row) of a financial statement. Each row will contain values that are representative of the attributes associated with the line."
+	},
+	"type": "TABLE"
+}

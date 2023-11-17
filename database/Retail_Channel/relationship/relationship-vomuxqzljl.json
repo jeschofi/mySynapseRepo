@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vomuxqzljl",
+	"properties": {
+		"Name": "relationship-vomuxqzljl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RetailProduct",
+		"ToTableName": "ChannelAggregateProductCancellations",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RetailProduct.cdm.json/RetailProduct\",\"toEntity\":\"ChannelAggregateProductCancellations.cdm.json/ChannelAggregateProductCancellations\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "51885d5d-139c-4111-b542-548d44628f39"
+	},
+	"type": "RELATIONSHIP"
+}

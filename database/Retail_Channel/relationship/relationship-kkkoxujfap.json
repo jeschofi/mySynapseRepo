@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kkkoxujfap",
+	"properties": {
+		"Name": "relationship-kkkoxujfap",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelOrderCommission",
+		"ToTableName": "ChannelOrderPartyCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TransactionId",
+				"ToColumnName": "TransactionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelOrderCommission.cdm.json/ChannelOrderCommission\",\"toEntity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"joinPairs\":[{\"fromAttribute\":\"TransactionId\",\"toAttribute\":\"TransactionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a503678a-7b48-4009-a912-50ff96ecc46b"
+	},
+	"type": "RELATIONSHIP"
+}

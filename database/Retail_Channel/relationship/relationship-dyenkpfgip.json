@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dyenkpfgip",
+	"properties": {
+		"Name": "relationship-dyenkpfgip",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Franchisee",
+		"ToTableName": "Royalty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FranchiseeId",
+				"ToColumnName": "FranchiseeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Franchisee.cdm.json/Franchisee\",\"toEntity\":\"Royalty.cdm.json/Royalty\",\"joinPairs\":[{\"fromAttribute\":\"FranchiseeId\",\"toAttribute\":\"FranchiseeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8e99e12c-a868-4a0e-abea-0424760350d0"
+	},
+	"type": "RELATIONSHIP"
+}

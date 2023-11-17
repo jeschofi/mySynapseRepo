@@ -1,0 +1,214 @@
+{
+	"name": "LineOfCreditDraw",
+	"properties": {
+		"Name": "LineOfCreditDraw",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.\n\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCreditDraw.cdm.json/LineOfCreditDraw",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "LineOfCreditProvidingPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCreditDraw.cdm.json/LineOfCreditDraw",
+						"Name": "LineOfCreditProvidingPartyId"
+					}
+				},
+				{
+					"Name": "LineOfCreditPeriodStartDate",
+					"Description": "The period starting date for which the line of credit is established.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCreditDraw.cdm.json/LineOfCreditDraw",
+						"Name": "LineOfCreditPeriodStartDate"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCreditDraw.cdm.json/LineOfCreditDraw",
+						"Name": "IsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "DrawTimestamp",
+					"Description": "The timestamp of the draw.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCreditDraw.cdm.json/LineOfCreditDraw",
+						"Name": "DrawTimestamp"
+					}
+				},
+				{
+					"Name": "DrawAmount",
+					"Description": "The amount of the draw in the associated currency.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCreditDraw.cdm.json/LineOfCreditDraw",
+						"Name": "DrawAmount"
+					}
+				},
+				{
+					"Name": "DrawNote",
+					"Description": "A note, comment or additional information regarding the line of credit draw.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LineOfCreditDraw.cdm.json/LineOfCreditDraw",
+						"Name": "DrawNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0d86e198-e826-4faf-85a5-2459fc33d52c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LineOfCreditDraw",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LineOfCreditDraw",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"LegalEntityId\"},\"LineOfCreditProvidingPartyId\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"LineOfCreditProvidingPartyId\"},\"LineOfCreditPeriodStartDate\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"LineOfCreditPeriodStartDate\"},\"IsoCurrencyCode\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"IsoCurrencyCode\"},\"DrawTimestamp\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"DrawTimestamp\"},\"DrawAmount\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"DrawAmount\"},\"DrawNote\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"DrawNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LineOfCreditDraw\",\"path\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\"},\"description\":\"The draw by the legal entity against a line of credit in the associated currency and as of the indicated date.\",\"primaryKey\":[\"LegalEntityId\",\"LineOfCreditProvidingPartyId\",\"LineOfCreditPeriodStartDate\",\"IsoCurrencyCode\",\"DrawTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\\n\\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"LineOfCreditProvidingPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"LineOfCreditProvidingPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"LineOfCreditPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period starting date for which the line of credit is established.\",\"isNullable\":false,\"name\":\"LineOfCreditPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":false,\"name\":\"IsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"DrawTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the draw.\",\"isNullable\":false,\"name\":\"DrawTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"DrawAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the draw in the associated currency.\",\"isNullable\":true,\"scale\":2,\"name\":\"DrawAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"name\":\"DrawNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the line of credit draw.\",\"isNullable\":true,\"name\":\"DrawNote\"}]}}}",
+			"Description": "The draw by the legal entity against a line of credit in the associated currency and as of the indicated date.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,LineOfCreditProvidingPartyId,LineOfCreditPeriodStartDate,IsoCurrencyCode,DrawTimestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LineOfCreditProvidingPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LineOfCreditPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DrawTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DrawAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DrawNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d5570bd8-6da5-4cce-a8ba-88a0d61e3338",
+		"Description": "The draw by the legal entity against a line of credit in the associated currency and as of the indicated date."
+	},
+	"type": "TABLE"
+}

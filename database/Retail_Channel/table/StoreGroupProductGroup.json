@@ -1,0 +1,170 @@
+{
+	"name": "StoreGroupProductGroup",
+	"properties": {
+		"Name": "StoreGroupProductGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreGroupId",
+					"Description": "The unique identifier of a Store Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupProductGroup.cdm.json/StoreGroupProductGroup",
+						"Name": "StoreGroupId"
+					}
+				},
+				{
+					"Name": "ProductGroupId",
+					"Description": "The unique identifier of a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupProductGroup.cdm.json/StoreGroupProductGroup",
+						"Name": "ProductGroupId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date of the store group product group relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupProductGroup.cdm.json/StoreGroupProductGroup",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date of the store group product group relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupProductGroup.cdm.json/StoreGroupProductGroup",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "StoreGroupProductGroupNote",
+					"Description": "A note, comment or additional information regarding the store group product group affiliation.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupProductGroup.cdm.json/StoreGroupProductGroup",
+						"Name": "StoreGroupProductGroupNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "869ff4cf-a382-4f0f-b1fd-cd7474cd05b4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreGroupProductGroup",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreGroupProductGroup",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreGroupId\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"StoreGroupId\"},\"ProductGroupId\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"ProductGroupId\"},\"PeriodStartDate\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"PeriodEndDate\"},\"StoreGroupProductGroupNote\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"StoreGroupProductGroupNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreGroupProductGroup\",\"path\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\"},\"description\":\"An association between a Store Group and a Product Group.\",\"primaryKey\":[\"StoreGroupId\",\"ProductGroupId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"StoreGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Group.\",\"isNullable\":false,\"name\":\"StoreGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"ProductGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Group.\",\"isNullable\":false,\"name\":\"ProductGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date of the store group product group relationship.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date of the store group product group relationship.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"name\":\"StoreGroupProductGroupNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the store group product group affiliation.\",\"isNullable\":true,\"name\":\"StoreGroupProductGroupNote\"}]}}}",
+			"Description": "An association between a Store Group and a Product Group.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "StoreGroupId,ProductGroupId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreGroupProductGroupNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d81d0721-11fd-4f2a-b2d8-32c5e3606860",
+		"Description": "An association between a Store Group and a Product Group."
+	},
+	"type": "TABLE"
+}

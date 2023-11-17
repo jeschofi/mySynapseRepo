@@ -1,0 +1,194 @@
+{
+	"name": "FinancialProductRating",
+	"properties": {
+		"Name": "FinancialProductRating",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FinancialProductId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductRating.cdm.json/FinancialProductRating",
+						"Name": "FinancialProductId"
+					}
+				},
+				{
+					"Name": "CreditRatingAgencyId",
+					"Description": "The unique identifier of a Credit Rating Agency.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductRating.cdm.json/FinancialProductRating",
+						"Name": "CreditRatingAgencyId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the rating was effective.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductRating.cdm.json/FinancialProductRating",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "CreditRatingAgencyRatingId",
+					"Description": "The unique identifier of a credit rating agency rating.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductRating.cdm.json/FinancialProductRating",
+						"Name": "CreditRatingAgencyRatingId"
+					}
+				},
+				{
+					"Name": "FinancialProductRating",
+					"Description": "The rating of the financial product for the associated period.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductRating.cdm.json/FinancialProductRating",
+						"Name": "FinancialProductRating"
+					}
+				},
+				{
+					"Name": "FinancialProductRatingNote",
+					"Description": "A note, comment or additional information regarding the financial product rating.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductRating.cdm.json/FinancialProductRating",
+						"Name": "FinancialProductRatingNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "298b2468-404b-4bbb-b042-100ddbc35256",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialProductRating",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialProductRating",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FinancialProductId\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"FinancialProductId\"},\"CreditRatingAgencyId\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"CreditRatingAgencyId\"},\"Timestamp\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"Timestamp\"},\"CreditRatingAgencyRatingId\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"CreditRatingAgencyRatingId\"},\"FinancialProductRating\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"FinancialProductRating\"},\"FinancialProductRatingNote\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"FinancialProductRatingNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FinancialProductRating\",\"path\":\"FinancialProductRating.cdm.json/FinancialProductRating\"},\"description\":\"The financial product rating for the Financial Product for the associated period.\\n\\nEx:\\nFitch Investors Service bond ratings:\\n------------------------------------------------\\nHighest quality = AAA\\nHigh quality = AA\\nUpper medium quality = A\\nMedium grade = BBB\\nSomewhat speculative = BB\\nLow grade, speculative = B\\nLow grade, default possible = CCC\\nLow grade, partial recovery possible = CC\\nImminent default = C\\nDefault = D\",\"primaryKey\":[\"FinancialProductId\",\"CreditRatingAgencyId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"FinancialProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"FinancialProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"CreditRatingAgencyId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Credit Rating Agency.\",\"isNullable\":true,\"name\":\"CreditRatingAgencyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the rating was effective.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"CreditRatingAgencyRatingId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a credit rating agency rating.\",\"isNullable\":true,\"name\":\"CreditRatingAgencyRatingId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"FinancialProductRating\"},\"dataType\":\"integer\",\"description\":\"The rating of the financial product for the associated period.\",\"isNullable\":true,\"name\":\"FinancialProductRating\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"name\":\"FinancialProductRatingNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the financial product rating.\",\"isNullable\":true,\"name\":\"FinancialProductRatingNote\"}]}}}",
+			"Description": "The financial product rating for the Financial Product for the associated period.\n\nEx:\nFitch Investors Service bond ratings:\n------------------------------------------------\nHighest quality = AAA\nHigh quality = AA\nUpper medium quality = A\nMedium grade = BBB\nSomewhat speculative = BB\nLow grade, speculative = B\nLow grade, default possible = CCC\nLow grade, partial recovery possible = CC\nImminent default = C\nDefault = D",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "FinancialProductId,CreditRatingAgencyId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FinancialProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CreditRatingAgencyId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CreditRatingAgencyRatingId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinancialProductRating\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinancialProductRatingNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b4825dab-326d-482d-9960-a7a227188961",
+		"Description": "The financial product rating for the Financial Product for the associated period.\n\nEx:\nFitch Investors Service bond ratings:\n------------------------------------------------\nHighest quality = AAA\nHigh quality = AA\nUpper medium quality = A\nMedium grade = BBB\nSomewhat speculative = BB\nLow grade, speculative = B\nLow grade, default possible = CCC\nLow grade, partial recovery possible = CC\nImminent default = C\nDefault = D"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,418 @@
+{
+	"name": "ShopperPosition",
+	"properties": {
+		"Name": "ShopperPosition",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ShopperSessionId",
+					"Description": "The unique identifier of a Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperSessionId"
+					}
+				},
+				{
+					"Name": "ShopperPositionId",
+					"Description": "The unique identifier of a Shopper Position within a Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperPositionId"
+					}
+				},
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "FloorId",
+					"Description": "The unique identifier of a Floor.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "FloorId"
+					}
+				},
+				{
+					"Name": "FloorPeriodStartDate",
+					"Description": "The period start date for which the store floor is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "FloorPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ShopperPositionStartTimestamp",
+					"Description": "The start timestamp for which the associated shopper position is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperPositionStartTimestamp"
+					}
+				},
+				{
+					"Name": "ShopperPositionEndTimestamp",
+					"Description": "The end timestamp for which the associated shopper position is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperPositionEndTimestamp"
+					}
+				},
+				{
+					"Name": "ShopperAbsolutePositionX",
+					"Description": "An absolute (raw) measurement of the shoppers position based on the  X-Axis.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperAbsolutePositionX"
+					}
+				},
+				{
+					"Name": "ShopperAbsolutePositionY",
+					"Description": "An absolute (raw) measurement of the shoppers position based on the  Y-Axis.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperAbsolutePositionY"
+					}
+				},
+				{
+					"Name": "ShopperAbsolutePositionZ",
+					"Description": "An absolute (raw) measurement of the shoppers position based on the  Z-Axis.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperAbsolutePositionZ"
+					}
+				},
+				{
+					"Name": "ShopperAbsolutePositionUom",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperAbsolutePositionUom"
+					}
+				},
+				{
+					"Name": "ShopperPositionRotationX",
+					"Description": "Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\n\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperPositionRotationX"
+					}
+				},
+				{
+					"Name": "ShopperPositionRotationY",
+					"Description": "Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \n\nA shopper position that is angled downward would be a negative Rotation Y value, whereas a shopper position that is angled upward would be a positive Rotation Y value.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperPositionRotationY"
+					}
+				},
+				{
+					"Name": "ShopperPositionRotationZ",
+					"Description": "Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperPositionRotationZ"
+					}
+				},
+				{
+					"Name": "FloorLocationXCoordinate",
+					"Description": "The floor location x-coordinate of the shopper position.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "FloorLocationXCoordinate"
+					}
+				},
+				{
+					"Name": "FloorLocationYCoordinate",
+					"Description": "The floor location y-coordinate of the shopper position.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "FloorLocationYCoordinate"
+					}
+				},
+				{
+					"Name": "FloorLocationZCoordinate",
+					"Description": "The floor location z-coordinate of the shopper position.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "FloorLocationZCoordinate"
+					}
+				},
+				{
+					"Name": "ShopperPositionTypeId",
+					"Description": "The unique identifier of a Shopper Position Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPosition.cdm.json/ShopperPosition",
+						"Name": "ShopperPositionTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e7b44a4b-15b7-487f-a567-1c5b422bcd08",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperPosition",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperPosition",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ShopperSessionId\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperSessionId\"},\"ShopperPositionId\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionId\"},\"StoreId\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"StoreId\"},\"FloorId\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorId\"},\"FloorPeriodStartDate\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorPeriodStartDate\"},\"ShopperPositionStartTimestamp\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionStartTimestamp\"},\"ShopperPositionEndTimestamp\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionEndTimestamp\"},\"ShopperAbsolutePositionX\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionX\"},\"ShopperAbsolutePositionY\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionY\"},\"ShopperAbsolutePositionZ\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionZ\"},\"ShopperAbsolutePositionUom\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionUom\"},\"ShopperPositionRotationX\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionRotationX\"},\"ShopperPositionRotationY\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionRotationY\"},\"ShopperPositionRotationZ\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionRotationZ\"},\"FloorLocationXCoordinate\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorLocationXCoordinate\"},\"FloorLocationYCoordinate\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorLocationYCoordinate\"},\"FloorLocationZCoordinate\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorLocationZCoordinate\"},\"ShopperPositionTypeId\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ShopperPosition\",\"path\":\"ShopperPosition.cdm.json/ShopperPosition\"},\"description\":\"Shopper Position indicates where a shopper is located within the store layout, as well as the orientation of the shopper or position types that are part of the shopper.\",\"primaryKey\":[\"ShopperSessionId\",\"ShopperPositionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperSessionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Shopper Session.\",\"isNullable\":false,\"name\":\"ShopperSessionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Shopper Position within a Shopper Session.\",\"isNullable\":false,\"name\":\"ShopperPositionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":true,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Floor.\",\"isNullable\":true,\"name\":\"FloorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the store floor is available for merchandising.\",\"isNullable\":true,\"name\":\"FloorPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The start timestamp for which the associated shopper position is in effect.\",\"isNullable\":true,\"name\":\"ShopperPositionStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The end timestamp for which the associated shopper position is in effect.\",\"isNullable\":true,\"name\":\"ShopperPositionEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionX\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"An absolute (raw) measurement of the shoppers position based on the  X-Axis.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShopperAbsolutePositionX\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionY\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"An absolute (raw) measurement of the shoppers position based on the  Y-Axis.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShopperAbsolutePositionY\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionZ\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"An absolute (raw) measurement of the shoppers position based on the  Z-Axis.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShopperAbsolutePositionZ\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperAbsolutePositionUom\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"ShopperAbsolutePositionUom\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionRotationX\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\\n\\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShopperPositionRotationX\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionRotationY\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \\n\\nA shopper position that is angled downward would be a negative Rotation Y value, whereas a shopper position that is angled upward would be a positive Rotation Y value.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShopperPositionRotationY\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionRotationZ\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShopperPositionRotationZ\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorLocationXCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location x-coordinate of the shopper position.\",\"isNullable\":true,\"name\":\"FloorLocationXCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorLocationYCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location y-coordinate of the shopper position.\",\"isNullable\":true,\"name\":\"FloorLocationYCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"FloorLocationZCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location z-coordinate of the shopper position.\",\"isNullable\":true,\"name\":\"FloorLocationZCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"name\":\"ShopperPositionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Shopper Position Type.\",\"isNullable\":true,\"name\":\"ShopperPositionTypeId\"}]}}}",
+			"Description": "Shopper Position indicates where a shopper is located within the store layout, as well as the orientation of the shopper or position types that are part of the shopper.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ShopperSessionId,ShopperPositionId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ShopperSessionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShopperPositionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorPeriodStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperPositionStartTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperPositionEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperAbsolutePositionX\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperAbsolutePositionY\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperAbsolutePositionZ\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperAbsolutePositionUom\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperPositionRotationX\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperPositionRotationY\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperPositionRotationZ\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationXCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationYCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationZCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperPositionTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "a9682ed7-72b9-4990-b30b-bad23103e2d0",
+		"Description": "Shopper Position indicates where a shopper is located within the store layout, as well as the orientation of the shopper or position types that are part of the shopper."
+	},
+	"type": "TABLE"
+}

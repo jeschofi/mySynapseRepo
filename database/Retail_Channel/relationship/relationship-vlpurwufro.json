@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vlpurwufro",
+	"properties": {
+		"Name": "relationship-vlpurwufro",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Atm",
+		"ToTableName": "AtmService",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmId",
+				"ToColumnName": "AtmId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Atm.cdm.json/Atm\",\"toEntity\":\"AtmService.cdm.json/AtmService\",\"joinPairs\":[{\"fromAttribute\":\"AtmId\",\"toAttribute\":\"AtmId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dee2c9e6-7feb-402f-9a6a-32f4881b4d46"
+	},
+	"type": "RELATIONSHIP"
+}

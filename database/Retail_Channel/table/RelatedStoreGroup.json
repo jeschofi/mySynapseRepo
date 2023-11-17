@@ -1,0 +1,189 @@
+{
+	"name": "RelatedStoreGroup",
+	"properties": {
+		"Name": "RelatedStoreGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreGroupId",
+					"Description": "The unique identifier of a Store Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedStoreGroup.cdm.json/RelatedStoreGroup",
+						"Name": "StoreGroupId"
+					}
+				},
+				{
+					"Name": "RelatedStoreGroupId",
+					"Description": "The unique identifier of a Store Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedStoreGroup.cdm.json/RelatedStoreGroup",
+						"Name": "RelatedStoreGroupId"
+					}
+				},
+				{
+					"Name": "StoreGroupRelationshipTypeId",
+					"Description": "The unique identifier of a Store Group Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedStoreGroup.cdm.json/RelatedStoreGroup",
+						"Name": "StoreGroupRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date of the store relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedStoreGroup.cdm.json/RelatedStoreGroup",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date of the store relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedStoreGroup.cdm.json/RelatedStoreGroup",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "StoreGroupRelationshipNote",
+					"Description": "A note, comment or additional information regarding the store group relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedStoreGroup.cdm.json/RelatedStoreGroup",
+						"Name": "StoreGroupRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b3d8bb69-9712-45c5-a459-8d55f4df8037",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedStoreGroup",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedStoreGroup",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreGroupId\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"StoreGroupId\"},\"RelatedStoreGroupId\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"RelatedStoreGroupId\"},\"StoreGroupRelationshipTypeId\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"StoreGroupRelationshipTypeId\"},\"PeriodStartDate\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"PeriodEndDate\"},\"StoreGroupRelationshipNote\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"StoreGroupRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedStoreGroup\",\"path\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\"},\"description\":\"The relationship of two or more Store Groups.\",\"primaryKey\":[\"StoreGroupId\",\"RelatedStoreGroupId\",\"StoreGroupRelationshipTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"StoreGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Group.\",\"isNullable\":false,\"name\":\"StoreGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"RelatedStoreGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Group.\",\"isNullable\":false,\"name\":\"RelatedStoreGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"StoreGroupRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Group Relationship Type.\",\"isNullable\":false,\"name\":\"StoreGroupRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date of the store relationship.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date of the store relationship.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedStoreGroup.cdm.json/RelatedStoreGroup\",\"name\":\"StoreGroupRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the store group relationship.\",\"isNullable\":true,\"name\":\"StoreGroupRelationshipNote\"}]}}}",
+			"Description": "The relationship of two or more Store Groups.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "StoreGroupId,RelatedStoreGroupId,StoreGroupRelationshipTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedStoreGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreGroupRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreGroupRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "f7309e6a-d44c-42d9-a14a-49f543a589c1",
+		"Description": "The relationship of two or more Store Groups."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cmgoulntyc",
+	"properties": {
+		"Name": "relationship-cmgoulntyc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommunicationType",
+		"ToTableName": "Communication",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommunicationTypeId",
+				"ToColumnName": "CommunicationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommunicationType.cdm.json/CommunicationType\",\"toEntity\":\"Communication.cdm.json/Communication\",\"joinPairs\":[{\"fromAttribute\":\"CommunicationTypeId\",\"toAttribute\":\"CommunicationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bc71fead-284c-4293-99a3-e04607d7e35c"
+	},
+	"type": "RELATIONSHIP"
+}

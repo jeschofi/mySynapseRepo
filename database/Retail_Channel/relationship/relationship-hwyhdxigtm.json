@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hwyhdxigtm",
+	"properties": {
+		"Name": "relationship-hwyhdxigtm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreIndicatorType",
+		"ToTableName": "StoreIndicator",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreIndicatorTypeId",
+				"ToColumnName": "StoreIndicatorTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreIndicatorType.cdm.json/StoreIndicatorType\",\"toEntity\":\"StoreIndicator.cdm.json/StoreIndicator\",\"joinPairs\":[{\"fromAttribute\":\"StoreIndicatorTypeId\",\"toAttribute\":\"StoreIndicatorTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "445de49e-c22d-4472-9206-5ccf925acb0c"
+	},
+	"type": "RELATIONSHIP"
+}

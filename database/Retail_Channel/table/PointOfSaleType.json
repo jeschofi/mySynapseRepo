@@ -1,0 +1,130 @@
+{
+	"name": "PointOfSaleType",
+	"properties": {
+		"Name": "PointOfSaleType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PointOfSaleTypeId",
+					"Description": "The unique identifier of the POS Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PointOfSaleType.cdm.json/PointOfSaleType",
+						"Name": "PointOfSaleTypeId"
+					}
+				},
+				{
+					"Name": "PointOfSaleTypeName",
+					"Description": "The name of the POS Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PointOfSaleType.cdm.json/PointOfSaleType",
+						"Name": "PointOfSaleTypeName"
+					}
+				},
+				{
+					"Name": "PointOfSaleTypeDescription",
+					"Description": "The description of the POS Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PointOfSaleType.cdm.json/PointOfSaleType",
+						"Name": "PointOfSaleTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "76ee17ea-4507-465e-935a-e576b394864b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/PointOfSaleType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/PointOfSaleType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PointOfSaleTypeId\":{\"entity\":\"PointOfSaleType.cdm.json/PointOfSaleType\",\"name\":\"PointOfSaleTypeId\"},\"PointOfSaleTypeName\":{\"entity\":\"PointOfSaleType.cdm.json/PointOfSaleType\",\"name\":\"PointOfSaleTypeName\"},\"PointOfSaleTypeDescription\":{\"entity\":\"PointOfSaleType.cdm.json/PointOfSaleType\",\"name\":\"PointOfSaleTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PointOfSaleType\",\"path\":\"PointOfSaleType.cdm.json/PointOfSaleType\"},\"description\":\"The type of POS based on functionality.\\n\\nEx:\\n- Full-Service\\n- Self-Service\",\"primaryKey\":[\"PointOfSaleTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PointOfSaleType.cdm.json/PointOfSaleType\",\"name\":\"PointOfSaleTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the POS Type.\",\"isNullable\":false,\"name\":\"PointOfSaleTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PointOfSaleType.cdm.json/PointOfSaleType\",\"name\":\"PointOfSaleTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the POS Type.\",\"isNullable\":true,\"name\":\"PointOfSaleTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PointOfSaleType.cdm.json/PointOfSaleType\",\"name\":\"PointOfSaleTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the POS Type.\",\"isNullable\":true,\"name\":\"PointOfSaleTypeDescription\"}]}}}",
+			"Description": "The type of POS based on functionality.\n\nEx:\n- Full-Service\n- Self-Service",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "PointOfSaleTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PointOfSaleTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PointOfSaleTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PointOfSaleTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "20ad053d-0c17-4f2c-be10-5dba1a95aea1",
+		"Description": "The type of POS based on functionality.\n\nEx:\n- Full-Service\n- Self-Service"
+	},
+	"type": "TABLE"
+}

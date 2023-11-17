@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jardkazraf",
+	"properties": {
+		"Name": "relationship-jardkazraf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SecurityIssuer",
+		"ToTableName": "FinancialProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IssuerId",
+				"ToColumnName": "IssuerId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"toEntity\":\"FinancialProduct.cdm.json/FinancialProduct\",\"joinPairs\":[{\"fromAttribute\":\"IssuerId\",\"toAttribute\":\"IssuerId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cb5d929a-58df-4e5b-a942-f58b9832e337"
+	},
+	"type": "RELATIONSHIP"
+}

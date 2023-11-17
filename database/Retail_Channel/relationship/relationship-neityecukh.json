@@ -1,0 +1,29 @@
+{
+	"name": "relationship-neityecukh",
+	"properties": {
+		"Name": "relationship-neityecukh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PointOfSaleType",
+		"ToTableName": "PointOfSale",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PointOfSaleTypeId",
+				"ToColumnName": "PointOfSaleTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PointOfSaleType.cdm.json/PointOfSaleType\",\"toEntity\":\"PointOfSale.cdm.json/PointOfSale\",\"joinPairs\":[{\"fromAttribute\":\"PointOfSaleTypeId\",\"toAttribute\":\"PointOfSaleTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "498416c1-c354-4a07-a037-d0c1dc1d8ded"
+	},
+	"type": "RELATIONSHIP"
+}

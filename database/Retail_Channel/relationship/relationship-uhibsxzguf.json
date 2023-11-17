@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uhibsxzguf",
+	"properties": {
+		"Name": "relationship-uhibsxzguf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelClassification",
+		"ToTableName": "ChannelType",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelClassificationId",
+				"ToColumnName": "ChannelClassificationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelClassification.cdm.json/ChannelClassification\",\"toEntity\":\"ChannelType.cdm.json/ChannelType\",\"joinPairs\":[{\"fromAttribute\":\"ChannelClassificationId\",\"toAttribute\":\"ChannelClassificationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "02b11994-eea3-47d9-b259-42435a71e59e"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "VisitCommunication",
+	"properties": {
+		"Name": "VisitCommunication",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VisitId",
+					"Description": "The unique identifier of a Visit.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VisitCommunication.cdm.json/VisitCommunication",
+						"Name": "VisitId"
+					}
+				},
+				{
+					"Name": "CommunicationId",
+					"Description": "The unique identifier of a service request/contact Communication.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VisitCommunication.cdm.json/VisitCommunication",
+						"Name": "CommunicationId"
+					}
+				},
+				{
+					"Name": "MarketingEventCommunicationNote",
+					"Description": "A note, comment or additional information regarding the marketing event communication.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "VisitCommunication.cdm.json/VisitCommunication",
+						"Name": "MarketingEventCommunicationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e2bb7f24-3d8b-49a5-831e-1c0ea9231589",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/VisitCommunication",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/VisitCommunication",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VisitId\":{\"entity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"name\":\"VisitId\"},\"CommunicationId\":{\"entity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"name\":\"CommunicationId\"},\"MarketingEventCommunicationNote\":{\"entity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"name\":\"MarketingEventCommunicationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"VisitCommunication\",\"path\":\"VisitCommunication.cdm.json/VisitCommunication\"},\"description\":\"A communication related to a visit.\",\"primaryKey\":[\"VisitId\",\"CommunicationId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"name\":\"VisitId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Visit.\",\"isNullable\":false,\"name\":\"VisitId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"name\":\"CommunicationId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a service request/contact Communication.\",\"isNullable\":false,\"name\":\"CommunicationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"name\":\"MarketingEventCommunicationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the marketing event communication.\",\"isNullable\":true,\"name\":\"MarketingEventCommunicationNote\"}]}}}",
+			"Description": "A communication related to a visit.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "VisitId,CommunicationId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VisitId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommunicationId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MarketingEventCommunicationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "2e68e9fb-7391-4eed-8bf0-a46660538738",
+		"Description": "A communication related to a visit."
+	},
+	"type": "TABLE"
+}

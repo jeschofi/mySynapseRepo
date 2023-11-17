@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tteajdiziu",
+	"properties": {
+		"Name": "relationship-tteajdiziu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DurationCalculationMethod",
+		"ToTableName": "BondDuration",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DurationCalculationMethodId",
+				"ToColumnName": "DurationCalculationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DurationCalculationMethod.cdm.json/DurationCalculationMethod\",\"toEntity\":\"BondDuration.cdm.json/BondDuration\",\"joinPairs\":[{\"fromAttribute\":\"DurationCalculationMethodId\",\"toAttribute\":\"DurationCalculationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f479381c-f6c6-40e5-a61b-49e6aa3b5874"
+	},
+	"type": "RELATIONSHIP"
+}

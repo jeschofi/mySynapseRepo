@@ -1,0 +1,29 @@
+{
+	"name": "relationship-galkvobtqj",
+	"properties": {
+		"Name": "relationship-galkvobtqj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocation",
+		"ToTableName": "FuelPump",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreId",
+				"ToColumnName": "StoreId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"toEntity\":\"FuelPump.cdm.json/FuelPump\",\"joinPairs\":[{\"fromAttribute\":\"StoreId\",\"toAttribute\":\"StoreId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "de1ecd81-db76-4868-a793-2ca9ddddb261"
+	},
+	"type": "RELATIONSHIP"
+}

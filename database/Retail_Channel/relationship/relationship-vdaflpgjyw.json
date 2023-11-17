@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vdaflpgjyw",
+	"properties": {
+		"Name": "relationship-vdaflpgjyw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Store",
+		"ToTableName": "StoreFixedCost",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreId",
+				"ToColumnName": "StoreId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Store.cdm.json/Store\",\"toEntity\":\"StoreFixedCost.cdm.json/StoreFixedCost\",\"joinPairs\":[{\"fromAttribute\":\"StoreId\",\"toAttribute\":\"StoreId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2d80914e-dee5-4510-97b3-779f4a845102"
+	},
+	"type": "RELATIONSHIP"
+}

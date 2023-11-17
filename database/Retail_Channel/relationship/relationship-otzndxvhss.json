@@ -1,0 +1,29 @@
+{
+	"name": "relationship-otzndxvhss",
+	"properties": {
+		"Name": "relationship-otzndxvhss",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelPartyRelationshipType",
+		"ToTableName": "ChannelRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelPartyRelationshipTypeId",
+				"ToColumnName": "ChannelPartyRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\",\"toEntity\":\"ChannelRelatedParty.cdm.json/ChannelRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"ChannelPartyRelationshipTypeId\",\"toAttribute\":\"ChannelPartyRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "de878afb-489e-4cfc-9e80-5b0a4c5b9451"
+	},
+	"type": "RELATIONSHIP"
+}

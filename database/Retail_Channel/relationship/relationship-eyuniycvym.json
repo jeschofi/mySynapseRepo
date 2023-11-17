@@ -1,0 +1,29 @@
+{
+	"name": "relationship-eyuniycvym",
+	"properties": {
+		"Name": "relationship-eyuniycvym",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocationType",
+		"ToTableName": "StoreServiceLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreServiceLocationTypeId",
+				"ToColumnName": "StoreServiceLocationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"toEntity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"joinPairs\":[{\"fromAttribute\":\"StoreServiceLocationTypeId\",\"toAttribute\":\"StoreServiceLocationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8ead49d4-d61c-42a8-941a-a93d83b68f53"
+	},
+	"type": "RELATIONSHIP"
+}

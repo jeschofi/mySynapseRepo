@@ -1,0 +1,195 @@
+{
+	"name": "RelatedLegalEntity",
+	"properties": {
+		"Name": "RelatedLegalEntity",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.\n\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedLegalEntity.cdm.json/RelatedLegalEntity",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "RelatedLegalEntityId",
+					"Description": "The unique identifier of a related Legal Entity.\n\nIn this case it is the business, organization or legal entity who books are being recorded and financial statements presented.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedLegalEntity.cdm.json/RelatedLegalEntity",
+						"Name": "RelatedLegalEntityId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date of the legal entity relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedLegalEntity.cdm.json/RelatedLegalEntity",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date of the legal entity relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedLegalEntity.cdm.json/RelatedLegalEntity",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "LegalEntityRelationshipTypeId",
+					"Description": "The unique identifier of the Legal Entity Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedLegalEntity.cdm.json/RelatedLegalEntity",
+						"Name": "LegalEntityRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "LegalEntityRelationshipNote",
+					"Description": "A note, comment or additional information regarding the related legal entities.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedLegalEntity.cdm.json/RelatedLegalEntity",
+						"Name": "LegalEntityRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7856e6f6-0cc5-40e4-8803-4f995096521c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/RelatedLegalEntity",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/RelatedLegalEntity",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"LegalEntityId\"},\"RelatedLegalEntityId\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"RelatedLegalEntityId\"},\"PeriodStartDate\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"PeriodEndDate\"},\"LegalEntityRelationshipTypeId\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"LegalEntityRelationshipTypeId\"},\"LegalEntityRelationshipNote\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"LegalEntityRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedLegalEntity\",\"path\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\"},\"description\":\"A legal entity related to the associated legal entity.\\n\\nNote:\\nThis may also be defined by the DUN's relationship/hierarchy.\",\"primaryKey\":[\"LegalEntityId\",\"RelatedLegalEntityId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\\n\\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"RelatedLegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a related Legal Entity.\\n\\nIn this case it is the business, organization or legal entity who books are being recorded and financial statements presented.\",\"isNullable\":false,\"name\":\"RelatedLegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date of the legal entity relationship.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date of the legal entity relationship.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"LegalEntityRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Legal Entity Relationship Type.\",\"isNullable\":true,\"name\":\"LegalEntityRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"name\":\"LegalEntityRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the related legal entities.\",\"isNullable\":true,\"name\":\"LegalEntityRelationshipNote\"}]}}}",
+			"Description": "A legal entity related to the associated legal entity.\n\nNote:\nThis may also be defined by the DUN's relationship/hierarchy.",
+			"DisplayFolderInfo": "{\"name\":\"Legal Entity\",\"colorCode\":\"#00727A\"}",
+			"PrimaryKeys": "LegalEntityId,RelatedLegalEntityId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedLegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LegalEntityRelationshipTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LegalEntityRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "58bdc76a-5b34-4ebd-a2b0-ae957ce8c699",
+		"Description": "A legal entity related to the associated legal entity.\n\nNote:\nThis may also be defined by the DUN's relationship/hierarchy."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gbvbugnnzt",
+	"properties": {
+		"Name": "relationship-gbvbugnnzt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Stock",
+		"ToTableName": "StockIssuedShares",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StockId",
+				"ToColumnName": "StockId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Stock.cdm.json/Stock\",\"toEntity\":\"StockIssuedShares.cdm.json/StockIssuedShares\",\"joinPairs\":[{\"fromAttribute\":\"StockId\",\"toAttribute\":\"StockId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8ad9adae-e030-48f8-9eac-0ccdb8bd1558"
+	},
+	"type": "RELATIONSHIP"
+}

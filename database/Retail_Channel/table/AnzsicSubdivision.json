@@ -1,0 +1,149 @@
+{
+	"name": "AnzsicSubdivision",
+	"properties": {
+		"Name": "AnzsicSubdivision",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AnzsicSubdivisionCode",
+					"Description": "The unique identifier of an ANZSIC Subdivision.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 2,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicSubdivision.cdm.json/AnzsicSubdivision",
+						"Name": "AnzsicSubdivisionCode"
+					}
+				},
+				{
+					"Name": "AnzsicSubdivisionName",
+					"Description": "The name of an ANZSIC Subdivision.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicSubdivision.cdm.json/AnzsicSubdivision",
+						"Name": "AnzsicSubdivisionName"
+					}
+				},
+				{
+					"Name": "AnzsicSubdivisionDescription",
+					"Description": "The description of an ANZSIC Subdivision.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicSubdivision.cdm.json/AnzsicSubdivision",
+						"Name": "AnzsicSubdivisionDescription"
+					}
+				},
+				{
+					"Name": "AnzsicDivisionCode",
+					"Description": "The unique identifier of an ANZSIC Division.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 1,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AnzsicSubdivision.cdm.json/AnzsicSubdivision",
+						"Name": "AnzsicDivisionCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7fa7a18d-00b8-4034-8171-d6ec6ca19663",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AnzsicSubdivision",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AnzsicSubdivision",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AnzsicSubdivisionCode\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicSubdivisionCode\"},\"AnzsicSubdivisionName\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicSubdivisionName\"},\"AnzsicSubdivisionDescription\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicSubdivisionDescription\"},\"AnzsicDivisionCode\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicDivisionCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AnzsicSubdivision\",\"path\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\"},\"description\":\"Subdivisions created to better identify groups of economic activities.\",\"primaryKey\":[\"AnzsicSubdivisionCode\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicSubdivisionCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":2,\"description\":\"The unique identifier of an ANZSIC Subdivision.\",\"isNullable\":false,\"scale\":0,\"name\":\"AnzsicSubdivisionCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicSubdivisionName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an ANZSIC Subdivision.\",\"isNullable\":true,\"name\":\"AnzsicSubdivisionName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicSubdivisionDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an ANZSIC Subdivision.\",\"isNullable\":true,\"name\":\"AnzsicSubdivisionDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"name\":\"AnzsicDivisionCode\"},\"dataType\":\"string\",\"dataTypeLength\":1,\"description\":\"The unique identifier of an ANZSIC Division.\",\"isNullable\":false,\"name\":\"AnzsicDivisionCode\"}]}}}",
+			"Description": "Subdivisions created to better identify groups of economic activities.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "AnzsicSubdivisionCode",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AnzsicSubdivisionCode\",\"type\":\"decimal(2,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AnzsicSubdivisionName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnzsicSubdivisionDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnzsicDivisionCode\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "3b630be0-345c-4a7c-a737-25fe929445f7",
+		"Description": "Subdivisions created to better identify groups of economic activities."
+	},
+	"type": "TABLE"
+}

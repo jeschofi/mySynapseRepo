@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zcomdoflbs",
+	"properties": {
+		"Name": "relationship-zcomdoflbs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingFramework",
+		"ToTableName": "Ledger",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingFrameworkId",
+				"ToColumnName": "AccountingFrameworkId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingFramework.cdm.json/AccountingFramework\",\"toEntity\":\"Ledger.cdm.json/Ledger\",\"joinPairs\":[{\"fromAttribute\":\"AccountingFrameworkId\",\"toAttribute\":\"AccountingFrameworkId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8490b41c-32b0-46f0-8103-037ae8dd8fb2"
+	},
+	"type": "RELATIONSHIP"
+}

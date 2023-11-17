@@ -1,0 +1,727 @@
+{
+	"name": "StatementOfComprehensiveIncome",
+	"properties": {
+		"Name": "StatementOfComprehensiveIncome",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "FinancialStatementId",
+					"Description": "The unique identifier of a Financial Statement.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "FinancialStatementId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the financial statement is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the financial statement is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "Revenue",
+					"Description": "The revenue of the organization during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "Revenue"
+					}
+				},
+				{
+					"Name": "CostOfSales",
+					"Description": "The cost of sales during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "CostOfSales"
+					}
+				},
+				{
+					"Name": "GrossProfit",
+					"Description": "The gross profit during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "GrossProfit"
+					}
+				},
+				{
+					"Name": "InvestmentIncome",
+					"Description": "The amount of investment income earned during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "InvestmentIncome"
+					}
+				},
+				{
+					"Name": "OtherGainsAndLosses",
+					"Description": "Other gains and losses that occurred during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "OtherGainsAndLosses"
+					}
+				},
+				{
+					"Name": "DepreciationExpenses",
+					"Description": "The amount of depreciation realized during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "DepreciationExpenses"
+					}
+				},
+				{
+					"Name": "DistributionExpenses",
+					"Description": "The amount of distribution expenses incurred during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "DistributionExpenses"
+					}
+				},
+				{
+					"Name": "MarketingExpenses",
+					"Description": "The amount of marketing expenses incurred during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "MarketingExpenses"
+					}
+				},
+				{
+					"Name": "AdministrativeExpenses",
+					"Description": "The amount of administrative expenses that occurred during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "AdministrativeExpenses"
+					}
+				},
+				{
+					"Name": "OtherExpenses",
+					"Description": "The amount of other expenses that occurred during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "OtherExpenses"
+					}
+				},
+				{
+					"Name": "FinanceCosts",
+					"Description": "The amount of finance costs incurred during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "FinanceCosts"
+					}
+				},
+				{
+					"Name": "ShareOfProfitsOfAssociates",
+					"Description": "The profits of associated that were shared by the organization during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ShareOfProfitsOfAssociates"
+					}
+				},
+				{
+					"Name": "GainRecognizedOnDisposalOfInterestInFormerAssociate",
+					"Description": "The Gain Recognized on Disposal of Interest in Former Associate",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "GainRecognizedOnDisposalOfInterestInFormerAssociate"
+					}
+				},
+				{
+					"Name": "ProfitBeforeTax",
+					"Description": "The profit before tax for the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ProfitBeforeTax"
+					}
+				},
+				{
+					"Name": "IncomeTaxExpense",
+					"Description": "The income tax expense incurred for the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "IncomeTaxExpense"
+					}
+				},
+				{
+					"Name": "ProfitForThePeriodFromContinuingOperations",
+					"Description": "The profit for the period from continuing operations.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ProfitForThePeriodFromContinuingOperations"
+					}
+				},
+				{
+					"Name": "ProfitForThePeriodFromDiscontinuedOperations",
+					"Description": "The profit for the period from discontinued operations.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ProfitForThePeriodFromDiscontinuedOperations"
+					}
+				},
+				{
+					"Name": "ProfitForThePeriod",
+					"Description": "The Total Profit for the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ProfitForThePeriod"
+					}
+				},
+				{
+					"Name": "ExchangeDifferencesOnTranslatingForeignOperations",
+					"Description": "Exchange Differences on Translating Foreign Operations",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ExchangeDifferencesOnTranslatingForeignOperations"
+					}
+				},
+				{
+					"Name": "GainOnRevaluationOfProperties",
+					"Description": "Gain on Revaluation of Properties",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "GainOnRevaluationOfProperties"
+					}
+				},
+				{
+					"Name": "ShareOfComprehensiveIncomeOfAssociates",
+					"Description": "Share of Comprehensive Income of Associates",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ShareOfComprehensiveIncomeOfAssociates"
+					}
+				},
+				{
+					"Name": "OtherComprehensiveIncomeForPeriodNetOfTax",
+					"Description": "Other Comprehensive Income for Period, Net of Tax",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "OtherComprehensiveIncomeForPeriodNetOfTax"
+					}
+				},
+				{
+					"Name": "TotalComprehensiveIncomeForThePeriod",
+					"Description": "TOTAL COMPREHENSIVE INCOME FOR THE PERIOD",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "TotalComprehensiveIncomeForThePeriod"
+					}
+				},
+				{
+					"Name": "ProfitAttributableToOwnersOfTheCompany",
+					"Description": "Profit Attributable to Owners of the Company",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ProfitAttributableToOwnersOfTheCompany"
+					}
+				},
+				{
+					"Name": "ProfitAttributableToNonControllingInterests",
+					"Description": "Profit Attributable to Non-controlling Interests",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "ProfitAttributableToNonControllingInterests"
+					}
+				},
+				{
+					"Name": "TotalComprehensiveIncomeAttributableToOwnersOfTheCompany",
+					"Description": "Total Comprehensive Income Attributable to Owners of the Company",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "TotalComprehensiveIncomeAttributableToOwnersOfTheCompany"
+					}
+				},
+				{
+					"Name": "TotalComprehensiveIncomeAttributableToNonControllingInterests",
+					"Description": "Total Comprehensive Income Attributable to Non-controlling Interests",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "TotalComprehensiveIncomeAttributableToNonControllingInterests"
+					}
+				},
+				{
+					"Name": "BasicFromContinuingOperations",
+					"Description": "The Basic Earnings Per Share from continuing operations",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "BasicFromContinuingOperations"
+					}
+				},
+				{
+					"Name": "DilutedFromContinuingOperations",
+					"Description": "The Diluted Earnings Per Share from continuing operations",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "DilutedFromContinuingOperations"
+					}
+				},
+				{
+					"Name": "EarningsPerShareLevelOfPrecisionId",
+					"Description": "The unique identifier of a Level of Precision.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome",
+						"Name": "EarningsPerShareLevelOfPrecisionId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9c86d584-341b-4014-a830-db6032864609",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/StatementOfComprehensiveIncome",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/StatementOfComprehensiveIncome",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"LegalEntityId\"},\"FinancialStatementId\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"FinancialStatementId\"},\"PeriodStartDate\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"PeriodEndDate\"},\"Revenue\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"Revenue\"},\"CostOfSales\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"CostOfSales\"},\"GrossProfit\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"GrossProfit\"},\"InvestmentIncome\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"InvestmentIncome\"},\"OtherGainsAndLosses\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"OtherGainsAndLosses\"},\"DepreciationExpenses\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"DepreciationExpenses\"},\"DistributionExpenses\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"DistributionExpenses\"},\"MarketingExpenses\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"MarketingExpenses\"},\"AdministrativeExpenses\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"AdministrativeExpenses\"},\"OtherExpenses\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"OtherExpenses\"},\"FinanceCosts\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"FinanceCosts\"},\"ShareOfProfitsOfAssociates\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ShareOfProfitsOfAssociates\"},\"GainRecognizedOnDisposalOfInterestInFormerAssociate\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"GainRecognizedOnDisposalOfInterestInFormerAssociate\"},\"ProfitBeforeTax\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitBeforeTax\"},\"IncomeTaxExpense\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"IncomeTaxExpense\"},\"ProfitForThePeriodFromContinuingOperations\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitForThePeriodFromContinuingOperations\"},\"ProfitForThePeriodFromDiscontinuedOperations\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitForThePeriodFromDiscontinuedOperations\"},\"ProfitForThePeriod\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitForThePeriod\"},\"ExchangeDifferencesOnTranslatingForeignOperations\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ExchangeDifferencesOnTranslatingForeignOperations\"},\"GainOnRevaluationOfProperties\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"GainOnRevaluationOfProperties\"},\"ShareOfComprehensiveIncomeOfAssociates\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ShareOfComprehensiveIncomeOfAssociates\"},\"OtherComprehensiveIncomeForPeriodNetOfTax\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"OtherComprehensiveIncomeForPeriodNetOfTax\"},\"TotalComprehensiveIncomeForThePeriod\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"TotalComprehensiveIncomeForThePeriod\"},\"ProfitAttributableToOwnersOfTheCompany\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitAttributableToOwnersOfTheCompany\"},\"ProfitAttributableToNonControllingInterests\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitAttributableToNonControllingInterests\"},\"TotalComprehensiveIncomeAttributableToOwnersOfTheCompany\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"TotalComprehensiveIncomeAttributableToOwnersOfTheCompany\"},\"TotalComprehensiveIncomeAttributableToNonControllingInterests\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"TotalComprehensiveIncomeAttributableToNonControllingInterests\"},\"BasicFromContinuingOperations\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"BasicFromContinuingOperations\"},\"DilutedFromContinuingOperations\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"DilutedFromContinuingOperations\"},\"EarningsPerShareLevelOfPrecisionId\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"EarningsPerShareLevelOfPrecisionId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StatementOfComprehensiveIncome\",\"path\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\"},\"description\":\"The Statement of Comprehensive Income details the amount of income and how it was earned. \\n\\nIt is a summary of the revenue, expenses and net income/net loss of the legal entity for a specific period where:\\n\\nREVENUE = The increase in capital as a result of the sale of goods or services provided by the business.   The revenue is equal to the cash, accounts receivable and other assets gained in compensation for goods sold or services rendered.\\n\\nEXPENSES = The decrease in capital that is the result of the business' revenue-producing operations.   The expenses amount is equal to the value of the goods and services used up or consumed in obtaining the revenue.\\n\\nNET INCOME = The increase in capital that is the result from profitable operation of the business during the period.   It is the excess of revenues over expenses for the accounting period.\\n\\nNET LOSS = The decrease in capital resulting from the operations of the business.   It is the excess of expenses over revenue for the operating period.\\n\\nIt is a record of its earnings or losses for a given period. It shows all of the money a company earned (revenues) and all of the money a company spent (expenses) during this period. \\n\\nIt documents the changes in the balance sheet retained earnings account from one period to the next (see Stockholders Equity Retained Earnings).\\n\\nIt also accounts for the effects of some basic accounting principles such as depreciation.\\n\\nIt is for a specific period of time, where the balance sheet is at a specific instance of time.\",\"primaryKey\":[\"LegalEntityId\",\"FinancialStatementId\",\"PeriodStartDate\",\"PeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"FinancialStatementId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Financial Statement.\",\"isNullable\":false,\"name\":\"FinancialStatementId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the financial statement is prepared.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the financial statement is prepared.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"Revenue\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The revenue of the organization during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"Revenue\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"CostOfSales\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The cost of sales during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"CostOfSales\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"GrossProfit\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The gross profit during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"GrossProfit\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"InvestmentIncome\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of investment income earned during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"InvestmentIncome\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"OtherGainsAndLosses\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Other gains and losses that occurred during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"OtherGainsAndLosses\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"DepreciationExpenses\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of depreciation realized during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"DepreciationExpenses\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"DistributionExpenses\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of distribution expenses incurred during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"DistributionExpenses\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"MarketingExpenses\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of marketing expenses incurred during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"MarketingExpenses\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"AdministrativeExpenses\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of administrative expenses that occurred during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"AdministrativeExpenses\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"OtherExpenses\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of other expenses that occurred during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"OtherExpenses\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"FinanceCosts\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of finance costs incurred during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"FinanceCosts\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ShareOfProfitsOfAssociates\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The profits of associated that were shared by the organization during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"ShareOfProfitsOfAssociates\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"GainRecognizedOnDisposalOfInterestInFormerAssociate\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Gain Recognized on Disposal of Interest in Former Associate\",\"isNullable\":true,\"scale\":2,\"name\":\"GainRecognizedOnDisposalOfInterestInFormerAssociate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitBeforeTax\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The profit before tax for the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProfitBeforeTax\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"IncomeTaxExpense\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The income tax expense incurred for the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"IncomeTaxExpense\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitForThePeriodFromContinuingOperations\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The profit for the period from continuing operations.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProfitForThePeriodFromContinuingOperations\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitForThePeriodFromDiscontinuedOperations\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The profit for the period from discontinued operations.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProfitForThePeriodFromDiscontinuedOperations\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitForThePeriod\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Total Profit for the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProfitForThePeriod\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ExchangeDifferencesOnTranslatingForeignOperations\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Exchange Differences on Translating Foreign Operations\",\"isNullable\":true,\"scale\":2,\"name\":\"ExchangeDifferencesOnTranslatingForeignOperations\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"GainOnRevaluationOfProperties\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Gain on Revaluation of Properties\",\"isNullable\":true,\"scale\":2,\"name\":\"GainOnRevaluationOfProperties\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ShareOfComprehensiveIncomeOfAssociates\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Share of Comprehensive Income of Associates\",\"isNullable\":true,\"scale\":2,\"name\":\"ShareOfComprehensiveIncomeOfAssociates\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"OtherComprehensiveIncomeForPeriodNetOfTax\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Other Comprehensive Income for Period, Net of Tax\",\"isNullable\":true,\"scale\":2,\"name\":\"OtherComprehensiveIncomeForPeriodNetOfTax\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"TotalComprehensiveIncomeForThePeriod\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"TOTAL COMPREHENSIVE INCOME FOR THE PERIOD\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalComprehensiveIncomeForThePeriod\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitAttributableToOwnersOfTheCompany\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Profit Attributable to Owners of the Company\",\"isNullable\":true,\"scale\":2,\"name\":\"ProfitAttributableToOwnersOfTheCompany\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"ProfitAttributableToNonControllingInterests\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Profit Attributable to Non-controlling Interests\",\"isNullable\":true,\"scale\":2,\"name\":\"ProfitAttributableToNonControllingInterests\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"TotalComprehensiveIncomeAttributableToOwnersOfTheCompany\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Total Comprehensive Income Attributable to Owners of the Company\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalComprehensiveIncomeAttributableToOwnersOfTheCompany\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"TotalComprehensiveIncomeAttributableToNonControllingInterests\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Total Comprehensive Income Attributable to Non-controlling Interests\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalComprehensiveIncomeAttributableToNonControllingInterests\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"BasicFromContinuingOperations\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Basic Earnings Per Share from continuing operations\",\"isNullable\":true,\"scale\":2,\"name\":\"BasicFromContinuingOperations\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"DilutedFromContinuingOperations\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The Diluted Earnings Per Share from continuing operations\",\"isNullable\":true,\"scale\":2,\"name\":\"DilutedFromContinuingOperations\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"name\":\"EarningsPerShareLevelOfPrecisionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Level of Precision.\",\"isNullable\":true,\"name\":\"EarningsPerShareLevelOfPrecisionId\"}]}}}",
+			"Description": "The Statement of Comprehensive Income details the amount of income and how it was earned. \n\nIt is a summary of the revenue, expenses and net income/net loss of the legal entity for a specific period where:\n\nREVENUE = The increase in capital as a result of the sale of goods or services provided by the business.   The revenue is equal to the cash, accounts receivable and other assets gained in compensation for goods sold or services rendered.\n\nEXPENSES = The decrease in capital that is the result of the business' revenue-producing operations.   The expenses amount is equal to the value of the goods and services used up or consumed in obtaining the revenue.\n\nNET INCOME = The increase in capital that is the result from profitable operation of the business during the period.   It is the excess of revenues over expenses for the accounting period.\n\nNET LOSS = The decrease in capital resulting from the operations of the business.   It is the excess of expenses over revenue for the operating period.\n\nIt is a record of its earnings or losses for a given period. It shows all of the money a company earned (revenues) and all of the money a company spent (expenses) during this period. \n\nIt documents the changes in the balance sheet retained earnings account from one period to the next (see Stockholders Equity Retained Earnings).\n\nIt also accounts for the effects of some basic accounting principles such as depreciation.\n\nIt is for a specific period of time, where the balance sheet is at a specific instance of time.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,FinancialStatementId,PeriodStartDate,PeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialStatementId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Revenue\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CostOfSales\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GrossProfit\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InvestmentIncome\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OtherGainsAndLosses\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DepreciationExpenses\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DistributionExpenses\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingExpenses\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AdministrativeExpenses\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OtherExpenses\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinanceCosts\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShareOfProfitsOfAssociates\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GainRecognizedOnDisposalOfInterestInFormerAssociate\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProfitBeforeTax\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncomeTaxExpense\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProfitForThePeriodFromContinuingOperations\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProfitForThePeriodFromDiscontinuedOperations\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProfitForThePeriod\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ExchangeDifferencesOnTranslatingForeignOperations\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GainOnRevaluationOfProperties\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShareOfComprehensiveIncomeOfAssociates\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OtherComprehensiveIncomeForPeriodNetOfTax\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalComprehensiveIncomeForThePeriod\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProfitAttributableToOwnersOfTheCompany\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProfitAttributableToNonControllingInterests\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalComprehensiveIncomeAttributableToOwnersOfTheCompany\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalComprehensiveIncomeAttributableToNonControllingInterests\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BasicFromContinuingOperations\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DilutedFromContinuingOperations\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EarningsPerShareLevelOfPrecisionId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "a8ee2b98-6ab5-43cf-acb6-996b460c020e",
+		"Description": "The Statement of Comprehensive Income details the amount of income and how it was earned. \n\nIt is a summary of the revenue, expenses and net income/net loss of the legal entity for a specific period where:\n\nREVENUE = The increase in capital as a result of the sale of goods or services provided by the business.   The revenue is equal to the cash, accounts receivable and other assets gained in compensation for goods sold or services rendered.\n\nEXPENSES = The decrease in capital that is the result of the business' revenue-producing operations.   The expenses amount is equal to the value of the goods and services used up or consumed in obtaining the revenue.\n\nNET INCOME = The increase in capital that is the result from profitable operation of the business during the period.   It is the excess of revenues over expenses for the accounting period.\n\nNET LOSS = The decrease in capital resulting from the operations of the business.   It is the excess of expenses over revenue for the operating period.\n\nIt is a record of its earnings or losses for a given period. It shows all of the money a company earned (revenues) and all of the money a company spent (expenses) during this period. \n\nIt documents the changes in the balance sheet retained earnings account from one period to the next (see Stockholders Equity Retained Earnings).\n\nIt also accounts for the effects of some basic accounting principles such as depreciation.\n\nIt is for a specific period of time, where the balance sheet is at a specific instance of time."
+	},
+	"type": "TABLE"
+}

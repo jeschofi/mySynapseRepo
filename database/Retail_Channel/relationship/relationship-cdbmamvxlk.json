@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cdbmamvxlk",
+	"properties": {
+		"Name": "relationship-cdbmamvxlk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocationType",
+		"ToTableName": "ServiceLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreServiceLocationTypeId",
+				"ToColumnName": "StoreServiceLocationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"toEntity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"joinPairs\":[{\"fromAttribute\":\"StoreServiceLocationTypeId\",\"toAttribute\":\"StoreServiceLocationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6b565c8c-48f5-45f5-b9fd-faf2859f2a0f"
+	},
+	"type": "RELATIONSHIP"
+}

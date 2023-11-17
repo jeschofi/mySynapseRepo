@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bswmwozmgw",
+	"properties": {
+		"Name": "relationship-bswmwozmgw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PriceListType",
+		"ToTableName": "StoreProductPriceList",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PriceListTypeId",
+				"ToColumnName": "PriceListTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PriceListType.cdm.json/PriceListType\",\"toEntity\":\"StoreProductPriceList.cdm.json/StoreProductPriceList\",\"joinPairs\":[{\"fromAttribute\":\"PriceListTypeId\",\"toAttribute\":\"PriceListTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "934f6d8d-7ae8-4ce1-a97a-e3f709a5559e"
+	},
+	"type": "RELATIONSHIP"
+}

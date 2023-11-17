@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fznelmfmcc",
+	"properties": {
+		"Name": "relationship-fznelmfmcc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Store",
+		"ToTableName": "StoreAvailableChannel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreId",
+				"ToColumnName": "StoreId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Store.cdm.json/Store\",\"toEntity\":\"StoreAvailableChannel.cdm.json/StoreAvailableChannel\",\"joinPairs\":[{\"fromAttribute\":\"StoreId\",\"toAttribute\":\"StoreId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b2cc5070-be40-4c1b-9b34-238383af24aa"
+	},
+	"type": "RELATIONSHIP"
+}

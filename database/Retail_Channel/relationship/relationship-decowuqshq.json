@@ -1,0 +1,29 @@
+{
+	"name": "relationship-decowuqshq",
+	"properties": {
+		"Name": "relationship-decowuqshq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DayOfWeek",
+		"ToTableName": "StoreHoursOfOperation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DayOfWeekId",
+				"ToColumnName": "DayOfWeekId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"toEntity\":\"StoreHoursOfOperation.cdm.json/StoreHoursOfOperation\",\"joinPairs\":[{\"fromAttribute\":\"DayOfWeekId\",\"toAttribute\":\"DayOfWeekId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e70d875b-aec9-4575-beec-9b3cf8c60439"
+	},
+	"type": "RELATIONSHIP"
+}

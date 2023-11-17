@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xmgejjwpmc",
+	"properties": {
+		"Name": "relationship-xmgejjwpmc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "ChannelOrderPartyCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3b4643a4-aa94-44e2-b1a6-cc92cb7815ac"
+	},
+	"type": "RELATIONSHIP"
+}

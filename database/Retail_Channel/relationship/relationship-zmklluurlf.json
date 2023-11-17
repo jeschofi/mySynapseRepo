@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zmklluurlf",
+	"properties": {
+		"Name": "relationship-zmklluurlf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "EmailType",
+		"ToTableName": "StoreDepartmentEmail",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmailTypeId",
+				"ToColumnName": "EmailTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"EmailType.cdm.json/EmailType\",\"toEntity\":\"StoreDepartmentEmail.cdm.json/StoreDepartmentEmail\",\"joinPairs\":[{\"fromAttribute\":\"EmailTypeId\",\"toAttribute\":\"EmailTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "85d4b1f2-e97e-43af-9d0b-3d30f7feee6a"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,136 @@
+{
+	"name": "BondType",
+	"properties": {
+		"Name": "BondType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BondTypeId",
+					"Description": "The unique identifier of a type of bond.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondType.cdm.json/BondType",
+						"Name": "BondTypeId"
+					}
+				},
+				{
+					"Name": "BondTypeName",
+					"Description": "The name of a type of bond.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondType.cdm.json/BondType",
+						"Name": "BondTypeName"
+					}
+				},
+				{
+					"Name": "BondTypeDescription",
+					"Description": "The description of a type of bond.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondType.cdm.json/BondType",
+						"Name": "BondTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ca10e738-5ff5-493b-922c-62d01b5a3251",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BondTypeId\":{\"entity\":\"BondType.cdm.json/BondType\",\"name\":\"BondTypeId\"},\"BondTypeName\":{\"entity\":\"BondType.cdm.json/BondType\",\"name\":\"BondTypeName\"},\"BondTypeDescription\":{\"entity\":\"BondType.cdm.json/BondType\",\"name\":\"BondTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BondType\",\"path\":\"BondType.cdm.json/BondType\"},\"description\":\"A means of classifying or categorizing bonds based on common characteristics, market segments, issuers or financial objectives.\\n\\nEx:\\n- Adjustment Bond\\n- Authority Bond\\n- Bearer Bond\\n- Bond Anticipation Note\\n- Certificateless Municipal bond\\n- Collateralized Bond Obligation (CBO)\\n- Collateralized Mortgage Obligation (CMO)\\n- Debenture\\n- Discount Note\\n- EuroBond\\n- High-Yield Bond\\n- Housing Bond\\n- Industrial Development Bond\\n- Investment Grade Bond\\n- Mortgage Grade Bond\\n- Municipal Revenue Bond\\n- Public Purpose Bond\\n- Special Assessment Bond\\n- Split Coupon Bond\\n- State Bond\\n- Taxable Municipal Bond\\n- Unlimited Tax Bond\\n- US Corporate Bond\\n- US Government Bond\\n- Yankee Bond\\n- Zero Coupon Bond\\n\\nwhere:\\n \\nADJUSTMENT BOND\\nA Bond issued in Exchange for Outstanding Bonds when a Corporation facing Bankruptcy is recapitalized.\",\"primaryKey\":[\"BondTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondType.cdm.json/BondType\",\"name\":\"BondTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a type of bond.\",\"isNullable\":false,\"name\":\"BondTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondType.cdm.json/BondType\",\"name\":\"BondTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a type of bond.\",\"isNullable\":true,\"name\":\"BondTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondType.cdm.json/BondType\",\"name\":\"BondTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a type of bond.\",\"isNullable\":true,\"name\":\"BondTypeDescription\"}]}}}",
+			"Description": "A means of classifying or categorizing bonds based on common characteristics, market segments, issuers or financial objectives.\n\nEx:\n- Adjustment Bond\n- Authority Bond\n- Bearer Bond\n- Bond Anticipation Note\n- Certificateless Municipal bond\n- Collateralized Bond Obligation (CBO)\n- Collateralized Mortgage Obligation (CMO)\n- Debenture\n- Discount Note\n- EuroBond\n- High-Yield Bond\n- Housing Bond\n- Industrial Development Bond\n- Investment Grade Bond\n- Mortgage Grade Bond\n- Municipal Revenue Bond\n- Public Purpose Bond\n- Special Assessment Bond\n- Split Coupon Bond\n- State Bond\n- Taxable Municipal Bond\n- Unlimited Tax Bond\n- US Corporate Bond\n- US Government Bond\n- Yankee Bond\n- Zero Coupon Bond\n\nwhere:\n \nADJUSTMENT BOND\nA Bond issued in Exchange for Outstanding Bonds when a Corporation facing Bankruptcy is recapitalized.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "BondTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BondTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BondTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BondTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "044c04cd-10f2-48cf-aaaa-1b29003b6a8b",
+		"Description": "A means of classifying or categorizing bonds based on common characteristics, market segments, issuers or financial objectives.\n\nEx:\n- Adjustment Bond\n- Authority Bond\n- Bearer Bond\n- Bond Anticipation Note\n- Certificateless Municipal bond\n- Collateralized Bond Obligation (CBO)\n- Collateralized Mortgage Obligation (CMO)\n- Debenture\n- Discount Note\n- EuroBond\n- High-Yield Bond\n- Housing Bond\n- Industrial Development Bond\n- Investment Grade Bond\n- Mortgage Grade Bond\n- Municipal Revenue Bond\n- Public Purpose Bond\n- Special Assessment Bond\n- Split Coupon Bond\n- State Bond\n- Taxable Municipal Bond\n- Unlimited Tax Bond\n- US Corporate Bond\n- US Government Bond\n- Yankee Bond\n- Zero Coupon Bond\n\nwhere:\n \nADJUSTMENT BOND\nA Bond issued in Exchange for Outstanding Bonds when a Corporation facing Bankruptcy is recapitalized."
+	},
+	"type": "TABLE"
+}

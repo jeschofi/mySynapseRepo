@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lyffzwvktl",
+	"properties": {
+		"Name": "relationship-lyffzwvktl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarDate",
+		"ToTableName": "RelatedCalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "RelatedCalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"toEntity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"RelatedCalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c78954e7-dda4-4dcc-8ae3-ed0c8132bd61"
+	},
+	"type": "RELATIONSHIP"
+}

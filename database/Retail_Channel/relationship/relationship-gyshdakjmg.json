@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gyshdakjmg",
+	"properties": {
+		"Name": "relationship-gyshdakjmg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "ProductGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "ClassificationAgencyPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"ProductGroup.cdm.json/ProductGroup\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"ClassificationAgencyPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5be0efa8-b308-4967-9407-8fb01684782b"
+	},
+	"type": "RELATIONSHIP"
+}

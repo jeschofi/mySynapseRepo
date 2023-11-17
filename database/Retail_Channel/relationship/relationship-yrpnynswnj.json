@@ -1,0 +1,29 @@
+{
+	"name": "relationship-yrpnynswnj",
+	"properties": {
+		"Name": "relationship-yrpnynswnj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CreditStatusType",
+		"ToTableName": "CustomerAccountCreditStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CreditStatusTypeId",
+				"ToColumnName": "CreditStatusTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CreditStatusType.cdm.json/CreditStatusType\",\"toEntity\":\"CustomerAccountCreditStatus.cdm.json/CustomerAccountCreditStatus\",\"joinPairs\":[{\"fromAttribute\":\"CreditStatusTypeId\",\"toAttribute\":\"CreditStatusTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f415cff9-c638-413d-86ff-633aa54c7d82"
+	},
+	"type": "RELATIONSHIP"
+}

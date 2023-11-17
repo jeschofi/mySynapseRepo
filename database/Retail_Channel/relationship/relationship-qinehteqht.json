@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qinehteqht",
+	"properties": {
+		"Name": "relationship-qinehteqht",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarYear",
+		"ToTableName": "CalendarQuarter",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarYear.cdm.json/CalendarYear\",\"toEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6f046ac5-21f8-4dd9-93b0-490ec68e182f"
+	},
+	"type": "RELATIONSHIP"
+}

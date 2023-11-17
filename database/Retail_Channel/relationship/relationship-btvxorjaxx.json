@@ -1,0 +1,29 @@
+{
+	"name": "relationship-btvxorjaxx",
+	"properties": {
+		"Name": "relationship-btvxorjaxx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketingProgram",
+		"ToTableName": "ChannelProgramProductSales",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketingProgramId",
+				"ToColumnName": "MarketingProgramId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"toEntity\":\"ChannelProgramProductSales.cdm.json/ChannelProgramProductSales\",\"joinPairs\":[{\"fromAttribute\":\"MarketingProgramId\",\"toAttribute\":\"MarketingProgramId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f6a76587-d738-4527-ab80-aefe66c3a2e5"
+	},
+	"type": "RELATIONSHIP"
+}

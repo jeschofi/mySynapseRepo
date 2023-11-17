@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nsayivjncs",
+	"properties": {
+		"Name": "relationship-nsayivjncs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "InventoryValuationMethod",
+		"ToTableName": "LegalEntityAccountingPolicy",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "InventoryValuationMethodId",
+				"ToColumnName": "InventoryValuationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"InventoryValuationMethod.cdm.json/InventoryValuationMethod\",\"toEntity\":\"LegalEntityAccountingPolicy.cdm.json/LegalEntityAccountingPolicy\",\"joinPairs\":[{\"fromAttribute\":\"InventoryValuationMethodId\",\"toAttribute\":\"InventoryValuationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dcfe9778-f84c-4ad9-a572-820c7e8eb8fc"
+	},
+	"type": "RELATIONSHIP"
+}

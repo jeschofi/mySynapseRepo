@@ -1,0 +1,29 @@
+{
+	"name": "relationship-alxpszxppp",
+	"properties": {
+		"Name": "relationship-alxpszxppp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayArea",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AreaPeriodStartDate",
+				"ToColumnName": "AreaPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayArea.cdm.json/StoreDisplayArea\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"AreaPeriodStartDate\",\"toAttribute\":\"AreaPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8f563bc3-37e4-43dc-a979-a6df0034474e"
+	},
+	"type": "RELATIONSHIP"
+}

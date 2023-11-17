@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fuvnycxiaa",
+	"properties": {
+		"Name": "relationship-fuvnycxiaa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Bond",
+		"ToTableName": "BondDuration",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondId",
+				"ToColumnName": "BondId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Bond.cdm.json/Bond\",\"toEntity\":\"BondDuration.cdm.json/BondDuration\",\"joinPairs\":[{\"fromAttribute\":\"BondId\",\"toAttribute\":\"BondId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5ca38128-b778-4bc3-ac41-df8a646cc783"
+	},
+	"type": "RELATIONSHIP"
+}

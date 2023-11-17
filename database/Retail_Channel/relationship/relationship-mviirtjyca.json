@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mviirtjyca",
+	"properties": {
+		"Name": "relationship-mviirtjyca",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SicMajorGroup",
+		"ToTableName": "SicIndustryGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SicMajorGroupCode",
+				"ToColumnName": "SicMajorGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"toEntity\":\"SicIndustryGroup.cdm.json/SicIndustryGroup\",\"joinPairs\":[{\"fromAttribute\":\"SicMajorGroupCode\",\"toAttribute\":\"SicMajorGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6cce5b47-9b8f-4167-9c88-8bee3967cb89"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vyuifpokkb",
+	"properties": {
+		"Name": "relationship-vyuifpokkb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RetailProduct",
+		"ToTableName": "ChannelAggregateProductReturns",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RetailProduct.cdm.json/RetailProduct\",\"toEntity\":\"ChannelAggregateProductReturns.cdm.json/ChannelAggregateProductReturns\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7cdb19a2-96b7-46ee-9e0e-4fe15a28b694"
+	},
+	"type": "RELATIONSHIP"
+}

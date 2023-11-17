@@ -1,0 +1,29 @@
+{
+	"name": "relationship-eonmcimniw",
+	"properties": {
+		"Name": "relationship-eonmcimniw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShopperPosition",
+		"ToTableName": "ShopperItemInteractionEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShopperSessionId",
+				"ToColumnName": "ShopperSessionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"toEntity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"joinPairs\":[{\"fromAttribute\":\"ShopperSessionId\",\"toAttribute\":\"ShopperSessionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7473f25d-3c88-41f0-b846-bf82eab6bc16"
+	},
+	"type": "RELATIONSHIP"
+}

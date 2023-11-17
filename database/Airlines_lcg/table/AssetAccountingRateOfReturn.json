@@ -1,0 +1,233 @@
+{
+	"name": "AssetAccountingRateOfReturn",
+	"properties": {
+		"Name": "AssetAccountingRateOfReturn",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the ARR is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the ARR is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "InitialInvestmentAmount",
+					"Description": "The initial investment made into the Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "InitialInvestmentAmount"
+					}
+				},
+				{
+					"Name": "AssetLife",
+					"Description": "The useful life of the Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "AssetLife"
+					}
+				},
+				{
+					"Name": "CashInflowsPerYearAmount",
+					"Description": "The amount of cash inflows per year associated with the Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "CashInflowsPerYearAmount"
+					}
+				},
+				{
+					"Name": "DepreciationAmount",
+					"Description": "Depreciation = (Cost-Salvage Value)/Life",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "DepreciationAmount"
+					}
+				},
+				{
+					"Name": "AccountingRateOfReturn",
+					"Description": "ARR = (Cash Inflows Per Year - Depreciation)/Initial Investment",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn",
+						"Name": "AccountingRateOfReturn"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4d7f2f58-f29d-4dba-9b4b-efd9f33a837f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetAccountingRateOfReturn",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetAccountingRateOfReturn",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetId\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"AssetId\"},\"PeriodStartDate\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"PeriodEndDate\"},\"InitialInvestmentAmount\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"InitialInvestmentAmount\"},\"AssetLife\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"AssetLife\"},\"CashInflowsPerYearAmount\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"CashInflowsPerYearAmount\"},\"DepreciationAmount\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"DepreciationAmount\"},\"AccountingRateOfReturn\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"AccountingRateOfReturn\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetAccountingRateOfReturn\",\"path\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\"},\"description\":\"The Accounting Rate Of Return (ARR) is a profitability measurement from a conventional accounting standpoint which compares the required investment to future annual earnings associated with the Asset.\\n\\nARR advantages:\\n\\n-  Simple to apply\\n-  Measure profitability\\n-  Number correlate to presentation on financial statements\\n-  Measure full useful life of asset\\n\\nARR disadvantages:\\n\\n-  Does not consider time value of money\\n-  Use income data as opposed to cash flow data\",\"primaryKey\":[\"AssetId\",\"PeriodStartDate\",\"PeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the ARR is calculated.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the ARR is calculated.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"InitialInvestmentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The initial investment made into the Asset.\",\"isNullable\":true,\"scale\":2,\"name\":\"InitialInvestmentAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"AssetLife\"},\"dataType\":\"integer\",\"description\":\"The useful life of the Asset.\",\"isNullable\":true,\"name\":\"AssetLife\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"CashInflowsPerYearAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of cash inflows per year associated with the Asset.\",\"isNullable\":true,\"scale\":2,\"name\":\"CashInflowsPerYearAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"DepreciationAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Depreciation = (Cost-Salvage Value)/Life\",\"isNullable\":true,\"scale\":2,\"name\":\"DepreciationAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingRateOfReturn.cdm.json/AssetAccountingRateOfReturn\",\"name\":\"AccountingRateOfReturn\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"ARR = (Cash Inflows Per Year - Depreciation)/Initial Investment\",\"isNullable\":true,\"scale\":2,\"name\":\"AccountingRateOfReturn\"}]}}}",
+			"Description": "The Accounting Rate Of Return (ARR) is a profitability measurement from a conventional accounting standpoint which compares the required investment to future annual earnings associated with the Asset.\n\nARR advantages:\n\n-  Simple to apply\n-  Measure profitability\n-  Number correlate to presentation on financial statements\n-  Measure full useful life of asset\n\nARR disadvantages:\n\n-  Does not consider time value of money\n-  Use income data as opposed to cash flow data",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetId,PeriodStartDate,PeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"InitialInvestmentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetLife\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CashInflowsPerYearAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DepreciationAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AccountingRateOfReturn\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "e8f7fd88-3df0-4e04-bf9e-84d84032adee",
+		"Description": "The Accounting Rate Of Return (ARR) is a profitability measurement from a conventional accounting standpoint which compares the required investment to future annual earnings associated with the Asset.\n\nARR advantages:\n\n-  Simple to apply\n-  Measure profitability\n-  Number correlate to presentation on financial statements\n-  Measure full useful life of asset\n\nARR disadvantages:\n\n-  Does not consider time value of money\n-  Use income data as opposed to cash flow data"
+	},
+	"type": "TABLE"
+}

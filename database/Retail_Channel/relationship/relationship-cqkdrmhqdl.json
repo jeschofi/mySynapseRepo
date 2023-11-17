@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cqkdrmhqdl",
+	"properties": {
+		"Name": "relationship-cqkdrmhqdl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Tax",
+		"ToTableName": "ChannelApplicableTax",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TaxId",
+				"ToColumnName": "TaxId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Tax.cdm.json/Tax\",\"toEntity\":\"ChannelApplicableTax.cdm.json/ChannelApplicableTax\",\"joinPairs\":[{\"fromAttribute\":\"TaxId\",\"toAttribute\":\"TaxId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dc651778-c9ee-4a16-97cf-a68f0f8e6c79"
+	},
+	"type": "RELATIONSHIP"
+}

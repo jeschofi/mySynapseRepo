@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qvloxrqwvm",
+	"properties": {
+		"Name": "relationship-qvloxrqwvm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayLocation",
+		"ToTableName": "ProductStoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DisplayLocationPeriodStartDate",
+				"ToColumnName": "DisplayLocationPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"toEntity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"DisplayLocationPeriodStartDate\",\"toAttribute\":\"DisplayLocationPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d6908277-0acd-4d28-a194-8d615e702be5"
+	},
+	"type": "RELATIONSHIP"
+}

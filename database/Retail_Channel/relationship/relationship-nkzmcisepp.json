@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nkzmcisepp",
+	"properties": {
+		"Name": "relationship-nkzmcisepp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarWeek",
+		"ToTableName": "CalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarWeekId",
+				"ToColumnName": "CalendarWeekId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"toEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"CalendarWeekId\",\"toAttribute\":\"CalendarWeekId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e25fcfce-bdad-4d57-9cef-88d6ef953350"
+	},
+	"type": "RELATIONSHIP"
+}

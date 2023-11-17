@@ -1,0 +1,29 @@
+{
+	"name": "relationship-oofybctnoc",
+	"properties": {
+		"Name": "relationship-oofybctnoc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TelephoneNumberType",
+		"ToTableName": "ChannelTelephoneNumber",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TelephoneNumberTypeId",
+				"ToColumnName": "TelephoneNumberTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"toEntity\":\"ChannelTelephoneNumber.cdm.json/ChannelTelephoneNumber\",\"joinPairs\":[{\"fromAttribute\":\"TelephoneNumberTypeId\",\"toAttribute\":\"TelephoneNumberTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f03cfc43-e69a-4e59-bc91-c6a078af0bcc"
+	},
+	"type": "RELATIONSHIP"
+}

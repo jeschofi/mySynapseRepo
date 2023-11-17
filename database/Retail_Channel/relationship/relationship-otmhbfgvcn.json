@@ -1,0 +1,29 @@
+{
+	"name": "relationship-otmhbfgvcn",
+	"properties": {
+		"Name": "relationship-otmhbfgvcn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "PriceListType",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PriceListForPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"PriceListType.cdm.json/PriceListType\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PriceListForPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1c22e8be-97a6-4797-9d58-2d435270d829"
+	},
+	"type": "RELATIONSHIP"
+}

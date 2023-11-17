@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ntvzsvcejo",
+	"properties": {
+		"Name": "relationship-ntvzsvcejo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Store",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreId",
+				"ToColumnName": "StoreId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Store.cdm.json/Store\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"StoreId\",\"toAttribute\":\"StoreId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e3fbcf17-7a90-486c-8528-d6bb64e087a5"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wjdmklfvlb",
+	"properties": {
+		"Name": "relationship-wjdmklfvlb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDepartment",
+		"ToTableName": "StoreDepartmentTelephoneNumber",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepartmentId",
+				"ToColumnName": "DepartmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDepartment.cdm.json/StoreDepartment\",\"toEntity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"joinPairs\":[{\"fromAttribute\":\"DepartmentId\",\"toAttribute\":\"DepartmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "39c11a3c-c0ae-46ea-b29b-c7a69fa05205"
+	},
+	"type": "RELATIONSHIP"
+}

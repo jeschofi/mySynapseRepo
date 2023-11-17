@@ -1,0 +1,130 @@
+{
+	"name": "CommunicationPriority",
+	"properties": {
+		"Name": "CommunicationPriority",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommunicationPriorityId",
+					"Description": "The unique identifier of a Communication Priority.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationPriority.cdm.json/CommunicationPriority",
+						"Name": "CommunicationPriorityId"
+					}
+				},
+				{
+					"Name": "CommunicationPriorityName",
+					"Description": "The name of a Communication Priority.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationPriority.cdm.json/CommunicationPriority",
+						"Name": "CommunicationPriorityName"
+					}
+				},
+				{
+					"Name": "CommunicationPriorityDescription",
+					"Description": "The description of a Communication Priority.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationPriority.cdm.json/CommunicationPriority",
+						"Name": "CommunicationPriorityDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "82935660-8b3f-4d72-a046-af7b0a2f6ae3",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommunicationPriority",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommunicationPriority",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommunicationPriorityId\":{\"entity\":\"CommunicationPriority.cdm.json/CommunicationPriority\",\"name\":\"CommunicationPriorityId\"},\"CommunicationPriorityName\":{\"entity\":\"CommunicationPriority.cdm.json/CommunicationPriority\",\"name\":\"CommunicationPriorityName\"},\"CommunicationPriorityDescription\":{\"entity\":\"CommunicationPriority.cdm.json/CommunicationPriority\",\"name\":\"CommunicationPriorityDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CommunicationPriority\",\"path\":\"CommunicationPriority.cdm.json/CommunicationPriority\"},\"description\":\"The priority assigned to the communication.\\n\\nEx:\\n- Critical\\n- High\\n- Medium\\n- Low\\n- Administrative\\n- Unknown\\n- N/A\",\"primaryKey\":[\"CommunicationPriorityId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationPriority.cdm.json/CommunicationPriority\",\"name\":\"CommunicationPriorityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Communication Priority.\",\"isNullable\":false,\"name\":\"CommunicationPriorityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationPriority.cdm.json/CommunicationPriority\",\"name\":\"CommunicationPriorityName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Communication Priority.\",\"isNullable\":true,\"name\":\"CommunicationPriorityName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationPriority.cdm.json/CommunicationPriority\",\"name\":\"CommunicationPriorityDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Communication Priority.\",\"isNullable\":true,\"name\":\"CommunicationPriorityDescription\"}]}}}",
+			"Description": "The priority assigned to the communication.\n\nEx:\n- Critical\n- High\n- Medium\n- Low\n- Administrative\n- Unknown\n- N/A",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#502006\"}",
+			"PrimaryKeys": "CommunicationPriorityId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommunicationPriorityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommunicationPriorityName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommunicationPriorityDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "43311c75-4a48-48ee-85ca-eb433acf66be",
+		"Description": "The priority assigned to the communication.\n\nEx:\n- Critical\n- High\n- Medium\n- Low\n- Administrative\n- Unknown\n- N/A"
+	},
+	"type": "TABLE"
+}

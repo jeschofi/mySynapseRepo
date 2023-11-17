@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vtbmlyumpn",
+	"properties": {
+		"Name": "relationship-vtbmlyumpn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Channel",
+		"ToTableName": "CustomerAccountProductDistributionChannel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelId",
+				"ToColumnName": "ChannelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Channel.cdm.json/Channel\",\"toEntity\":\"CustomerAccountProductDistributionChannel.cdm.json/CustomerAccountProductDistributionChannel\",\"joinPairs\":[{\"fromAttribute\":\"ChannelId\",\"toAttribute\":\"ChannelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2c5350c8-e5f2-46af-901c-920b598c838d"
+	},
+	"type": "RELATIONSHIP"
+}

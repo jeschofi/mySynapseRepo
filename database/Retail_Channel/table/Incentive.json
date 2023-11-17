@@ -1,0 +1,322 @@
+{
+	"name": "Incentive",
+	"properties": {
+		"Name": "Incentive",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IncentiveId",
+					"Description": "The unique identifier of an Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveId"
+					}
+				},
+				{
+					"Name": "IncentiveStartDate",
+					"Description": "The start date or first date that the Incentive is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveStartDate"
+					}
+				},
+				{
+					"Name": "IncentiveEndDate",
+					"Description": "The end date or last date that the Incentive is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveEndDate"
+					}
+				},
+				{
+					"Name": "IncentiveName",
+					"Description": "The name of the Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveName"
+					}
+				},
+				{
+					"Name": "IncentiveDescription",
+					"Description": "A description of the Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveDescription"
+					}
+				},
+				{
+					"Name": "IncentiveEligibilityStatement",
+					"Description": "A statement of the eligibility of an employee or third party to be assigned incentives using the associated Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveEligibilityStatement"
+					}
+				},
+				{
+					"Name": "IncentiveRestrictionsStatement",
+					"Description": "A statement detailing the restrictions that are applied to the associated Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveRestrictionsStatement"
+					}
+				},
+				{
+					"Name": "IncentiveMinimumSalesRevenueAmount",
+					"Description": "The minimum sales revenue amount for which the associated Incentive is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveMinimumSalesRevenueAmount"
+					}
+				},
+				{
+					"Name": "IncentiveMinimumNumberUnits",
+					"Description": "The minimum number of units for which the associated Incentive is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveMinimumNumberUnits"
+					}
+				},
+				{
+					"Name": "IncentiveBaseAmount",
+					"Description": "The base incentive amount paid in accordance with a sale under the Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveBaseAmount"
+					}
+				},
+				{
+					"Name": "IncentiveAmountPerUnit",
+					"Description": "The amount of the Incentive to be paid per unit sold.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveAmountPerUnit"
+					}
+				},
+				{
+					"Name": "IncentiveFlatFeeAmount",
+					"Description": "The flat fee paid as an incentive in accordance with a transaction.\n\nThis is for cases where the incentive is not calculated as a percentage but rather as a flat incentive regardless of the number of units involved.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveFlatFeeAmount"
+					}
+				},
+				{
+					"Name": "IncentiveTypeId",
+					"Description": "The unique identifier of an Incentive Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Incentive.cdm.json/Incentive",
+						"Name": "IncentiveTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c9544a0b-e5c9-4735-a286-d71536318364",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Incentive",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Incentive",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IncentiveId\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveId\"},\"IncentiveStartDate\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveStartDate\"},\"IncentiveEndDate\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveEndDate\"},\"IncentiveName\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveName\"},\"IncentiveDescription\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveDescription\"},\"IncentiveEligibilityStatement\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveEligibilityStatement\"},\"IncentiveRestrictionsStatement\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveRestrictionsStatement\"},\"IncentiveMinimumSalesRevenueAmount\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveMinimumSalesRevenueAmount\"},\"IncentiveMinimumNumberUnits\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveMinimumNumberUnits\"},\"IncentiveBaseAmount\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveBaseAmount\"},\"IncentiveAmountPerUnit\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveAmountPerUnit\"},\"IncentiveFlatFeeAmount\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveFlatFeeAmount\"},\"IncentiveTypeId\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Incentive\",\"path\":\"Incentive.cdm.json/Incentive\"},\"description\":\"An incentive is something that motivates an individual to perform an action.\",\"primaryKey\":[\"IncentiveId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Incentive.\",\"isNullable\":false,\"name\":\"IncentiveId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date or first date that the Incentive is in effect.\",\"isNullable\":false,\"name\":\"IncentiveStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date or last date that the Incentive is in effect.\",\"isNullable\":false,\"name\":\"IncentiveEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Incentive.\",\"isNullable\":true,\"name\":\"IncentiveName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the Incentive.\",\"isNullable\":true,\"name\":\"IncentiveDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveEligibilityStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement of the eligibility of an employee or third party to be assigned incentives using the associated Incentive.\",\"isNullable\":true,\"name\":\"IncentiveEligibilityStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveRestrictionsStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement detailing the restrictions that are applied to the associated Incentive.\",\"isNullable\":true,\"name\":\"IncentiveRestrictionsStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveMinimumSalesRevenueAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum sales revenue amount for which the associated Incentive is defined or valid.\",\"isNullable\":true,\"scale\":2,\"name\":\"IncentiveMinimumSalesRevenueAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveMinimumNumberUnits\"},\"dataType\":\"integer\",\"description\":\"The minimum number of units for which the associated Incentive is defined or valid.\",\"isNullable\":true,\"name\":\"IncentiveMinimumNumberUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveBaseAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The base incentive amount paid in accordance with a sale under the Incentive.\",\"isNullable\":true,\"scale\":2,\"name\":\"IncentiveBaseAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveAmountPerUnit\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the Incentive to be paid per unit sold.\",\"isNullable\":true,\"scale\":2,\"name\":\"IncentiveAmountPerUnit\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveFlatFeeAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The flat fee paid as an incentive in accordance with a transaction.\\n\\nThis is for cases where the incentive is not calculated as a percentage but rather as a flat incentive regardless of the number of units involved.\",\"isNullable\":true,\"scale\":2,\"name\":\"IncentiveFlatFeeAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Incentive.cdm.json/Incentive\",\"name\":\"IncentiveTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Incentive Type.\",\"isNullable\":true,\"name\":\"IncentiveTypeId\"}]}}}",
+			"Description": "An incentive is something that motivates an individual to perform an action.",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "IncentiveId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IncentiveId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IncentiveStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IncentiveEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IncentiveName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveEligibilityStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveRestrictionsStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveMinimumSalesRevenueAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveMinimumNumberUnits\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveBaseAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveAmountPerUnit\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveFlatFeeAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IncentiveTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "fe0d9a16-48ba-405e-a439-364fa81490d6",
+		"Description": "An incentive is something that motivates an individual to perform an action."
+	},
+	"type": "TABLE"
+}

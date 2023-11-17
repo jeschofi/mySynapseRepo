@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lsljmctoch",
+	"properties": {
+		"Name": "relationship-lsljmctoch",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelAssortment",
+		"ToTableName": "ChannelAssortmentProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SizeClassId",
+				"ToColumnName": "SizeClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelAssortment.cdm.json/ChannelAssortment\",\"toEntity\":\"ChannelAssortmentProduct.cdm.json/ChannelAssortmentProduct\",\"joinPairs\":[{\"fromAttribute\":\"SizeClassId\",\"toAttribute\":\"SizeClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9baa1d6e-9c4b-4bb7-abb3-317110eb44aa"
+	},
+	"type": "RELATIONSHIP"
+}

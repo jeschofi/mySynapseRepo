@@ -20,7 +20,10 @@
 		"RelationshipType": 0,
 		"Properties": {
 			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"toEntity\":\"AnimalEvent.cdm.json/AnimalEvent\",\"joinPairs\":[{\"fromAttribute\":\"AnimalEventTypeId\",\"toAttribute\":\"AnimalEventTypeId\"}]}}"
-		}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5e689c06-a1dc-4b6a-9a5a-c1333c07b0d7"
 	},
 	"type": "RELATIONSHIP"
 }

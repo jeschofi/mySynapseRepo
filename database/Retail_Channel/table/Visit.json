@@ -1,0 +1,284 @@
+{
+	"name": "Visit",
+	"properties": {
+		"Name": "Visit",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "VisitId",
+					"Description": "The unique identifier of a Visit.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "VisitId"
+					}
+				},
+				{
+					"Name": "VisitStartTimestamp",
+					"Description": "The start timestamp for which the visit is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "VisitStartTimestamp"
+					}
+				},
+				{
+					"Name": "VisitEndTimestamp",
+					"Description": "The end timestamp for which the visit is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "VisitEndTimestamp"
+					}
+				},
+				{
+					"Name": "VisitTypeId",
+					"Description": "The unique identifier of a Visit Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "VisitTypeId"
+					}
+				},
+				{
+					"Name": "VisitNote",
+					"Description": "A note, comment or additional information regarding the visit.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "VisitNote"
+					}
+				},
+				{
+					"Name": "EmployeeId",
+					"Description": "The unique identifier of an Employee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "EmployeeId"
+					}
+				},
+				{
+					"Name": "CustomerId",
+					"Description": "The unique identifier of a Customer.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "CustomerId"
+					}
+				},
+				{
+					"Name": "VisitingPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "VisitingPartyId"
+					}
+				},
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "VisitedPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Visit.cdm.json/Visit",
+						"Name": "VisitedPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c76cb9f8-4019-4b2d-9efd-79a65f91e4e1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Visit",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Visit",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"VisitId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitId\"},\"VisitStartTimestamp\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitStartTimestamp\"},\"VisitEndTimestamp\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitEndTimestamp\"},\"VisitTypeId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitTypeId\"},\"VisitNote\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitNote\"},\"EmployeeId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"EmployeeId\"},\"CustomerId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"CustomerId\"},\"VisitingPartyId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitingPartyId\"},\"ChannelId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"ChannelId\"},\"StoreId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"StoreId\"},\"VisitedPartyId\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitedPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Visit\",\"path\":\"Visit.cdm.json/Visit\"},\"description\":\"A visit between two parties. The visiting party may be a party, employee or customer. The visited party may be a party, channel or store.\",\"primaryKey\":[\"VisitId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Visit.\",\"isNullable\":false,\"name\":\"VisitId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The start timestamp for which the visit is in-effect.\",\"isNullable\":false,\"name\":\"VisitStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The end timestamp for which the visit is in-effect.\",\"isNullable\":true,\"name\":\"VisitEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Visit Type.\",\"isNullable\":true,\"name\":\"VisitTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the visit.\",\"isNullable\":true,\"name\":\"VisitNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"EmployeeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employee.\",\"isNullable\":true,\"name\":\"EmployeeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"CustomerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer.\",\"isNullable\":true,\"name\":\"CustomerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitingPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"VisitingPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":true,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":true,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Visit.cdm.json/Visit\",\"name\":\"VisitedPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"VisitedPartyId\"}]}}}",
+			"Description": "A visit between two parties. The visiting party may be a party, employee or customer. The visited party may be a party, channel or store.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "VisitId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"VisitId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VisitStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"VisitEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VisitTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VisitNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"EmployeeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VisitingPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VisitedPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "a1f7b83f-6697-4414-a9a7-e3fdb8affedf",
+		"Description": "A visit between two parties. The visiting party may be a party, employee or customer. The visited party may be a party, channel or store."
+	},
+	"type": "TABLE"
+}

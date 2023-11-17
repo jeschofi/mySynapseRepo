@@ -1,0 +1,265 @@
+{
+	"name": "CalendarWeek",
+	"properties": {
+		"Name": "CalendarWeek",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CalendarId",
+					"Description": "The unique identifier of a Calendar.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarId"
+					}
+				},
+				{
+					"Name": "CalendarWeekId",
+					"Description": "The unique identifier of a Calendar Week.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarWeekId"
+					}
+				},
+				{
+					"Name": "CalendarWeekName",
+					"Description": "The name of the associated calendar week.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarWeekName"
+					}
+				},
+				{
+					"Name": "CalendarWeekDescription",
+					"Description": "The description of the calendar week.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarWeekDescription"
+					}
+				},
+				{
+					"Name": "CalendarWeekStartDate",
+					"Description": "The start date of the calendar week.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarWeekStartDate"
+					}
+				},
+				{
+					"Name": "CalendarWeekEndDate",
+					"Description": "The end date of the calendar week.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarWeekEndDate"
+					}
+				},
+				{
+					"Name": "CalendarWeekNumber",
+					"Description": "The week number associated with the calendar week.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarWeekNumber"
+					}
+				},
+				{
+					"Name": "CalendarMonthId",
+					"Description": "The unique identifier of a calendar month.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarMonthId"
+					}
+				},
+				{
+					"Name": "CalendarQuarterId",
+					"Description": "The unique identifier of a calendar quarter.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarQuarterId"
+					}
+				},
+				{
+					"Name": "CalendarYearId",
+					"Description": "The unique identifier of a Calendar Year.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarWeek.cdm.json/CalendarWeek",
+						"Name": "CalendarYearId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "bdee45bb-aa0e-4f96-8396-e151cd72efc6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CalendarWeek",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CalendarWeek",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CalendarId\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarId\"},\"CalendarWeekId\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekId\"},\"CalendarWeekName\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekName\"},\"CalendarWeekDescription\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekDescription\"},\"CalendarWeekStartDate\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekStartDate\"},\"CalendarWeekEndDate\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekEndDate\"},\"CalendarWeekNumber\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekNumber\"},\"CalendarMonthId\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarMonthId\"},\"CalendarQuarterId\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarQuarterId\"},\"CalendarYearId\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarYearId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CalendarWeek\",\"path\":\"CalendarWeek.cdm.json/CalendarWeek\"},\"description\":\"A calendar week is used to define a set of calendar dates which belong to the calendar week.\",\"primaryKey\":[\"CalendarId\",\"CalendarWeekId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar.\",\"isNullable\":false,\"name\":\"CalendarId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar Week.\",\"isNullable\":false,\"name\":\"CalendarWeekId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the associated calendar week.\",\"isNullable\":true,\"name\":\"CalendarWeekName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the calendar week.\",\"isNullable\":true,\"name\":\"CalendarWeekDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date of the calendar week.\",\"isNullable\":true,\"name\":\"CalendarWeekStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date of the calendar week.\",\"isNullable\":true,\"name\":\"CalendarWeekEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarWeekNumber\"},\"dataType\":\"integer\",\"description\":\"The week number associated with the calendar week.\",\"isNullable\":true,\"name\":\"CalendarWeekNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarMonthId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a calendar month.\",\"isNullable\":true,\"name\":\"CalendarMonthId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarQuarterId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a calendar quarter.\",\"isNullable\":true,\"name\":\"CalendarQuarterId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"name\":\"CalendarYearId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar Year.\",\"isNullable\":true,\"name\":\"CalendarYearId\"}]}}}",
+			"Description": "A calendar week is used to define a set of calendar dates which belong to the calendar week.",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "CalendarId,CalendarWeekId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CalendarId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CalendarWeekId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CalendarWeekName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarWeekDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarWeekStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarWeekEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarWeekNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarMonthId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarQuarterId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarYearId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "126f129b-6569-435a-8de6-f97e436f10b8",
+		"Description": "A calendar week is used to define a set of calendar dates which belong to the calendar week."
+	},
+	"type": "TABLE"
+}

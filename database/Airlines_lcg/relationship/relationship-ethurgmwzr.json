@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ethurgmwzr",
+	"properties": {
+		"Name": "relationship-ethurgmwzr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Bond",
+		"ToTableName": "BondYieldToMaturity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondId",
+				"ToColumnName": "BondId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Bond.cdm.json/Bond\",\"toEntity\":\"BondYieldToMaturity.cdm.json/BondYieldToMaturity\",\"joinPairs\":[{\"fromAttribute\":\"BondId\",\"toAttribute\":\"BondId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "367b337e-359b-4a4a-a062-ff108af90342"
+	},
+	"type": "RELATIONSHIP"
+}

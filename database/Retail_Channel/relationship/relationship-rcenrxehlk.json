@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rcenrxehlk",
+	"properties": {
+		"Name": "relationship-rcenrxehlk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarQuarter",
+		"ToTableName": "CalendarPeriod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"toEntity\":\"CalendarPeriod.cdm.json/CalendarPeriod\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6fb334d8-553f-4c7f-9ddf-436b6d46908d"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ephezfnztr",
+	"properties": {
+		"Name": "relationship-ephezfnztr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProductStoreDisplayLocation",
+		"ToTableName": "ProductDisplayInteraction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DisplayLocationPeriodStartDate",
+				"ToColumnName": "DisplayLocationPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"toEntity\":\"ProductDisplayInteraction.cdm.json/ProductDisplayInteraction\",\"joinPairs\":[{\"fromAttribute\":\"DisplayLocationPeriodStartDate\",\"toAttribute\":\"DisplayLocationPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1eb54fa7-55c4-4e4c-a9ce-eaacd07e940a"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xvdvpxwfts",
+	"properties": {
+		"Name": "relationship-xvdvpxwfts",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Project",
+		"ToTableName": "LedgerAccount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProjectId",
+				"ToColumnName": "ProjectId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Project.cdm.json/Project\",\"toEntity\":\"LedgerAccount.cdm.json/LedgerAccount\",\"joinPairs\":[{\"fromAttribute\":\"ProjectId\",\"toAttribute\":\"ProjectId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3156795a-904f-48cb-9cae-bc854a99c884"
+	},
+	"type": "RELATIONSHIP"
+}

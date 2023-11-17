@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hcosugfhly",
+	"properties": {
+		"Name": "relationship-hcosugfhly",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarDate",
+		"ToTableName": "RelatedCalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "Date",
+				"ToColumnName": "Date"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"toEntity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"Date\",\"toAttribute\":\"Date\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c7cc57a2-cce4-46b9-9e14-7e9806dbce44"
+	},
+	"type": "RELATIONSHIP"
+}

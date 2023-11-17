@@ -1,0 +1,569 @@
+{
+	"name": "Store",
+	"properties": {
+		"Name": "Store",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "StoreName",
+					"Description": "The business name of the store.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreName"
+					}
+				},
+				{
+					"Name": "StoreShortName",
+					"Description": "The business name of the store.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreShortName"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "OperatedByPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "OperatedByPartyId"
+					}
+				},
+				{
+					"Name": "StoreOpenDate",
+					"Description": "The date that the store was first opened.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreOpenDate"
+					}
+				},
+				{
+					"Name": "StoreCloseDate",
+					"Description": "The date that the store was permanently closed.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreCloseDate"
+					}
+				},
+				{
+					"Name": "StoreTelephoneNumber",
+					"Description": "The Store telephone number.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 15,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreTelephoneNumber"
+					}
+				},
+				{
+					"Name": "StoreFaxNumber",
+					"Description": "The Store fax number.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 15,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreFaxNumber"
+					}
+				},
+				{
+					"Name": "StoreEmailAddress",
+					"Description": "The Store email address.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreEmailAddress"
+					}
+				},
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "GrossFloorArea",
+					"Description": "The total floor area of the Store including display and support areas such as stock keeping, dressing rooms and building functions.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "GrossFloorArea"
+					}
+				},
+				{
+					"Name": "BuildingFunctionsArea",
+					"Description": "The total building functions square footage, which includes air conditioning, heating and dockage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "BuildingFunctionsArea"
+					}
+				},
+				{
+					"Name": "NonsellingArea",
+					"Description": "The total non-selling square footage of the associated Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "NonsellingArea"
+					}
+				},
+				{
+					"Name": "AvailableSellingArea",
+					"Description": "The total selling area within the Store expressed in square footage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "AvailableSellingArea"
+					}
+				},
+				{
+					"Name": "NumberOfFloors",
+					"Description": "The number of floors of the Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "NumberOfFloors"
+					}
+				},
+				{
+					"Name": "TerritoryId",
+					"Description": "The unique identifier of a Territory.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "TerritoryId"
+					}
+				},
+				{
+					"Name": "AreaId",
+					"Description": "The unique identifier of a Territory.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "AreaId"
+					}
+				},
+				{
+					"Name": "RegionId",
+					"Description": "The unique identifier of a Territory.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "RegionId"
+					}
+				},
+				{
+					"Name": "DistrictId",
+					"Description": "The unique identifier of a Territory.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "DistrictId"
+					}
+				},
+				{
+					"Name": "StoreTypeId",
+					"Description": "The unique identifier of a Store Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreTypeId"
+					}
+				},
+				{
+					"Name": "StoreCategoryId",
+					"Description": "The unique identifier of a Store Category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StoreCategoryId"
+					}
+				},
+				{
+					"Name": "StorePartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "StorePartyId"
+					}
+				},
+				{
+					"Name": "MerchantId",
+					"Description": "The Merchant Identification (MID) is a unique number that identifies your merchant account to payment processing networks and to your payment software.\n\nA series or group of digits that uniquely identifies the merchant to the merchant signing bank for account and billing purposes. \n\nWhen a merchant retains the services of a credit card processor, it is issued a merchant ID.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "MerchantId"
+					}
+				},
+				{
+					"Name": "BrandId",
+					"Description": "The unique identifier of a Brand.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "BrandId"
+					}
+				},
+				{
+					"Name": "FranchiseeId",
+					"Description": "The unique identifier of a Franchisee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Store.cdm.json/Store",
+						"Name": "FranchiseeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6007d4bf-5789-4de5-8f05-1cb027ef9048",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Store",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Store",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreId\"},\"StoreName\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreName\"},\"StoreShortName\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreShortName\"},\"LocationId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"LocationId\"},\"OperatedByPartyId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"OperatedByPartyId\"},\"StoreOpenDate\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreOpenDate\"},\"StoreCloseDate\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreCloseDate\"},\"StoreTelephoneNumber\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreTelephoneNumber\"},\"StoreFaxNumber\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreFaxNumber\"},\"StoreEmailAddress\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreEmailAddress\"},\"ChannelId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"ChannelId\"},\"GrossFloorArea\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"GrossFloorArea\"},\"BuildingFunctionsArea\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"BuildingFunctionsArea\"},\"NonsellingArea\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"NonsellingArea\"},\"AvailableSellingArea\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"AvailableSellingArea\"},\"NumberOfFloors\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"NumberOfFloors\"},\"TerritoryId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"TerritoryId\"},\"AreaId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"AreaId\"},\"RegionId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"RegionId\"},\"DistrictId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"DistrictId\"},\"StoreTypeId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreTypeId\"},\"StoreCategoryId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreCategoryId\"},\"StorePartyId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StorePartyId\"},\"MerchantId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"MerchantId\"},\"BrandId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"BrandId\"},\"FranchiseeId\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"FranchiseeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Store\",\"path\":\"Store.cdm.json/Store\"},\"description\":\"A retail/channel location where products, goods and services are sold to consumers.\",\"primaryKey\":[\"StoreId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The business name of the store.\",\"isNullable\":true,\"name\":\"StoreName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreShortName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The business name of the store.\",\"isNullable\":true,\"name\":\"StoreShortName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"OperatedByPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"OperatedByPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreOpenDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the store was first opened.\",\"isNullable\":true,\"name\":\"StoreOpenDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreCloseDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the store was permanently closed.\",\"isNullable\":true,\"name\":\"StoreCloseDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreTelephoneNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":15,\"description\":\"The Store telephone number.\",\"isNullable\":true,\"scale\":0,\"name\":\"StoreTelephoneNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreFaxNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":15,\"description\":\"The Store fax number.\",\"isNullable\":true,\"scale\":0,\"name\":\"StoreFaxNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreEmailAddress\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The Store email address.\",\"isNullable\":true,\"name\":\"StoreEmailAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":true,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"GrossFloorArea\"},\"dataType\":\"integer\",\"description\":\"The total floor area of the Store including display and support areas such as stock keeping, dressing rooms and building functions.\",\"isNullable\":true,\"name\":\"GrossFloorArea\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"BuildingFunctionsArea\"},\"dataType\":\"integer\",\"description\":\"The total building functions square footage, which includes air conditioning, heating and dockage.\",\"isNullable\":true,\"name\":\"BuildingFunctionsArea\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"NonsellingArea\"},\"dataType\":\"integer\",\"description\":\"The total non-selling square footage of the associated Store.\",\"isNullable\":true,\"name\":\"NonsellingArea\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"AvailableSellingArea\"},\"dataType\":\"integer\",\"description\":\"The total selling area within the Store expressed in square footage.\",\"isNullable\":true,\"name\":\"AvailableSellingArea\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"NumberOfFloors\"},\"dataType\":\"integer\",\"description\":\"The number of floors of the Store.\",\"isNullable\":true,\"name\":\"NumberOfFloors\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"TerritoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Territory.\",\"isNullable\":true,\"name\":\"TerritoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"AreaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Territory.\",\"isNullable\":true,\"name\":\"AreaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"RegionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Territory.\",\"isNullable\":true,\"name\":\"RegionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"DistrictId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Territory.\",\"isNullable\":true,\"name\":\"DistrictId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Type.\",\"isNullable\":true,\"name\":\"StoreTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StoreCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Category.\",\"isNullable\":true,\"name\":\"StoreCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"StorePartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"StorePartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"MerchantId\"},\"dataType\":\"integer\",\"description\":\"The Merchant Identification (MID) is a unique number that identifies your merchant account to payment processing networks and to your payment software.\\n\\nA series or group of digits that uniquely identifies the merchant to the merchant signing bank for account and billing purposes. \\n\\nWhen a merchant retains the services of a credit card processor, it is issued a merchant ID.\",\"isNullable\":false,\"name\":\"MerchantId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"BrandId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Brand.\",\"isNullable\":true,\"name\":\"BrandId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Store.cdm.json/Store\",\"name\":\"FranchiseeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Franchisee.\",\"isNullable\":true,\"name\":\"FranchiseeId\"}]}}}",
+			"Description": "A retail/channel location where products, goods and services are sold to consumers.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreShortName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatedByPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreOpenDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreCloseDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreTelephoneNumber\",\"type\":\"decimal(15,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreFaxNumber\",\"type\":\"decimal(15,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreEmailAddress\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GrossFloorArea\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BuildingFunctionsArea\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NonsellingArea\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AvailableSellingArea\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NumberOfFloors\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TerritoryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AreaId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RegionId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DistrictId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreCategoryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StorePartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MerchantId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BrandId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "da0a2b38-4290-4ede-bff9-f36b30aa1633",
+		"Description": "A retail/channel location where products, goods and services are sold to consumers."
+	},
+	"type": "TABLE"
+}

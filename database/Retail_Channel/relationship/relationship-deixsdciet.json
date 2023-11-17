@@ -1,0 +1,29 @@
+{
+	"name": "relationship-deixsdciet",
+	"properties": {
+		"Name": "relationship-deixsdciet",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayShelf",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShelfPeriodStartDate",
+				"ToColumnName": "ShelfPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"ShelfPeriodStartDate\",\"toAttribute\":\"ShelfPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1d58d64a-dfbd-4f25-934d-a909a6d13fc0"
+	},
+	"type": "RELATIONSHIP"
+}

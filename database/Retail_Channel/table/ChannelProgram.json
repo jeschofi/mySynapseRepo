@@ -1,0 +1,208 @@
+{
+	"name": "ChannelProgram",
+	"properties": {
+		"Name": "ChannelProgram",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProgram.cdm.json/ChannelProgram",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "MarketingProgramId",
+					"Description": "The unique identifier of a Program.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProgram.cdm.json/ChannelProgram",
+						"Name": "MarketingProgramId"
+					}
+				},
+				{
+					"Name": "StartDate",
+					"Description": "The date upon which the Channel began participation in the Program.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProgram.cdm.json/ChannelProgram",
+						"Name": "StartDate"
+					}
+				},
+				{
+					"Name": "EndDate",
+					"Description": "The date upon which the Channel terminated or ceased to participate in the Program.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProgram.cdm.json/ChannelProgram",
+						"Name": "EndDate"
+					}
+				},
+				{
+					"Name": "PromotionalAllowanceAmount",
+					"Description": "An incentive amount given to a Channel for participating in a Program.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProgram.cdm.json/ChannelProgram",
+						"Name": "PromotionalAllowanceAmount"
+					}
+				},
+				{
+					"Name": "CoopAdvertisingIndicator",
+					"Description": "A flag or indicator denoting that the Channel has a cooperative advertising relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProgram.cdm.json/ChannelProgram",
+						"Name": "CoopAdvertisingIndicator"
+					}
+				},
+				{
+					"Name": "Note",
+					"Description": "A note, comment or additional information related to the Channel Program relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProgram.cdm.json/ChannelProgram",
+						"Name": "Note"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1f7bb28e-57a6-4afb-97ab-d1b4ec6f9bf8",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelProgram",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelProgram",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"ChannelId\"},\"MarketingProgramId\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"MarketingProgramId\"},\"StartDate\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"StartDate\"},\"EndDate\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"EndDate\"},\"PromotionalAllowanceAmount\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"PromotionalAllowanceAmount\"},\"CoopAdvertisingIndicator\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"CoopAdvertisingIndicator\"},\"Note\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"Note\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelProgram\",\"path\":\"ChannelProgram.cdm.json/ChannelProgram\"},\"description\":\"The Program(s) that support or are applicable to a Channel.\",\"primaryKey\":[\"ChannelId\",\"MarketingProgramId\",\"StartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"MarketingProgramId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Program.\",\"isNullable\":false,\"name\":\"MarketingProgramId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"StartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date upon which the Channel began participation in the Program.\",\"isNullable\":false,\"name\":\"StartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"EndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date upon which the Channel terminated or ceased to participate in the Program.\",\"isNullable\":false,\"name\":\"EndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"PromotionalAllowanceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"An incentive amount given to a Channel for participating in a Program.\",\"isNullable\":true,\"scale\":2,\"name\":\"PromotionalAllowanceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"CoopAdvertisingIndicator\"},\"dataType\":\"boolean\",\"description\":\"A flag or indicator denoting that the Channel has a cooperative advertising relationship.\",\"isNullable\":true,\"name\":\"CoopAdvertisingIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProgram.cdm.json/ChannelProgram\",\"name\":\"Note\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information related to the Channel Program relationship.\",\"isNullable\":true,\"name\":\"Note\"}]}}}",
+			"Description": "The Program(s) that support or are applicable to a Channel.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,MarketingProgramId,StartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MarketingProgramId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PromotionalAllowanceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CoopAdvertisingIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Note\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "668e72d0-b390-4ff7-ba79-fb4d908415d7",
+		"Description": "The Program(s) that support or are applicable to a Channel."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,456 @@
+{
+	"name": "StoreDisplayBin",
+	"properties": {
+		"Name": "StoreDisplayBin",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "BinId",
+					"Description": "The unique identifier of a Bin.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinId"
+					}
+				},
+				{
+					"Name": "BinPeriodStartDate",
+					"Description": "The period start date for which the Store Display Bin is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinPeriodStartDate"
+					}
+				},
+				{
+					"Name": "BinPeriodEndDate",
+					"Description": "The period end date until which the Store Display Bin is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinPeriodEndDate"
+					}
+				},
+				{
+					"Name": "ShelfId",
+					"Description": "The unique identifier of a Shelf.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "ShelfId"
+					}
+				},
+				{
+					"Name": "ShelfPeriodStartDate",
+					"Description": "The period start date for which the Store Display Shelf is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "ShelfPeriodStartDate"
+					}
+				},
+				{
+					"Name": "LocationAddress",
+					"Description": "A unique address within a Warehouse that may identify a Building, Storeroom, Area, Aisle, Shelf, Tier, Bin etc.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 512,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "LocationAddress"
+					}
+				},
+				{
+					"Name": "FloorLocationXCoordinate",
+					"Description": "The floor location x-coordinate of the Bin center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "FloorLocationXCoordinate"
+					}
+				},
+				{
+					"Name": "FloorLocationYCoordinate",
+					"Description": "The floor location y-coordinate of the Bin center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "FloorLocationYCoordinate"
+					}
+				},
+				{
+					"Name": "FloorLocationZCoordinate",
+					"Description": "The floor location z-coordinate of the Bin center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "FloorLocationZCoordinate"
+					}
+				},
+				{
+					"Name": "BinRotationX",
+					"Description": "Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\n\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinRotationX"
+					}
+				},
+				{
+					"Name": "BinRotationY",
+					"Description": "Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \n\nThe majority of store display bins are level and parallel to the floor.  In those cases Rotation Y would be 0.  However, some  bins sit on display shelves are angled downward to allow better visibility into bins.  Thus, the bin is also angled downward.  This would be a negative Rotation Y value.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinRotationY"
+					}
+				},
+				{
+					"Name": "BinRotationZ",
+					"Description": "Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.\n\nThe majority of store display bins sit flat on shelves are level and parallel to the floor, or a large bin may sit directly on the floor, so the Rotation Z would be 0.  There might be instances where bin displays are intentionally tilted toward one side or the other, which would be a non-zero Rotation Z vale.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinRotationZ"
+					}
+				},
+				{
+					"Name": "BinNominalLength",
+					"Description": "The length of the bin measured in the unit of measure specified by the Dimensions Unit of Measure ID.  It is expressed as a nominal dimension, since the bin could have different shapes, such as a cylinder.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinNominalLength"
+					}
+				},
+				{
+					"Name": "BinNominalWidth",
+					"Description": "The width of the bin measured in the unit of measure specified by the Dimensions Unit of Measure ID.  It is expressed as a nominal dimension, since the bin could have different shapes, such as a cylinder.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinNominalWidth"
+					}
+				},
+				{
+					"Name": "BinNominalHeight",
+					"Description": "The height of the bin measured in the unit of measure specified by the Dimensions Unit of Measure ID.  It is expressed as a nominal dimension, since the bin could have different shapes, such as a cylinder.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinNominalHeight"
+					}
+				},
+				{
+					"Name": "DimensionsUnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "DimensionsUnitOfMeasureId"
+					}
+				},
+				{
+					"Name": "BinStorageVolume",
+					"Description": "The storage volume of the bin measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "BinStorageVolume"
+					}
+				},
+				{
+					"Name": "VolumeUnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "VolumeUnitOfMeasureId"
+					}
+				},
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayBin.cdm.json/StoreDisplayBin",
+						"Name": "AssetId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fd8999ac-e3cd-4f5c-9099-7a1a6d8cabe9",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplayBin",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplayBin",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"StoreId\"},\"BinId\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinId\"},\"BinPeriodStartDate\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinPeriodStartDate\"},\"BinPeriodEndDate\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinPeriodEndDate\"},\"ShelfId\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"ShelfId\"},\"ShelfPeriodStartDate\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"ShelfPeriodStartDate\"},\"LocationAddress\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"LocationAddress\"},\"FloorLocationXCoordinate\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"FloorLocationXCoordinate\"},\"FloorLocationYCoordinate\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"FloorLocationYCoordinate\"},\"FloorLocationZCoordinate\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"FloorLocationZCoordinate\"},\"BinRotationX\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinRotationX\"},\"BinRotationY\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinRotationY\"},\"BinRotationZ\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinRotationZ\"},\"BinNominalLength\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinNominalLength\"},\"BinNominalWidth\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinNominalWidth\"},\"BinNominalHeight\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinNominalHeight\"},\"DimensionsUnitOfMeasureId\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"DimensionsUnitOfMeasureId\"},\"BinStorageVolume\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinStorageVolume\"},\"VolumeUnitOfMeasureId\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"VolumeUnitOfMeasureId\"},\"AssetId\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"AssetId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreDisplayBin\",\"path\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\"},\"description\":\"A storage device designed to hold small, discrete parts.\",\"primaryKey\":[\"StoreId\",\"BinId\",\"BinPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Bin.\",\"isNullable\":false,\"name\":\"BinId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Store Display Bin is available for merchandising.\",\"isNullable\":false,\"name\":\"BinPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date until which the Store Display Bin is available for merchandising.\",\"isNullable\":true,\"name\":\"BinPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"ShelfId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Shelf.\",\"isNullable\":false,\"name\":\"ShelfId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"ShelfPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Store Display Shelf is available for merchandising.\",\"isNullable\":false,\"name\":\"ShelfPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"LocationAddress\"},\"dataType\":\"string\",\"dataTypeLength\":512,\"description\":\"A unique address within a Warehouse that may identify a Building, Storeroom, Area, Aisle, Shelf, Tier, Bin etc.\",\"isNullable\":false,\"name\":\"LocationAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"FloorLocationXCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location x-coordinate of the Bin center point.\",\"isNullable\":true,\"name\":\"FloorLocationXCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"FloorLocationYCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location y-coordinate of the Bin center point.\",\"isNullable\":true,\"name\":\"FloorLocationYCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"FloorLocationZCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location z-coordinate of the Bin center point.\",\"isNullable\":true,\"name\":\"FloorLocationZCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinRotationX\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\\n\\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.\",\"isNullable\":true,\"scale\":8,\"name\":\"BinRotationX\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinRotationY\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \\n\\nThe majority of store display bins are level and parallel to the floor.  In those cases Rotation Y would be 0.  However, some  bins sit on display shelves are angled downward to allow better visibility into bins.  Thus, the bin is also angled downward.  This would be a negative Rotation Y value.\",\"isNullable\":true,\"scale\":8,\"name\":\"BinRotationY\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinRotationZ\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.\\n\\nThe majority of store display bins sit flat on shelves are level and parallel to the floor, or a large bin may sit directly on the floor, so the Rotation Z would be 0.  There might be instances where bin displays are intentionally tilted toward one side or the other, which would be a non-zero Rotation Z vale.\",\"isNullable\":true,\"scale\":8,\"name\":\"BinRotationZ\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinNominalLength\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The length of the bin measured in the unit of measure specified by the Dimensions Unit of Measure ID.  It is expressed as a nominal dimension, since the bin could have different shapes, such as a cylinder.\",\"isNullable\":true,\"scale\":8,\"name\":\"BinNominalLength\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinNominalWidth\"},\"dataType\":\"integer\",\"description\":\"The width of the bin measured in the unit of measure specified by the Dimensions Unit of Measure ID.  It is expressed as a nominal dimension, since the bin could have different shapes, such as a cylinder.\",\"isNullable\":true,\"name\":\"BinNominalWidth\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinNominalHeight\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The height of the bin measured in the unit of measure specified by the Dimensions Unit of Measure ID.  It is expressed as a nominal dimension, since the bin could have different shapes, such as a cylinder.\",\"isNullable\":true,\"scale\":8,\"name\":\"BinNominalHeight\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"DimensionsUnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"DimensionsUnitOfMeasureId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"BinStorageVolume\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The storage volume of the bin measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"scale\":8,\"name\":\"BinStorageVolume\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"VolumeUnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"VolumeUnitOfMeasureId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":true,\"name\":\"AssetId\"}]}}}",
+			"Description": "A storage device designed to hold small, discrete parts.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,BinId,BinPeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BinId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BinPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BinPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShelfPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationAddress\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FloorLocationXCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationYCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationZCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BinRotationX\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BinRotationY\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BinRotationZ\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BinNominalLength\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BinNominalWidth\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BinNominalHeight\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DimensionsUnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BinStorageVolume\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"VolumeUnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "ae4731ae-d389-4e1c-a061-8ef527f734b6",
+		"Description": "A storage device designed to hold small, discrete parts."
+	},
+	"type": "TABLE"
+}

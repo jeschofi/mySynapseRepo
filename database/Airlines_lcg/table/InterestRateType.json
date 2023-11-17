@@ -1,0 +1,136 @@
+{
+	"name": "InterestRateType",
+	"properties": {
+		"Name": "InterestRateType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "InterestRateTypeId",
+					"Description": "The unique identifier of an Interest Rate Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InterestRateType.cdm.json/InterestRateType",
+						"Name": "InterestRateTypeId"
+					}
+				},
+				{
+					"Name": "InterestRateTypeName",
+					"Description": "The name of an Interest Rate Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InterestRateType.cdm.json/InterestRateType",
+						"Name": "InterestRateTypeName"
+					}
+				},
+				{
+					"Name": "InterestRateTypeDescription",
+					"Description": "The description of an Interest Rate Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "InterestRateType.cdm.json/InterestRateType",
+						"Name": "InterestRateTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "bf59f855-422f-4c59-999d-2040a18ea8f4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/InterestRateType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/InterestRateType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"InterestRateTypeId\":{\"entity\":\"InterestRateType.cdm.json/InterestRateType\",\"name\":\"InterestRateTypeId\"},\"InterestRateTypeName\":{\"entity\":\"InterestRateType.cdm.json/InterestRateType\",\"name\":\"InterestRateTypeName\"},\"InterestRateTypeDescription\":{\"entity\":\"InterestRateType.cdm.json/InterestRateType\",\"name\":\"InterestRateTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"InterestRateType\",\"path\":\"InterestRateType.cdm.json/InterestRateType\"},\"description\":\"A classification of interest rate types.\\n\\nEx.:\\n- Fixed Interest Rate\\n- Variable Interest Rate\\n- Payable At Maturity\\n\\nwhere:\\nFIXED INTEREST RATE\\nAn interest rate that is set at the time of offering and does not change.\\n\\nVARIABLE INTEREST RATE\\nAn interest rate which is tied to an index, such as the Wall Street Journal Prime, and fluctuates during the life of the offering.\\n\\nPAYABLE AT MATURITY\\nBonds that have no periodic interest payments and the investor receives a single payment at maturity equal to the purchase price + interest earned, compounded semi-annually at the original interest rate.  \\n\\nThese are known as Zero Coupon Bonds.\",\"primaryKey\":[\"InterestRateTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InterestRateType.cdm.json/InterestRateType\",\"name\":\"InterestRateTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Interest Rate Type.\",\"isNullable\":false,\"name\":\"InterestRateTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InterestRateType.cdm.json/InterestRateType\",\"name\":\"InterestRateTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Interest Rate Type.\",\"isNullable\":true,\"name\":\"InterestRateTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"InterestRateType.cdm.json/InterestRateType\",\"name\":\"InterestRateTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Interest Rate Type.\",\"isNullable\":true,\"name\":\"InterestRateTypeDescription\"}]}}}",
+			"Description": "A classification of interest rate types.\n\nEx.:\n- Fixed Interest Rate\n- Variable Interest Rate\n- Payable At Maturity\n\nwhere:\nFIXED INTEREST RATE\nAn interest rate that is set at the time of offering and does not change.\n\nVARIABLE INTEREST RATE\nAn interest rate which is tied to an index, such as the Wall Street Journal Prime, and fluctuates during the life of the offering.\n\nPAYABLE AT MATURITY\nBonds that have no periodic interest payments and the investor receives a single payment at maturity equal to the purchase price + interest earned, compounded semi-annually at the original interest rate.  \n\nThese are known as Zero Coupon Bonds.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "InterestRateTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"InterestRateTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"InterestRateTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InterestRateTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2b1d2759-1435-49fd-b7e9-c4bd9dd0ef52",
+		"Description": "A classification of interest rate types.\n\nEx.:\n- Fixed Interest Rate\n- Variable Interest Rate\n- Payable At Maturity\n\nwhere:\nFIXED INTEREST RATE\nAn interest rate that is set at the time of offering and does not change.\n\nVARIABLE INTEREST RATE\nAn interest rate which is tied to an index, such as the Wall Street Journal Prime, and fluctuates during the life of the offering.\n\nPAYABLE AT MATURITY\nBonds that have no periodic interest payments and the investor receives a single payment at maturity equal to the purchase price + interest earned, compounded semi-annually at the original interest rate.  \n\nThese are known as Zero Coupon Bonds."
+	},
+	"type": "TABLE"
+}

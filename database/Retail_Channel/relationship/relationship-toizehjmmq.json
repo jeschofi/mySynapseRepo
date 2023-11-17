@@ -1,0 +1,29 @@
+{
+	"name": "relationship-toizehjmmq",
+	"properties": {
+		"Name": "relationship-toizehjmmq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Calendar",
+		"ToTableName": "CalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Calendar.cdm.json/Calendar\",\"toEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6b47482b-8b0a-42fe-aa85-fc9413124cdf"
+	},
+	"type": "RELATIONSHIP"
+}

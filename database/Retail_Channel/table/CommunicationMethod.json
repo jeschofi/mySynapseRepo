@@ -1,0 +1,130 @@
+{
+	"name": "CommunicationMethod",
+	"properties": {
+		"Name": "CommunicationMethod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommunicationMethodId",
+					"Description": "The unique identifier of a Communication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationMethod.cdm.json/CommunicationMethod",
+						"Name": "CommunicationMethodId"
+					}
+				},
+				{
+					"Name": "CommunicationMethodName",
+					"Description": "The name of a Communication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationMethod.cdm.json/CommunicationMethod",
+						"Name": "CommunicationMethodName"
+					}
+				},
+				{
+					"Name": "CommunicationMethodDescription",
+					"Description": "The description of a Communication Method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommunicationMethod.cdm.json/CommunicationMethod",
+						"Name": "CommunicationMethodDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9cc99b95-240f-4dd2-b434-fecce953f979",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommunicationMethod",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommunicationMethod",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommunicationMethodId\":{\"entity\":\"CommunicationMethod.cdm.json/CommunicationMethod\",\"name\":\"CommunicationMethodId\"},\"CommunicationMethodName\":{\"entity\":\"CommunicationMethod.cdm.json/CommunicationMethod\",\"name\":\"CommunicationMethodName\"},\"CommunicationMethodDescription\":{\"entity\":\"CommunicationMethod.cdm.json/CommunicationMethod\",\"name\":\"CommunicationMethodDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CommunicationMethod\",\"path\":\"CommunicationMethod.cdm.json/CommunicationMethod\"},\"description\":\"The method by which information is transmitted, received or processed.\\n\\nEx:\\n-  Chat\\n-  Correspondence / Document\\n-  Email\\n-  Fax\\n-  In Person\\n-  Interactive Voice Response (IVR)\\n-  Internet\\n-  SMS\\n-  Social Media\\n-  Telephone\",\"primaryKey\":[\"CommunicationMethodId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationMethod.cdm.json/CommunicationMethod\",\"name\":\"CommunicationMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Communication Method.\",\"isNullable\":false,\"name\":\"CommunicationMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationMethod.cdm.json/CommunicationMethod\",\"name\":\"CommunicationMethodName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Communication Method.\",\"isNullable\":true,\"name\":\"CommunicationMethodName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommunicationMethod.cdm.json/CommunicationMethod\",\"name\":\"CommunicationMethodDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Communication Method.\",\"isNullable\":true,\"name\":\"CommunicationMethodDescription\"}]}}}",
+			"Description": "The method by which information is transmitted, received or processed.\n\nEx:\n-  Chat\n-  Correspondence / Document\n-  Email\n-  Fax\n-  In Person\n-  Interactive Voice Response (IVR)\n-  Internet\n-  SMS\n-  Social Media\n-  Telephone",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#502006\"}",
+			"PrimaryKeys": "CommunicationMethodId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommunicationMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommunicationMethodName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommunicationMethodDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d323b112-cce8-4f5a-8e77-7ef0490f2b99",
+		"Description": "The method by which information is transmitted, received or processed.\n\nEx:\n-  Chat\n-  Correspondence / Document\n-  Email\n-  Fax\n-  In Person\n-  Interactive Voice Response (IVR)\n-  Internet\n-  SMS\n-  Social Media\n-  Telephone"
+	},
+	"type": "TABLE"
+}

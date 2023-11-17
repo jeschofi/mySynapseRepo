@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ghccmdiray",
+	"properties": {
+		"Name": "relationship-ghccmdiray",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionSchedule",
+		"ToTableName": "CommissionScheduleDetailByUnits",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionScheduleId",
+				"ToColumnName": "CommissionScheduleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionSchedule.cdm.json/CommissionSchedule\",\"toEntity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"joinPairs\":[{\"fromAttribute\":\"CommissionScheduleId\",\"toAttribute\":\"CommissionScheduleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0b451849-59c4-4e97-bdca-eca5e8ee7f64"
+	},
+	"type": "RELATIONSHIP"
+}

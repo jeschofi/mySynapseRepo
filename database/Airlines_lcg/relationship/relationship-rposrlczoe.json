@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rposrlczoe",
+	"properties": {
+		"Name": "relationship-rposrlczoe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Bond",
+		"ToTableName": "BondAccruedInterest",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondId",
+				"ToColumnName": "BondId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Bond.cdm.json/Bond\",\"toEntity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"joinPairs\":[{\"fromAttribute\":\"BondId\",\"toAttribute\":\"BondId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8955afd3-3c8a-4ae3-b701-2fce79052685"
+	},
+	"type": "RELATIONSHIP"
+}

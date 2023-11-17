@@ -1,0 +1,168 @@
+{
+	"name": "DayOfWeek",
+	"properties": {
+		"Name": "DayOfWeek",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "DayOfWeekId",
+					"Description": "The unique identifier of a Day Of Week.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DayOfWeek.cdm.json/DayOfWeek",
+						"Name": "DayOfWeekId"
+					}
+				},
+				{
+					"Name": "DayOfWeekName",
+					"Description": "The name of the Day Of Week.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DayOfWeek.cdm.json/DayOfWeek",
+						"Name": "DayOfWeekName"
+					}
+				},
+				{
+					"Name": "DayOfWeekDescription",
+					"Description": "The description of the Day Of Week.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DayOfWeek.cdm.json/DayOfWeek",
+						"Name": "DayOfWeekDescription"
+					}
+				},
+				{
+					"Name": "BusinessDayIndicator",
+					"Description": "Indicates that the associated day is a business day.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DayOfWeek.cdm.json/DayOfWeek",
+						"Name": "BusinessDayIndicator"
+					}
+				},
+				{
+					"Name": "WeekendIndicator",
+					"Description": "Indicates that the associated day falls on a weekend.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "DayOfWeek.cdm.json/DayOfWeek",
+						"Name": "WeekendIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "63825116-7352-4919-a494-56b5f5052369",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/DayOfWeek",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/DayOfWeek",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"DayOfWeekId\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"DayOfWeekId\"},\"DayOfWeekName\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"DayOfWeekName\"},\"DayOfWeekDescription\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"DayOfWeekDescription\"},\"BusinessDayIndicator\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"BusinessDayIndicator\"},\"WeekendIndicator\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"WeekendIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"DayOfWeek\",\"path\":\"DayOfWeek.cdm.json/DayOfWeek\"},\"description\":\"The day(s) of the week that are applicable.\\n\\nEx.:\\n- Monday\\n- Tuesday\\n- Wednesday\\n- Thursday \\n- Friday\\n- Saturday\\n- Sunday\\n- Weekdays (Monday - Friday)\\n- Weekends (Saturday - Sunday)\",\"primaryKey\":[\"DayOfWeekId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"DayOfWeekId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Day Of Week.\",\"isNullable\":false,\"name\":\"DayOfWeekId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"DayOfWeekName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Day Of Week.\",\"isNullable\":true,\"name\":\"DayOfWeekName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"DayOfWeekDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Day Of Week.\",\"isNullable\":true,\"name\":\"DayOfWeekDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"BusinessDayIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the associated day is a business day.\",\"isNullable\":true,\"name\":\"BusinessDayIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"name\":\"WeekendIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the associated day falls on a weekend.\",\"isNullable\":true,\"name\":\"WeekendIndicator\"}]}}}",
+			"Description": "The day(s) of the week that are applicable.\n\nEx.:\n- Monday\n- Tuesday\n- Wednesday\n- Thursday \n- Friday\n- Saturday\n- Sunday\n- Weekdays (Monday - Friday)\n- Weekends (Saturday - Sunday)",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "DayOfWeekId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"DayOfWeekId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DayOfWeekName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DayOfWeekDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BusinessDayIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WeekendIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "023e4991-999f-447b-899d-c6e1bdc6199a",
+		"Description": "The day(s) of the week that are applicable.\n\nEx.:\n- Monday\n- Tuesday\n- Wednesday\n- Thursday \n- Friday\n- Saturday\n- Sunday\n- Weekdays (Monday - Friday)\n- Weekends (Saturday - Sunday)"
+	},
+	"type": "TABLE"
+}

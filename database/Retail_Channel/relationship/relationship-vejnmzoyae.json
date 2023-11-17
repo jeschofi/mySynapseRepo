@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vejnmzoyae",
+	"properties": {
+		"Name": "relationship-vejnmzoyae",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NaicsIndustryGroup",
+		"ToTableName": "NaicsIndustry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NaicsIndustryGroupCode",
+				"ToColumnName": "NaicsIndustryGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NaicsIndustryGroup.cdm.json/NaicsIndustryGroup\",\"toEntity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"joinPairs\":[{\"fromAttribute\":\"NaicsIndustryGroupCode\",\"toAttribute\":\"NaicsIndustryGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c677668e-e270-4218-9f13-9499aa904b34"
+	},
+	"type": "RELATIONSHIP"
+}

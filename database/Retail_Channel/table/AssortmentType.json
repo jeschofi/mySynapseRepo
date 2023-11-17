@@ -1,0 +1,130 @@
+{
+	"name": "AssortmentType",
+	"properties": {
+		"Name": "AssortmentType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssortmentTypeId",
+					"Description": "The unique identifier of an Assortment Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssortmentType.cdm.json/AssortmentType",
+						"Name": "AssortmentTypeId"
+					}
+				},
+				{
+					"Name": "AssortmentTypeName",
+					"Description": "The name given to an Assortment Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssortmentType.cdm.json/AssortmentType",
+						"Name": "AssortmentTypeName"
+					}
+				},
+				{
+					"Name": "AssortmentTypeDescription",
+					"Description": "The description of an Assortment Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssortmentType.cdm.json/AssortmentType",
+						"Name": "AssortmentTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8de45c81-4ef0-4e74-864d-702ca2f0b88d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AssortmentType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AssortmentType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssortmentTypeId\":{\"entity\":\"AssortmentType.cdm.json/AssortmentType\",\"name\":\"AssortmentTypeId\"},\"AssortmentTypeName\":{\"entity\":\"AssortmentType.cdm.json/AssortmentType\",\"name\":\"AssortmentTypeName\"},\"AssortmentTypeDescription\":{\"entity\":\"AssortmentType.cdm.json/AssortmentType\",\"name\":\"AssortmentTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssortmentType\",\"path\":\"AssortmentType.cdm.json/AssortmentType\"},\"description\":\"A classification or grouping of Products to be offered for sale.\\n\\ne.g.\\nCore Assortment\\nRecommended Assortment\\nOptional Assortment\\nProposed Assortment\\nSeasonal Assortment\",\"primaryKey\":[\"AssortmentTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssortmentType.cdm.json/AssortmentType\",\"name\":\"AssortmentTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Assortment Type.\",\"isNullable\":false,\"name\":\"AssortmentTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssortmentType.cdm.json/AssortmentType\",\"name\":\"AssortmentTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name given to an Assortment Type.\",\"isNullable\":true,\"name\":\"AssortmentTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssortmentType.cdm.json/AssortmentType\",\"name\":\"AssortmentTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Assortment Type.\",\"isNullable\":true,\"name\":\"AssortmentTypeDescription\"}]}}}",
+			"Description": "A classification or grouping of Products to be offered for sale.\n\ne.g.\nCore Assortment\nRecommended Assortment\nOptional Assortment\nProposed Assortment\nSeasonal Assortment",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "AssortmentTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssortmentTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssortmentTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssortmentTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d90e31ad-2422-4ea5-8c20-8cf27dae519f",
+		"Description": "A classification or grouping of Products to be offered for sale.\n\ne.g.\nCore Assortment\nRecommended Assortment\nOptional Assortment\nProposed Assortment\nSeasonal Assortment"
+	},
+	"type": "TABLE"
+}

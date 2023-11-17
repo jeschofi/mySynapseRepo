@@ -1,0 +1,169 @@
+{
+	"name": "ShopperProductInteractionEvent",
+	"properties": {
+		"Name": "ShopperProductInteractionEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ShopperSessionId",
+					"Description": "The unique identifier of a Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent",
+						"Name": "ShopperSessionId"
+					}
+				},
+				{
+					"Name": "ShopperPositionId",
+					"Description": "The unique identifier of a Shopper Position within a Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent",
+						"Name": "ShopperPositionId"
+					}
+				},
+				{
+					"Name": "ProductDisplayInteractionId",
+					"Description": "The unique identifier of a Product Display Interaction.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent",
+						"Name": "ProductDisplayInteractionId"
+					}
+				},
+				{
+					"Name": "ShopperProductInteractionEventEndTimestamp",
+					"Description": "The end timestamp for which the Shopper Product Interaction Event is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent",
+						"Name": "ShopperProductInteractionEventEndTimestamp"
+					}
+				},
+				{
+					"Name": "ShopperProductInteractionEventNote",
+					"Description": "A note, comment or additional information regarding the Shopper Product Interaction Event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent",
+						"Name": "ShopperProductInteractionEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a13e2ebe-409e-4da8-b26a-64fec35eb40a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperProductInteractionEvent",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperProductInteractionEvent",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ShopperSessionId\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperSessionId\"},\"ShopperPositionId\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperPositionId\"},\"ProductDisplayInteractionId\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ProductDisplayInteractionId\"},\"ShopperProductInteractionEventEndTimestamp\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperProductInteractionEventEndTimestamp\"},\"ShopperProductInteractionEventNote\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperProductInteractionEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ShopperProductInteractionEvent\",\"path\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\"},\"description\":\"A Shopper Product Interaction Event is an event that occurs through specific Shopper Positions in the store and specific product displays in the store at a specific time interval.  For example, a shopper may be in front of a fixture for several minutes, interacting with 1 or more products.  The interaction with each product may be determined through 1 or more shopper position parameters.\",\"primaryKey\":[\"ShopperSessionId\",\"ShopperPositionId\",\"ProductDisplayInteractionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperSessionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Shopper Session.\",\"isNullable\":false,\"name\":\"ShopperSessionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperPositionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Shopper Position within a Shopper Session.\",\"isNullable\":false,\"name\":\"ShopperPositionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ProductDisplayInteractionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product Display Interaction.\",\"isNullable\":false,\"name\":\"ProductDisplayInteractionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperProductInteractionEventEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The end timestamp for which the Shopper Product Interaction Event is in-effect.\",\"isNullable\":true,\"name\":\"ShopperProductInteractionEventEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperProductInteractionEvent.cdm.json/ShopperProductInteractionEvent\",\"name\":\"ShopperProductInteractionEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Shopper Product Interaction Event.\",\"isNullable\":true,\"name\":\"ShopperProductInteractionEventNote\"}]}}}",
+			"Description": "A Shopper Product Interaction Event is an event that occurs through specific Shopper Positions in the store and specific product displays in the store at a specific time interval.  For example, a shopper may be in front of a fixture for several minutes, interacting with 1 or more products.  The interaction with each product may be determined through 1 or more shopper position parameters.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ShopperSessionId,ShopperPositionId,ProductDisplayInteractionId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ShopperSessionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShopperPositionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductDisplayInteractionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShopperProductInteractionEventEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperProductInteractionEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "45b51e52-0fee-4089-a50b-759c5ac18bbd",
+		"Description": "A Shopper Product Interaction Event is an event that occurs through specific Shopper Positions in the store and specific product displays in the store at a specific time interval.  For example, a shopper may be in front of a fixture for several minutes, interacting with 1 or more products.  The interaction with each product may be determined through 1 or more shopper position parameters."
+	},
+	"type": "TABLE"
+}

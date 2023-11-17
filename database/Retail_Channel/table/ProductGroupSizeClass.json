@@ -1,0 +1,170 @@
+{
+	"name": "ProductGroupSizeClass",
+	"properties": {
+		"Name": "ProductGroupSizeClass",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProductGroupId",
+					"Description": "The unique identifier of a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupSizeClass.cdm.json/ProductGroupSizeClass",
+						"Name": "ProductGroupId"
+					}
+				},
+				{
+					"Name": "SizeClassId",
+					"Description": "The unique identifier of a size class.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupSizeClass.cdm.json/ProductGroupSizeClass",
+						"Name": "SizeClassId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for information about a Size Class within a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupSizeClass.cdm.json/ProductGroupSizeClass",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for information about a Size Class within a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupSizeClass.cdm.json/ProductGroupSizeClass",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "NumberOfProductsInSizeClass",
+					"Description": "The number of Products in a Product Group for a particular Size Class during a Period.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroupSizeClass.cdm.json/ProductGroupSizeClass",
+						"Name": "NumberOfProductsInSizeClass"
+					}
+				}
+			],
+			"ColumnSetEntityName": "690f376f-2bb8-4ac0-8790-c6de81b817ff",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductGroupSizeClass",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductGroupSizeClass",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductGroupId\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"ProductGroupId\"},\"SizeClassId\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"SizeClassId\"},\"PeriodStartDate\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"PeriodEndDate\"},\"NumberOfProductsInSizeClass\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"NumberOfProductsInSizeClass\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductGroupSizeClass\",\"path\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\"},\"description\":\"The number of Products in a Product Group for a particular Size Class during a Period.\",\"primaryKey\":[\"ProductGroupId\",\"SizeClassId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"ProductGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Group.\",\"isNullable\":false,\"name\":\"ProductGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"SizeClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a size class.\",\"isNullable\":false,\"name\":\"SizeClassId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for information about a Size Class within a Product Group.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for information about a Size Class within a Product Group.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"name\":\"NumberOfProductsInSizeClass\"},\"dataType\":\"integer\",\"description\":\"The number of Products in a Product Group for a particular Size Class during a Period.\",\"isNullable\":true,\"name\":\"NumberOfProductsInSizeClass\"}]}}}",
+			"Description": "The number of Products in a Product Group for a particular Size Class during a Period.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "ProductGroupId,SizeClassId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProductGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SizeClassId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NumberOfProductsInSizeClass\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "9cc53f96-2675-4466-875f-738a44a08544",
+		"Description": "The number of Products in a Product Group for a particular Size Class during a Period."
+	},
+	"type": "TABLE"
+}

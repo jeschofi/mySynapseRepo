@@ -1,0 +1,246 @@
+{
+	"name": "MarketingProgram",
+	"properties": {
+		"Name": "MarketingProgram",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "MarketingProgramId",
+					"Description": "The unique identifier of a Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramId"
+					}
+				},
+				{
+					"Name": "MarketingProgramName",
+					"Description": "The name of the Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramName"
+					}
+				},
+				{
+					"Name": "MarketingProgramDescription",
+					"Description": "The description of the Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramDescription"
+					}
+				},
+				{
+					"Name": "MarketingProgramStartDate",
+					"Description": "The start date of the Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramStartDate"
+					}
+				},
+				{
+					"Name": "MarketingProgramEndDate",
+					"Description": "The end date of the Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramEndDate"
+					}
+				},
+				{
+					"Name": "MarketingProgramEligibilityStatement",
+					"Description": "A statement that describes the eligibility to participate in the Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramEligibilityStatement"
+					}
+				},
+				{
+					"Name": "MarketingProgramRestrictionStatement",
+					"Description": "A statement of the restrictions that apply to access to or participation in the Marketing Program.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramRestrictionStatement"
+					}
+				},
+				{
+					"Name": "MarketingProgramTypeId",
+					"Description": "The unique identifier of a Marketing Program Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "MarketingProgramTypeId"
+					}
+				},
+				{
+					"Name": "SponsoringPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "MarketingProgram.cdm.json/MarketingProgram",
+						"Name": "SponsoringPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fde8ba16-febd-4c57-a642-d60f64b5c8d1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/MarketingProgram",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/MarketingProgram",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"MarketingProgramId\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramId\"},\"MarketingProgramName\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramName\"},\"MarketingProgramDescription\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramDescription\"},\"MarketingProgramStartDate\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramStartDate\"},\"MarketingProgramEndDate\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramEndDate\"},\"MarketingProgramEligibilityStatement\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramEligibilityStatement\"},\"MarketingProgramRestrictionStatement\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramRestrictionStatement\"},\"MarketingProgramTypeId\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramTypeId\"},\"SponsoringPartyId\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"SponsoringPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"MarketingProgram\",\"path\":\"MarketingProgram.cdm.json/MarketingProgram\"},\"description\":\"An administrative vehicle that details the pricing, administration and sales strategy of selling products and services to a Market or Market Segment of consumers.\\n\\nEx:\\n- Low Income Education Loan Program\\n- Senior Citizenship Program\\n- Student Shopped Program\\n- FNMA Community Home Buyers Program\\n- FNMA Employer-Assisted Housing\\n- First Time Buyer\\n- a product specific promotion program\\n- a program to educate the public or consumers about a product or service\\n- a support program such as 'product maintenance'\\n\\nNote:\\nA Program may also be associated with an Order in which case it identifies the specific Program under which the associated Order was placed or fulfilled.\",\"primaryKey\":[\"MarketingProgramId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Marketing Program.\",\"isNullable\":false,\"name\":\"MarketingProgramId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Marketing Program.\",\"isNullable\":true,\"name\":\"MarketingProgramName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Marketing Program.\",\"isNullable\":true,\"name\":\"MarketingProgramDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The start date of the Marketing Program.\",\"isNullable\":true,\"name\":\"MarketingProgramStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The end date of the Marketing Program.\",\"isNullable\":true,\"name\":\"MarketingProgramEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramEligibilityStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement that describes the eligibility to participate in the Marketing Program.\",\"isNullable\":true,\"name\":\"MarketingProgramEligibilityStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramRestrictionStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A statement of the restrictions that apply to access to or participation in the Marketing Program.\",\"isNullable\":true,\"name\":\"MarketingProgramRestrictionStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"MarketingProgramTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Marketing Program Type.\",\"isNullable\":true,\"name\":\"MarketingProgramTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"name\":\"SponsoringPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"SponsoringPartyId\"}]}}}",
+			"Description": "An administrative vehicle that details the pricing, administration and sales strategy of selling products and services to a Market or Market Segment of consumers.\n\nEx:\n- Low Income Education Loan Program\n- Senior Citizenship Program\n- Student Shopped Program\n- FNMA Community Home Buyers Program\n- FNMA Employer-Assisted Housing\n- First Time Buyer\n- a product specific promotion program\n- a program to educate the public or consumers about a product or service\n- a support program such as 'product maintenance'\n\nNote:\nA Program may also be associated with an Order in which case it identifies the specific Program under which the associated Order was placed or fulfilled.",
+			"DisplayFolderInfo": "{\"name\":\"Marketing & Advertising\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "MarketingProgramId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"MarketingProgramId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MarketingProgramName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingProgramDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingProgramStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingProgramEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingProgramEligibilityStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingProgramRestrictionStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketingProgramTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SponsoringPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "a1d149f5-e75f-4a1f-8ace-6a85b5ee62f9",
+		"Description": "An administrative vehicle that details the pricing, administration and sales strategy of selling products and services to a Market or Market Segment of consumers.\n\nEx:\n- Low Income Education Loan Program\n- Senior Citizenship Program\n- Student Shopped Program\n- FNMA Community Home Buyers Program\n- FNMA Employer-Assisted Housing\n- First Time Buyer\n- a product specific promotion program\n- a program to educate the public or consumers about a product or service\n- a support program such as 'product maintenance'\n\nNote:\nA Program may also be associated with an Order in which case it identifies the specific Program under which the associated Order was placed or fulfilled."
+	},
+	"type": "TABLE"
+}

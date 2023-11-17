@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ldfbsquwyv",
+	"properties": {
+		"Name": "relationship-ldfbsquwyv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProductGroup",
+		"ToTableName": "ProductGroupProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductGroupId",
+				"ToColumnName": "ProductGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProductGroup.cdm.json/ProductGroup\",\"toEntity\":\"ProductGroupProduct.cdm.json/ProductGroupProduct\",\"joinPairs\":[{\"fromAttribute\":\"ProductGroupId\",\"toAttribute\":\"ProductGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a74c18f5-6e5c-4a78-9dc0-ebef05c3cc08"
+	},
+	"type": "RELATIONSHIP"
+}

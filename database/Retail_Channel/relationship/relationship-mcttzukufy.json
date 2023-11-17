@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mcttzukufy",
+	"properties": {
+		"Name": "relationship-mcttzukufy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Commission",
+		"ToTableName": "PartyEarnedCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionId",
+				"ToColumnName": "CommissionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Commission.cdm.json/Commission\",\"toEntity\":\"PartyEarnedCommission.cdm.json/PartyEarnedCommission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionId\",\"toAttribute\":\"CommissionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bb63cb02-a706-42a6-955b-7d8c402fcd4a"
+	},
+	"type": "RELATIONSHIP"
+}

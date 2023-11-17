@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cfunftqcus",
+	"properties": {
+		"Name": "relationship-cfunftqcus",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CreditRatingAgency",
+		"ToTableName": "CreditRatingAgencyRating",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CreditRatingAgencyId",
+				"ToColumnName": "CreditRatingAgencyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CreditRatingAgency.cdm.json/CreditRatingAgency\",\"toEntity\":\"CreditRatingAgencyRating.cdm.json/CreditRatingAgencyRating\",\"joinPairs\":[{\"fromAttribute\":\"CreditRatingAgencyId\",\"toAttribute\":\"CreditRatingAgencyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "378c14b3-0ad2-47cf-931c-3744123d35f7"
+	},
+	"type": "RELATIONSHIP"
+}

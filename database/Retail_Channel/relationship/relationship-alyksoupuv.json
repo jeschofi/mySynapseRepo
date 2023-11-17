@@ -1,0 +1,29 @@
+{
+	"name": "relationship-alyksoupuv",
+	"properties": {
+		"Name": "relationship-alyksoupuv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocation",
+		"ToTableName": "StoreServiceLocationHours",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreId",
+				"ToColumnName": "StoreId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"toEntity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"joinPairs\":[{\"fromAttribute\":\"StoreId\",\"toAttribute\":\"StoreId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3be85b6d-bd70-465b-814c-e959f26a9e55"
+	},
+	"type": "RELATIONSHIP"
+}

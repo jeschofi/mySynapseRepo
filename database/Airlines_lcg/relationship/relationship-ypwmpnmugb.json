@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ypwmpnmugb",
+	"properties": {
+		"Name": "relationship-ypwmpnmugb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CreditRatingAgency",
+		"ToTableName": "BondEventRisk",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CreditRatingAgencyId",
+				"ToColumnName": "CreditRatingAgencyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CreditRatingAgency.cdm.json/CreditRatingAgency\",\"toEntity\":\"BondEventRisk.cdm.json/BondEventRisk\",\"joinPairs\":[{\"fromAttribute\":\"CreditRatingAgencyId\",\"toAttribute\":\"CreditRatingAgencyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "48d51ae4-3052-4fa6-b009-153de147a3e2"
+	},
+	"type": "RELATIONSHIP"
+}

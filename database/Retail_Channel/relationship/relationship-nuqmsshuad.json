@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nuqmsshuad",
+	"properties": {
+		"Name": "relationship-nuqmsshuad",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreEventType",
+		"ToTableName": "StoreEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreEventTypeId",
+				"ToColumnName": "StoreEventTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreEventType.cdm.json/StoreEventType\",\"toEntity\":\"StoreEvent.cdm.json/StoreEvent\",\"joinPairs\":[{\"fromAttribute\":\"StoreEventTypeId\",\"toAttribute\":\"StoreEventTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "eedb97d2-c3ec-4937-bfbd-7126c9051130"
+	},
+	"type": "RELATIONSHIP"
+}

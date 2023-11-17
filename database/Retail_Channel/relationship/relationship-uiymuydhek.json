@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uiymuydhek",
+	"properties": {
+		"Name": "relationship-uiymuydhek",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StorageTank",
+		"ToTableName": "FuelPumpStorageTank",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StorageTankId",
+				"ToColumnName": "StorageTankId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StorageTank.cdm.json/StorageTank\",\"toEntity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"joinPairs\":[{\"fromAttribute\":\"StorageTankId\",\"toAttribute\":\"StorageTankId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4c55b1c6-1a7e-481c-b16e-4dcf2ac7a791"
+	},
+	"type": "RELATIONSHIP"
+}

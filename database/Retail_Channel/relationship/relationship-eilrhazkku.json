@@ -1,0 +1,29 @@
+{
+	"name": "relationship-eilrhazkku",
+	"properties": {
+		"Name": "relationship-eilrhazkku",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Market",
+		"ToTableName": "MarketSegment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketId",
+				"ToColumnName": "MarketId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Market.cdm.json/Market\",\"toEntity\":\"MarketSegment.cdm.json/MarketSegment\",\"joinPairs\":[{\"fromAttribute\":\"MarketId\",\"toAttribute\":\"MarketId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "29292981-0d0c-4ac5-afde-82fade554079"
+	},
+	"type": "RELATIONSHIP"
+}

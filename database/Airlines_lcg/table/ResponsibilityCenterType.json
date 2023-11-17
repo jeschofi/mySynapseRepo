@@ -1,0 +1,136 @@
+{
+	"name": "ResponsibilityCenterType",
+	"properties": {
+		"Name": "ResponsibilityCenterType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ResponsibilityCenterTypeId",
+					"Description": "The unique identifier of a Responsibility Center Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenterType.cdm.json/ResponsibilityCenterType",
+						"Name": "ResponsibilityCenterTypeId"
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterTypeName",
+					"Description": "The name of a Responsibility Center Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenterType.cdm.json/ResponsibilityCenterType",
+						"Name": "ResponsibilityCenterTypeName"
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterTypeDescription",
+					"Description": "The description of a Responsibility Center Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ResponsibilityCenterType.cdm.json/ResponsibilityCenterType",
+						"Name": "ResponsibilityCenterTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c9d3cee4-5b3a-455e-83ca-9a7fb3da07f4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/ResponsibilityCenterType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/ResponsibilityCenterType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ResponsibilityCenterTypeId\":{\"entity\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\",\"name\":\"ResponsibilityCenterTypeId\"},\"ResponsibilityCenterTypeName\":{\"entity\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\",\"name\":\"ResponsibilityCenterTypeName\"},\"ResponsibilityCenterTypeDescription\":{\"entity\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\",\"name\":\"ResponsibilityCenterTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ResponsibilityCenterType\",\"path\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\"},\"description\":\"The type of responsibility center:\\n\\nEx:\\n- Cost center\\n- Discretionary Cost center (Expenses)\\n- Revenue center\\n- Profit Center\\n- Investment center\\n\\nwhere:\\n\\nCOST center is a responsibility center in which a department or organization has responsibility for controlling costs but does not have responsibility for controlling revenues or investment levels.\\n\\nDISCRETIONARY COST center is a responsibility center in which a department or organization only has responsibility for controlling expenses and staying within a budget.\\n\\nREVENUE center is a responsibility center in which a department or organization has responsibility for revenues but does not have responsibility for controlling costs or investment levels.\\n\\nPROFIT center is a responsibility center in which a department or organization has responsibility for revenues and controlling costs but does not have responsibility for investment levels.\\n\\nINVESTMENT center is a responsibility center in which a department or organization has responsibility for revenues, controlling and the level of investment in the responsibility center.\",\"primaryKey\":[\"ResponsibilityCenterTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\",\"name\":\"ResponsibilityCenterTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Responsibility Center Type.\",\"isNullable\":false,\"name\":\"ResponsibilityCenterTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\",\"name\":\"ResponsibilityCenterTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Responsibility Center Type.\",\"isNullable\":true,\"name\":\"ResponsibilityCenterTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\",\"name\":\"ResponsibilityCenterTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Responsibility Center Type.\",\"isNullable\":true,\"name\":\"ResponsibilityCenterTypeDescription\"}]}}}",
+			"Description": "The type of responsibility center:\n\nEx:\n- Cost center\n- Discretionary Cost center (Expenses)\n- Revenue center\n- Profit Center\n- Investment center\n\nwhere:\n\nCOST center is a responsibility center in which a department or organization has responsibility for controlling costs but does not have responsibility for controlling revenues or investment levels.\n\nDISCRETIONARY COST center is a responsibility center in which a department or organization only has responsibility for controlling expenses and staying within a budget.\n\nREVENUE center is a responsibility center in which a department or organization has responsibility for revenues but does not have responsibility for controlling costs or investment levels.\n\nPROFIT center is a responsibility center in which a department or organization has responsibility for revenues and controlling costs but does not have responsibility for investment levels.\n\nINVESTMENT center is a responsibility center in which a department or organization has responsibility for revenues, controlling and the level of investment in the responsibility center.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "ResponsibilityCenterTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ResponsibilityCenterTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ResponsibilityCenterTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResponsibilityCenterTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "6871911b-2e00-4530-8f00-0410bbb82d04",
+		"Description": "The type of responsibility center:\n\nEx:\n- Cost center\n- Discretionary Cost center (Expenses)\n- Revenue center\n- Profit Center\n- Investment center\n\nwhere:\n\nCOST center is a responsibility center in which a department or organization has responsibility for controlling costs but does not have responsibility for controlling revenues or investment levels.\n\nDISCRETIONARY COST center is a responsibility center in which a department or organization only has responsibility for controlling expenses and staying within a budget.\n\nREVENUE center is a responsibility center in which a department or organization has responsibility for revenues but does not have responsibility for controlling costs or investment levels.\n\nPROFIT center is a responsibility center in which a department or organization has responsibility for revenues and controlling costs but does not have responsibility for investment levels.\n\nINVESTMENT center is a responsibility center in which a department or organization has responsibility for revenues, controlling and the level of investment in the responsibility center."
+	},
+	"type": "TABLE"
+}

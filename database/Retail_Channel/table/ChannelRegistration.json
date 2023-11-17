@@ -1,0 +1,189 @@
+{
+	"name": "ChannelRegistration",
+	"properties": {
+		"Name": "ChannelRegistration",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistration.cdm.json/ChannelRegistration",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "RegistrationPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistration.cdm.json/ChannelRegistration",
+						"Name": "RegistrationPartyId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp for which the associated registration is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistration.cdm.json/ChannelRegistration",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp for which the associated registration is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistration.cdm.json/ChannelRegistration",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "ChannelRegistrationStatusTypeId",
+					"Description": "The unique identifier of a Channel Registration Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistration.cdm.json/ChannelRegistration",
+						"Name": "ChannelRegistrationStatusTypeId"
+					}
+				},
+				{
+					"Name": "ChannelRegistrationNote",
+					"Description": "A note, comment or additional information regarding the channel registration.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistration.cdm.json/ChannelRegistration",
+						"Name": "ChannelRegistrationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "59febd34-6870-4d37-8af6-68b41b021d8b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRegistration",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRegistration",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"ChannelId\"},\"RegistrationPartyId\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"RegistrationPartyId\"},\"PeriodStartTimestamp\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"PeriodEndTimestamp\"},\"ChannelRegistrationStatusTypeId\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"ChannelRegistrationStatusTypeId\"},\"ChannelRegistrationNote\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"ChannelRegistrationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelRegistration\",\"path\":\"ChannelRegistration.cdm.json/ChannelRegistration\"},\"description\":\"A party that has a relationship with the product over the indicated period.\",\"primaryKey\":[\"ChannelId\",\"RegistrationPartyId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"RegistrationPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"RegistrationPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the associated registration is in-effect.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp for which the associated registration is in-effect.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"ChannelRegistrationStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel Registration Status Type.\",\"isNullable\":true,\"name\":\"ChannelRegistrationStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"name\":\"ChannelRegistrationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the channel registration.\",\"isNullable\":true,\"name\":\"ChannelRegistrationNote\"}]}}}",
+			"Description": "A party that has a relationship with the product over the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,RegistrationPartyId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RegistrationPartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelRegistrationStatusTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelRegistrationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "7a5af817-a365-4f05-b90e-be4bb65e6ce1",
+		"Description": "A party that has a relationship with the product over the indicated period."
+	},
+	"type": "TABLE"
+}

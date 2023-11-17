@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lnrdgmbraz",
+	"properties": {
+		"Name": "relationship-lnrdgmbraz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PointOfSale",
+		"ToTableName": "PointOfSaleEmployee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PointOfSaleId",
+				"ToColumnName": "PointOfSaleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PointOfSale.cdm.json/PointOfSale\",\"toEntity\":\"PointOfSaleEmployee.cdm.json/PointOfSaleEmployee\",\"joinPairs\":[{\"fromAttribute\":\"PointOfSaleId\",\"toAttribute\":\"PointOfSaleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bf5a9e52-8623-4a44-8a5a-e88e1f2e8d5e"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,170 @@
+{
+	"name": "CustomerMarketSegment",
+	"properties": {
+		"Name": "CustomerMarketSegment",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerId",
+					"Description": "The unique identifier of a Customer.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerMarketSegment.cdm.json/CustomerMarketSegment",
+						"Name": "CustomerId"
+					}
+				},
+				{
+					"Name": "MarketSegmentId",
+					"Description": "The unique identifier of a Market Segment.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerMarketSegment.cdm.json/CustomerMarketSegment",
+						"Name": "MarketSegmentId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date that the customer market segment relationship is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerMarketSegment.cdm.json/CustomerMarketSegment",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date that the customer market segment relationship is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerMarketSegment.cdm.json/CustomerMarketSegment",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CustomerMarketSegmentNote",
+					"Description": "A note, comment or additional information regarding the customer market segment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerMarketSegment.cdm.json/CustomerMarketSegment",
+						"Name": "CustomerMarketSegmentNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "437a011f-2e15-41e0-a12f-1fe89452e5af",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerMarketSegment",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerMarketSegment",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerId\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"CustomerId\"},\"MarketSegmentId\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"MarketSegmentId\"},\"PeriodStartDate\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"PeriodEndDate\"},\"CustomerMarketSegmentNote\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"CustomerMarketSegmentNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerMarketSegment\",\"path\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\"},\"description\":\"The one or more Market Segment(s) to which the customer is assigned.\",\"primaryKey\":[\"CustomerId\",\"MarketSegmentId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"CustomerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer.\",\"isNullable\":false,\"name\":\"CustomerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"MarketSegmentId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Market Segment.\",\"isNullable\":false,\"name\":\"MarketSegmentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date that the customer market segment relationship is defined.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date that the customer market segment relationship is defined.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"name\":\"CustomerMarketSegmentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the customer market segment.\",\"isNullable\":true,\"name\":\"CustomerMarketSegmentNote\"}]}}}",
+			"Description": "The one or more Market Segment(s) to which the customer is assigned.",
+			"DisplayFolderInfo": "{\"name\":\"Customer\",\"colorCode\":\"#E3008C\"}",
+			"PrimaryKeys": "CustomerId,MarketSegmentId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MarketSegmentId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerMarketSegmentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "bf3f7b1f-9f3e-4c39-b975-8e302c8d5472",
+		"Description": "The one or more Market Segment(s) to which the customer is assigned."
+	},
+	"type": "TABLE"
+}

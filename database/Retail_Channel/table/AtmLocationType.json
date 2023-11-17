@@ -1,0 +1,130 @@
+{
+	"name": "AtmLocationType",
+	"properties": {
+		"Name": "AtmLocationType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AtmLocationTypeId",
+					"Description": "The unique identifier of the ATM Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocationType.cdm.json/AtmLocationType",
+						"Name": "AtmLocationTypeId"
+					}
+				},
+				{
+					"Name": "AtmLocationName",
+					"Description": "The name of the ATM Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocationType.cdm.json/AtmLocationType",
+						"Name": "AtmLocationName"
+					}
+				},
+				{
+					"Name": "AtmLocationDescription",
+					"Description": "The description of the ATM Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocationType.cdm.json/AtmLocationType",
+						"Name": "AtmLocationDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c631f0af-1f50-4609-926c-5c953cc70f9c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmLocationType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmLocationType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AtmLocationTypeId\":{\"entity\":\"AtmLocationType.cdm.json/AtmLocationType\",\"name\":\"AtmLocationTypeId\"},\"AtmLocationName\":{\"entity\":\"AtmLocationType.cdm.json/AtmLocationType\",\"name\":\"AtmLocationName\"},\"AtmLocationDescription\":{\"entity\":\"AtmLocationType.cdm.json/AtmLocationType\",\"name\":\"AtmLocationDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AtmLocationType\",\"path\":\"AtmLocationType.cdm.json/AtmLocationType\"},\"description\":\"A categorization of ATM location based upon the host function performed at that location.\\n\\nEx:\\n- Airport\\n- Grocery stores \\n- Gas stations \\n- Discount superstores \\n- Book stores \\n- Ticket counters (concert tickets, airline tickets, etc.) \\n- Pharmacies \\n- Hotels \\n- E-tailers \\n- Restaurants\",\"primaryKey\":[\"AtmLocationTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocationType.cdm.json/AtmLocationType\",\"name\":\"AtmLocationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the ATM Location Type.\",\"isNullable\":false,\"name\":\"AtmLocationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocationType.cdm.json/AtmLocationType\",\"name\":\"AtmLocationName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the ATM Location Type.\",\"isNullable\":true,\"name\":\"AtmLocationName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocationType.cdm.json/AtmLocationType\",\"name\":\"AtmLocationDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the ATM Location Type.\",\"isNullable\":true,\"name\":\"AtmLocationDescription\"}]}}}",
+			"Description": "A categorization of ATM location based upon the host function performed at that location.\n\nEx:\n- Airport\n- Grocery stores \n- Gas stations \n- Discount superstores \n- Book stores \n- Ticket counters (concert tickets, airline tickets, etc.) \n- Pharmacies \n- Hotels \n- E-tailers \n- Restaurants",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "AtmLocationTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AtmLocationTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AtmLocationName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AtmLocationDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d1be2284-f447-498e-b33a-f2f00d431e50",
+		"Description": "A categorization of ATM location based upon the host function performed at that location.\n\nEx:\n- Airport\n- Grocery stores \n- Gas stations \n- Discount superstores \n- Book stores \n- Ticket counters (concert tickets, airline tickets, etc.) \n- Pharmacies \n- Hotels \n- E-tailers \n- Restaurants"
+	},
+	"type": "TABLE"
+}

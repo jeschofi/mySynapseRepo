@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zsangclict",
+	"properties": {
+		"Name": "relationship-zsangclict",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LineOfCredit",
+		"ToTableName": "LineOfCreditDraw",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LineOfCreditProvidingPartyId",
+				"ToColumnName": "LineOfCreditProvidingPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LineOfCredit.cdm.json/LineOfCredit\",\"toEntity\":\"LineOfCreditDraw.cdm.json/LineOfCreditDraw\",\"joinPairs\":[{\"fromAttribute\":\"LineOfCreditProvidingPartyId\",\"toAttribute\":\"LineOfCreditProvidingPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "386145f0-b9cc-4701-9105-4c7606af7f6a"
+	},
+	"type": "RELATIONSHIP"
+}

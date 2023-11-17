@@ -1,0 +1,174 @@
+{
+	"name": "SecurityIssuer",
+	"properties": {
+		"Name": "SecurityIssuer",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IssuerId",
+					"Description": "The unique identifier of a Role.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityIssuer.cdm.json/SecurityIssuer",
+						"Name": "IssuerId"
+					}
+				},
+				{
+					"Name": "IssuerName",
+					"Description": "The name of the Issuer.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityIssuer.cdm.json/SecurityIssuer",
+						"Name": "IssuerName"
+					}
+				},
+				{
+					"Name": "SecurityIssuerTypeId",
+					"Description": "The unique identifier of the Issuer Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityIssuer.cdm.json/SecurityIssuer",
+						"Name": "SecurityIssuerTypeId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityIssuer.cdm.json/SecurityIssuer",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "DunsNumber",
+					"Description": "An exclusive nine-digit Dun & Bradstreet D-U-N-S Number is assigned to each business location in a global database, it is widely used as a tool for identifying, organizing and consolidating information about businesses. Companies worldwide use it to link information about suppliers, customers and trading partners, providing them a more complete picture of risks and opportunities in their business relationships.\n\nD&B D-U-N-S Numbers are the key to building corporate family relationships in the D&B file. Since each location of a business may have its own unique D&B D-U-N-S Number, a large organization is likely to have many different D&B D-U-N-S Numbers within its corporate \"family tree\". D&B links the D&B D-U-N-S Numbers of parents, subsidiaries, headquarters and branches on more than 6.0 million corporate family members around the world.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 9,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SecurityIssuer.cdm.json/SecurityIssuer",
+						"Name": "DunsNumber"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9ba06017-32d2-4845-8cf8-39d9b5956b96",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/SecurityIssuer",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/SecurityIssuer",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IssuerId\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"IssuerId\"},\"IssuerName\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"IssuerName\"},\"SecurityIssuerTypeId\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"SecurityIssuerTypeId\"},\"PartyId\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"PartyId\"},\"DunsNumber\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"DunsNumber\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SecurityIssuer\",\"path\":\"SecurityIssuer.cdm.json/SecurityIssuer\"},\"description\":\"An entity that may issue and distribute securities. \\n\\nStock issuers are required to report corporate developments to its shareholders and, if declared, pay dividends. \\n\\nBond issuers must make timely payments of interest and principal to its bondholders.\",\"primaryKey\":[\"IssuerId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"IssuerId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Role.\",\"isNullable\":false,\"name\":\"IssuerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"IssuerName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Issuer.\",\"isNullable\":true,\"name\":\"IssuerName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"SecurityIssuerTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Issuer Type.\",\"isNullable\":true,\"name\":\"SecurityIssuerTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SecurityIssuer.cdm.json/SecurityIssuer\",\"name\":\"DunsNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":9,\"description\":\"An exclusive nine-digit Dun & Bradstreet D-U-N-S Number is assigned to each business location in a global database, it is widely used as a tool for identifying, organizing and consolidating information about businesses. Companies worldwide use it to link information about suppliers, customers and trading partners, providing them a more complete picture of risks and opportunities in their business relationships.\\n\\nD&B D-U-N-S Numbers are the key to building corporate family relationships in the D&B file. Since each location of a business may have its own unique D&B D-U-N-S Number, a large organization is likely to have many different D&B D-U-N-S Numbers within its corporate \\\"family tree\\\". D&B links the D&B D-U-N-S Numbers of parents, subsidiaries, headquarters and branches on more than 6.0 million corporate family members around the world.\",\"isNullable\":true,\"scale\":0,\"name\":\"DunsNumber\"}]}}}",
+			"Description": "An entity that may issue and distribute securities. \n\nStock issuers are required to report corporate developments to its shareholders and, if declared, pay dividends. \n\nBond issuers must make timely payments of interest and principal to its bondholders.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "IssuerId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IssuerId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IssuerName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SecurityIssuerTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DunsNumber\",\"type\":\"decimal(9,0)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3299c018-1df6-4912-9357-6d9d4f6f4b47",
+		"Description": "An entity that may issue and distribute securities. \n\nStock issuers are required to report corporate developments to its shareholders and, if declared, pay dividends. \n\nBond issuers must make timely payments of interest and principal to its bondholders."
+	},
+	"type": "TABLE"
+}

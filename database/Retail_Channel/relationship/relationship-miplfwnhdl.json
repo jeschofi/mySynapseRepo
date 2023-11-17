@@ -1,0 +1,29 @@
+{
+	"name": "relationship-miplfwnhdl",
+	"properties": {
+		"Name": "relationship-miplfwnhdl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreGroup",
+		"ToTableName": "StoreGroupProductGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreGroupId",
+				"ToColumnName": "StoreGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreGroup.cdm.json/StoreGroup\",\"toEntity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"joinPairs\":[{\"fromAttribute\":\"StoreGroupId\",\"toAttribute\":\"StoreGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0d4cf900-5ddf-4d4f-be5c-82b0a655e0f4"
+	},
+	"type": "RELATIONSHIP"
+}

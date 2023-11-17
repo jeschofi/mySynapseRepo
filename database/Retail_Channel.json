@@ -1,0 +1,27 @@
+{
+	"name": "Retail_Channel",
+	"properties": {
+		"Name": "Retail_Channel",
+		"EntityType": "DATABASE",
+		"Description": "",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"DerivedModelDBInfo": "{\"ModelDirectives\":{\"BaseModel\":{\"Name\":\"Retail\",\"Version\":\"1.3.0\"}}}",
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel",
+			"Properties": {
+				"FormatType": "delta",
+				"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 5,
+		"ObjectId": "7b835610-ed93-4d49-98fd-eb7e8b247546"
+	},
+	"type": "DATABASE"
+}

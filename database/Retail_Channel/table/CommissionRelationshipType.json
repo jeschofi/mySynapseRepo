@@ -1,0 +1,130 @@
+{
+	"name": "CommissionRelationshipType",
+	"properties": {
+		"Name": "CommissionRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommissionRelationshipTypeId",
+					"Description": "The unique identifier of a Commission Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionRelationshipType.cdm.json/CommissionRelationshipType",
+						"Name": "CommissionRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "CommissionRelationshipTypeName",
+					"Description": "The name of a Commission Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionRelationshipType.cdm.json/CommissionRelationshipType",
+						"Name": "CommissionRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "CommissionRelationshipTypeDescription",
+					"Description": "The description of a Commission Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionRelationshipType.cdm.json/CommissionRelationshipType",
+						"Name": "CommissionRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4d49dc18-a936-4c2c-99ec-ca61aa9f27c0",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommissionRelationshipType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommissionRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommissionRelationshipTypeId\":{\"entity\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\",\"name\":\"CommissionRelationshipTypeId\"},\"CommissionRelationshipTypeName\":{\"entity\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\",\"name\":\"CommissionRelationshipTypeName\"},\"CommissionRelationshipTypeDescription\":{\"entity\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\",\"name\":\"CommissionRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CommissionRelationshipType\",\"path\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\"},\"description\":\"Describes the relationship between two or more commissions.\\n\\nEx:\\n- is split between\\n- is replaced by\\n- supplements\",\"primaryKey\":[\"CommissionRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\",\"name\":\"CommissionRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission Relationship Type.\",\"isNullable\":false,\"name\":\"CommissionRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\",\"name\":\"CommissionRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Commission Relationship Type.\",\"isNullable\":true,\"name\":\"CommissionRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\",\"name\":\"CommissionRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Commission Relationship Type.\",\"isNullable\":true,\"name\":\"CommissionRelationshipTypeDescription\"}]}}}",
+			"Description": "Describes the relationship between two or more commissions.\n\nEx:\n- is split between\n- is replaced by\n- supplements",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "CommissionRelationshipTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommissionRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "b93303c8-75c5-41c8-88e6-b01f34aebb4b",
+		"Description": "Describes the relationship between two or more commissions.\n\nEx:\n- is split between\n- is replaced by\n- supplements"
+	},
+	"type": "TABLE"
+}

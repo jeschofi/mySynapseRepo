@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gxuowocsrw",
+	"properties": {
+		"Name": "relationship-gxuowocsrw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AtmServiceType",
+		"ToTableName": "AtmService",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmServiceTypeId",
+				"ToColumnName": "AtmServiceTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AtmServiceType.cdm.json/AtmServiceType\",\"toEntity\":\"AtmService.cdm.json/AtmService\",\"joinPairs\":[{\"fromAttribute\":\"AtmServiceTypeId\",\"toAttribute\":\"AtmServiceTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6e307a9e-1b94-4975-a60a-471d9a17242b"
+	},
+	"type": "RELATIONSHIP"
+}

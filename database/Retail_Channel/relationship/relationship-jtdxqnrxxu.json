@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jtdxqnrxxu",
+	"properties": {
+		"Name": "relationship-jtdxqnrxxu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "State",
+		"ToTableName": "ChannelLicense",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StateId",
+				"ToColumnName": "StateId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"State.cdm.json/State\",\"toEntity\":\"ChannelLicense.cdm.json/ChannelLicense\",\"joinPairs\":[{\"fromAttribute\":\"StateId\",\"toAttribute\":\"StateId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f54d088e-940c-4785-8940-7712516190d9"
+	},
+	"type": "RELATIONSHIP"
+}

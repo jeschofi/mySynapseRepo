@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qpleixxasc",
+	"properties": {
+		"Name": "relationship-qpleixxasc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "AccountingFramework",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "GoverningPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"AccountingFramework.cdm.json/AccountingFramework\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"GoverningPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a48698be-9b3d-48f2-80a4-9581eed457bf"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kdbirfhhqc",
+	"properties": {
+		"Name": "relationship-kdbirfhhqc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplaySection",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SectionId",
+				"ToColumnName": "SectionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"SectionId\",\"toAttribute\":\"SectionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "54e918df-6801-4e53-b742-2dc34839a43f"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-frqeksrett",
+	"properties": {
+		"Name": "relationship-frqeksrett",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Bond",
+		"ToTableName": "BondCallSchedule",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondId",
+				"ToColumnName": "BondId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Bond.cdm.json/Bond\",\"toEntity\":\"BondCallSchedule.cdm.json/BondCallSchedule\",\"joinPairs\":[{\"fromAttribute\":\"BondId\",\"toAttribute\":\"BondId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0b092f0d-f0c7-40f7-a721-a7caa7ac26fb"
+	},
+	"type": "RELATIONSHIP"
+}

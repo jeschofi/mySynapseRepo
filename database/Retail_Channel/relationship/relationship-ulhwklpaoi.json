@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ulhwklpaoi",
+	"properties": {
+		"Name": "relationship-ulhwklpaoi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BranchType",
+		"ToTableName": "Branch",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BranchTypeId",
+				"ToColumnName": "BranchTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BranchType.cdm.json/BranchType\",\"toEntity\":\"Branch.cdm.json/Branch\",\"joinPairs\":[{\"fromAttribute\":\"BranchTypeId\",\"toAttribute\":\"BranchTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "05c6162a-96c2-4235-ab2c-edce72a1ae93"
+	},
+	"type": "RELATIONSHIP"
+}

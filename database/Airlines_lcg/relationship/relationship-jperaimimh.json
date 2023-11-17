@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jperaimimh",
+	"properties": {
+		"Name": "relationship-jperaimimh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LegalEntityRelationshipType",
+		"ToTableName": "RelatedLegalEntity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LegalEntityRelationshipTypeId",
+				"ToColumnName": "LegalEntityRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LegalEntityRelationshipType.cdm.json/LegalEntityRelationshipType\",\"toEntity\":\"RelatedLegalEntity.cdm.json/RelatedLegalEntity\",\"joinPairs\":[{\"fromAttribute\":\"LegalEntityRelationshipTypeId\",\"toAttribute\":\"LegalEntityRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7d7f4a21-c758-406f-a318-87a87c75a764"
+	},
+	"type": "RELATIONSHIP"
+}

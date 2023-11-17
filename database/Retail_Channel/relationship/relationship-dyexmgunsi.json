@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dyexmgunsi",
+	"properties": {
+		"Name": "relationship-dyexmgunsi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarDate",
+		"ToTableName": "RelatedCalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "Date",
+				"ToColumnName": "RelatedDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"toEntity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"Date\",\"toAttribute\":\"RelatedDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "34e8dfe4-d009-4323-8b1b-005e67f583f9"
+	},
+	"type": "RELATIONSHIP"
+}

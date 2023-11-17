@@ -1,0 +1,193 @@
+{
+	"name": "RelatedCalendarDate",
+	"properties": {
+		"Name": "RelatedCalendarDate",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"Partitioning": {
+			"PartitionFunctionType": null,
+			"Keys": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CalendarId",
+					"Description": "The unique identifier of a Calendar.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCalendarDate.cdm.json/RelatedCalendarDate",
+						"Name": "CalendarId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date of the associated calendar.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCalendarDate.cdm.json/RelatedCalendarDate",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "RelatedCalendarId",
+					"Description": "The unique identifier of a Calendar.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCalendarDate.cdm.json/RelatedCalendarDate",
+						"Name": "RelatedCalendarId"
+					}
+				},
+				{
+					"Name": "RelatedDate",
+					"Description": "The date of the associated calendar.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCalendarDate.cdm.json/RelatedCalendarDate",
+						"Name": "RelatedDate"
+					}
+				},
+				{
+					"Name": "CalendarDateRelationshipTypeId",
+					"Description": "The unique identifier of a Calendar Date Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCalendarDate.cdm.json/RelatedCalendarDate",
+						"Name": "CalendarDateRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "CalendarDateRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Calendar Date relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCalendarDate.cdm.json/RelatedCalendarDate",
+						"Name": "CalendarDateRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8d495ab4-c51a-4675-91fb-66b032b4af88",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedCalendarDate",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedCalendarDate",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CalendarId\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"CalendarId\"},\"Date\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"Date\"},\"RelatedCalendarId\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"RelatedCalendarId\"},\"RelatedDate\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"RelatedDate\"},\"CalendarDateRelationshipTypeId\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"CalendarDateRelationshipTypeId\"},\"CalendarDateRelationshipNote\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"CalendarDateRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"name\":\"RelatedCalendarDate\",\"description\":\"The relationship between calendar dates.\",\"baseEntityReference\":{\"name\":\"RelatedCalendarDate\",\"path\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\"},\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"CalendarId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar.\",\"isNullable\":false,\"name\":\"CalendarId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of the associated calendar.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"RelatedCalendarId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar.\",\"isNullable\":false,\"name\":\"RelatedCalendarId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"RelatedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of the associated calendar.\",\"isNullable\":false,\"name\":\"RelatedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"CalendarDateRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar Date Relationship Type.\",\"isNullable\":false,\"name\":\"CalendarDateRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"name\":\"CalendarDateRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Calendar Date relationship.\",\"isNullable\":true,\"name\":\"CalendarDateRelationshipNote\"}]},\"primaryKey\":[\"CalendarId\",\"Date\",\"RelatedCalendarId\",\"RelatedDate\",\"CalendarDateRelationshipTypeId\"]}}",
+			"Description": "The relationship between calendar dates.",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "CalendarId,Date,RelatedCalendarId,RelatedDate,CalendarDateRelationshipTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CalendarId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedCalendarId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CalendarDateRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CalendarDateRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 3,
+		"ObjectId": "5b4af818-d5b3-43e2-a6f0-a5f3c33f08cb",
+		"Description": "The relationship between calendar dates."
+	},
+	"type": "TABLE"
+}

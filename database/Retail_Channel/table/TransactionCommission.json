@@ -1,0 +1,130 @@
+{
+	"name": "TransactionCommission",
+	"properties": {
+		"Name": "TransactionCommission",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TransactionId",
+					"Description": "The unique identifier of a Transaction.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TransactionCommission.cdm.json/TransactionCommission",
+						"Name": "TransactionId"
+					}
+				},
+				{
+					"Name": "CommissionId",
+					"Description": "The unique identifier of a commission.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TransactionCommission.cdm.json/TransactionCommission",
+						"Name": "CommissionId"
+					}
+				},
+				{
+					"Name": "TransactionCommissionNote",
+					"Description": "Notes, comments or additional information regarding the Transaction Commission.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TransactionCommission.cdm.json/TransactionCommission",
+						"Name": "TransactionCommissionNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8dcdfd87-5bb2-406d-a31b-0ceb2d9741cf",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/TransactionCommission",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/TransactionCommission",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TransactionId\":{\"entity\":\"TransactionCommission.cdm.json/TransactionCommission\",\"name\":\"TransactionId\"},\"CommissionId\":{\"entity\":\"TransactionCommission.cdm.json/TransactionCommission\",\"name\":\"CommissionId\"},\"TransactionCommissionNote\":{\"entity\":\"TransactionCommission.cdm.json/TransactionCommission\",\"name\":\"TransactionCommissionNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TransactionCommission\",\"path\":\"TransactionCommission.cdm.json/TransactionCommission\"},\"description\":\"The Transaction(s) for which the Commission is generated.\",\"primaryKey\":[\"TransactionId\",\"CommissionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TransactionCommission.cdm.json/TransactionCommission\",\"name\":\"TransactionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Transaction.\",\"isNullable\":false,\"name\":\"TransactionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TransactionCommission.cdm.json/TransactionCommission\",\"name\":\"CommissionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a commission.\",\"isNullable\":false,\"name\":\"CommissionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TransactionCommission.cdm.json/TransactionCommission\",\"name\":\"TransactionCommissionNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Transaction Commission.\",\"isNullable\":true,\"name\":\"TransactionCommissionNote\"}]}}}",
+			"Description": "The Transaction(s) for which the Commission is generated.",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "TransactionId,CommissionId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TransactionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TransactionCommissionNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "e9b2a1f5-eaa7-4b03-b7a4-d94e9881694b",
+		"Description": "The Transaction(s) for which the Commission is generated."
+	},
+	"type": "TABLE"
+}

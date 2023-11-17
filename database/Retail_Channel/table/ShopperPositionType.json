@@ -1,0 +1,130 @@
+{
+	"name": "ShopperPositionType",
+	"properties": {
+		"Name": "ShopperPositionType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ShopperPositionTypeId",
+					"Description": "The unique identifier of a Shopper Position Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPositionType.cdm.json/ShopperPositionType",
+						"Name": "ShopperPositionTypeId"
+					}
+				},
+				{
+					"Name": "ShopperPositionTypeName",
+					"Description": "The name of the Shopper Position Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPositionType.cdm.json/ShopperPositionType",
+						"Name": "ShopperPositionTypeName"
+					}
+				},
+				{
+					"Name": "ShopperPositionTypeDescription",
+					"Description": "The description of the Shopper Position Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperPositionType.cdm.json/ShopperPositionType",
+						"Name": "ShopperPositionTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6b5bca5d-30a9-4f94-9f82-052fec7354ce",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperPositionType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperPositionType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ShopperPositionTypeId\":{\"entity\":\"ShopperPositionType.cdm.json/ShopperPositionType\",\"name\":\"ShopperPositionTypeId\"},\"ShopperPositionTypeName\":{\"entity\":\"ShopperPositionType.cdm.json/ShopperPositionType\",\"name\":\"ShopperPositionTypeName\"},\"ShopperPositionTypeDescription\":{\"entity\":\"ShopperPositionType.cdm.json/ShopperPositionType\",\"name\":\"ShopperPositionTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ShopperPositionType\",\"path\":\"ShopperPositionType.cdm.json/ShopperPositionType\"},\"description\":\"When tracking a shopper through a store, there are several parameters that are of interest to determine a shopper's interaction with store displays and products.  In addition to she shopper's specific position within the store layout, other parameters of interest could be things such as:  top of the head, eyes, left/right hands, center body, average and others.\",\"primaryKey\":[\"ShopperPositionTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPositionType.cdm.json/ShopperPositionType\",\"name\":\"ShopperPositionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Shopper Position Type.\",\"isNullable\":false,\"name\":\"ShopperPositionTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPositionType.cdm.json/ShopperPositionType\",\"name\":\"ShopperPositionTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Shopper Position Type.\",\"isNullable\":true,\"name\":\"ShopperPositionTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperPositionType.cdm.json/ShopperPositionType\",\"name\":\"ShopperPositionTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Shopper Position Type.\",\"isNullable\":true,\"name\":\"ShopperPositionTypeDescription\"}]}}}",
+			"Description": "When tracking a shopper through a store, there are several parameters that are of interest to determine a shopper's interaction with store displays and products.  In addition to she shopper's specific position within the store layout, other parameters of interest could be things such as:  top of the head, eyes, left/right hands, center body, average and others.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ShopperPositionTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ShopperPositionTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShopperPositionTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperPositionTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "08e26826-d3ab-4fb9-90ee-341db166d94a",
+		"Description": "When tracking a shopper through a store, there are several parameters that are of interest to determine a shopper's interaction with store displays and products.  In addition to she shopper's specific position within the store layout, other parameters of interest could be things such as:  top of the head, eyes, left/right hands, center body, average and others."
+	},
+	"type": "TABLE"
+}

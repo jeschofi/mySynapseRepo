@@ -1,0 +1,286 @@
+{
+	"name": "ChannelProductTargetMarket",
+	"properties": {
+		"Name": "ChannelProductTargetMarket",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "MarketId",
+					"Description": "The unique identifier of a Market.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "MarketId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PlannedChannelProductMarketIntroductionDate",
+					"Description": "The date that the Product is planned for introduction into the Channel Target Market.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "PlannedChannelProductMarketIntroductionDate"
+					}
+				},
+				{
+					"Name": "ActualChannelProductMarketIntroductionDate",
+					"Description": "The actual date that the Product was introduced into the Channel Target Market.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "ActualChannelProductMarketIntroductionDate"
+					}
+				},
+				{
+					"Name": "PlannedChannelMarketProductSalesUnitsQuantity",
+					"Description": "The planned number of Product units that are to be sold into the Channel Target Market during the defined period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "PlannedChannelMarketProductSalesUnitsQuantity"
+					}
+				},
+				{
+					"Name": "ActualChannelMarketProductSalesUnitsQuantity",
+					"Description": "The actual number of Product units sold into the Channel Target Market during the period defined.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "ActualChannelMarketProductSalesUnitsQuantity"
+					}
+				},
+				{
+					"Name": "PlannedChannelMarketProductSalesRevenueAmount",
+					"Description": "The planned gross sales revenue amount to be generated by Product unit sales into the Channel Target Market during the period defined.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "PlannedChannelMarketProductSalesRevenueAmount"
+					}
+				},
+				{
+					"Name": "ActualChannelMarketProductSalesRevenueAmount",
+					"Description": "The actual gross sales revenue amount generated by Product unit sales into the Channel Target Market during the period defined.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket",
+						"Name": "ActualChannelMarketProductSalesRevenueAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "77be1b3e-e451-4894-a906-5e498c904e55",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelProductTargetMarket",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelProductTargetMarket",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ChannelId\"},\"ProductId\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ProductId\"},\"MarketId\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"MarketId\"},\"PeriodStartDate\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PeriodEndDate\"},\"PlannedChannelProductMarketIntroductionDate\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PlannedChannelProductMarketIntroductionDate\"},\"ActualChannelProductMarketIntroductionDate\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ActualChannelProductMarketIntroductionDate\"},\"PlannedChannelMarketProductSalesUnitsQuantity\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PlannedChannelMarketProductSalesUnitsQuantity\"},\"ActualChannelMarketProductSalesUnitsQuantity\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ActualChannelMarketProductSalesUnitsQuantity\"},\"PlannedChannelMarketProductSalesRevenueAmount\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PlannedChannelMarketProductSalesRevenueAmount\"},\"ActualChannelMarketProductSalesRevenueAmount\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ActualChannelMarketProductSalesRevenueAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelProductTargetMarket\",\"path\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\"},\"description\":\"The Channel Market to which Product marketing communications and advertising is directed.\\n\\n\\\"Target Marketing\\\" is the strategy that identifies groups in a Market and develops products or advertising based upon the characteristics and attributes of that group.    This is just the opposite of \\\"Mass Marketing\\\", which applies a single Product to all market segments.\\n\\nTarget Marketing involves three basic activities:\\n\\n1.  Segment the Market - based upon geographic, demographic, psychographic or behavioral characteristics.\\n\\n2.  Target the Market -  by identifying the specific Market Segments that will be addressed.  \\n\\n3.  Position the Product - to make it most appealing to the target Market Segment consumer.\\n\\nUpon defining target markets, one of three strategies must be selected for implementation:\\n\\n1.  Undifferentiated Marketing\\n2.  Differentiated Marketing\\n3.  Concentrated Marketing\",\"primaryKey\":[\"ChannelId\",\"ProductId\",\"MarketId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"MarketId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Market.\",\"isNullable\":false,\"name\":\"MarketId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PlannedChannelProductMarketIntroductionDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Product is planned for introduction into the Channel Target Market.\",\"isNullable\":true,\"name\":\"PlannedChannelProductMarketIntroductionDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ActualChannelProductMarketIntroductionDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The actual date that the Product was introduced into the Channel Target Market.\",\"isNullable\":true,\"name\":\"ActualChannelProductMarketIntroductionDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PlannedChannelMarketProductSalesUnitsQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The planned number of Product units that are to be sold into the Channel Target Market during the defined period.\",\"isNullable\":true,\"scale\":2,\"name\":\"PlannedChannelMarketProductSalesUnitsQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ActualChannelMarketProductSalesUnitsQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The actual number of Product units sold into the Channel Target Market during the period defined.\",\"isNullable\":true,\"scale\":2,\"name\":\"ActualChannelMarketProductSalesUnitsQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"PlannedChannelMarketProductSalesRevenueAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The planned gross sales revenue amount to be generated by Product unit sales into the Channel Target Market during the period defined.\",\"isNullable\":true,\"scale\":2,\"name\":\"PlannedChannelMarketProductSalesRevenueAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"name\":\"ActualChannelMarketProductSalesRevenueAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The actual gross sales revenue amount generated by Product unit sales into the Channel Target Market during the period defined.\",\"isNullable\":true,\"scale\":2,\"name\":\"ActualChannelMarketProductSalesRevenueAmount\"}]}}}",
+			"Description": "The Channel Market to which Product marketing communications and advertising is directed.\n\n\"Target Marketing\" is the strategy that identifies groups in a Market and develops products or advertising based upon the characteristics and attributes of that group.    This is just the opposite of \"Mass Marketing\", which applies a single Product to all market segments.\n\nTarget Marketing involves three basic activities:\n\n1.  Segment the Market - based upon geographic, demographic, psychographic or behavioral characteristics.\n\n2.  Target the Market -  by identifying the specific Market Segments that will be addressed.  \n\n3.  Position the Product - to make it most appealing to the target Market Segment consumer.\n\nUpon defining target markets, one of three strategies must be selected for implementation:\n\n1.  Undifferentiated Marketing\n2.  Differentiated Marketing\n3.  Concentrated Marketing",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,ProductId,MarketId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MarketId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PlannedChannelProductMarketIntroductionDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ActualChannelProductMarketIntroductionDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedChannelMarketProductSalesUnitsQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ActualChannelMarketProductSalesUnitsQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PlannedChannelMarketProductSalesRevenueAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ActualChannelMarketProductSalesRevenueAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "ef5a4f2c-4bfb-466f-a03d-44fb1d7e4cdc",
+		"Description": "The Channel Market to which Product marketing communications and advertising is directed.\n\n\"Target Marketing\" is the strategy that identifies groups in a Market and develops products or advertising based upon the characteristics and attributes of that group.    This is just the opposite of \"Mass Marketing\", which applies a single Product to all market segments.\n\nTarget Marketing involves three basic activities:\n\n1.  Segment the Market - based upon geographic, demographic, psychographic or behavioral characteristics.\n\n2.  Target the Market -  by identifying the specific Market Segments that will be addressed.  \n\n3.  Position the Product - to make it most appealing to the target Market Segment consumer.\n\nUpon defining target markets, one of three strategies must be selected for implementation:\n\n1.  Undifferentiated Marketing\n2.  Differentiated Marketing\n3.  Concentrated Marketing"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "ChannelRegistrationStatusType",
+	"properties": {
+		"Name": "ChannelRegistrationStatusType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelRegistrationStatusTypeId",
+					"Description": "The unique identifier of a Channel Registration Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType",
+						"Name": "ChannelRegistrationStatusTypeId"
+					}
+				},
+				{
+					"Name": "ChannelRegistrationStatusTypeName",
+					"Description": "The name of a Channel Registration Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType",
+						"Name": "ChannelRegistrationStatusTypeName"
+					}
+				},
+				{
+					"Name": "ChannelRegistrationStatusTypeDescription",
+					"Description": "The description of a Channel Registration Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType",
+						"Name": "ChannelRegistrationStatusTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6e34db29-c73b-48f9-a53b-1cef8ab9563d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRegistrationStatusType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRegistrationStatusType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelRegistrationStatusTypeId\":{\"entity\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\",\"name\":\"ChannelRegistrationStatusTypeId\"},\"ChannelRegistrationStatusTypeName\":{\"entity\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\",\"name\":\"ChannelRegistrationStatusTypeName\"},\"ChannelRegistrationStatusTypeDescription\":{\"entity\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\",\"name\":\"ChannelRegistrationStatusTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelRegistrationStatusType\",\"path\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\"},\"description\":\"The status type of the associated Registration on behalf of a channel.\\n\\nEx:\\n\\n- filed\\n- pending\\n- approved\\n- rejected\\n- in review\\n- appealed\",\"primaryKey\":[\"ChannelRegistrationStatusTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\",\"name\":\"ChannelRegistrationStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel Registration Status Type.\",\"isNullable\":false,\"name\":\"ChannelRegistrationStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\",\"name\":\"ChannelRegistrationStatusTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Channel Registration Status Type.\",\"isNullable\":true,\"name\":\"ChannelRegistrationStatusTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\",\"name\":\"ChannelRegistrationStatusTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Channel Registration Status Type.\",\"isNullable\":true,\"name\":\"ChannelRegistrationStatusTypeDescription\"}]}}}",
+			"Description": "The status type of the associated Registration on behalf of a channel.\n\nEx:\n\n- filed\n- pending\n- approved\n- rejected\n- in review\n- appealed",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelRegistrationStatusTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelRegistrationStatusTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelRegistrationStatusTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelRegistrationStatusTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "ffebb73e-81ee-4c75-832a-25c1dc9e85ce",
+		"Description": "The status type of the associated Registration on behalf of a channel.\n\nEx:\n\n- filed\n- pending\n- approved\n- rejected\n- in review\n- appealed"
+	},
+	"type": "TABLE"
+}

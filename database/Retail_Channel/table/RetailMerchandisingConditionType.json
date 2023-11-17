@@ -1,0 +1,130 @@
+{
+	"name": "RetailMerchandisingConditionType",
+	"properties": {
+		"Name": "RetailMerchandisingConditionType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "RetailMerchandisingConditionTypeId",
+					"Description": "The unique identifier of a retail merchandising condition type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType",
+						"Name": "RetailMerchandisingConditionTypeId"
+					}
+				},
+				{
+					"Name": "RetailMerchandisingConditionTypeName",
+					"Description": "The name of a retail merchandising condition type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType",
+						"Name": "RetailMerchandisingConditionTypeName"
+					}
+				},
+				{
+					"Name": "RetailMerchandisingConditionTypeDescription",
+					"Description": "The description of a retail merchandising condition type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType",
+						"Name": "RetailMerchandisingConditionTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "5f35884f-275f-49c7-a1ec-af68b1c646c4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RetailMerchandisingConditionType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RetailMerchandisingConditionType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"RetailMerchandisingConditionTypeId\":{\"entity\":\"RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType\",\"name\":\"RetailMerchandisingConditionTypeId\"},\"RetailMerchandisingConditionTypeName\":{\"entity\":\"RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType\",\"name\":\"RetailMerchandisingConditionTypeName\"},\"RetailMerchandisingConditionTypeDescription\":{\"entity\":\"RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType\",\"name\":\"RetailMerchandisingConditionTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RetailMerchandisingConditionType\",\"path\":\"RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType\"},\"description\":\"The type of retail merchandising condition.\\n\\nEx:\\n- Price Reduction\\n- Display\\n- Feature\\n- Feature and Display\\n- Temporary Price Reduction (TPR)\\n\\nThere are 4 commonly used merchandising conditions that manufacturers generally pay retailers to execute in order to sell more product.  Most analyses look at 4 mutually exclusive merchandising conditions:  Feature without Display, Display without Feature, Feature & Display (F&D), and Temporary Price Reduction Only (TPR or TPR Only).\\n\\nFeature - Retail merchandising condition executed by retailers and measured by going through newspapers and flyers.  A Feature is a printed ad vehicle distributed by the retailer usually weekly, via newspapers, direct mail or in-store.  Most commonly used is Feature without Display.  Any Feature (with or without a Display) and Feature only (without a price cut) are also available but not used that often.\\n\\nAny Promotion - Stores that have either Display, Feature, TPR or any combination of these merchandising conditions at any point during a specific period are counted in measures with \\\"Any Promo.\\\"\\n\\nTemporary Price Reduction (TPR) - Retail merchandising condition executed by retailers and measured using the retailer's POS system. A TPR is a temporary price cut of at least 5% from the regular price. If the TPR lasts for several weeks it can become the regular price.\\n\\n Display\\nJULY 1, 2012 By ROBIN SIMON 4 COMMENTS\\nIn-store merchandising condition executed by retailers and measured using a sample of audited stores.  A Display is a temporary secondary location in the store different from the regular shelf location, usually an endcap or in-aisle display.  After 7 weeks, a secondary location is no longer considered temporary.  Most commonly used is Display without Feature.  Any Display (with or without a Feature) and Display only (without a price cut) are also available but not used that often.\\n\\nRetail merchandising condition executed by retailers and measured by going through newspapers and flyers.  A Feature is a printed ad vehicle distributed by the retailer usually weekly,  via newspapers, direct mail or in-store.  Most commonly used is Feature without Display.  Any Feature (with or without a Display) and Feature only (without a price cut) are also available but not used that often.\",\"primaryKey\":[\"RetailMerchandisingConditionTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType\",\"name\":\"RetailMerchandisingConditionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a retail merchandising condition type.\",\"isNullable\":false,\"name\":\"RetailMerchandisingConditionTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType\",\"name\":\"RetailMerchandisingConditionTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a retail merchandising condition type.\",\"isNullable\":true,\"name\":\"RetailMerchandisingConditionTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RetailMerchandisingConditionType.cdm.json/RetailMerchandisingConditionType\",\"name\":\"RetailMerchandisingConditionTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a retail merchandising condition type.\",\"isNullable\":true,\"name\":\"RetailMerchandisingConditionTypeDescription\"}]}}}",
+			"Description": "The type of retail merchandising condition.\n\nEx:\n- Price Reduction\n- Display\n- Feature\n- Feature and Display\n- Temporary Price Reduction (TPR)\n\nThere are 4 commonly used merchandising conditions that manufacturers generally pay retailers to execute in order to sell more product.  Most analyses look at 4 mutually exclusive merchandising conditions:  Feature without Display, Display without Feature, Feature & Display (F&D), and Temporary Price Reduction Only (TPR or TPR Only).\n\nFeature - Retail merchandising condition executed by retailers and measured by going through newspapers and flyers.  A Feature is a printed ad vehicle distributed by the retailer usually weekly, via newspapers, direct mail or in-store.  Most commonly used is Feature without Display.  Any Feature (with or without a Display) and Feature only (without a price cut) are also available but not used that often.\n\nAny Promotion - Stores that have either Display, Feature, TPR or any combination of these merchandising conditions at any point during a specific period are counted in measures with \"Any Promo.\"\n\nTemporary Price Reduction (TPR) - Retail merchandising condition executed by retailers and measured using the retailer's POS system. A TPR is a temporary price cut of at least 5% from the regular price. If the TPR lasts for several weeks it can become the regular price.\n\n Display\nJULY 1, 2012 By ROBIN SIMON 4 COMMENTS\nIn-store merchandising condition executed by retailers and measured using a sample of audited stores.  A Display is a temporary secondary location in the store different from the regular shelf location, usually an endcap or in-aisle display.  After 7 weeks, a secondary location is no longer considered temporary.  Most commonly used is Display without Feature.  Any Display (with or without a Feature) and Display only (without a price cut) are also available but not used that often.\n\nRetail merchandising condition executed by retailers and measured by going through newspapers and flyers.  A Feature is a printed ad vehicle distributed by the retailer usually weekly,  via newspapers, direct mail or in-store.  Most commonly used is Feature without Display.  Any Feature (with or without a Display) and Feature only (without a price cut) are also available but not used that often.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "RetailMerchandisingConditionTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"RetailMerchandisingConditionTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RetailMerchandisingConditionTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RetailMerchandisingConditionTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "01718f5d-7f2e-4db0-be34-a122045f3063",
+		"Description": "The type of retail merchandising condition.\n\nEx:\n- Price Reduction\n- Display\n- Feature\n- Feature and Display\n- Temporary Price Reduction (TPR)\n\nThere are 4 commonly used merchandising conditions that manufacturers generally pay retailers to execute in order to sell more product.  Most analyses look at 4 mutually exclusive merchandising conditions:  Feature without Display, Display without Feature, Feature & Display (F&D), and Temporary Price Reduction Only (TPR or TPR Only).\n\nFeature - Retail merchandising condition executed by retailers and measured by going through newspapers and flyers.  A Feature is a printed ad vehicle distributed by the retailer usually weekly, via newspapers, direct mail or in-store.  Most commonly used is Feature without Display.  Any Feature (with or without a Display) and Feature only (without a price cut) are also available but not used that often.\n\nAny Promotion - Stores that have either Display, Feature, TPR or any combination of these merchandising conditions at any point during a specific period are counted in measures with \"Any Promo.\"\n\nTemporary Price Reduction (TPR) - Retail merchandising condition executed by retailers and measured using the retailer's POS system. A TPR is a temporary price cut of at least 5% from the regular price. If the TPR lasts for several weeks it can become the regular price.\n\n Display\nJULY 1, 2012 By ROBIN SIMON 4 COMMENTS\nIn-store merchandising condition executed by retailers and measured using a sample of audited stores.  A Display is a temporary secondary location in the store different from the regular shelf location, usually an endcap or in-aisle display.  After 7 weeks, a secondary location is no longer considered temporary.  Most commonly used is Display without Feature.  Any Display (with or without a Feature) and Display only (without a price cut) are also available but not used that often.\n\nRetail merchandising condition executed by retailers and measured by going through newspapers and flyers.  A Feature is a printed ad vehicle distributed by the retailer usually weekly,  via newspapers, direct mail or in-store.  Most commonly used is Feature without Display.  Any Feature (with or without a Display) and Feature only (without a price cut) are also available but not used that often."
+	},
+	"type": "TABLE"
+}

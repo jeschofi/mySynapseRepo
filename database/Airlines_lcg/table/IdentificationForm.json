@@ -1,0 +1,136 @@
+{
+	"name": "IdentificationForm",
+	"properties": {
+		"Name": "IdentificationForm",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IdentificationFormId",
+					"Description": "The unique identifier of an Identification Form.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationForm.cdm.json/IdentificationForm",
+						"Name": "IdentificationFormId"
+					}
+				},
+				{
+					"Name": "IdentificationFormName",
+					"Description": "The name of an Identification Form.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationForm.cdm.json/IdentificationForm",
+						"Name": "IdentificationFormName"
+					}
+				},
+				{
+					"Name": "IdentificationFormDescription",
+					"Description": "The description of an Identification Form.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationForm.cdm.json/IdentificationForm",
+						"Name": "IdentificationFormDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ee6d0ff4-fb40-4602-b062-1eb0ad571898",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/IdentificationForm",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/IdentificationForm",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IdentificationFormId\":{\"entity\":\"IdentificationForm.cdm.json/IdentificationForm\",\"name\":\"IdentificationFormId\"},\"IdentificationFormName\":{\"entity\":\"IdentificationForm.cdm.json/IdentificationForm\",\"name\":\"IdentificationFormName\"},\"IdentificationFormDescription\":{\"entity\":\"IdentificationForm.cdm.json/IdentificationForm\",\"name\":\"IdentificationFormDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"IdentificationForm\",\"path\":\"IdentificationForm.cdm.json/IdentificationForm\"},\"description\":\"The form of identification.\\n\\nEx:\\n- Card\\n- Paper Wristband\\n- PVC Wristband\\n- FOB\\n- Lanyard\\n- Jewelry\\n- Intangible (Identification Number issued but no physical form)\",\"primaryKey\":[\"IdentificationFormId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationForm.cdm.json/IdentificationForm\",\"name\":\"IdentificationFormId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Identification Form.\",\"isNullable\":false,\"name\":\"IdentificationFormId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationForm.cdm.json/IdentificationForm\",\"name\":\"IdentificationFormName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Identification Form.\",\"isNullable\":true,\"name\":\"IdentificationFormName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationForm.cdm.json/IdentificationForm\",\"name\":\"IdentificationFormDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Identification Form.\",\"isNullable\":true,\"name\":\"IdentificationFormDescription\"}]}}}",
+			"Description": "The form of identification.\n\nEx:\n- Card\n- Paper Wristband\n- PVC Wristband\n- FOB\n- Lanyard\n- Jewelry\n- Intangible (Identification Number issued but no physical form)",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#003C96\"}",
+			"PrimaryKeys": "IdentificationFormId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IdentificationFormId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IdentificationFormName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationFormDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "27fbf29b-4517-46d8-8f85-9417d2a82bf8",
+		"Description": "The form of identification.\n\nEx:\n- Card\n- Paper Wristband\n- PVC Wristband\n- FOB\n- Lanyard\n- Jewelry\n- Intangible (Identification Number issued but no physical form)"
+	},
+	"type": "TABLE"
+}

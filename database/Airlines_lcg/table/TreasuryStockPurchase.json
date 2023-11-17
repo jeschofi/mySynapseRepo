@@ -1,0 +1,156 @@
+{
+	"name": "TreasuryStockPurchase",
+	"properties": {
+		"Name": "TreasuryStockPurchase",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStockPurchase.cdm.json/TreasuryStockPurchase",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "StockId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStockPurchase.cdm.json/TreasuryStockPurchase",
+						"Name": "StockId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is current or reported as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStockPurchase.cdm.json/TreasuryStockPurchase",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "NumberOfSharesPurchased",
+					"Description": "The number of treasury shares purchased on the associated timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStockPurchase.cdm.json/TreasuryStockPurchase",
+						"Name": "NumberOfSharesPurchased"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fcf9155a-aaeb-48f7-9b8c-28aa5fc7d239",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/TreasuryStockPurchase",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/TreasuryStockPurchase",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"LegalEntityId\"},\"StockId\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"StockId\"},\"Timestamp\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"Timestamp\"},\"NumberOfSharesPurchased\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"NumberOfSharesPurchased\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TreasuryStockPurchase\",\"path\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\"},\"description\":\"The individual treasury stock purchases by the corporation that comprise the total number of treasury stock shares held.\",\"primaryKey\":[\"LegalEntityId\",\"StockId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"StockId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"StockId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is current or reported as-of.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStockPurchase.cdm.json/TreasuryStockPurchase\",\"name\":\"NumberOfSharesPurchased\"},\"dataType\":\"integer\",\"description\":\"The number of treasury shares purchased on the associated timestamp.\",\"isNullable\":true,\"name\":\"NumberOfSharesPurchased\"}]}}}",
+			"Description": "The individual treasury stock purchases by the corporation that comprise the total number of treasury stock shares held.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "LegalEntityId,StockId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StockId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NumberOfSharesPurchased\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2e8cbb4c-806b-4840-a58f-1081e255770a",
+		"Description": "The individual treasury stock purchases by the corporation that comprise the total number of treasury stock shares held."
+	},
+	"type": "TABLE"
+}

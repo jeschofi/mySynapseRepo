@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cpebuxhobs",
+	"properties": {
+		"Name": "relationship-cpebuxhobs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarType",
+		"ToTableName": "Calendar",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarTypeId",
+				"ToColumnName": "CalendarTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarType.cdm.json/CalendarType\",\"toEntity\":\"Calendar.cdm.json/Calendar\",\"joinPairs\":[{\"fromAttribute\":\"CalendarTypeId\",\"toAttribute\":\"CalendarTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "11faf0d3-4678-4870-8483-39d335c49dc3"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,189 @@
+{
+	"name": "CustomerAccountRelatedChannel",
+	"properties": {
+		"Name": "CustomerAccountRelatedChannel",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerAccountId",
+					"Description": "The unique identifier of a Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel",
+						"Name": "CustomerAccountId"
+					}
+				},
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "CustomerAccountChannelRelationshipTypeId",
+					"Description": "The unique identifier of a Customer Account Channel Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel",
+						"Name": "CustomerAccountChannelRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the associated Customer Account Channel relationship is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the associated Customer Account Channel relationship is defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CustomerAccountChannelRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Customer Account - Channel relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel",
+						"Name": "CustomerAccountChannelRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "35bcdb90-1fcb-45ec-93b2-f52222cdd757",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerAccountRelatedChannel",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerAccountRelatedChannel",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerAccountId\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"CustomerAccountId\"},\"ChannelId\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"ChannelId\"},\"CustomerAccountChannelRelationshipTypeId\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"CustomerAccountChannelRelationshipTypeId\"},\"PeriodStartDate\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"PeriodEndDate\"},\"CustomerAccountChannelRelationshipNote\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"CustomerAccountChannelRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"name\":\"CustomerAccountRelatedChannel\",\"description\":\"The Channel associated with the Customer Account for the associated period.\",\"baseEntityReference\":{\"name\":\"CustomerAccountRelatedChannel\",\"path\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\"},\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"CustomerAccountId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer Account.\",\"isNullable\":false,\"name\":\"CustomerAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"CustomerAccountChannelRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Customer Account Channel Relationship Type.\",\"isNullable\":false,\"name\":\"CustomerAccountChannelRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the associated Customer Account Channel relationship is defined.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the associated Customer Account Channel relationship is defined.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountRelatedChannel.cdm.json/CustomerAccountRelatedChannel\",\"name\":\"CustomerAccountChannelRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Customer Account - Channel relationship.\",\"isNullable\":true,\"name\":\"CustomerAccountChannelRelationshipNote\"}]},\"primaryKey\":[\"CustomerAccountId\",\"ChannelId\",\"CustomerAccountChannelRelationshipTypeId\",\"PeriodStartDate\"]}}",
+			"Description": "The Channel associated with the Customer Account for the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Account\",\"colorCode\":\"#022F22\"}",
+			"PrimaryKeys": "CustomerAccountId,ChannelId,CustomerAccountChannelRelationshipTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerAccountId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerAccountChannelRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerAccountChannelRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "69d62957-6ae6-4f91-a327-1a340220bdb8",
+		"Description": "The Channel associated with the Customer Account for the associated period."
+	},
+	"type": "TABLE"
+}

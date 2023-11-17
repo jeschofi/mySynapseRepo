@@ -1,0 +1,168 @@
+{
+	"name": "Website",
+	"properties": {
+		"Name": "Website",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "WebsiteUrl",
+					"Description": "The URL associated with the website. Often referred to as the domain name or registered domain name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 2083,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Website.cdm.json/Website",
+						"Name": "WebsiteUrl"
+					}
+				},
+				{
+					"Name": "HttpServerIpAddress",
+					"Description": "Internet Protocol number or address. A unique number consisting of 4 parts separated by dots, e.g. 165.113.245.2 \n\nEvery machine that is connected to the Internet must have a unique IP address at a point in time, though those IP addresses can be either static (i.e. fixed) or they can be dynamically allocated with the result that a website may have different IP addresses over time. If a machine does not have an IP number, it is not really on the Internet. Most machines also have one or more URLs or Domain Names that are easier for people to remember and which resolve to an IP address through the use of Name Servers.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 32,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Website.cdm.json/Website",
+						"Name": "HttpServerIpAddress"
+					}
+				},
+				{
+					"Name": "WebsiteName",
+					"Description": "The title or name of the website.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Website.cdm.json/Website",
+						"Name": "WebsiteName"
+					}
+				},
+				{
+					"Name": "WebsiteDescription",
+					"Description": "A description of a website.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Website.cdm.json/Website",
+						"Name": "WebsiteDescription"
+					}
+				},
+				{
+					"Name": "WebsiteOwningPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Website.cdm.json/Website",
+						"Name": "WebsiteOwningPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0915d7b0-6e2f-4ea6-bb5a-49a1d7dc0ac1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Website",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Website",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"WebsiteUrl\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteUrl\"},\"HttpServerIpAddress\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"HttpServerIpAddress\"},\"WebsiteName\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteName\"},\"WebsiteDescription\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteDescription\"},\"WebsiteOwningPartyId\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteOwningPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Website\",\"path\":\"Website.cdm.json/Website\"},\"description\":\"A website is a collection of Webpages, images, videos or other digital assets that is hosted on one or several Web server(s), usually accessible via the Internet, cell phone or a LAN.\",\"primaryKey\":[\"WebsiteUrl\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteUrl\"},\"dataType\":\"string\",\"dataTypeLength\":2083,\"description\":\"The URL associated with the website. Often referred to as the domain name or registered domain name.\",\"isNullable\":false,\"name\":\"WebsiteUrl\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"HttpServerIpAddress\"},\"dataType\":\"string\",\"dataTypeLength\":32,\"description\":\"Internet Protocol number or address. A unique number consisting of 4 parts separated by dots, e.g. 165.113.245.2 \\n\\nEvery machine that is connected to the Internet must have a unique IP address at a point in time, though those IP addresses can be either static (i.e. fixed) or they can be dynamically allocated with the result that a website may have different IP addresses over time. If a machine does not have an IP number, it is not really on the Internet. Most machines also have one or more URLs or Domain Names that are easier for people to remember and which resolve to an IP address through the use of Name Servers.\",\"isNullable\":true,\"name\":\"HttpServerIpAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The title or name of the website.\",\"isNullable\":true,\"name\":\"WebsiteName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of a website.\",\"isNullable\":true,\"name\":\"WebsiteDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Website.cdm.json/Website\",\"name\":\"WebsiteOwningPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"WebsiteOwningPartyId\"}]}}}",
+			"Description": "A website is a collection of Webpages, images, videos or other digital assets that is hosted on one or several Web server(s), usually accessible via the Internet, cell phone or a LAN.",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#502006\"}",
+			"PrimaryKeys": "WebsiteUrl",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"WebsiteUrl\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"HttpServerIpAddress\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WebsiteName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WebsiteDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WebsiteOwningPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "56015922-93cd-4628-b390-a68b934b0475",
+		"Description": "A website is a collection of Webpages, images, videos or other digital assets that is hosted on one or several Web server(s), usually accessible via the Internet, cell phone or a LAN."
+	},
+	"type": "TABLE"
+}

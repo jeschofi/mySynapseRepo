@@ -1,0 +1,136 @@
+{
+	"name": "AssetAccountingCategory",
+	"properties": {
+		"Name": "AssetAccountingCategory",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetAccountingCategoryId",
+					"Description": "The unique identifier of an Asset Accounting Category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingCategory.cdm.json/AssetAccountingCategory",
+						"Name": "AssetAccountingCategoryId"
+					}
+				},
+				{
+					"Name": "AssetAccountingCategoryName",
+					"Description": "The name of an Asset Accounting Category.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingCategory.cdm.json/AssetAccountingCategory",
+						"Name": "AssetAccountingCategoryName"
+					}
+				},
+				{
+					"Name": "AssetAccountingCategoryDescription",
+					"Description": "The description of an Asset Accounting Category.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetAccountingCategory.cdm.json/AssetAccountingCategory",
+						"Name": "AssetAccountingCategoryDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7af36162-7c66-4065-9aed-2cf11dd222a3",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetAccountingCategory",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetAccountingCategory",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetAccountingCategoryId\":{\"entity\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\",\"name\":\"AssetAccountingCategoryId\"},\"AssetAccountingCategoryName\":{\"entity\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\",\"name\":\"AssetAccountingCategoryName\"},\"AssetAccountingCategoryDescription\":{\"entity\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\",\"name\":\"AssetAccountingCategoryDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetAccountingCategory\",\"path\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\"},\"description\":\"A categorization of assets as to whether they will be used, sold or reassigned within one year, beyond one year or are a deferred charge.\\n\\nNONCURRENT ASSET\\nAssets meant to be used up or consumed beyond one operating cycle or one year.\\n\\nDEFERRED CHARGE\\nA charge that is deferred to another operating cycle or period.\\n\\nCURRENT ASSET\\nAssets meant to be used up or consumed within one operating cycle or one year.\",\"primaryKey\":[\"AssetAccountingCategoryId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\",\"name\":\"AssetAccountingCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Asset Accounting Category.\",\"isNullable\":false,\"name\":\"AssetAccountingCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\",\"name\":\"AssetAccountingCategoryName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Asset Accounting Category.\",\"isNullable\":true,\"name\":\"AssetAccountingCategoryName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\",\"name\":\"AssetAccountingCategoryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Asset Accounting Category.\",\"isNullable\":true,\"name\":\"AssetAccountingCategoryDescription\"}]}}}",
+			"Description": "A categorization of assets as to whether they will be used, sold or reassigned within one year, beyond one year or are a deferred charge.\n\nNONCURRENT ASSET\nAssets meant to be used up or consumed beyond one operating cycle or one year.\n\nDEFERRED CHARGE\nA charge that is deferred to another operating cycle or period.\n\nCURRENT ASSET\nAssets meant to be used up or consumed within one operating cycle or one year.",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetAccountingCategoryId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetAccountingCategoryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetAccountingCategoryName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetAccountingCategoryDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "211787f4-3b0a-4a9d-9a4c-4ef119e0d0f7",
+		"Description": "A categorization of assets as to whether they will be used, sold or reassigned within one year, beyond one year or are a deferred charge.\n\nNONCURRENT ASSET\nAssets meant to be used up or consumed beyond one operating cycle or one year.\n\nDEFERRED CHARGE\nA charge that is deferred to another operating cycle or period.\n\nCURRENT ASSET\nAssets meant to be used up or consumed within one operating cycle or one year."
+	},
+	"type": "TABLE"
+}

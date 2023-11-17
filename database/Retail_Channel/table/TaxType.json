@@ -1,0 +1,149 @@
+{
+	"name": "TaxType",
+	"properties": {
+		"Name": "TaxType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TaxTypeId",
+					"Description": "The unique identifier of a Tax Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxType.cdm.json/TaxType",
+						"Name": "TaxTypeId"
+					}
+				},
+				{
+					"Name": "TaxTypeName",
+					"Description": "The common name or business name by which a Tax Type is known.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxType.cdm.json/TaxType",
+						"Name": "TaxTypeName"
+					}
+				},
+				{
+					"Name": "TaxTypeDescription",
+					"Description": "The description of the Tax Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxType.cdm.json/TaxType",
+						"Name": "TaxTypeDescription"
+					}
+				},
+				{
+					"Name": "TaxingAuthorityPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxType.cdm.json/TaxType",
+						"Name": "TaxingAuthorityPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a9304ce5-ede1-4e4e-b3d8-4aed8c829b5b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/TaxType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/TaxType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TaxTypeId\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxTypeId\"},\"TaxTypeName\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxTypeName\"},\"TaxTypeDescription\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxTypeDescription\"},\"TaxingAuthorityPartyId\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxingAuthorityPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TaxType\",\"path\":\"TaxType.cdm.json/TaxType\"},\"description\":\"A categorization or classification of Taxes based upon common characteristics, attributes or functionality.\\n\\nEx:\\n- VAT\\n- GST\\n- HST\\n- City\\n- Local tax\\n- State/Local tax\\n- State\\n- Provincial\\n- Federal\\n- Resident Withholding Tax (Savings, checking accounts)\\n- Mortgage Recording Tax\\n- The Securities Transaction Tax (STT)\\n- Overusage tax\\n- Sales and Excise Taxes : 5% of monthly utility bill sales and excise tax City Of Alexandria VA\\n- Utility Tax Each purchaser of utility service in the City of Fairfax, VA is levied a tax based on the total amount of monthly utility usage.\\n- State Utility Tax\",\"primaryKey\":[\"TaxTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Tax Type.\",\"isNullable\":false,\"name\":\"TaxTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The common name or business name by which a Tax Type is known.\",\"isNullable\":true,\"name\":\"TaxTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Tax Type.\",\"isNullable\":true,\"name\":\"TaxTypeDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxType.cdm.json/TaxType\",\"name\":\"TaxingAuthorityPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"TaxingAuthorityPartyId\"}]}}}",
+			"Description": "A categorization or classification of Taxes based upon common characteristics, attributes or functionality.\n\nEx:\n- VAT\n- GST\n- HST\n- City\n- Local tax\n- State/Local tax\n- State\n- Provincial\n- Federal\n- Resident Withholding Tax (Savings, checking accounts)\n- Mortgage Recording Tax\n- The Securities Transaction Tax (STT)\n- Overusage tax\n- Sales and Excise Taxes : 5% of monthly utility bill sales and excise tax City Of Alexandria VA\n- Utility Tax Each purchaser of utility service in the City of Fairfax, VA is levied a tax based on the total amount of monthly utility usage.\n- State Utility Tax",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "TaxTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TaxTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TaxTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxingAuthorityPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "432c5990-c16f-44b3-b223-912487c6dbc1",
+		"Description": "A categorization or classification of Taxes based upon common characteristics, attributes or functionality.\n\nEx:\n- VAT\n- GST\n- HST\n- City\n- Local tax\n- State/Local tax\n- State\n- Provincial\n- Federal\n- Resident Withholding Tax (Savings, checking accounts)\n- Mortgage Recording Tax\n- The Securities Transaction Tax (STT)\n- Overusage tax\n- Sales and Excise Taxes : 5% of monthly utility bill sales and excise tax City Of Alexandria VA\n- Utility Tax Each purchaser of utility service in the City of Fairfax, VA is levied a tax based on the total amount of monthly utility usage.\n- State Utility Tax"
+	},
+	"type": "TABLE"
+}

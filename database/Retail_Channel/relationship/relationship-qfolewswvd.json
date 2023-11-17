@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qfolewswvd",
+	"properties": {
+		"Name": "relationship-qfolewswvd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssortmentType",
+		"ToTableName": "ChannelAssortment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssortmentTypeId",
+				"ToColumnName": "AssortmentTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssortmentType.cdm.json/AssortmentType\",\"toEntity\":\"ChannelAssortment.cdm.json/ChannelAssortment\",\"joinPairs\":[{\"fromAttribute\":\"AssortmentTypeId\",\"toAttribute\":\"AssortmentTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7088359f-2269-4fa7-a50a-f1d7d5d52760"
+	},
+	"type": "RELATIONSHIP"
+}

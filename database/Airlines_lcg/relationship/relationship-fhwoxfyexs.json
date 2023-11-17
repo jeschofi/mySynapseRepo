@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fhwoxfyexs",
+	"properties": {
+		"Name": "relationship-fhwoxfyexs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DepreciationMethod",
+		"ToTableName": "AssetDepreciation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepreciationMethodId",
+				"ToColumnName": "DepreciationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DepreciationMethod.cdm.json/DepreciationMethod\",\"toEntity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"joinPairs\":[{\"fromAttribute\":\"DepreciationMethodId\",\"toAttribute\":\"DepreciationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b4750cd2-4e48-4038-9abe-8a9db07ac3b5"
+	},
+	"type": "RELATIONSHIP"
+}

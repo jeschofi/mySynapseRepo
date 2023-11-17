@@ -1,0 +1,130 @@
+{
+	"name": "StoreWarehouseRelationshipType",
+	"properties": {
+		"Name": "StoreWarehouseRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreWarehouseRelationshipTypeId",
+					"Description": "The unique identifier of a Store Warehouse Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType",
+						"Name": "StoreWarehouseRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "StoreWarehouseRelationshipTypeName",
+					"Description": "The name of a Store Warehouse Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType",
+						"Name": "StoreWarehouseRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "StoreWarehouseRelationshipTypeDescription",
+					"Description": "The description of a Store Warehouse Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType",
+						"Name": "StoreWarehouseRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "169b9fae-e211-4e8a-9a9d-7d28aa9a878e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreWarehouseRelationshipType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreWarehouseRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreWarehouseRelationshipTypeId\":{\"entity\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\",\"name\":\"StoreWarehouseRelationshipTypeId\"},\"StoreWarehouseRelationshipTypeName\":{\"entity\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\",\"name\":\"StoreWarehouseRelationshipTypeName\"},\"StoreWarehouseRelationshipTypeDescription\":{\"entity\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\",\"name\":\"StoreWarehouseRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreWarehouseRelationshipType\",\"path\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\"},\"description\":\"The nature of the relationship between a store and a warehouse.\\n\\nEx:\\n- Selling Store Sales Area\\n- Selling Store Storage Area\\n- Selling Store Distribution Warehouse\",\"primaryKey\":[\"StoreWarehouseRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\",\"name\":\"StoreWarehouseRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Warehouse Relationship Type.\",\"isNullable\":false,\"name\":\"StoreWarehouseRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\",\"name\":\"StoreWarehouseRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Store Warehouse Relationship Type.\",\"isNullable\":true,\"name\":\"StoreWarehouseRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\",\"name\":\"StoreWarehouseRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Store Warehouse Relationship Type.\",\"isNullable\":true,\"name\":\"StoreWarehouseRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between a store and a warehouse.\n\nEx:\n- Selling Store Sales Area\n- Selling Store Storage Area\n- Selling Store Distribution Warehouse",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreWarehouseRelationshipTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreWarehouseRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreWarehouseRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreWarehouseRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "c1019986-a299-4ba5-83a6-4a22087d2e2c",
+		"Description": "The nature of the relationship between a store and a warehouse.\n\nEx:\n- Selling Store Sales Area\n- Selling Store Storage Area\n- Selling Store Distribution Warehouse"
+	},
+	"type": "TABLE"
+}

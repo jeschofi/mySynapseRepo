@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kecilfyvjp",
+	"properties": {
+		"Name": "relationship-kecilfyvjp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Channel",
+		"ToTableName": "ProductChannelSatisfactionRating",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelId",
+				"ToColumnName": "ChannelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Channel.cdm.json/Channel\",\"toEntity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"joinPairs\":[{\"fromAttribute\":\"ChannelId\",\"toAttribute\":\"ChannelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3f6c09f0-6533-4857-871d-14bc2cc4e2b4"
+	},
+	"type": "RELATIONSHIP"
+}

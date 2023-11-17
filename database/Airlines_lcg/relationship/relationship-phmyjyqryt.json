@@ -1,0 +1,29 @@
+{
+	"name": "relationship-phmyjyqryt",
+	"properties": {
+		"Name": "relationship-phmyjyqryt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssetCostType",
+		"ToTableName": "AssetCost",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetCostTypeId",
+				"ToColumnName": "AssetCostTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssetCostType.cdm.json/AssetCostType\",\"toEntity\":\"AssetCost.cdm.json/AssetCost\",\"joinPairs\":[{\"fromAttribute\":\"AssetCostTypeId\",\"toAttribute\":\"AssetCostTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "04d44a22-7301-4c86-8372-239f2740d438"
+	},
+	"type": "RELATIONSHIP"
+}

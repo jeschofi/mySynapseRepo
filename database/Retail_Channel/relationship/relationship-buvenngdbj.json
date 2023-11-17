@@ -1,0 +1,29 @@
+{
+	"name": "relationship-buvenngdbj",
+	"properties": {
+		"Name": "relationship-buvenngdbj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionStatus",
+		"ToTableName": "Commission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionStatusId",
+				"ToColumnName": "CommissionStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionStatus.cdm.json/CommissionStatus\",\"toEntity\":\"Commission.cdm.json/Commission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionStatusId\",\"toAttribute\":\"CommissionStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fe0bb961-a1ff-48d5-b77b-ea0e7aa23d2f"
+	},
+	"type": "RELATIONSHIP"
+}

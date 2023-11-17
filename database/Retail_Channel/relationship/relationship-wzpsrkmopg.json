@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wzpsrkmopg",
+	"properties": {
+		"Name": "relationship-wzpsrkmopg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreFloor",
+		"ToTableName": "ShopperPosition",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FloorPeriodStartDate",
+				"ToColumnName": "FloorPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreFloor.cdm.json/StoreFloor\",\"toEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"joinPairs\":[{\"fromAttribute\":\"FloorPeriodStartDate\",\"toAttribute\":\"FloorPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ded19c78-2ab9-487f-9f00-d4016b88320b"
+	},
+	"type": "RELATIONSHIP"
+}

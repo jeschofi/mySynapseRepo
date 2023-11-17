@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ttvoxpkhqk",
+	"properties": {
+		"Name": "relationship-ttvoxpkhqk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Asset",
+		"ToTableName": "AssetDiscountedPaybackPeriod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetId",
+				"ToColumnName": "AssetId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Asset.cdm.json/Asset\",\"toEntity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"joinPairs\":[{\"fromAttribute\":\"AssetId\",\"toAttribute\":\"AssetId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "902c8847-bec5-41fe-82e6-c81dbb1afb67"
+	},
+	"type": "RELATIONSHIP"
+}

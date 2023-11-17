@@ -1,0 +1,189 @@
+{
+	"name": "ChannelRelatedEmployee",
+	"properties": {
+		"Name": "ChannelRelatedEmployee",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "EmployeeId",
+					"Description": "The unique identifier of an Employee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee",
+						"Name": "EmployeeId"
+					}
+				},
+				{
+					"Name": "ChannelEmployeeRelationshipTypeId",
+					"Description": "The unique identifier of a Channel Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee",
+						"Name": "ChannelEmployeeRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the channel employee relationship is valid of defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the channel employee relationship is valid of defined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "ChannelEmployeeRelationshipNote",
+					"Description": "A note, comment or additional information regarding a channel related employee.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee",
+						"Name": "ChannelEmployeeRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "bb42e7fb-203d-4ecd-a384-f4d24da7b8b8",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRelatedEmployee",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRelatedEmployee",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"ChannelId\"},\"EmployeeId\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"EmployeeId\"},\"ChannelEmployeeRelationshipTypeId\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"ChannelEmployeeRelationshipTypeId\"},\"PeriodStartDate\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"PeriodEndDate\"},\"ChannelEmployeeRelationshipNote\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"ChannelEmployeeRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelRelatedEmployee\",\"path\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\"},\"description\":\"An employee that has a relationship with a channel.\",\"primaryKey\":[\"ChannelId\",\"EmployeeId\",\"ChannelEmployeeRelationshipTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"EmployeeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Employee.\",\"isNullable\":false,\"name\":\"EmployeeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"ChannelEmployeeRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel Relationship Type.\",\"isNullable\":false,\"name\":\"ChannelEmployeeRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the channel employee relationship is valid of defined.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the channel employee relationship is valid of defined.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"name\":\"ChannelEmployeeRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding a channel related employee.\",\"isNullable\":true,\"name\":\"ChannelEmployeeRelationshipNote\"}]}}}",
+			"Description": "An employee that has a relationship with a channel.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,EmployeeId,ChannelEmployeeRelationshipTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"EmployeeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelEmployeeRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelEmployeeRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "92b86413-f86f-48be-b78d-8e9a65a3c7b9",
+		"Description": "An employee that has a relationship with a channel."
+	},
+	"type": "TABLE"
+}

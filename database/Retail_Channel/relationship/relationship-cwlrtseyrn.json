@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cwlrtseyrn",
+	"properties": {
+		"Name": "relationship-cwlrtseyrn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Visit",
+		"ToTableName": "VisitCommunication",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "VisitId",
+				"ToColumnName": "VisitId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Visit.cdm.json/Visit\",\"toEntity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"joinPairs\":[{\"fromAttribute\":\"VisitId\",\"toAttribute\":\"VisitId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fbbf738c-1da9-426f-b7ec-939a3f93e5ff"
+	},
+	"type": "RELATIONSHIP"
+}

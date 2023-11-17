@@ -1,0 +1,29 @@
+{
+	"name": "relationship-epydpfrptw",
+	"properties": {
+		"Name": "relationship-epydpfrptw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DayOfWeek",
+		"ToTableName": "StoreServiceLocationHours",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DayOfWeekId",
+				"ToColumnName": "DayOfWeekId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"toEntity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"joinPairs\":[{\"fromAttribute\":\"DayOfWeekId\",\"toAttribute\":\"DayOfWeekId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2a9ee461-3a68-4b76-864a-4742f54e4b20"
+	},
+	"type": "RELATIONSHIP"
+}

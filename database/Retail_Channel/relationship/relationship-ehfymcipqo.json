@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ehfymcipqo",
+	"properties": {
+		"Name": "relationship-ehfymcipqo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TerritoryType",
+		"ToTableName": "Territory",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TerritoryTypeId",
+				"ToColumnName": "TerritoryTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TerritoryType.cdm.json/TerritoryType\",\"toEntity\":\"Territory.cdm.json/Territory\",\"joinPairs\":[{\"fromAttribute\":\"TerritoryTypeId\",\"toAttribute\":\"TerritoryTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ad5c9d52-52ed-4930-9aa6-514d11b91032"
+	},
+	"type": "RELATIONSHIP"
+}

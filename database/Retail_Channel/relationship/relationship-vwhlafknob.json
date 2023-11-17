@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vwhlafknob",
+	"properties": {
+		"Name": "relationship-vwhlafknob",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Employee",
+		"ToTableName": "ChannelRelatedEmployee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmployeeId",
+				"ToColumnName": "EmployeeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Employee.cdm.json/Employee\",\"toEntity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"joinPairs\":[{\"fromAttribute\":\"EmployeeId\",\"toAttribute\":\"EmployeeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "408ec0ac-c6db-48a7-9e96-3e7c0243431d"
+	},
+	"type": "RELATIONSHIP"
+}

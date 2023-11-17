@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ccvgometwm",
+	"properties": {
+		"Name": "relationship-ccvgometwm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarYear",
+		"ToTableName": "CalendarWeek",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarYear.cdm.json/CalendarYear\",\"toEntity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "38e807fc-b0e7-47d6-84de-8d85a7206325"
+	},
+	"type": "RELATIONSHIP"
+}

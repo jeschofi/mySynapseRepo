@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vsysoxdrij",
+	"properties": {
+		"Name": "relationship-vsysoxdrij",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LevelOfPrecision",
+		"ToTableName": "FinancialStatementColumn",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LevelOfPrecisionId",
+				"ToColumnName": "LevelOfPrecisionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LevelOfPrecision.cdm.json/LevelOfPrecision\",\"toEntity\":\"FinancialStatementColumn.cdm.json/FinancialStatementColumn\",\"joinPairs\":[{\"fromAttribute\":\"LevelOfPrecisionId\",\"toAttribute\":\"LevelOfPrecisionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f5fb7a74-76de-4e2e-9054-a6f0dd289360"
+	},
+	"type": "RELATIONSHIP"
+}

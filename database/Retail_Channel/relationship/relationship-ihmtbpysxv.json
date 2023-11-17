@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ihmtbpysxv",
+	"properties": {
+		"Name": "relationship-ihmtbpysxv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "ChannelRegistration",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "RegistrationPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"RegistrationPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dde9bee3-a50c-4947-a34c-0edf915ea8bb"
+	},
+	"type": "RELATIONSHIP"
+}

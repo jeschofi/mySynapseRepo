@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qamyedzybw",
+	"properties": {
+		"Name": "relationship-qamyedzybw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarYear",
+		"ToTableName": "CalendarMonth",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarYear.cdm.json/CalendarYear\",\"toEntity\":\"CalendarMonth.cdm.json/CalendarMonth\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "38c3a4e0-85dd-4fb9-9f62-550dc2043604"
+	},
+	"type": "RELATIONSHIP"
+}

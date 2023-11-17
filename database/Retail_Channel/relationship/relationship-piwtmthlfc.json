@@ -1,0 +1,29 @@
+{
+	"name": "relationship-piwtmthlfc",
+	"properties": {
+		"Name": "relationship-piwtmthlfc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarDateRelationshipType",
+		"ToTableName": "RelatedCalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarDateRelationshipTypeId",
+				"ToColumnName": "CalendarDateRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarDateRelationshipType.cdm.json/CalendarDateRelationshipType\",\"toEntity\":\"RelatedCalendarDate.cdm.json/RelatedCalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"CalendarDateRelationshipTypeId\",\"toAttribute\":\"CalendarDateRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "94d177fc-d743-4493-acef-c7df55f558c1"
+	},
+	"type": "RELATIONSHIP"
+}

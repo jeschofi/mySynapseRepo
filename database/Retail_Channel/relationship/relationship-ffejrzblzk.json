@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ffejrzblzk",
+	"properties": {
+		"Name": "relationship-ffejrzblzk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ItemDisplayInteraction",
+		"ToTableName": "ShopperItemInteractionEvent",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ItemDisplayInteractionId",
+				"ToColumnName": "ItemDisplayInteractionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"toEntity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"joinPairs\":[{\"fromAttribute\":\"ItemDisplayInteractionId\",\"toAttribute\":\"ItemDisplayInteractionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f45d4dba-e713-4cc8-8141-fcf68a52c3fa"
+	},
+	"type": "RELATIONSHIP"
+}

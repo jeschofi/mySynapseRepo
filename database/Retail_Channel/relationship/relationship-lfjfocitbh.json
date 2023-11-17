@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lfjfocitbh",
+	"properties": {
+		"Name": "relationship-lfjfocitbh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RatingCriteria",
+		"ToTableName": "ProductChannelSatisfactionRating",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "RatingCriteriaId",
+				"ToColumnName": "RatingCriteriaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RatingCriteria.cdm.json/RatingCriteria\",\"toEntity\":\"ProductChannelSatisfactionRating.cdm.json/ProductChannelSatisfactionRating\",\"joinPairs\":[{\"fromAttribute\":\"RatingCriteriaId\",\"toAttribute\":\"RatingCriteriaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2f227334-05c0-47bf-a002-3987126f5f1a"
+	},
+	"type": "RELATIONSHIP"
+}

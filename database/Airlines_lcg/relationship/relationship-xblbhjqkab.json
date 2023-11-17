@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xblbhjqkab",
+	"properties": {
+		"Name": "relationship-xblbhjqkab",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingBasis",
+		"ToTableName": "LegalEntityAccountingPeriodAccountingBasis",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingBasisId",
+				"ToColumnName": "AccountingBasisId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingBasis.cdm.json/AccountingBasis\",\"toEntity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"joinPairs\":[{\"fromAttribute\":\"AccountingBasisId\",\"toAttribute\":\"AccountingBasisId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d77e3acd-571d-40bb-b3a7-73d728d973ff"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-shryklznxa",
+	"properties": {
+		"Name": "relationship-shryklznxa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreFloor",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FloorId",
+				"ToColumnName": "FloorId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreFloor.cdm.json/StoreFloor\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"FloorId\",\"toAttribute\":\"FloorId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e0b925b5-79a6-4789-be26-d3dcdf94fcce"
+	},
+	"type": "RELATIONSHIP"
+}

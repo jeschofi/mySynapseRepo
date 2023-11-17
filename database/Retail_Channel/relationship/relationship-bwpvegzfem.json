@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bwpvegzfem",
+	"properties": {
+		"Name": "relationship-bwpvegzfem",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreFloor",
+		"ToTableName": "ShopperPosition",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FloorId",
+				"ToColumnName": "FloorId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreFloor.cdm.json/StoreFloor\",\"toEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"joinPairs\":[{\"fromAttribute\":\"FloorId\",\"toAttribute\":\"FloorId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7b97c6b9-6a3b-410d-9f26-310e3951ff21"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,176 @@
+{
+	"name": "LegalEntityAccountingPeriodAccountingBasis",
+	"properties": {
+		"Name": "LegalEntityAccountingPeriodAccountingBasis",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.\n\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "AccountingPeriodStartDate",
+					"Description": "The starting date of the accounting period.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis",
+						"Name": "AccountingPeriodStartDate"
+					}
+				},
+				{
+					"Name": "AccountingPeriodEndDate",
+					"Description": "The ending date of the accounting period.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis",
+						"Name": "AccountingPeriodEndDate"
+					}
+				},
+				{
+					"Name": "ChangeInAccountingPrincipleIndicator",
+					"Description": "Use of an accounting principle in the current year different from the one used in the preceding year.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis",
+						"Name": "ChangeInAccountingPrincipleIndicator"
+					}
+				},
+				{
+					"Name": "AccountingBasisId",
+					"Description": "The unique identifier of an Accounting Basis.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis",
+						"Name": "AccountingBasisId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "82fb9c76-a08c-470b-9a49-2bf0520f7764",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LegalEntityAccountingPeriodAccountingBasis",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LegalEntityAccountingPeriodAccountingBasis",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"LegalEntityId\"},\"AccountingPeriodStartDate\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"AccountingPeriodStartDate\"},\"AccountingPeriodEndDate\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"AccountingPeriodEndDate\"},\"ChangeInAccountingPrincipleIndicator\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"ChangeInAccountingPrincipleIndicator\"},\"AccountingBasisId\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"AccountingBasisId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LegalEntityAccountingPeriodAccountingBasis\",\"path\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\"},\"description\":\"The accounting basis used by the Legal Entity for the associated accounting period.\",\"primaryKey\":[\"LegalEntityId\",\"AccountingPeriodStartDate\",\"AccountingPeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\\n\\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"AccountingPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The starting date of the accounting period.\",\"isNullable\":false,\"name\":\"AccountingPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"AccountingPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The ending date of the accounting period.\",\"isNullable\":false,\"name\":\"AccountingPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"ChangeInAccountingPrincipleIndicator\"},\"dataType\":\"boolean\",\"description\":\"Use of an accounting principle in the current year different from the one used in the preceding year.\",\"isNullable\":true,\"name\":\"ChangeInAccountingPrincipleIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityAccountingPeriodAccountingBasis.cdm.json/LegalEntityAccountingPeriodAccountingBasis\",\"name\":\"AccountingBasisId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Accounting Basis.\",\"isNullable\":true,\"name\":\"AccountingBasisId\"}]}}}",
+			"Description": "The accounting basis used by the Legal Entity for the associated accounting period.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,AccountingPeriodStartDate,AccountingPeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AccountingPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AccountingPeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChangeInAccountingPrincipleIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AccountingBasisId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3533c604-03c4-4716-af18-556164ff3aa4",
+		"Description": "The accounting basis used by the Legal Entity for the associated accounting period."
+	},
+	"type": "TABLE"
+}

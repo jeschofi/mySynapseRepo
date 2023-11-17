@@ -1,0 +1,29 @@
+{
+	"name": "relationship-acmomggdod",
+	"properties": {
+		"Name": "relationship-acmomggdod",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelType",
+		"ToTableName": "Channel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelTypeId",
+				"ToColumnName": "ChannelTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelType.cdm.json/ChannelType\",\"toEntity\":\"Channel.cdm.json/Channel\",\"joinPairs\":[{\"fromAttribute\":\"ChannelTypeId\",\"toAttribute\":\"ChannelTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c4f48614-c111-421a-bc05-56c8c0067bf7"
+	},
+	"type": "RELATIONSHIP"
+}

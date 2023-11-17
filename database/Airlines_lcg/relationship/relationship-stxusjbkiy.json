@@ -1,0 +1,29 @@
+{
+	"name": "relationship-stxusjbkiy",
+	"properties": {
+		"Name": "relationship-stxusjbkiy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingProcedureType",
+		"ToTableName": "JournalTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingProcedureTypeId",
+				"ToColumnName": "AccountingProcedureTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingProcedureType.cdm.json/AccountingProcedureType\",\"toEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"joinPairs\":[{\"fromAttribute\":\"AccountingProcedureTypeId\",\"toAttribute\":\"AccountingProcedureTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "334cb954-d0e0-4abf-8773-44ed313b60cf"
+	},
+	"type": "RELATIONSHIP"
+}

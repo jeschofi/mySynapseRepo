@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kachopuoxf",
+	"properties": {
+		"Name": "relationship-kachopuoxf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AtmLocationType",
+		"ToTableName": "AtmLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmLocationTypeId",
+				"ToColumnName": "AtmLocationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AtmLocationType.cdm.json/AtmLocationType\",\"toEntity\":\"AtmLocation.cdm.json/AtmLocation\",\"joinPairs\":[{\"fromAttribute\":\"AtmLocationTypeId\",\"toAttribute\":\"AtmLocationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "318d5bdd-144b-494e-b43a-4ae0ba8c66f1"
+	},
+	"type": "RELATIONSHIP"
+}

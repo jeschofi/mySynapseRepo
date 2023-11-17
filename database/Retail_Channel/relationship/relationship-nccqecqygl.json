@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nccqecqygl",
+	"properties": {
+		"Name": "relationship-nccqecqygl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDepartment",
+		"ToTableName": "StoreDepartmentEmail",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepartmentId",
+				"ToColumnName": "DepartmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDepartment.cdm.json/StoreDepartment\",\"toEntity\":\"StoreDepartmentEmail.cdm.json/StoreDepartmentEmail\",\"joinPairs\":[{\"fromAttribute\":\"DepartmentId\",\"toAttribute\":\"DepartmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d1a78a72-5b5b-4848-bec7-4f81348c2d12"
+	},
+	"type": "RELATIONSHIP"
+}

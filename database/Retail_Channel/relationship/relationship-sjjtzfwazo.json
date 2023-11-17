@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sjjtzfwazo",
+	"properties": {
+		"Name": "relationship-sjjtzfwazo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelOrderCommission",
+		"ToTableName": "ChannelOrderPartyCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionAwardedDate",
+				"ToColumnName": "CommissionAwardedDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelOrderCommission.cdm.json/ChannelOrderCommission\",\"toEntity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionAwardedDate\",\"toAttribute\":\"CommissionAwardedDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "34e7d498-a67e-459f-94dd-3df4c8993243"
+	},
+	"type": "RELATIONSHIP"
+}

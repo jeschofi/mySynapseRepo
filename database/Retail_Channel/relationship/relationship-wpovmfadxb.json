@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wpovmfadxb",
+	"properties": {
+		"Name": "relationship-wpovmfadxb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarQuarter",
+		"ToTableName": "CalendarMonth",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarQuarterId",
+				"ToColumnName": "CalendarQuarterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"toEntity\":\"CalendarMonth.cdm.json/CalendarMonth\",\"joinPairs\":[{\"fromAttribute\":\"CalendarQuarterId\",\"toAttribute\":\"CalendarQuarterId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "afd1eed5-27da-477d-96d2-6068d9520266"
+	},
+	"type": "RELATIONSHIP"
+}

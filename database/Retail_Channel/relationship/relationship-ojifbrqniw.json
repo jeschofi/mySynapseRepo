@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ojifbrqniw",
+	"properties": {
+		"Name": "relationship-ojifbrqniw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayLocation",
+		"ToTableName": "StoreTrafficCount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DisplayLocationId",
+				"ToColumnName": "DisplayLocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"toEntity\":\"StoreTrafficCount.cdm.json/StoreTrafficCount\",\"joinPairs\":[{\"fromAttribute\":\"DisplayLocationId\",\"toAttribute\":\"DisplayLocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9b173579-1526-4814-bf7b-c3dd06cf1d61"
+	},
+	"type": "RELATIONSHIP"
+}

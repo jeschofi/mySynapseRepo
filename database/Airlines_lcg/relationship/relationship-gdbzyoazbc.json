@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gdbzyoazbc",
+	"properties": {
+		"Name": "relationship-gdbzyoazbc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Stock",
+		"ToTableName": "CommonStock",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StockId",
+				"ToColumnName": "StockId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Stock.cdm.json/Stock\",\"toEntity\":\"CommonStock.cdm.json/CommonStock\",\"joinPairs\":[{\"fromAttribute\":\"StockId\",\"toAttribute\":\"StockId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a3afa0ba-ec76-478d-b430-de6d2676ef2d"
+	},
+	"type": "RELATIONSHIP"
+}

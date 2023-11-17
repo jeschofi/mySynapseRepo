@@ -1,0 +1,169 @@
+{
+	"name": "ChannelIncentiveAward",
+	"properties": {
+		"Name": "ChannelIncentiveAward",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentiveAward.cdm.json/ChannelIncentiveAward",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "IncentiveId",
+					"Description": "The unique identifier of an Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentiveAward.cdm.json/ChannelIncentiveAward",
+						"Name": "IncentiveId"
+					}
+				},
+				{
+					"Name": "AwardDate",
+					"Description": "The date that the incentive was awarded.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentiveAward.cdm.json/ChannelIncentiveAward",
+						"Name": "AwardDate"
+					}
+				},
+				{
+					"Name": "AwardAmount",
+					"Description": "The amount or value of the incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentiveAward.cdm.json/ChannelIncentiveAward",
+						"Name": "AwardAmount"
+					}
+				},
+				{
+					"Name": "ChannelIncentiveAwardNote",
+					"Description": "Notes, comments or additional information regarding the Channel Incentive Award.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentiveAward.cdm.json/ChannelIncentiveAward",
+						"Name": "ChannelIncentiveAwardNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a15deb93-bbb4-4056-b459-a335786c11aa",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelIncentiveAward",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelIncentiveAward",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"ChannelId\"},\"IncentiveId\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"IncentiveId\"},\"AwardDate\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"AwardDate\"},\"AwardAmount\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"AwardAmount\"},\"ChannelIncentiveAwardNote\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"ChannelIncentiveAwardNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelIncentiveAward\",\"path\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\"},\"description\":\"An incentive that is awarded to a Channel.\",\"primaryKey\":[\"ChannelId\",\"IncentiveId\",\"AwardDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"IncentiveId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Incentive.\",\"isNullable\":false,\"name\":\"IncentiveId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"AwardDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the incentive was awarded.\",\"isNullable\":false,\"name\":\"AwardDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"AwardAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount or value of the incentive.\",\"isNullable\":true,\"scale\":2,\"name\":\"AwardAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"name\":\"ChannelIncentiveAwardNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Channel Incentive Award.\",\"isNullable\":true,\"name\":\"ChannelIncentiveAwardNote\"}]}}}",
+			"Description": "An incentive that is awarded to a Channel.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,IncentiveId,AwardDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IncentiveId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AwardDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AwardAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelIncentiveAwardNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "32cdbe71-e703-4f20-8796-2b7e2dd6a412",
+		"Description": "An incentive that is awarded to a Channel."
+	},
+	"type": "TABLE"
+}

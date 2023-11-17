@@ -1,0 +1,29 @@
+{
+	"name": "relationship-curexljsax",
+	"properties": {
+		"Name": "relationship-curexljsax",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreFloor",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FloorPeriodStartDate",
+				"ToColumnName": "FloorPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreFloor.cdm.json/StoreFloor\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"FloorPeriodStartDate\",\"toAttribute\":\"FloorPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d9239260-20fe-4ef3-8f8c-7a063f5eb2e0"
+	},
+	"type": "RELATIONSHIP"
+}

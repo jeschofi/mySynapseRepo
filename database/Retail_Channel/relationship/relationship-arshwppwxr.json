@@ -1,0 +1,29 @@
+{
+	"name": "relationship-arshwppwxr",
+	"properties": {
+		"Name": "relationship-arshwppwxr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Brand",
+		"ToTableName": "StoreBrand",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BrandId",
+				"ToColumnName": "BrandId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Brand.cdm.json/Brand\",\"toEntity\":\"StoreBrand.cdm.json/StoreBrand\",\"joinPairs\":[{\"fromAttribute\":\"BrandId\",\"toAttribute\":\"BrandId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ddea6da8-4faf-422c-93bc-9e74ac960bd6"
+	},
+	"type": "RELATIONSHIP"
+}

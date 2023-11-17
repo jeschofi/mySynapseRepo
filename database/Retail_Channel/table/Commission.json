@@ -1,0 +1,381 @@
+{
+	"name": "Commission",
+	"properties": {
+		"Name": "Commission",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommissionId",
+					"Description": "The unique identifier of a Commission.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionId"
+					}
+				},
+				{
+					"Name": "CommissionBasisAmount",
+					"Description": "The amount upon which the Commission is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionBasisAmount"
+					}
+				},
+				{
+					"Name": "CommissionAmount",
+					"Description": "The amount of the commission to be paid.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionAmount"
+					}
+				},
+				{
+					"Name": "SplitCommissionIndicator",
+					"Description": "Indicates that the commission was paid to two or more parties.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "SplitCommissionIndicator"
+					}
+				},
+				{
+					"Name": "CommissionEarnedDate",
+					"Description": "The date that the commission is earned.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionEarnedDate"
+					}
+				},
+				{
+					"Name": "CommissionDueDate",
+					"Description": "The date that the commission is due to be paid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionDueDate"
+					}
+				},
+				{
+					"Name": "CommissionPaidDate",
+					"Description": "The date that the commission is actually paid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionPaidDate"
+					}
+				},
+				{
+					"Name": "CommissionNote",
+					"Description": "Notes, comments or additional information regarding the Commission.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionNote"
+					}
+				},
+				{
+					"Name": "CommissionScheduleId",
+					"Description": "The unique identifier of a Commission Schedule.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionScheduleId"
+					}
+				},
+				{
+					"Name": "CommissionMinimumNumberUnits",
+					"Description": "The minimum number of units for which the associated Commission Schedule is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionMinimumNumberUnits"
+					}
+				},
+				{
+					"Name": "CommissionMaximumNumberUnits",
+					"Description": "The maximum number of units for which the associated Commission Schedule is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionMaximumNumberUnits"
+					}
+				},
+				{
+					"Name": "CommissionMinimumSalesRevenueAmount",
+					"Description": "The minimum sales revenue amount for which the associated Commission Schedule is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionMinimumSalesRevenueAmount"
+					}
+				},
+				{
+					"Name": "CommissionMaximumSalesRevenueAmount",
+					"Description": "The maximum sales revenue amount for which the associated Commission Schedule is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionMaximumSalesRevenueAmount"
+					}
+				},
+				{
+					"Name": "CommissionScheduleDetailStartDate",
+					"Description": "The effective start date or first date that the Commission Schedule Detail is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionScheduleDetailStartDate"
+					}
+				},
+				{
+					"Name": "CommissionStatusId",
+					"Description": "The unique identifier of a Commission Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionStatusId"
+					}
+				},
+				{
+					"Name": "CommissionTypeId",
+					"Description": "The unique identifier of a Commission Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Commission.cdm.json/Commission",
+						"Name": "CommissionTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "dbd796a6-32a5-4c0a-aa70-6dfd295d6eff",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Commission",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Commission",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommissionId\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionId\"},\"CommissionBasisAmount\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionBasisAmount\"},\"CommissionAmount\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionAmount\"},\"SplitCommissionIndicator\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"SplitCommissionIndicator\"},\"CommissionEarnedDate\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionEarnedDate\"},\"CommissionDueDate\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionDueDate\"},\"CommissionPaidDate\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionPaidDate\"},\"CommissionNote\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionNote\"},\"CommissionScheduleId\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionScheduleId\"},\"CommissionMinimumNumberUnits\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMinimumNumberUnits\"},\"CommissionMaximumNumberUnits\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMaximumNumberUnits\"},\"CommissionMinimumSalesRevenueAmount\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMinimumSalesRevenueAmount\"},\"CommissionMaximumSalesRevenueAmount\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMaximumSalesRevenueAmount\"},\"CommissionScheduleDetailStartDate\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionScheduleDetailStartDate\"},\"CommissionStatusId\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionStatusId\"},\"CommissionTypeId\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Commission\",\"path\":\"Commission.cdm.json/Commission\"},\"description\":\"A commission paid on the associated criteria as required. Commissions can be paid on the initial booking, renewal, or collection of payment as specified by the commission type.\",\"primaryKey\":[\"CommissionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission.\",\"isNullable\":false,\"name\":\"CommissionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionBasisAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount upon which the Commission is calculated.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionBasisAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the commission to be paid.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"SplitCommissionIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the commission was paid to two or more parties.\",\"isNullable\":true,\"name\":\"SplitCommissionIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionEarnedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the commission is earned.\",\"isNullable\":true,\"name\":\"CommissionEarnedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionDueDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the commission is due to be paid.\",\"isNullable\":true,\"name\":\"CommissionDueDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionPaidDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the commission is actually paid.\",\"isNullable\":true,\"name\":\"CommissionPaidDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Commission.\",\"isNullable\":true,\"name\":\"CommissionNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionScheduleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission Schedule.\",\"isNullable\":true,\"name\":\"CommissionScheduleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMinimumNumberUnits\"},\"dataType\":\"integer\",\"description\":\"The minimum number of units for which the associated Commission Schedule is defined or valid.\",\"isNullable\":true,\"name\":\"CommissionMinimumNumberUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMaximumNumberUnits\"},\"dataType\":\"integer\",\"description\":\"The maximum number of units for which the associated Commission Schedule is defined or valid.\",\"isNullable\":true,\"name\":\"CommissionMaximumNumberUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMinimumSalesRevenueAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum sales revenue amount for which the associated Commission Schedule is defined or valid.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionMinimumSalesRevenueAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionMaximumSalesRevenueAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The maximum sales revenue amount for which the associated Commission Schedule is defined or valid.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionMaximumSalesRevenueAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionScheduleDetailStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The effective start date or first date that the Commission Schedule Detail is in effect.\",\"isNullable\":true,\"name\":\"CommissionScheduleDetailStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission Status.\",\"isNullable\":true,\"name\":\"CommissionStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Commission.cdm.json/Commission\",\"name\":\"CommissionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission Type.\",\"isNullable\":true,\"name\":\"CommissionTypeId\"}]}}}",
+			"Description": "A commission paid on the associated criteria as required. Commissions can be paid on the initial booking, renewal, or collection of payment as specified by the commission type.",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "CommissionId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommissionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionBasisAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SplitCommissionIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionEarnedDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionDueDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionPaidDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionScheduleId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionMinimumNumberUnits\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionMaximumNumberUnits\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionMinimumSalesRevenueAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionMaximumSalesRevenueAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionScheduleDetailStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionStatusId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "b69895a7-dd60-4fea-88ed-250cd86480d9",
+		"Description": "A commission paid on the associated criteria as required. Commissions can be paid on the initial booking, renewal, or collection of payment as specified by the commission type."
+	},
+	"type": "TABLE"
+}

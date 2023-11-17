@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zqbsuclwob",
+	"properties": {
+		"Name": "relationship-zqbsuclwob",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocation",
+		"ToTableName": "StoreServiceLocationHours",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PeriodStartTimestamp",
+				"ToColumnName": "PeriodStartTimestamp"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"toEntity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"joinPairs\":[{\"fromAttribute\":\"PeriodStartTimestamp\",\"toAttribute\":\"PeriodStartTimestamp\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "549c870b-6976-4144-aa6e-5340017e2690"
+	},
+	"type": "RELATIONSHIP"
+}

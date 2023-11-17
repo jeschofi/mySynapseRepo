@@ -1,0 +1,130 @@
+{
+	"name": "AtmServiceType",
+	"properties": {
+		"Name": "AtmServiceType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AtmServiceTypeId",
+					"Description": "The unique identifier of an ATM Service Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmServiceType.cdm.json/AtmServiceType",
+						"Name": "AtmServiceTypeId"
+					}
+				},
+				{
+					"Name": "AtmServiceTypeName",
+					"Description": "The name of an ATM Service Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmServiceType.cdm.json/AtmServiceType",
+						"Name": "AtmServiceTypeName"
+					}
+				},
+				{
+					"Name": "AtmServiceTypeDescription",
+					"Description": "The description of an ATM Service Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmServiceType.cdm.json/AtmServiceType",
+						"Name": "AtmServiceTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ac459aec-bb73-4a10-8e8c-4cbe0b4fb2cd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmServiceType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmServiceType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AtmServiceTypeId\":{\"entity\":\"AtmServiceType.cdm.json/AtmServiceType\",\"name\":\"AtmServiceTypeId\"},\"AtmServiceTypeName\":{\"entity\":\"AtmServiceType.cdm.json/AtmServiceType\",\"name\":\"AtmServiceTypeName\"},\"AtmServiceTypeDescription\":{\"entity\":\"AtmServiceType.cdm.json/AtmServiceType\",\"name\":\"AtmServiceTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AtmServiceType\",\"path\":\"AtmServiceType.cdm.json/AtmServiceType\"},\"description\":\"A specific type of service or function that may be offered at a specific ATM machine such as:\\n\\n- Deposits\\n- Loan payments\\n- Cash\\n- Bill payment \\n- Stamp purchase\\n- Mortgage loan payment\\n- Individual account access\\n- Printing of statements\\n- Transfer of funds\",\"primaryKey\":[\"AtmServiceTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmServiceType.cdm.json/AtmServiceType\",\"name\":\"AtmServiceTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an ATM Service Type.\",\"isNullable\":false,\"name\":\"AtmServiceTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmServiceType.cdm.json/AtmServiceType\",\"name\":\"AtmServiceTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an ATM Service Type.\",\"isNullable\":true,\"name\":\"AtmServiceTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmServiceType.cdm.json/AtmServiceType\",\"name\":\"AtmServiceTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an ATM Service Type.\",\"isNullable\":true,\"name\":\"AtmServiceTypeDescription\"}]}}}",
+			"Description": "A specific type of service or function that may be offered at a specific ATM machine such as:\n\n- Deposits\n- Loan payments\n- Cash\n- Bill payment \n- Stamp purchase\n- Mortgage loan payment\n- Individual account access\n- Printing of statements\n- Transfer of funds",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "AtmServiceTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AtmServiceTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AtmServiceTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AtmServiceTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "23da9413-ace1-465c-96d6-c4cfa0f3a978",
+		"Description": "A specific type of service or function that may be offered at a specific ATM machine such as:\n\n- Deposits\n- Loan payments\n- Cash\n- Bill payment \n- Stamp purchase\n- Mortgage loan payment\n- Individual account access\n- Printing of statements\n- Transfer of funds"
+	},
+	"type": "TABLE"
+}

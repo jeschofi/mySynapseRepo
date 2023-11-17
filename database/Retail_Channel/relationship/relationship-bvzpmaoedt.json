@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bvzpmaoedt",
+	"properties": {
+		"Name": "relationship-bvzpmaoedt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayAisle",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AisleId",
+				"ToColumnName": "AisleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayAisle.cdm.json/StoreDisplayAisle\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"AisleId\",\"toAttribute\":\"AisleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dd9dc0be-a9e1-43b1-a56d-f772d356bc62"
+	},
+	"type": "RELATIONSHIP"
+}

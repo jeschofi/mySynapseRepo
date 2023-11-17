@@ -1,0 +1,303 @@
+{
+	"name": "CommissionScheduleDetailByUnits",
+	"properties": {
+		"Name": "CommissionScheduleDetailByUnits",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommissionScheduleId",
+					"Description": "The unique identifier of a Commission Schedule.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionScheduleId"
+					}
+				},
+				{
+					"Name": "CommissionMinimumNumberUnits",
+					"Description": "The minimum number of units for which the associated Commission Schedule is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionMinimumNumberUnits"
+					}
+				},
+				{
+					"Name": "CommissionMaximumNumberUnits",
+					"Description": "The maximum number of units for which the associated Commission Schedule is defined or valid.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionMaximumNumberUnits"
+					}
+				},
+				{
+					"Name": "CommissionScheduleDetailStartDate",
+					"Description": "The effective start date or first date that the Commission Schedule Detail is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionScheduleDetailStartDate"
+					}
+				},
+				{
+					"Name": "CommissionScheduleDetailEndDate",
+					"Description": "The effective end date or last date that the Commission Schedule is in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionScheduleDetailEndDate"
+					}
+				},
+				{
+					"Name": "CommissionBaseAmount",
+					"Description": "The base commission amount paid in accordance with a sale under the Commission Schedule.\n\nThis is normally interpreted as a 'minimum base commission amount'.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionBaseAmount"
+					}
+				},
+				{
+					"Name": "CommissionAmountPerUnit",
+					"Description": "The amount of the Commission to be paid per unit sold.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionAmountPerUnit"
+					}
+				},
+				{
+					"Name": "CommissionFlatFeeAmount",
+					"Description": "The flat fee paid as a commission in accordance with a transaction.\n\nThis is for cases where the commission is not calculated as a percentage but rather as a flat commission regardless of the number of Product units involved.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionFlatFeeAmount"
+					}
+				},
+				{
+					"Name": "CommissionPercentage",
+					"Description": "The percentage of the Commissionable Amount to be paid per product sale.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionPercentage"
+					}
+				},
+				{
+					"Name": "CommissionMinimumAmount",
+					"Description": "The minimum commission amount charged in conjunction with the Commission Schedule.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionMinimumAmount"
+					}
+				},
+				{
+					"Name": "CommissionMaximumAmount",
+					"Description": "The maximum commission amount charged in conjunction with the Commission Schedule.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionMaximumAmount"
+					}
+				},
+				{
+					"Name": "CommissionScheduleDetailNote",
+					"Description": "Notes, comments or additional information regarding the Commission Schedule Detail.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits",
+						"Name": "CommissionScheduleDetailNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "bc147216-7624-4cb4-a6ef-b718f767524e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommissionScheduleDetailByUnits",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CommissionScheduleDetailByUnits",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommissionScheduleId\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleId\"},\"CommissionMinimumNumberUnits\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMinimumNumberUnits\"},\"CommissionMaximumNumberUnits\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMaximumNumberUnits\"},\"CommissionScheduleDetailStartDate\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleDetailStartDate\"},\"CommissionScheduleDetailEndDate\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleDetailEndDate\"},\"CommissionBaseAmount\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionBaseAmount\"},\"CommissionAmountPerUnit\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionAmountPerUnit\"},\"CommissionFlatFeeAmount\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionFlatFeeAmount\"},\"CommissionPercentage\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionPercentage\"},\"CommissionMinimumAmount\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMinimumAmount\"},\"CommissionMaximumAmount\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMaximumAmount\"},\"CommissionScheduleDetailNote\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleDetailNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CommissionScheduleDetailByUnits\",\"path\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\"},\"description\":\"The detail associated with a specific commission schedule when the commission schedule is based on number of units sold.\",\"primaryKey\":[\"CommissionScheduleId\",\"CommissionMinimumNumberUnits\",\"CommissionMaximumNumberUnits\",\"CommissionScheduleDetailStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission Schedule.\",\"isNullable\":false,\"name\":\"CommissionScheduleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMinimumNumberUnits\"},\"dataType\":\"integer\",\"description\":\"The minimum number of units for which the associated Commission Schedule is defined or valid.\",\"isNullable\":false,\"name\":\"CommissionMinimumNumberUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMaximumNumberUnits\"},\"dataType\":\"integer\",\"description\":\"The maximum number of units for which the associated Commission Schedule is defined or valid.\",\"isNullable\":false,\"name\":\"CommissionMaximumNumberUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleDetailStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The effective start date or first date that the Commission Schedule Detail is in effect.\",\"isNullable\":false,\"name\":\"CommissionScheduleDetailStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleDetailEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The effective end date or last date that the Commission Schedule is in effect.\",\"isNullable\":true,\"name\":\"CommissionScheduleDetailEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionBaseAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The base commission amount paid in accordance with a sale under the Commission Schedule.\\n\\nThis is normally interpreted as a 'minimum base commission amount'.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionBaseAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionAmountPerUnit\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the Commission to be paid per unit sold.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionAmountPerUnit\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionFlatFeeAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The flat fee paid as a commission in accordance with a transaction.\\n\\nThis is for cases where the commission is not calculated as a percentage but rather as a flat commission regardless of the number of Product units involved.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionFlatFeeAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionPercentage\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The percentage of the Commissionable Amount to be paid per product sale.\",\"isNullable\":true,\"scale\":8,\"name\":\"CommissionPercentage\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMinimumAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The minimum commission amount charged in conjunction with the Commission Schedule.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionMinimumAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionMaximumAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The maximum commission amount charged in conjunction with the Commission Schedule.\",\"isNullable\":true,\"scale\":2,\"name\":\"CommissionMaximumAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"name\":\"CommissionScheduleDetailNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Commission Schedule Detail.\",\"isNullable\":true,\"name\":\"CommissionScheduleDetailNote\"}]}}}",
+			"Description": "The detail associated with a specific commission schedule when the commission schedule is based on number of units sold.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "CommissionScheduleId,CommissionMinimumNumberUnits,CommissionMaximumNumberUnits,CommissionScheduleDetailStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommissionScheduleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionMinimumNumberUnits\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionMaximumNumberUnits\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionScheduleDetailStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionScheduleDetailEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionBaseAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionAmountPerUnit\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionFlatFeeAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionPercentage\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionMinimumAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionMaximumAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CommissionScheduleDetailNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "27e38334-f76f-4be5-8ecc-97f306f25f83",
+		"Description": "The detail associated with a specific commission schedule when the commission schedule is based on number of units sold."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mvbjoijldr",
+	"properties": {
+		"Name": "relationship-mvbjoijldr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerType",
+		"ToTableName": "Customer",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CustomerTypeId",
+				"ToColumnName": "CustomerTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerType.cdm.json/CustomerType\",\"toEntity\":\"Customer.cdm.json/Customer\",\"joinPairs\":[{\"fromAttribute\":\"CustomerTypeId\",\"toAttribute\":\"CustomerTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "aa83e529-4e2d-4ea9-bbcb-b11973c78e15"
+	},
+	"type": "RELATIONSHIP"
+}

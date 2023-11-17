@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sfgiuxhslv",
+	"properties": {
+		"Name": "relationship-sfgiuxhslv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FuelPump",
+		"ToTableName": "FuelPumpStorageTank",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FuelPumpId",
+				"ToColumnName": "FuelPumpId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FuelPump.cdm.json/FuelPump\",\"toEntity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"joinPairs\":[{\"fromAttribute\":\"FuelPumpId\",\"toAttribute\":\"FuelPumpId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ff146cc0-e4e5-4d27-a7ce-e5d7b2e83981"
+	},
+	"type": "RELATIONSHIP"
+}

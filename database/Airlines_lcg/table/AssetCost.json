@@ -1,0 +1,195 @@
+{
+	"name": "AssetCost",
+	"properties": {
+		"Name": "AssetCost",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCost.cdm.json/AssetCost",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "AssetCostTypeId",
+					"Description": "The unique identifier of an Asset Cost Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCost.cdm.json/AssetCost",
+						"Name": "AssetCostTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the asset cost is assigned.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCost.cdm.json/AssetCost",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the asset cost is assigned",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCost.cdm.json/AssetCost",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "CostAmount",
+					"Description": "The amount of the cost.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCost.cdm.json/AssetCost",
+						"Name": "CostAmount"
+					}
+				},
+				{
+					"Name": "AssetCostNote",
+					"Description": "A note, comment or additional information regarding the asset cost.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCost.cdm.json/AssetCost",
+						"Name": "AssetCostNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "32c522dd-570d-47c8-9f7b-a988b57494ee",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetCost",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetCost",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetId\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"AssetId\"},\"AssetCostTypeId\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"AssetCostTypeId\"},\"PeriodStartDate\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"PeriodEndDate\"},\"CostAmount\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"CostAmount\"},\"AssetCostNote\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"AssetCostNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetCost\",\"path\":\"AssetCost.cdm.json/AssetCost\"},\"description\":\"A cost associated with the Asset for the indicated period.\",\"primaryKey\":[\"AssetId\",\"AssetCostTypeId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"AssetCostTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Asset Cost Type.\",\"isNullable\":false,\"name\":\"AssetCostTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the asset cost is assigned.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the asset cost is assigned\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"CostAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the cost.\",\"isNullable\":true,\"scale\":2,\"name\":\"CostAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCost.cdm.json/AssetCost\",\"name\":\"AssetCostNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the asset cost.\",\"isNullable\":true,\"name\":\"AssetCostNote\"}]}}}",
+			"Description": "A cost associated with the Asset for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetId,AssetCostTypeId,PeriodStartDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetCostTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CostAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetCostNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "b95cfa34-77ea-477b-a23c-02e7a6e6d59f",
+		"Description": "A cost associated with the Asset for the indicated period."
+	},
+	"type": "TABLE"
+}

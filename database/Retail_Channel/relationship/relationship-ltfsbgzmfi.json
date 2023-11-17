@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ltfsbgzmfi",
+	"properties": {
+		"Name": "relationship-ltfsbgzmfi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocation",
+		"ToTableName": "FuelPump",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ServiceLocationId",
+				"ToColumnName": "ServiceLocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"toEntity\":\"FuelPump.cdm.json/FuelPump\",\"joinPairs\":[{\"fromAttribute\":\"ServiceLocationId\",\"toAttribute\":\"ServiceLocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f4f32da6-337b-4cd1-8177-de715ab42034"
+	},
+	"type": "RELATIONSHIP"
+}

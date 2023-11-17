@@ -1,0 +1,29 @@
+{
+	"name": "relationship-oodcutogor",
+	"properties": {
+		"Name": "relationship-oodcutogor",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarMonth",
+		"ToTableName": "CalendarWeek",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarMonth.cdm.json/CalendarMonth\",\"toEntity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "19a1b7a1-e42f-49b0-bcaa-e599f2af1fc1"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,209 @@
+{
+	"name": "AtmHoursOfOperation",
+	"properties": {
+		"Name": "AtmHoursOfOperation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AtmId",
+					"Description": "The unique identifier of an ATM.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmHoursOfOperation.cdm.json/AtmHoursOfOperation",
+						"Name": "AtmId"
+					}
+				},
+				{
+					"Name": "DayOfWeek",
+					"Description": "The day of week for which the associated operation start/end hours are in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmHoursOfOperation.cdm.json/AtmHoursOfOperation",
+						"Name": "DayOfWeek"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the ATM hours of operation are valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmHoursOfOperation.cdm.json/AtmHoursOfOperation",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the ATM hours of operation are valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmHoursOfOperation.cdm.json/AtmHoursOfOperation",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "OperationStartTime",
+					"Description": "The starting or opening time of operation for the ATM.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmHoursOfOperation.cdm.json/AtmHoursOfOperation",
+						"Name": "OperationStartTime"
+					}
+				},
+				{
+					"Name": "OperationEndTime",
+					"Description": "The closing or ending time of operation for the ATM.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmHoursOfOperation.cdm.json/AtmHoursOfOperation",
+						"Name": "OperationEndTime"
+					}
+				},
+				{
+					"Name": "AtmHoursOfOperationNote",
+					"Description": "A note, comment or additional information regarding an ATM hours of operation.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmHoursOfOperation.cdm.json/AtmHoursOfOperation",
+						"Name": "AtmHoursOfOperationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "e0b1c58e-a87e-4c12-a26e-1ee993bfd57e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmHoursOfOperation",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmHoursOfOperation",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AtmId\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"AtmId\"},\"DayOfWeek\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"DayOfWeek\"},\"PeriodStartDate\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"PeriodEndDate\"},\"OperationStartTime\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"OperationStartTime\"},\"OperationEndTime\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"OperationEndTime\"},\"AtmHoursOfOperationNote\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"AtmHoursOfOperationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AtmHoursOfOperation\",\"path\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\"},\"description\":\"The ATM hours of operation on a particular date at the site where it is located.\",\"primaryKey\":[\"AtmId\",\"DayOfWeek\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"AtmId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an ATM.\",\"isNullable\":false,\"name\":\"AtmId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"DayOfWeek\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The day of week for which the associated operation start/end hours are in effect.\",\"isNullable\":false,\"name\":\"DayOfWeek\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the ATM hours of operation are valid.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the ATM hours of operation are valid.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"OperationStartTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The starting or opening time of operation for the ATM.\",\"isNullable\":false,\"name\":\"OperationStartTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"OperationEndTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The closing or ending time of operation for the ATM.\",\"isNullable\":false,\"name\":\"OperationEndTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmHoursOfOperation.cdm.json/AtmHoursOfOperation\",\"name\":\"AtmHoursOfOperationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding an ATM hours of operation.\",\"isNullable\":true,\"name\":\"AtmHoursOfOperationNote\"}]}}}",
+			"Description": "The ATM hours of operation on a particular date at the site where it is located.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "AtmId,DayOfWeek,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AtmId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DayOfWeek\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OperationStartTime\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OperationEndTime\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AtmHoursOfOperationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "9a1fba36-b59a-4a79-bcdd-06907f851afd",
+		"Description": "The ATM hours of operation on a particular date at the site where it is located."
+	},
+	"type": "TABLE"
+}

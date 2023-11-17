@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cxilftwszx",
+	"properties": {
+		"Name": "relationship-cxilftwszx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Channel",
+		"ToTableName": "CustomerAccountChannelProductRevenue",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelId",
+				"ToColumnName": "ChannelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Channel.cdm.json/Channel\",\"toEntity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"joinPairs\":[{\"fromAttribute\":\"ChannelId\",\"toAttribute\":\"ChannelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a03b650f-6ce9-454f-9e65-5d482dc59795"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-syfigxwwpz",
+	"properties": {
+		"Name": "relationship-syfigxwwpz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BrandRelationshipType",
+		"ToTableName": "RelatedBrand",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BrandRelationshipTypeId",
+				"ToColumnName": "BrandRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BrandRelationshipType.cdm.json/BrandRelationshipType\",\"toEntity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"joinPairs\":[{\"fromAttribute\":\"BrandRelationshipTypeId\",\"toAttribute\":\"BrandRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "fdd2704c-5bbc-4194-bf01-e8adf54d2539"
+	},
+	"type": "RELATIONSHIP"
+}

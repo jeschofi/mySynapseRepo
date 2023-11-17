@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mzclqjvjyi",
+	"properties": {
+		"Name": "relationship-mzclqjvjyi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DepreciationMethod",
+		"ToTableName": "LegalEntityAccountingPolicy",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepreciationMethodId",
+				"ToColumnName": "DepreciationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DepreciationMethod.cdm.json/DepreciationMethod\",\"toEntity\":\"LegalEntityAccountingPolicy.cdm.json/LegalEntityAccountingPolicy\",\"joinPairs\":[{\"fromAttribute\":\"DepreciationMethodId\",\"toAttribute\":\"DepreciationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "980dd0e7-8525-486f-bbc3-51a0f5700fed"
+	},
+	"type": "RELATIONSHIP"
+}

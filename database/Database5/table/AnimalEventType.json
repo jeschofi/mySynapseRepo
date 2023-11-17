@@ -3,87 +3,93 @@
 	"properties": {
 		"Name": "AnimalEventType",
 		"EntityType": "TABLE",
-		"Namespace": {
-			"DatabaseName": "Database5"
-		},
-		"Description": "A animal event that may be recorded for livestock cattle.\n\nEx:\n- Artificial Insemination (AI)\n- Cull\n- Implantation\n- Milking\n- Artificial fertilization\n- Embryo transfer\n- Ear tagging\n- Cattle Pull\n- Direct sale\n- Slaughtered\n\nwhere:\n\nArtificial Insemination (AI)\nThe introduction of semen into the vagina or uterus without sexual reproduction.\n\nCull\n To select inferior animals from the herd for potential sale.\n\nImplantation\nTo become attached to and embedded in the maternal uterine lining. Used for a fertilized egg.\n\nArtificial fertilization\nThe bringing together of semen and eggs under laboratory conditions.\n\nEmbryo transfer\nRecovering embryos from a donor animal and transferring these embryos to a recipient animal.\n\nEar tagging\n\nCattle Pull\nRemoving cattle from the pen for treatment. Also see Pulls.\n\nDirect sale\nThe sale of cattle on-farm, direct to a lot feeder, processor, backgrounder or restocker, where there has been no intermediary party or process.se time in the feed lot has been completed so that they are now ready for slaughter.",
 		"TableType": "EXTERNAL",
-		"Origin": {
-			"Type": "SPARK"
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Database5",
+			"DatabaseId": null
 		},
 		"StorageDescriptor": {
+			"Distribution": null,
 			"Columns": [
 				{
 					"Name": "AnimalEventTypeId",
 					"Description": "The unique identifier of an animal event type.",
-					"BaseAttributeReference": {
-						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
-						"Name": "AnimalEventTypeId"
-					},
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
 					},
-					"DeltaFormatInvalidMessages": []
+					"BaseAttributeReference": {
+						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
+						"Name": "AnimalEventTypeId"
+					}
 				},
 				{
 					"Name": "AnimalEventTypeName",
 					"Description": "The name of an animal event type.",
-					"BaseAttributeReference": {
-						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
-						"Name": "AnimalEventTypeName"
-					},
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
 					},
-					"DeltaFormatInvalidMessages": []
+					"BaseAttributeReference": {
+						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
+						"Name": "AnimalEventTypeName"
+					}
 				},
 				{
 					"Name": "AnimalEventTypeDescription",
 					"Description": "The description of an animal event type.",
-					"BaseAttributeReference": {
-						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
-						"Name": "AnimalEventTypeDescription"
-					},
 					"OriginDataTypeName": {
 						"TypeName": "string",
 						"IsComplexType": false,
 						"IsNullable": true,
 						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "string"
 						}
 					},
-					"DeltaFormatInvalidMessages": []
+					"BaseAttributeReference": {
+						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
+						"Name": "AnimalEventTypeDescription"
+					}
 				},
 				{
 					"Name": "AnimalEventCategoryId",
 					"Description": "The unique identifier of an animal event category.",
-					"BaseAttributeReference": {
-						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
-						"Name": "AnimalEventCategoryId"
-					},
 					"OriginDataTypeName": {
 						"TypeName": "integer",
 						"IsComplexType": false,
 						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
 						"Properties": {
 							"HIVE_TYPE_STRING": "integer"
 						}
 					},
-					"DeltaFormatInvalidMessages": []
+					"BaseAttributeReference": {
+						"Entity": "AnimalEventType.cdm.json/AnimalEventType",
+						"Name": "AnimalEventCategoryId"
+					}
 				}
 			],
+			"ColumnSetEntityName": "66033619-de82-4901-bd9b-d3b2fa80751e",
 			"Format": {
 				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
 				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
@@ -92,8 +98,8 @@
 				"Properties": {
 					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Database5/AnimalEventType",
 					"delimiter": ",",
-					"multiLine": "false",
 					"firstRowAsHeader": "false",
+					"multiLine": "false",
 					"serialization.format": "1",
 					"escape": "\\",
 					"quote": "\"",
@@ -115,19 +121,35 @@
 				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AnimalEventTypeId\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventTypeId\"},\"AnimalEventTypeName\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventTypeName\"},\"AnimalEventTypeDescription\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventTypeDescription\"},\"AnimalEventCategoryId\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventCategoryId\"}}}"
 			},
 			"Compressed": false,
+			"SerDeInfo": null,
 			"IsStoredAsSubdirectories": false
 		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
 		"Properties": {
 			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AnimalEventType\",\"path\":\"AnimalEventType.cdm.json/AnimalEventType\"},\"description\":\"A animal event that may be recorded for livestock cattle.\\n\\nEx:\\n- Artificial Insemination (AI)\\n- Cull\\n- Implantation\\n- Milking\\n- Artificial fertilization\\n- Embryo transfer\\n- Ear tagging\\n- Cattle Pull\\n- Direct sale\\n- Slaughtered\\n\\nwhere:\\n\\nArtificial Insemination (AI)\\nThe introduction of semen into the vagina or uterus without sexual reproduction.\\n\\nCull\\n To select inferior animals from the herd for potential sale.\\n\\nImplantation\\nTo become attached to and embedded in the maternal uterine lining. Used for a fertilized egg.\\n\\nArtificial fertilization\\nThe bringing together of semen and eggs under laboratory conditions.\\n\\nEmbryo transfer\\nRecovering embryos from a donor animal and transferring these embryos to a recipient animal.\\n\\nEar tagging\\n\\nCattle Pull\\nRemoving cattle from the pen for treatment. Also see Pulls.\\n\\nDirect sale\\nThe sale of cattle on-farm, direct to a lot feeder, processor, backgrounder or restocker, where there has been no intermediary party or process.se time in the feed lot has been completed so that they are now ready for slaughter.\",\"primaryKey\":[\"AnimalEventTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an animal event type.\",\"isNullable\":false,\"name\":\"AnimalEventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an animal event type.\",\"isNullable\":true,\"name\":\"AnimalEventTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an animal event type.\",\"isNullable\":true,\"name\":\"AnimalEventTypeDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AnimalEventType.cdm.json/AnimalEventType\",\"name\":\"AnimalEventCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an animal event category.\",\"isNullable\":true,\"name\":\"AnimalEventCategoryId\"}]}}}",
 			"Description": "A animal event that may be recorded for livestock cattle.\n\nEx:\n- Artificial Insemination (AI)\n- Cull\n- Implantation\n- Milking\n- Artificial fertilization\n- Embryo transfer\n- Ear tagging\n- Cattle Pull\n- Direct sale\n- Slaughtered\n\nwhere:\n\nArtificial Insemination (AI)\nThe introduction of semen into the vagina or uterus without sexual reproduction.\n\nCull\n To select inferior animals from the herd for potential sale.\n\nImplantation\nTo become attached to and embedded in the maternal uterine lining. Used for a fertilized egg.\n\nArtificial fertilization\nThe bringing together of semen and eggs under laboratory conditions.\n\nEmbryo transfer\nRecovering embryos from a donor animal and transferring these embryos to a recipient animal.\n\nEar tagging\n\nCattle Pull\nRemoving cattle from the pen for treatment. Also see Pulls.\n\nDirect sale\nThe sale of cattle on-farm, direct to a lot feeder, processor, backgrounder or restocker, where there has been no intermediary party or process.se time in the feed lot has been completed so that they are now ready for slaughter.",
 			"DisplayFolderInfo": "{\"name\":\"Animal\",\"colorCode\":\"#00188F\"}",
 			"PrimaryKeys": "AnimalEventTypeId",
 			"spark.sql.sources.provider": "csv",
-			"sql:IsAppendOnly": false
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AnimalEventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AnimalEventTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnimalEventTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnimalEventCategoryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
 		},
-		"Retention": 0,
-		"Temporary": false,
-		"IsRewriteEnabled": false
+		"ObjectVersion": 1,
+		"ObjectId": "08ba4f0d-ab27-4379-a2fc-2a43f49affa8",
+		"Description": "A animal event that may be recorded for livestock cattle.\n\nEx:\n- Artificial Insemination (AI)\n- Cull\n- Implantation\n- Milking\n- Artificial fertilization\n- Embryo transfer\n- Ear tagging\n- Cattle Pull\n- Direct sale\n- Slaughtered\n\nwhere:\n\nArtificial Insemination (AI)\nThe introduction of semen into the vagina or uterus without sexual reproduction.\n\nCull\n To select inferior animals from the herd for potential sale.\n\nImplantation\nTo become attached to and embedded in the maternal uterine lining. Used for a fertilized egg.\n\nArtificial fertilization\nThe bringing together of semen and eggs under laboratory conditions.\n\nEmbryo transfer\nRecovering embryos from a donor animal and transferring these embryos to a recipient animal.\n\nEar tagging\n\nCattle Pull\nRemoving cattle from the pen for treatment. Also see Pulls.\n\nDirect sale\nThe sale of cattle on-farm, direct to a lot feeder, processor, backgrounder or restocker, where there has been no intermediary party or process.se time in the feed lot has been completed so that they are now ready for slaughter."
 	},
 	"type": "TABLE"
 }

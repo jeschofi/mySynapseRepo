@@ -1,0 +1,29 @@
+{
+	"name": "relationship-sgtkymqslo",
+	"properties": {
+		"Name": "relationship-sgtkymqslo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Calendar",
+		"ToTableName": "StoreCalendar",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Calendar.cdm.json/Calendar\",\"toEntity\":\"StoreCalendar.cdm.json/StoreCalendar\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f2be4ef5-8aa5-414a-9037-f42aaf1a99e6"
+	},
+	"type": "RELATIONSHIP"
+}

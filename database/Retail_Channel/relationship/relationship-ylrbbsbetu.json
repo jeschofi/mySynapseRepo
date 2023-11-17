@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ylrbbsbetu",
+	"properties": {
+		"Name": "relationship-ylrbbsbetu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketSegment",
+		"ToTableName": "CustomerMarketSegment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketSegmentId",
+				"ToColumnName": "MarketSegmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketSegment.cdm.json/MarketSegment\",\"toEntity\":\"CustomerMarketSegment.cdm.json/CustomerMarketSegment\",\"joinPairs\":[{\"fromAttribute\":\"MarketSegmentId\",\"toAttribute\":\"MarketSegmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "48b5f298-98e4-42a9-801a-19f7681258b4"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,213 @@
+{
+	"name": "JournalEntry",
+	"properties": {
+		"Name": "JournalEntry",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "JournalId",
+					"Description": "The unique identifier of a Journal.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JournalEntry.cdm.json/JournalEntry",
+						"Name": "JournalId"
+					}
+				},
+				{
+					"Name": "JournalEntryId",
+					"Description": "The unique identifier of a Journal Entry.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JournalEntry.cdm.json/JournalEntry",
+						"Name": "JournalEntryId"
+					}
+				},
+				{
+					"Name": "JournalTimestamp",
+					"Description": "The timestamp of the journal entry.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JournalEntry.cdm.json/JournalEntry",
+						"Name": "JournalTimestamp"
+					}
+				},
+				{
+					"Name": "JournalEntryDescription",
+					"Description": "A description of the journal entry/transaction.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JournalEntry.cdm.json/JournalEntry",
+						"Name": "JournalEntryDescription"
+					}
+				},
+				{
+					"Name": "TransactionId",
+					"Description": "The unique identifier of a Transaction.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JournalEntry.cdm.json/JournalEntry",
+						"Name": "TransactionId"
+					}
+				},
+				{
+					"Name": "JournalAdjustingEntryTypeId",
+					"Description": "The unique identifier of a journal adjusting entry type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JournalEntry.cdm.json/JournalEntry",
+						"Name": "JournalAdjustingEntryTypeId"
+					}
+				},
+				{
+					"Name": "ResponsibilityCenterId",
+					"Description": "The unique identifier of a Responsibility Center.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "JournalEntry.cdm.json/JournalEntry",
+						"Name": "ResponsibilityCenterId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "99401d69-9fd6-4ad0-b486-cf5f09f01162",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/JournalEntry",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/JournalEntry",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"JournalId\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalId\"},\"JournalEntryId\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalEntryId\"},\"JournalTimestamp\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalTimestamp\"},\"JournalEntryDescription\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalEntryDescription\"},\"TransactionId\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"TransactionId\"},\"JournalAdjustingEntryTypeId\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalAdjustingEntryTypeId\"},\"ResponsibilityCenterId\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"ResponsibilityCenterId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"JournalEntry\",\"path\":\"JournalEntry.cdm.json/JournalEntry\"},\"description\":\"The entry of a transaction into the journal or book of original entry.\\n\\nAll transactions are first recorded into a journal in chronological order.\\n\\nThis represents an adequate explanation of what has occurred before the transaction is posted to accounts.\\n\\nNote:\\nThe transaction may be entered into one or more journals such as a general journal and a specialized journal.\",\"primaryKey\":[\"JournalId\",\"JournalEntryId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Journal.\",\"isNullable\":false,\"name\":\"JournalId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalEntryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Journal Entry.\",\"isNullable\":false,\"name\":\"JournalEntryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the journal entry.\",\"isNullable\":true,\"name\":\"JournalTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalEntryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A description of the journal entry/transaction.\",\"isNullable\":true,\"name\":\"JournalEntryDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"TransactionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Transaction.\",\"isNullable\":false,\"name\":\"TransactionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"JournalAdjustingEntryTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a journal adjusting entry type.\",\"isNullable\":true,\"name\":\"JournalAdjustingEntryTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"JournalEntry.cdm.json/JournalEntry\",\"name\":\"ResponsibilityCenterId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Responsibility Center.\",\"isNullable\":true,\"name\":\"ResponsibilityCenterId\"}]}}}",
+			"Description": "The entry of a transaction into the journal or book of original entry.\n\nAll transactions are first recorded into a journal in chronological order.\n\nThis represents an adequate explanation of what has occurred before the transaction is posted to accounts.\n\nNote:\nThe transaction may be entered into one or more journals such as a general journal and a specialized journal.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "JournalId,JournalEntryId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"JournalId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"JournalEntryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"JournalTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"JournalEntryDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TransactionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"JournalAdjustingEntryTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ResponsibilityCenterId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "0a2d0e18-96cf-4b8f-8b90-f9209b9af5c1",
+		"Description": "The entry of a transaction into the journal or book of original entry.\n\nAll transactions are first recorded into a journal in chronological order.\n\nThis represents an adequate explanation of what has occurred before the transaction is posted to accounts.\n\nNote:\nThe transaction may be entered into one or more journals such as a general journal and a specialized journal."
+	},
+	"type": "TABLE"
+}

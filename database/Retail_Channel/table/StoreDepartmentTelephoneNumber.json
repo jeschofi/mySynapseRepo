@@ -1,0 +1,265 @@
+{
+	"name": "StoreDepartmentTelephoneNumber",
+	"properties": {
+		"Name": "StoreDepartmentTelephoneNumber",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "DepartmentId",
+					"Description": "The unique identifier of a Department.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "DepartmentId"
+					}
+				},
+				{
+					"Name": "TelephoneNumberTypeId",
+					"Description": "The unique identifier of a Telephone Number Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "TelephoneNumberTypeId"
+					}
+				},
+				{
+					"Name": "TelephoneNumber",
+					"Description": "The complete, concatenated telephone number (area code + prefix + suffix + extension).",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 15,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "TelephoneNumber"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp associated with the information.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp associated with the information.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "PreferenceId",
+					"Description": "The unique identifier of a Preference.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "PreferenceId"
+					}
+				},
+				{
+					"Name": "TelephoneNumberNote",
+					"Description": "A note, comment or additional information regarding the Telephone Number.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "TelephoneNumberNote"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "TextCapableIndicator",
+					"Description": "Indicates whether the telephone (number) is capable of sending / receiving text messages.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber",
+						"Name": "TextCapableIndicator"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1493c1bc-377b-46d2-8f01-aac8ba8ead6f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDepartmentTelephoneNumber",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDepartmentTelephoneNumber",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"StoreId\"},\"DepartmentId\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"DepartmentId\"},\"TelephoneNumberTypeId\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TelephoneNumberTypeId\"},\"TelephoneNumber\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TelephoneNumber\"},\"PeriodStartTimestamp\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"PeriodEndTimestamp\"},\"PreferenceId\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"PreferenceId\"},\"TelephoneNumberNote\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TelephoneNumberNote\"},\"LocationId\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"LocationId\"},\"TextCapableIndicator\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TextCapableIndicator\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreDepartmentTelephoneNumber\",\"path\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\"},\"description\":\"The store department telephone number of the associated Telephone Number Type for the indicated period.\",\"primaryKey\":[\"StoreId\",\"DepartmentId\",\"TelephoneNumberTypeId\",\"TelephoneNumber\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"DepartmentId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Department.\",\"isNullable\":false,\"name\":\"DepartmentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TelephoneNumberTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Telephone Number Type.\",\"isNullable\":false,\"name\":\"TelephoneNumberTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TelephoneNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":15,\"description\":\"The complete, concatenated telephone number (area code + prefix + suffix + extension).\",\"isNullable\":false,\"scale\":0,\"name\":\"TelephoneNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp associated with the information.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp associated with the information.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"PreferenceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Preference.\",\"isNullable\":true,\"name\":\"PreferenceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TelephoneNumberNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Telephone Number.\",\"isNullable\":true,\"name\":\"TelephoneNumberNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDepartmentTelephoneNumber.cdm.json/StoreDepartmentTelephoneNumber\",\"name\":\"TextCapableIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates whether the telephone (number) is capable of sending / receiving text messages.\",\"isNullable\":true,\"name\":\"TextCapableIndicator\"}]}}}",
+			"Description": "The store department telephone number of the associated Telephone Number Type for the indicated period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,DepartmentId,TelephoneNumberTypeId,TelephoneNumber,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DepartmentId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TelephoneNumberTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TelephoneNumber\",\"type\":\"decimal(15,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PreferenceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TelephoneNumberNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TextCapableIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "35e2a023-8a7d-4eb5-bbfe-3358b947720e",
+		"Description": "The store department telephone number of the associated Telephone Number Type for the indicated period."
+	},
+	"type": "TABLE"
+}

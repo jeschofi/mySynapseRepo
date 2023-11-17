@@ -1,0 +1,195 @@
+{
+	"name": "AssetDepreciation",
+	"properties": {
+		"Name": "AssetDepreciation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDepreciation.cdm.json/AssetDepreciation",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "DepreciationPeriodStartDate",
+					"Description": "The period start date for which the fixed asset depreciation is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDepreciation.cdm.json/AssetDepreciation",
+						"Name": "DepreciationPeriodStartDate"
+					}
+				},
+				{
+					"Name": "DepreciationPeriodEndDate",
+					"Description": "The period end date for which the fixed asset depreciation is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDepreciation.cdm.json/AssetDepreciation",
+						"Name": "DepreciationPeriodEndDate"
+					}
+				},
+				{
+					"Name": "PeriodDepreciationAmount",
+					"Description": "The amount of depreciation taken for the associated period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDepreciation.cdm.json/AssetDepreciation",
+						"Name": "PeriodDepreciationAmount"
+					}
+				},
+				{
+					"Name": "TotalAccumulatedDepreciationAmount",
+					"Description": "The total depreciation claimed to date.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDepreciation.cdm.json/AssetDepreciation",
+						"Name": "TotalAccumulatedDepreciationAmount"
+					}
+				},
+				{
+					"Name": "DepreciationMethodId",
+					"Description": "The unique identifier of the Depreciation Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDepreciation.cdm.json/AssetDepreciation",
+						"Name": "DepreciationMethodId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "83f75396-084c-4f3e-8552-5d0c65471cee",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetDepreciation",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetDepreciation",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetId\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"AssetId\"},\"DepreciationPeriodStartDate\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"DepreciationPeriodStartDate\"},\"DepreciationPeriodEndDate\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"DepreciationPeriodEndDate\"},\"PeriodDepreciationAmount\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"PeriodDepreciationAmount\"},\"TotalAccumulatedDepreciationAmount\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"TotalAccumulatedDepreciationAmount\"},\"DepreciationMethodId\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"DepreciationMethodId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetDepreciation\",\"path\":\"AssetDepreciation.cdm.json/AssetDepreciation\"},\"description\":\"All plant assets, except land, depreciate. Factors that contribute to depreciation are both physical and functional. \\n\\nPhysical depreciation results from the actual use of a plant asset. \\n\\nFunctional depreciation is a function of obsolescence factors such as technological advances and less demand for a product. The purpose of recording depreciation is to show the decline of usefulness of an asset, not\\na decline in its market value. \\n\\nDepreciation merely reduces the value of plant asset accounts, it does not reduce the cash account or affect cash flows.\\n\\nDepreciation is the amount of expense charged against earnings by a company to write off the cost of a plant or machine over its useful live, giving consideration to wear and tear, obsolescence, and salvage value. \\n\\nIf the expense is assumed to be incurred in equal amounts in each business period over the life of the asset, the depreciation method used is straight line (SL). If the expense is assumed to be incurred in decreasing amounts in each business period over the life of the asset, the method used is said to be accelerated. \\n\\nTwo commonly used variations of the accelerated method of depreciating an asset are the sum-of-years digits (SYD) and the double-declining balance (DDB) methods. Frequently, accelerated depreciation is chosen for a business' tax expense but straight line is chosen for its financial reporting purposes.\",\"primaryKey\":[\"AssetId\",\"DepreciationPeriodStartDate\",\"DepreciationPeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"DepreciationPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the fixed asset depreciation is calculated.\",\"isNullable\":false,\"name\":\"DepreciationPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"DepreciationPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the fixed asset depreciation is calculated.\",\"isNullable\":false,\"name\":\"DepreciationPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"PeriodDepreciationAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of depreciation taken for the associated period.\",\"isNullable\":true,\"scale\":2,\"name\":\"PeriodDepreciationAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"TotalAccumulatedDepreciationAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total depreciation claimed to date.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalAccumulatedDepreciationAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDepreciation.cdm.json/AssetDepreciation\",\"name\":\"DepreciationMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Depreciation Method.\",\"isNullable\":true,\"name\":\"DepreciationMethodId\"}]}}}",
+			"Description": "All plant assets, except land, depreciate. Factors that contribute to depreciation are both physical and functional. \n\nPhysical depreciation results from the actual use of a plant asset. \n\nFunctional depreciation is a function of obsolescence factors such as technological advances and less demand for a product. The purpose of recording depreciation is to show the decline of usefulness of an asset, not\na decline in its market value. \n\nDepreciation merely reduces the value of plant asset accounts, it does not reduce the cash account or affect cash flows.\n\nDepreciation is the amount of expense charged against earnings by a company to write off the cost of a plant or machine over its useful live, giving consideration to wear and tear, obsolescence, and salvage value. \n\nIf the expense is assumed to be incurred in equal amounts in each business period over the life of the asset, the depreciation method used is straight line (SL). If the expense is assumed to be incurred in decreasing amounts in each business period over the life of the asset, the method used is said to be accelerated. \n\nTwo commonly used variations of the accelerated method of depreciating an asset are the sum-of-years digits (SYD) and the double-declining balance (DDB) methods. Frequently, accelerated depreciation is chosen for a business' tax expense but straight line is chosen for its financial reporting purposes.",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetId,DepreciationPeriodStartDate,DepreciationPeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DepreciationPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DepreciationPeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodDepreciationAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalAccumulatedDepreciationAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DepreciationMethodId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "7ab9ecee-3147-48f0-a1d7-d366e781f4c4",
+		"Description": "All plant assets, except land, depreciate. Factors that contribute to depreciation are both physical and functional. \n\nPhysical depreciation results from the actual use of a plant asset. \n\nFunctional depreciation is a function of obsolescence factors such as technological advances and less demand for a product. The purpose of recording depreciation is to show the decline of usefulness of an asset, not\na decline in its market value. \n\nDepreciation merely reduces the value of plant asset accounts, it does not reduce the cash account or affect cash flows.\n\nDepreciation is the amount of expense charged against earnings by a company to write off the cost of a plant or machine over its useful live, giving consideration to wear and tear, obsolescence, and salvage value. \n\nIf the expense is assumed to be incurred in equal amounts in each business period over the life of the asset, the depreciation method used is straight line (SL). If the expense is assumed to be incurred in decreasing amounts in each business period over the life of the asset, the method used is said to be accelerated. \n\nTwo commonly used variations of the accelerated method of depreciating an asset are the sum-of-years digits (SYD) and the double-declining balance (DDB) methods. Frequently, accelerated depreciation is chosen for a business' tax expense but straight line is chosen for its financial reporting purposes."
+	},
+	"type": "TABLE"
+}

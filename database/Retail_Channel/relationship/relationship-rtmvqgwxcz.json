@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rtmvqgwxcz",
+	"properties": {
+		"Name": "relationship-rtmvqgwxcz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayLocation",
+		"ToTableName": "StoreTrafficCount",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DisplayLocationPeriodStartDate",
+				"ToColumnName": "DisplayLocationPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"toEntity\":\"StoreTrafficCount.cdm.json/StoreTrafficCount\",\"joinPairs\":[{\"fromAttribute\":\"DisplayLocationPeriodStartDate\",\"toAttribute\":\"DisplayLocationPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "aaf1a502-9d6b-4bd7-812f-a4251d8b4815"
+	},
+	"type": "RELATIONSHIP"
+}

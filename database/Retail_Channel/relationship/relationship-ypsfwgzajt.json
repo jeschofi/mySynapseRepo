@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ypsfwgzajt",
+	"properties": {
+		"Name": "relationship-ypsfwgzajt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Payment",
+		"ToTableName": "PartyEarnedCommissionPayment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PaymentId",
+				"ToColumnName": "PaymentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Payment.cdm.json/Payment\",\"toEntity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"joinPairs\":[{\"fromAttribute\":\"PaymentId\",\"toAttribute\":\"PaymentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3ec855ad-7e39-4ee3-8dc0-1196b62bd99d"
+	},
+	"type": "RELATIONSHIP"
+}

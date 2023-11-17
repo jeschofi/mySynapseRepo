@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mheozgzvkr",
+	"properties": {
+		"Name": "relationship-mheozgzvkr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialStatementDurationType",
+		"ToTableName": "SetOfFinancialStatements",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialStatementDurationTypeId",
+				"ToColumnName": "FinancialStatementDurationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"toEntity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"joinPairs\":[{\"fromAttribute\":\"FinancialStatementDurationTypeId\",\"toAttribute\":\"FinancialStatementDurationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "24987200-3a11-4f35-8e32-7b0ca4d6406c"
+	},
+	"type": "RELATIONSHIP"
+}

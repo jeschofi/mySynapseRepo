@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qnsypregrw",
+	"properties": {
+		"Name": "relationship-qnsypregrw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommonStock",
+		"ToTableName": "CommonStockDividendYield",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StockId",
+				"ToColumnName": "StockId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommonStock.cdm.json/CommonStock\",\"toEntity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"joinPairs\":[{\"fromAttribute\":\"StockId\",\"toAttribute\":\"StockId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0c8adcd8-a342-46bf-ac74-b6cc607a2eee"
+	},
+	"type": "RELATIONSHIP"
+}

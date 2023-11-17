@@ -1,0 +1,29 @@
+{
+	"name": "relationship-govmiqfolq",
+	"properties": {
+		"Name": "relationship-govmiqfolq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayShelf",
+		"ToTableName": "StoreDisplayBin",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShelfId",
+				"ToColumnName": "ShelfId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"toEntity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"joinPairs\":[{\"fromAttribute\":\"ShelfId\",\"toAttribute\":\"ShelfId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "20238bd5-55fe-49c5-8c93-89598f3f38c1"
+	},
+	"type": "RELATIONSHIP"
+}

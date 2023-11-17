@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vrxrjtkgxb",
+	"properties": {
+		"Name": "relationship-vrxrjtkgxb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketSegment",
+		"ToTableName": "ChannelTargetMarketSegment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketSegmentId",
+				"ToColumnName": "MarketSegmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketSegment.cdm.json/MarketSegment\",\"toEntity\":\"ChannelTargetMarketSegment.cdm.json/ChannelTargetMarketSegment\",\"joinPairs\":[{\"fromAttribute\":\"MarketSegmentId\",\"toAttribute\":\"MarketSegmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ef54f6b7-9631-4af8-8191-7e346c395e44"
+	},
+	"type": "RELATIONSHIP"
+}

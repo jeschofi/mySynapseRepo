@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rcoylagymm",
+	"properties": {
+		"Name": "relationship-rcoylagymm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreServiceLocation",
+		"ToTableName": "StoreServiceLocationHours",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ServiceLocationId",
+				"ToColumnName": "ServiceLocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"toEntity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"joinPairs\":[{\"fromAttribute\":\"ServiceLocationId\",\"toAttribute\":\"ServiceLocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0219f5fe-473c-4cbf-a705-6abd06f9e331"
+	},
+	"type": "RELATIONSHIP"
+}

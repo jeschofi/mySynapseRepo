@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mdpnjumgdh",
+	"properties": {
+		"Name": "relationship-mdpnjumgdh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarMonth",
+		"ToTableName": "CalendarWeek",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarMonthId",
+				"ToColumnName": "CalendarMonthId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarMonth.cdm.json/CalendarMonth\",\"toEntity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"joinPairs\":[{\"fromAttribute\":\"CalendarMonthId\",\"toAttribute\":\"CalendarMonthId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "47104941-897a-49fb-8f89-cb82660fe7e2"
+	},
+	"type": "RELATIONSHIP"
+}

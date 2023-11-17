@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hmppnoinxy",
+	"properties": {
+		"Name": "relationship-hmppnoinxy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RetailProduct",
+		"ToTableName": "ProductSalesChannelSalesGoal",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RetailProduct.cdm.json/RetailProduct\",\"toEntity\":\"ProductSalesChannelSalesGoal.cdm.json/ProductSalesChannelSalesGoal\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "82fbafba-c11c-4e1b-919a-66a92dacf251"
+	},
+	"type": "RELATIONSHIP"
+}

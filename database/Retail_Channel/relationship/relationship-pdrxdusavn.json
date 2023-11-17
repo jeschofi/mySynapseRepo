@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pdrxdusavn",
+	"properties": {
+		"Name": "relationship-pdrxdusavn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NaicsSubsector",
+		"ToTableName": "NaicsIndustryGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NaicsSubsectorCode",
+				"ToColumnName": "NaicsSubsectorCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"toEntity\":\"NaicsIndustryGroup.cdm.json/NaicsIndustryGroup\",\"joinPairs\":[{\"fromAttribute\":\"NaicsSubsectorCode\",\"toAttribute\":\"NaicsSubsectorCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "85248403-a615-48ca-86df-db202daa630f"
+	},
+	"type": "RELATIONSHIP"
+}

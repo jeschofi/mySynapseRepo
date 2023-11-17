@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ikcsperjgm",
+	"properties": {
+		"Name": "relationship-ikcsperjgm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionScheduleDetailByUnits",
+		"ToTableName": "Commission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionScheduleDetailStartDate",
+				"ToColumnName": "CommissionScheduleDetailStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"toEntity\":\"Commission.cdm.json/Commission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionScheduleDetailStartDate\",\"toAttribute\":\"CommissionScheduleDetailStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "52baedcb-d3e9-4b2a-a66f-f6beb98a1f66"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,136 @@
+{
+	"name": "FinancialStatementDurationType",
+	"properties": {
+		"Name": "FinancialStatementDurationType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FinancialStatementDurationTypeId",
+					"Description": "The unique identifier of a Financial Statement Duration Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementDurationType.cdm.json/FinancialStatementDurationType",
+						"Name": "FinancialStatementDurationTypeId"
+					}
+				},
+				{
+					"Name": "FinancialStatementDurationTypeName",
+					"Description": "The name of a Financial Statement Duration Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementDurationType.cdm.json/FinancialStatementDurationType",
+						"Name": "FinancialStatementDurationTypeName"
+					}
+				},
+				{
+					"Name": "FinancialStatementDurationTypeDescription",
+					"Description": "The description of a Financial Statement Duration Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialStatementDurationType.cdm.json/FinancialStatementDurationType",
+						"Name": "FinancialStatementDurationTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "5bcd2d9c-0875-4afb-8edd-f703249bcbb2",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialStatementDurationType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialStatementDurationType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FinancialStatementDurationTypeId\":{\"entity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"name\":\"FinancialStatementDurationTypeId\"},\"FinancialStatementDurationTypeName\":{\"entity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"name\":\"FinancialStatementDurationTypeName\"},\"FinancialStatementDurationTypeDescription\":{\"entity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"name\":\"FinancialStatementDurationTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FinancialStatementDurationType\",\"path\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\"},\"description\":\"The type of duration that the set of financial statements is for. \\n\\nEx:\\n- Fiscal Year\\n- Interim Statement\\n- Calendar Year\",\"primaryKey\":[\"FinancialStatementDurationTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"name\":\"FinancialStatementDurationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Financial Statement Duration Type.\",\"isNullable\":false,\"name\":\"FinancialStatementDurationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"name\":\"FinancialStatementDurationTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Financial Statement Duration Type.\",\"isNullable\":true,\"name\":\"FinancialStatementDurationTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialStatementDurationType.cdm.json/FinancialStatementDurationType\",\"name\":\"FinancialStatementDurationTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Financial Statement Duration Type.\",\"isNullable\":true,\"name\":\"FinancialStatementDurationTypeDescription\"}]}}}",
+			"Description": "The type of duration that the set of financial statements is for. \n\nEx:\n- Fiscal Year\n- Interim Statement\n- Calendar Year",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "FinancialStatementDurationTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FinancialStatementDurationTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialStatementDurationTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinancialStatementDurationTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "a6d756cf-eba2-4a64-b3ba-93e5812e7932",
+		"Description": "The type of duration that the set of financial statements is for. \n\nEx:\n- Fiscal Year\n- Interim Statement\n- Calendar Year"
+	},
+	"type": "TABLE"
+}

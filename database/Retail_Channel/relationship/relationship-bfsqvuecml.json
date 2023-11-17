@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bfsqvuecml",
+	"properties": {
+		"Name": "relationship-bfsqvuecml",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelAssortment",
+		"ToTableName": "ChannelAssortmentProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelId",
+				"ToColumnName": "ChannelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelAssortment.cdm.json/ChannelAssortment\",\"toEntity\":\"ChannelAssortmentProduct.cdm.json/ChannelAssortmentProduct\",\"joinPairs\":[{\"fromAttribute\":\"ChannelId\",\"toAttribute\":\"ChannelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1dc720d7-af8a-4f8e-b664-4f4a27a23338"
+	},
+	"type": "RELATIONSHIP"
+}

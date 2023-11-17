@@ -1,0 +1,136 @@
+{
+	"name": "BondRiskEventType",
+	"properties": {
+		"Name": "BondRiskEventType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BondRiskEventTypeId",
+					"Description": "The unique identifier of a bond event risk type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondRiskEventType.cdm.json/BondRiskEventType",
+						"Name": "BondRiskEventTypeId"
+					}
+				},
+				{
+					"Name": "BondRiskEventTypeName",
+					"Description": "The name of a bond event risk type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondRiskEventType.cdm.json/BondRiskEventType",
+						"Name": "BondRiskEventTypeName"
+					}
+				},
+				{
+					"Name": "BondRiskEventTypeDescription",
+					"Description": "The description of a bond event risk type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondRiskEventType.cdm.json/BondRiskEventType",
+						"Name": "BondRiskEventTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fafb4436-925d-4c65-bcad-0090eb5c6437",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondRiskEventType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondRiskEventType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BondRiskEventTypeId\":{\"entity\":\"BondRiskEventType.cdm.json/BondRiskEventType\",\"name\":\"BondRiskEventTypeId\"},\"BondRiskEventTypeName\":{\"entity\":\"BondRiskEventType.cdm.json/BondRiskEventType\",\"name\":\"BondRiskEventTypeName\"},\"BondRiskEventTypeDescription\":{\"entity\":\"BondRiskEventType.cdm.json/BondRiskEventType\",\"name\":\"BondRiskEventTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BondRiskEventType\",\"path\":\"BondRiskEventType.cdm.json/BondRiskEventType\"},\"description\":\"A categorization of events that can affect the valuation of a bond.\\n\\nEx.:\\n- Financial Stability of Issuer\\n- Interest Rate Risk\\n- Foreign Exchange Risk\\n- Credit Risk\",\"primaryKey\":[\"BondRiskEventTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondRiskEventType.cdm.json/BondRiskEventType\",\"name\":\"BondRiskEventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a bond event risk type.\",\"isNullable\":false,\"name\":\"BondRiskEventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondRiskEventType.cdm.json/BondRiskEventType\",\"name\":\"BondRiskEventTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a bond event risk type.\",\"isNullable\":true,\"name\":\"BondRiskEventTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondRiskEventType.cdm.json/BondRiskEventType\",\"name\":\"BondRiskEventTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a bond event risk type.\",\"isNullable\":true,\"name\":\"BondRiskEventTypeDescription\"}]}}}",
+			"Description": "A categorization of events that can affect the valuation of a bond.\n\nEx.:\n- Financial Stability of Issuer\n- Interest Rate Risk\n- Foreign Exchange Risk\n- Credit Risk",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "BondRiskEventTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BondRiskEventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BondRiskEventTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BondRiskEventTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "f54f5338-c4bb-42b0-8403-2368a3605847",
+		"Description": "A categorization of events that can affect the valuation of a bond.\n\nEx.:\n- Financial Stability of Issuer\n- Interest Rate Risk\n- Foreign Exchange Risk\n- Credit Risk"
+	},
+	"type": "TABLE"
+}

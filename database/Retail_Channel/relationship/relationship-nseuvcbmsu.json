@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nseuvcbmsu",
+	"properties": {
+		"Name": "relationship-nseuvcbmsu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShipmentMethod",
+		"ToTableName": "StoreAvailableShipmentMethod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShipmentMethodId",
+				"ToColumnName": "ShipmentMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShipmentMethod.cdm.json/ShipmentMethod\",\"toEntity\":\"StoreAvailableShipmentMethod.cdm.json/StoreAvailableShipmentMethod\",\"joinPairs\":[{\"fromAttribute\":\"ShipmentMethodId\",\"toAttribute\":\"ShipmentMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "207fa67b-3a87-4bcb-a1bc-774f9469a2ee"
+	},
+	"type": "RELATIONSHIP"
+}

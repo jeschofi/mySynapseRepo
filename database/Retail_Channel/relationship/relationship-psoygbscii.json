@@ -1,0 +1,29 @@
+{
+	"name": "relationship-psoygbscii",
+	"properties": {
+		"Name": "relationship-psoygbscii",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShopperPosition",
+		"ToTableName": "ShopperPositionReading",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShopperSessionId",
+				"ToColumnName": "ShopperSessionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"toEntity\":\"ShopperPositionReading.cdm.json/ShopperPositionReading\",\"joinPairs\":[{\"fromAttribute\":\"ShopperSessionId\",\"toAttribute\":\"ShopperSessionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3d462361-0821-4362-a919-befe56673c71"
+	},
+	"type": "RELATIONSHIP"
+}

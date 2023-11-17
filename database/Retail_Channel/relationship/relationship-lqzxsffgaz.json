@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lqzxsffgaz",
+	"properties": {
+		"Name": "relationship-lqzxsffgaz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionScheduleDetailByUnits",
+		"ToTableName": "Commission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionMaximumNumberUnits",
+				"ToColumnName": "CommissionMaximumNumberUnits"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionScheduleDetailByUnits.cdm.json/CommissionScheduleDetailByUnits\",\"toEntity\":\"Commission.cdm.json/Commission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionMaximumNumberUnits\",\"toAttribute\":\"CommissionMaximumNumberUnits\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4ba4dd10-dc65-46f0-9ec5-7d9a4d8263a1"
+	},
+	"type": "RELATIONSHIP"
+}

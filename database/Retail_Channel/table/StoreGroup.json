@@ -1,0 +1,130 @@
+{
+	"name": "StoreGroup",
+	"properties": {
+		"Name": "StoreGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreGroupId",
+					"Description": "The unique identifier of a Store Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroup.cdm.json/StoreGroup",
+						"Name": "StoreGroupId"
+					}
+				},
+				{
+					"Name": "StoreGroupName",
+					"Description": "The name of a Store Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroup.cdm.json/StoreGroup",
+						"Name": "StoreGroupName"
+					}
+				},
+				{
+					"Name": "StoreGroupDescription",
+					"Description": "The description of a Store Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroup.cdm.json/StoreGroup",
+						"Name": "StoreGroupDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1f4496bd-7d30-443a-8a24-ef46eaeb589c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreGroup",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreGroup",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreGroupId\":{\"entity\":\"StoreGroup.cdm.json/StoreGroup\",\"name\":\"StoreGroupId\"},\"StoreGroupName\":{\"entity\":\"StoreGroup.cdm.json/StoreGroup\",\"name\":\"StoreGroupName\"},\"StoreGroupDescription\":{\"entity\":\"StoreGroup.cdm.json/StoreGroup\",\"name\":\"StoreGroupDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreGroup\",\"path\":\"StoreGroup.cdm.json/StoreGroup\"},\"description\":\"An arbitrary grouping of Stores.\\n\\nEx:\\n- Size\\n- Format\\n- Location\\n- Ownership\",\"primaryKey\":[\"StoreGroupId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroup.cdm.json/StoreGroup\",\"name\":\"StoreGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Group.\",\"isNullable\":false,\"name\":\"StoreGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroup.cdm.json/StoreGroup\",\"name\":\"StoreGroupName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Store Group.\",\"isNullable\":true,\"name\":\"StoreGroupName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroup.cdm.json/StoreGroup\",\"name\":\"StoreGroupDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Store Group.\",\"isNullable\":true,\"name\":\"StoreGroupDescription\"}]}}}",
+			"Description": "An arbitrary grouping of Stores.\n\nEx:\n- Size\n- Format\n- Location\n- Ownership",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "StoreGroupId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreGroupName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreGroupDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "203b6f2c-8dfa-4f5a-8b6d-6f605053692c",
+		"Description": "An arbitrary grouping of Stores.\n\nEx:\n- Size\n- Format\n- Location\n- Ownership"
+	},
+	"type": "TABLE"
+}

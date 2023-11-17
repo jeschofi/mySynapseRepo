@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xsvwyrjsjc",
+	"properties": {
+		"Name": "relationship-xsvwyrjsjc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreGroup",
+		"ToTableName": "StoreGroupStore",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreGroupId",
+				"ToColumnName": "StoreGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreGroup.cdm.json/StoreGroup\",\"toEntity\":\"StoreGroupStore.cdm.json/StoreGroupStore\",\"joinPairs\":[{\"fromAttribute\":\"StoreGroupId\",\"toAttribute\":\"StoreGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "989f77c9-cd82-4de8-8397-ba70b4fb3856"
+	},
+	"type": "RELATIONSHIP"
+}

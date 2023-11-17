@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nehhgmvnlc",
+	"properties": {
+		"Name": "relationship-nehhgmvnlc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DayOfWeek",
+		"ToTableName": "CalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DayOfWeekId",
+				"ToColumnName": "DayOfWeekId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"toEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"DayOfWeekId\",\"toAttribute\":\"DayOfWeekId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e7550c4b-c591-41ff-8c71-6df2918a3aa6"
+	},
+	"type": "RELATIONSHIP"
+}

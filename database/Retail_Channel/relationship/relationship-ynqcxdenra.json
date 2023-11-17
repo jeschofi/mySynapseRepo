@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ynqcxdenra",
+	"properties": {
+		"Name": "relationship-ynqcxdenra",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayArea",
+		"ToTableName": "StoreDisplayAisle",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AreaPeriodStartDate",
+				"ToColumnName": "AreaPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayArea.cdm.json/StoreDisplayArea\",\"toEntity\":\"StoreDisplayAisle.cdm.json/StoreDisplayAisle\",\"joinPairs\":[{\"fromAttribute\":\"AreaPeriodStartDate\",\"toAttribute\":\"AreaPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "15240c43-9f19-4a67-801f-1edd0e0fdba9"
+	},
+	"type": "RELATIONSHIP"
+}

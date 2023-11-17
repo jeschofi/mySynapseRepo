@@ -1,0 +1,195 @@
+{
+	"name": "AssetPaybackPeriod",
+	"properties": {
+		"Name": "AssetPaybackPeriod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetPaybackPeriod.cdm.json/AssetPaybackPeriod",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the Asset payback is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetPaybackPeriod.cdm.json/AssetPaybackPeriod",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the Asset payback is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetPaybackPeriod.cdm.json/AssetPaybackPeriod",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "InitialInvestmentAmount",
+					"Description": "The initial amount invested into the Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetPaybackPeriod.cdm.json/AssetPaybackPeriod",
+						"Name": "InitialInvestmentAmount"
+					}
+				},
+				{
+					"Name": "AnnualCashInflow",
+					"Description": "The annual cash flow associated with the Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetPaybackPeriod.cdm.json/AssetPaybackPeriod",
+						"Name": "AnnualCashInflow"
+					}
+				},
+				{
+					"Name": "PaybackPeriod",
+					"Description": "Payback Period = (Initial Investment/Annual Cash Inflow)",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 3,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetPaybackPeriod.cdm.json/AssetPaybackPeriod",
+						"Name": "PaybackPeriod"
+					}
+				}
+			],
+			"ColumnSetEntityName": "83dc2338-3a02-4d84-818b-30329dd88160",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetPaybackPeriod",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetPaybackPeriod",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetId\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"AssetId\"},\"PeriodStartDate\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"PeriodEndDate\"},\"InitialInvestmentAmount\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"InitialInvestmentAmount\"},\"AnnualCashInflow\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"AnnualCashInflow\"},\"PaybackPeriod\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"PaybackPeriod\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetPaybackPeriod\",\"path\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\"},\"description\":\"Payback period is the number of years that is required to recover the initial investment.\\n\\nPayback advantages:\\n\\n- Simple to apply\\n- Addressed investment risk\\n\\nPayback disadvantages:\\n\\n- Does not consider time value of money\\n- Does not consider cash flows received after payback period\\n- Does not measure profitability\\n- Does not predict the optimum payback period\",\"primaryKey\":[\"AssetId\",\"PeriodStartDate\",\"PeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Asset payback is calculated.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the Asset payback is calculated.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"InitialInvestmentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The initial amount invested into the Asset.\",\"isNullable\":true,\"scale\":2,\"name\":\"InitialInvestmentAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"AnnualCashInflow\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The annual cash flow associated with the Asset.\",\"isNullable\":true,\"scale\":2,\"name\":\"AnnualCashInflow\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetPaybackPeriod.cdm.json/AssetPaybackPeriod\",\"name\":\"PaybackPeriod\"},\"dataType\":\"decimal\",\"dataTypeLength\":3,\"description\":\"Payback Period = (Initial Investment/Annual Cash Inflow)\",\"isNullable\":true,\"scale\":0,\"name\":\"PaybackPeriod\"}]}}}",
+			"Description": "Payback period is the number of years that is required to recover the initial investment.\n\nPayback advantages:\n\n- Simple to apply\n- Addressed investment risk\n\nPayback disadvantages:\n\n- Does not consider time value of money\n- Does not consider cash flows received after payback period\n- Does not measure profitability\n- Does not predict the optimum payback period",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetId,PeriodStartDate,PeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"InitialInvestmentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AnnualCashInflow\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaybackPeriod\",\"type\":\"decimal(3,0)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "9734ff3a-3c57-43a6-a6d4-e0d8a57fda33",
+		"Description": "Payback period is the number of years that is required to recover the initial investment.\n\nPayback advantages:\n\n- Simple to apply\n- Addressed investment risk\n\nPayback disadvantages:\n\n- Does not consider time value of money\n- Does not consider cash flows received after payback period\n- Does not measure profitability\n- Does not predict the optimum payback period"
+	},
+	"type": "TABLE"
+}

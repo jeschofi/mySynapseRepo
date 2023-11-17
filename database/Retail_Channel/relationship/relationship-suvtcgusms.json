@@ -1,0 +1,29 @@
+{
+	"name": "relationship-suvtcgusms",
+	"properties": {
+		"Name": "relationship-suvtcgusms",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SizeClass",
+		"ToTableName": "ChannelTypeAssortment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SizeClassId",
+				"ToColumnName": "SizeClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SizeClass.cdm.json/SizeClass\",\"toEntity\":\"ChannelTypeAssortment.cdm.json/ChannelTypeAssortment\",\"joinPairs\":[{\"fromAttribute\":\"SizeClassId\",\"toAttribute\":\"SizeClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7dc41768-1662-4172-96f9-0d7e4de68da2"
+	},
+	"type": "RELATIONSHIP"
+}

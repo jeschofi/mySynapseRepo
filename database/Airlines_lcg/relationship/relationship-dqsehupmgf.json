@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dqsehupmgf",
+	"properties": {
+		"Name": "relationship-dqsehupmgf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Project",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "ProjectResponsiblePartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Project.cdm.json/Project\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"ProjectResponsiblePartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "91cd9a09-d310-4092-9d52-8c1f1033b36c"
+	},
+	"type": "RELATIONSHIP"
+}

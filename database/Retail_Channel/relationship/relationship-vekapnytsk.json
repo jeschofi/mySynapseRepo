@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vekapnytsk",
+	"properties": {
+		"Name": "relationship-vekapnytsk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelStatusType",
+		"ToTableName": "ChannelStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelStatusTypeId",
+				"ToColumnName": "ChannelStatusTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelStatusType.cdm.json/ChannelStatusType\",\"toEntity\":\"ChannelStatus.cdm.json/ChannelStatus\",\"joinPairs\":[{\"fromAttribute\":\"ChannelStatusTypeId\",\"toAttribute\":\"ChannelStatusTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f0025a05-3b1a-4d8e-82b3-e37854274578"
+	},
+	"type": "RELATIONSHIP"
+}

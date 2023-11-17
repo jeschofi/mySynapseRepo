@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bkhchibuyh",
+	"properties": {
+		"Name": "relationship-bkhchibuyh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NaicsIndustry",
+		"ToTableName": "NaicsNationalIndustry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NaicsIndustryCode",
+				"ToColumnName": "NaicsIndustryCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"toEntity\":\"NaicsNationalIndustry.cdm.json/NaicsNationalIndustry\",\"joinPairs\":[{\"fromAttribute\":\"NaicsIndustryCode\",\"toAttribute\":\"NaicsIndustryCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "aab6e63e-ea78-4015-8acd-f3b506c20442"
+	},
+	"type": "RELATIONSHIP"
+}

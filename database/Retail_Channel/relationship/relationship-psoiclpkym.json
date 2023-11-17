@@ -1,0 +1,29 @@
+{
+	"name": "relationship-psoiclpkym",
+	"properties": {
+		"Name": "relationship-psoiclpkym",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SizeClass",
+		"ToTableName": "ChannelAssortment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SizeClassId",
+				"ToColumnName": "SizeClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SizeClass.cdm.json/SizeClass\",\"toEntity\":\"ChannelAssortment.cdm.json/ChannelAssortment\",\"joinPairs\":[{\"fromAttribute\":\"SizeClassId\",\"toAttribute\":\"SizeClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "36f4a538-2b4d-4e9d-aec1-b07730a675e4"
+	},
+	"type": "RELATIONSHIP"
+}

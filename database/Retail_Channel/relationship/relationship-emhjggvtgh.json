@@ -1,0 +1,29 @@
+{
+	"name": "relationship-emhjggvtgh",
+	"properties": {
+		"Name": "relationship-emhjggvtgh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Employee",
+		"ToTableName": "PointOfSaleEmployee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "EmployeeId",
+				"ToColumnName": "EmployeeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Employee.cdm.json/Employee\",\"toEntity\":\"PointOfSaleEmployee.cdm.json/PointOfSaleEmployee\",\"joinPairs\":[{\"fromAttribute\":\"EmployeeId\",\"toAttribute\":\"EmployeeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "03ad32ff-3ae7-4972-a8a0-4ca0b8ed3673"
+	},
+	"type": "RELATIONSHIP"
+}

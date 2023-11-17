@@ -1,0 +1,207 @@
+{
+	"name": "Market",
+	"properties": {
+		"Name": "Market",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "MarketId",
+					"Description": "The unique identifier of a Market.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Market.cdm.json/Market",
+						"Name": "MarketId"
+					}
+				},
+				{
+					"Name": "MarketName",
+					"Description": "The name of the Market.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Market.cdm.json/Market",
+						"Name": "MarketName"
+					}
+				},
+				{
+					"Name": "MarketDescription",
+					"Description": "The description of the Market.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Market.cdm.json/Market",
+						"Name": "MarketDescription"
+					}
+				},
+				{
+					"Name": "MarketDefinedDate",
+					"Description": "The date that the Market was defined for marketing and analysis purposes.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Market.cdm.json/Market",
+						"Name": "MarketDefinedDate"
+					}
+				},
+				{
+					"Name": "MarketTypeId",
+					"Description": "The unique identifier of a Market Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Market.cdm.json/Market",
+						"Name": "MarketTypeId"
+					}
+				},
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Market.cdm.json/Market",
+						"Name": "CountryId"
+					}
+				},
+				{
+					"Name": "GeographicAreaId",
+					"Description": "The unique identifier of a Geographic Area.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Market.cdm.json/Market",
+						"Name": "GeographicAreaId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "01de3256-206f-4cc8-8808-2a48af91ebe9",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Market",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Market",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"MarketId\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketId\"},\"MarketName\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketName\"},\"MarketDescription\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketDescription\"},\"MarketDefinedDate\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketDefinedDate\"},\"MarketTypeId\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketTypeId\"},\"CountryId\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"CountryId\"},\"GeographicAreaId\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"GeographicAreaId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Market\",\"path\":\"Market.cdm.json/Market\"},\"description\":\"A categorization of buyers with the desire and financial means to purchase a product based upon common attributes, characteristics or perceived value.\\n\\nA Market is the economic mechanism for bridging the gap between supply and demand, the product and the consumer.  \\n\\nExamples:\\n- Government Market\\n- Consumer Market\\n- Industrial Market\\n- Geographic Market\\n\\nA well-defined Market is characterized by:\\n\\n1. Measurability of its size and scope\\n2. Accessibility of the business organization to the market\\n3. The market is large enough to insure profitability\\n4. Stability of the market now and in the future\\n\\nMarkets are subdivided into Market Segments, which are linked to specific pre-defined Criteria.\\n\\nCompanies resort to Market Segmentation when they find that they cannot serve all the customers in one single large market.   \\n\\nTypical reasons for this strategy is because there are too many customers, they are dispersed over diverse geographies or distances or have different purchase patterns.\",\"primaryKey\":[\"MarketId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Market.\",\"isNullable\":false,\"name\":\"MarketId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Market.\",\"isNullable\":true,\"name\":\"MarketName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Market.\",\"isNullable\":true,\"name\":\"MarketDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketDefinedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Market was defined for marketing and analysis purposes.\",\"isNullable\":true,\"name\":\"MarketDefinedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"MarketTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Market Type.\",\"isNullable\":true,\"name\":\"MarketTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":true,\"name\":\"CountryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Market.cdm.json/Market\",\"name\":\"GeographicAreaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Geographic Area.\",\"isNullable\":false,\"name\":\"GeographicAreaId\"}]}}}",
+			"Description": "A categorization of buyers with the desire and financial means to purchase a product based upon common attributes, characteristics or perceived value.\n\nA Market is the economic mechanism for bridging the gap between supply and demand, the product and the consumer.  \n\nExamples:\n- Government Market\n- Consumer Market\n- Industrial Market\n- Geographic Market\n\nA well-defined Market is characterized by:\n\n1. Measurability of its size and scope\n2. Accessibility of the business organization to the market\n3. The market is large enough to insure profitability\n4. Stability of the market now and in the future\n\nMarkets are subdivided into Market Segments, which are linked to specific pre-defined Criteria.\n\nCompanies resort to Market Segmentation when they find that they cannot serve all the customers in one single large market.   \n\nTypical reasons for this strategy is because there are too many customers, they are dispersed over diverse geographies or distances or have different purchase patterns.",
+			"DisplayFolderInfo": "{\"name\":\"Marketing & Advertising\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "MarketId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"MarketId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"MarketName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketDefinedDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MarketTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GeographicAreaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "fde22752-7bae-4263-a2c2-bcfee55d3601",
+		"Description": "A categorization of buyers with the desire and financial means to purchase a product based upon common attributes, characteristics or perceived value.\n\nA Market is the economic mechanism for bridging the gap between supply and demand, the product and the consumer.  \n\nExamples:\n- Government Market\n- Consumer Market\n- Industrial Market\n- Geographic Market\n\nA well-defined Market is characterized by:\n\n1. Measurability of its size and scope\n2. Accessibility of the business organization to the market\n3. The market is large enough to insure profitability\n4. Stability of the market now and in the future\n\nMarkets are subdivided into Market Segments, which are linked to specific pre-defined Criteria.\n\nCompanies resort to Market Segmentation when they find that they cannot serve all the customers in one single large market.   \n\nTypical reasons for this strategy is because there are too many customers, they are dispersed over diverse geographies or distances or have different purchase patterns."
+	},
+	"type": "TABLE"
+}

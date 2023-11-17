@@ -1,0 +1,29 @@
+{
+	"name": "relationship-apkyqktxss",
+	"properties": {
+		"Name": "relationship-apkyqktxss",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarDate",
+		"ToTableName": "CalendarDateHoursOfOperation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"toEntity\":\"CalendarDateHoursOfOperation.cdm.json/CalendarDateHoursOfOperation\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1f50fdbf-6ff3-40da-9a4d-33f8d346c62c"
+	},
+	"type": "RELATIONSHIP"
+}

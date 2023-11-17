@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tgzucorkaq",
+	"properties": {
+		"Name": "relationship-tgzucorkaq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Market",
+		"ToTableName": "ChannelProductTargetMarket",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketId",
+				"ToColumnName": "MarketId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Market.cdm.json/Market\",\"toEntity\":\"ChannelProductTargetMarket.cdm.json/ChannelProductTargetMarket\",\"joinPairs\":[{\"fromAttribute\":\"MarketId\",\"toAttribute\":\"MarketId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "07b4f64e-74d8-46da-bcb4-7439e8b87efa"
+	},
+	"type": "RELATIONSHIP"
+}

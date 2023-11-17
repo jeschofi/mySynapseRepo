@@ -1,0 +1,130 @@
+{
+	"name": "ChannelRestrictionType",
+	"properties": {
+		"Name": "ChannelRestrictionType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelRestrictionTypeId",
+					"Description": "The unique identifier of a Channel Restriction Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRestrictionType.cdm.json/ChannelRestrictionType",
+						"Name": "ChannelRestrictionTypeId"
+					}
+				},
+				{
+					"Name": "ChannelRestrictionTypeName",
+					"Description": "The name of a Channel Restriction Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRestrictionType.cdm.json/ChannelRestrictionType",
+						"Name": "ChannelRestrictionTypeName"
+					}
+				},
+				{
+					"Name": "ChannelRestrictionTypeDescription",
+					"Description": "The description of a Channel Restriction Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelRestrictionType.cdm.json/ChannelRestrictionType",
+						"Name": "ChannelRestrictionTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ba0118da-84ab-4d6d-84aa-bad87fdc78ec",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRestrictionType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelRestrictionType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelRestrictionTypeId\":{\"entity\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\",\"name\":\"ChannelRestrictionTypeId\"},\"ChannelRestrictionTypeName\":{\"entity\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\",\"name\":\"ChannelRestrictionTypeName\"},\"ChannelRestrictionTypeDescription\":{\"entity\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\",\"name\":\"ChannelRestrictionTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelRestrictionType\",\"path\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\"},\"description\":\"A restriction that may be applied to a Channel.\\n\\nEx:\\n- Account applicants must meet Bank standards\\n- Channel may not market outside of their geography\\n- Channel may not accept account applications from outside of geography\",\"primaryKey\":[\"ChannelRestrictionTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\",\"name\":\"ChannelRestrictionTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel Restriction Type.\",\"isNullable\":false,\"name\":\"ChannelRestrictionTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\",\"name\":\"ChannelRestrictionTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Channel Restriction Type.\",\"isNullable\":true,\"name\":\"ChannelRestrictionTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\",\"name\":\"ChannelRestrictionTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Channel Restriction Type.\",\"isNullable\":true,\"name\":\"ChannelRestrictionTypeDescription\"}]}}}",
+			"Description": "A restriction that may be applied to a Channel.\n\nEx:\n- Account applicants must meet Bank standards\n- Channel may not market outside of their geography\n- Channel may not accept account applications from outside of geography",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelRestrictionTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelRestrictionTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelRestrictionTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelRestrictionTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "1b1b6e2b-84df-439a-8307-aa5ed0eb7f71",
+		"Description": "A restriction that may be applied to a Channel.\n\nEx:\n- Account applicants must meet Bank standards\n- Channel may not market outside of their geography\n- Channel may not accept account applications from outside of geography"
+	},
+	"type": "TABLE"
+}

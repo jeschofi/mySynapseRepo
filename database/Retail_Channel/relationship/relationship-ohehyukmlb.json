@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ohehyukmlb",
+	"properties": {
+		"Name": "relationship-ohehyukmlb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarYear",
+		"ToTableName": "CalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarYearId",
+				"ToColumnName": "CalendarYearId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarYear.cdm.json/CalendarYear\",\"toEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"CalendarYearId\",\"toAttribute\":\"CalendarYearId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "23e873a6-d79b-4f5d-bdcb-a22a8b8d7c7f"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,175 @@
+{
+	"name": "CommonStockDividendYield",
+	"properties": {
+		"Name": "CommonStockDividendYield",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StockId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommonStockDividendYield.cdm.json/CommonStockDividendYield",
+						"Name": "StockId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is current or reported as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommonStockDividendYield.cdm.json/CommonStockDividendYield",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "StockMarketPriceAmount",
+					"Description": "The price of the stock as of the associated timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommonStockDividendYield.cdm.json/CommonStockDividendYield",
+						"Name": "StockMarketPriceAmount"
+					}
+				},
+				{
+					"Name": "DividendsDistributedThisYearAmount",
+					"Description": "The total amount of dividends distributed this year.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommonStockDividendYield.cdm.json/CommonStockDividendYield",
+						"Name": "DividendsDistributedThisYearAmount"
+					}
+				},
+				{
+					"Name": "DividendYield",
+					"Description": "The ratio of dividend paid in a year on a single share of stock divided by the market price of the stock.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CommonStockDividendYield.cdm.json/CommonStockDividendYield",
+						"Name": "DividendYield"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6ee22ddd-a31f-4414-8ec9-cc3a24dafc38",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/CommonStockDividendYield",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/CommonStockDividendYield",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StockId\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"StockId\"},\"Timestamp\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"Timestamp\"},\"StockMarketPriceAmount\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"StockMarketPriceAmount\"},\"DividendsDistributedThisYearAmount\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"DividendsDistributedThisYearAmount\"},\"DividendYield\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"DividendYield\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CommonStockDividendYield\",\"path\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\"},\"description\":\"The ratio of dividend paid in a year on a single share of common stock divided by the market price of the stock.\",\"primaryKey\":[\"StockId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"StockId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"StockId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is current or reported as-of.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"StockMarketPriceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The price of the stock as of the associated timestamp.\",\"isNullable\":true,\"scale\":2,\"name\":\"StockMarketPriceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"DividendsDistributedThisYearAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total amount of dividends distributed this year.\",\"isNullable\":true,\"scale\":2,\"name\":\"DividendsDistributedThisYearAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CommonStockDividendYield.cdm.json/CommonStockDividendYield\",\"name\":\"DividendYield\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The ratio of dividend paid in a year on a single share of stock divided by the market price of the stock.\",\"isNullable\":true,\"scale\":8,\"name\":\"DividendYield\"}]}}}",
+			"Description": "The ratio of dividend paid in a year on a single share of common stock divided by the market price of the stock.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "StockId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StockId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StockMarketPriceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DividendsDistributedThisYearAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DividendYield\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "490f0bce-1183-43af-882e-b80904c3d9ba",
+		"Description": "The ratio of dividend paid in a year on a single share of common stock divided by the market price of the stock."
+	},
+	"type": "TABLE"
+}

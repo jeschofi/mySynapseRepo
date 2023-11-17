@@ -1,0 +1,29 @@
+{
+	"name": "relationship-obmnsthswb",
+	"properties": {
+		"Name": "relationship-obmnsthswb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssetAccountingCategory",
+		"ToTableName": "Asset",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetAccountingCategoryId",
+				"ToColumnName": "AssetAccountingCategoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssetAccountingCategory.cdm.json/AssetAccountingCategory\",\"toEntity\":\"Asset.cdm.json/Asset\",\"joinPairs\":[{\"fromAttribute\":\"AssetAccountingCategoryId\",\"toAttribute\":\"AssetAccountingCategoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f3611922-cea0-4f87-ab1f-df8e0bb15389"
+	},
+	"type": "RELATIONSHIP"
+}

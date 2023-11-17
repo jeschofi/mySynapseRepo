@@ -1,0 +1,130 @@
+{
+	"name": "ChannelIncentive",
+	"properties": {
+		"Name": "ChannelIncentive",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentive.cdm.json/ChannelIncentive",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "IncentiveId",
+					"Description": "The unique identifier of an Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentive.cdm.json/ChannelIncentive",
+						"Name": "IncentiveId"
+					}
+				},
+				{
+					"Name": "ChannelIncentiveNote",
+					"Description": "Notes, comments or additional information regarding the Channel Incentive.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelIncentive.cdm.json/ChannelIncentive",
+						"Name": "ChannelIncentiveNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3882ca98-db82-4b18-b733-02931b0d7a6d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelIncentive",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelIncentive",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelIncentive.cdm.json/ChannelIncentive\",\"name\":\"ChannelId\"},\"IncentiveId\":{\"entity\":\"ChannelIncentive.cdm.json/ChannelIncentive\",\"name\":\"IncentiveId\"},\"ChannelIncentiveNote\":{\"entity\":\"ChannelIncentive.cdm.json/ChannelIncentive\",\"name\":\"ChannelIncentiveNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelIncentive\",\"path\":\"ChannelIncentive.cdm.json/ChannelIncentive\"},\"description\":\"An incentive that is offered to a Channel.\",\"primaryKey\":[\"ChannelId\",\"IncentiveId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentive.cdm.json/ChannelIncentive\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentive.cdm.json/ChannelIncentive\",\"name\":\"IncentiveId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Incentive.\",\"isNullable\":false,\"name\":\"IncentiveId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelIncentive.cdm.json/ChannelIncentive\",\"name\":\"ChannelIncentiveNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Channel Incentive.\",\"isNullable\":true,\"name\":\"ChannelIncentiveNote\"}]}}}",
+			"Description": "An incentive that is offered to a Channel.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,IncentiveId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IncentiveId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelIncentiveNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "abbef451-8a04-4234-aa14-652b9cbc7025",
+		"Description": "An incentive that is offered to a Channel."
+	},
+	"type": "TABLE"
+}

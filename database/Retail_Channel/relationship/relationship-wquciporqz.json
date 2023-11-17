@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wquciporqz",
+	"properties": {
+		"Name": "relationship-wquciporqz",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Promotion",
+		"ToTableName": "ChannelPromotionProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PromotionId",
+				"ToColumnName": "PromotionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Promotion.cdm.json/Promotion\",\"toEntity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"joinPairs\":[{\"fromAttribute\":\"PromotionId\",\"toAttribute\":\"PromotionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1af2c660-f42a-4869-8e69-740698380561"
+	},
+	"type": "RELATIONSHIP"
+}

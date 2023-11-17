@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qibmljcvsi",
+	"properties": {
+		"Name": "relationship-qibmljcvsi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionRelationshipType",
+		"ToTableName": "RelatedCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionRelationshipTypeId",
+				"ToColumnName": "CommissionRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionRelationshipType.cdm.json/CommissionRelationshipType\",\"toEntity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionRelationshipTypeId\",\"toAttribute\":\"CommissionRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b421ffe7-594e-43cc-a140-6c79b81468e4"
+	},
+	"type": "RELATIONSHIP"
+}

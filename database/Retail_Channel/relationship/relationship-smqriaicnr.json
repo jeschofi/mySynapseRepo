@@ -1,0 +1,29 @@
+{
+	"name": "relationship-smqriaicnr",
+	"properties": {
+		"Name": "relationship-smqriaicnr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarDate",
+		"ToTableName": "CalendarDateHoursOfOperation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "Date",
+				"ToColumnName": "Date"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"toEntity\":\"CalendarDateHoursOfOperation.cdm.json/CalendarDateHoursOfOperation\",\"joinPairs\":[{\"fromAttribute\":\"Date\",\"toAttribute\":\"Date\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "947e2838-1a02-447c-b265-ae90e19d88bc"
+	},
+	"type": "RELATIONSHIP"
+}

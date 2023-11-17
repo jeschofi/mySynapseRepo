@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ehfhcgpmeg",
+	"properties": {
+		"Name": "relationship-ehfhcgpmeg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Atm",
+		"ToTableName": "AtmLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmId",
+				"ToColumnName": "AtmId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Atm.cdm.json/Atm\",\"toEntity\":\"AtmLocation.cdm.json/AtmLocation\",\"joinPairs\":[{\"fromAttribute\":\"AtmId\",\"toAttribute\":\"AtmId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "15b30418-2669-415c-a7b5-9590355049e3"
+	},
+	"type": "RELATIONSHIP"
+}

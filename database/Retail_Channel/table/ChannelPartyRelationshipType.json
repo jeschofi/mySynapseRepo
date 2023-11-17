@@ -1,0 +1,130 @@
+{
+	"name": "ChannelPartyRelationshipType",
+	"properties": {
+		"Name": "ChannelPartyRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelPartyRelationshipTypeId",
+					"Description": "The unique identifier of a Channel Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType",
+						"Name": "ChannelPartyRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "ChannelPartyRelationshipTypeName",
+					"Description": "The name of a Channel Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType",
+						"Name": "ChannelPartyRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "ChannelPartyRelationshipTypeDescription",
+					"Description": "The description of a Channel Party Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType",
+						"Name": "ChannelPartyRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4a1fc766-0aee-4e09-8446-40572e069782",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelPartyRelationshipType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelPartyRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelPartyRelationshipTypeId\":{\"entity\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\",\"name\":\"ChannelPartyRelationshipTypeId\"},\"ChannelPartyRelationshipTypeName\":{\"entity\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\",\"name\":\"ChannelPartyRelationshipTypeName\"},\"ChannelPartyRelationshipTypeDescription\":{\"entity\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\",\"name\":\"ChannelPartyRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelPartyRelationshipType\",\"path\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\"},\"description\":\"The nature of the relationship between the party and the channel over the indicated period.\\n\\nEx:\\n- Channel Account Representative\\n- Channel Sales Rep\\n- Channel Manager\\n- Channel Liaison\\n- Channel Prospect\\n- Channel Customer\\n- Agent\\n- ATM Location-At Party ID\",\"primaryKey\":[\"ChannelPartyRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\",\"name\":\"ChannelPartyRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel Party Relationship Type.\",\"isNullable\":false,\"name\":\"ChannelPartyRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\",\"name\":\"ChannelPartyRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Channel Party Relationship Type.\",\"isNullable\":true,\"name\":\"ChannelPartyRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPartyRelationshipType.cdm.json/ChannelPartyRelationshipType\",\"name\":\"ChannelPartyRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Channel Party Relationship Type.\",\"isNullable\":true,\"name\":\"ChannelPartyRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between the party and the channel over the indicated period.\n\nEx:\n- Channel Account Representative\n- Channel Sales Rep\n- Channel Manager\n- Channel Liaison\n- Channel Prospect\n- Channel Customer\n- Agent\n- ATM Location-At Party ID",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelPartyRelationshipTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelPartyRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelPartyRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelPartyRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "f417024c-2325-4076-8b89-2c34dae43df8",
+		"Description": "The nature of the relationship between the party and the channel over the indicated period.\n\nEx:\n- Channel Account Representative\n- Channel Sales Rep\n- Channel Manager\n- Channel Liaison\n- Channel Prospect\n- Channel Customer\n- Agent\n- ATM Location-At Party ID"
+	},
+	"type": "TABLE"
+}

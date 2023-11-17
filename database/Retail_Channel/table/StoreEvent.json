@@ -1,0 +1,150 @@
+{
+	"name": "StoreEvent",
+	"properties": {
+		"Name": "StoreEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreEvent.cdm.json/StoreEvent",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "StoreEventTypeId",
+					"Description": "The unique identifier of a Store Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreEvent.cdm.json/StoreEvent",
+						"Name": "StoreEventTypeId"
+					}
+				},
+				{
+					"Name": "StoreEventTimestamp",
+					"Description": "The timestamp of the store event.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreEvent.cdm.json/StoreEvent",
+						"Name": "StoreEventTimestamp"
+					}
+				},
+				{
+					"Name": "StoreEventNote",
+					"Description": "A note, comment or additional information regarding the store event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreEvent.cdm.json/StoreEvent",
+						"Name": "StoreEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f822f3b9-7aef-4c52-b290-504ef6c545bb",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreEvent",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreEvent",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreId\"},\"StoreEventTypeId\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreEventTypeId\"},\"StoreEventTimestamp\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreEventTimestamp\"},\"StoreEventNote\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreEvent\",\"path\":\"StoreEvent.cdm.json/StoreEvent\"},\"description\":\"The Event(s) that can be associated with a store.\",\"primaryKey\":[\"StoreId\",\"StoreEventTypeId\",\"StoreEventTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreEventTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Type.\",\"isNullable\":false,\"name\":\"StoreEventTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreEventTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the store event.\",\"isNullable\":false,\"name\":\"StoreEventTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreEvent.cdm.json/StoreEvent\",\"name\":\"StoreEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the store event.\",\"isNullable\":true,\"name\":\"StoreEventNote\"}]}}}",
+			"Description": "The Event(s) that can be associated with a store.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,StoreEventTypeId,StoreEventTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreEventTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreEventTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "05eb3475-dc13-4e4f-b02d-9d562f3117cb",
+		"Description": "The Event(s) that can be associated with a store."
+	},
+	"type": "TABLE"
+}

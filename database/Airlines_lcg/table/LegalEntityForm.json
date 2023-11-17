@@ -1,0 +1,174 @@
+{
+	"name": "LegalEntityForm",
+	"properties": {
+		"Name": "LegalEntityForm",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityFormId",
+					"Description": "The unique identifier of the Legal Entity Form.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityForm.cdm.json/LegalEntityForm",
+						"Name": "LegalEntityFormId"
+					}
+				},
+				{
+					"Name": "LegalEntityFormName",
+					"Description": "The name of the Legal Entity Form.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityForm.cdm.json/LegalEntityForm",
+						"Name": "LegalEntityFormName"
+					}
+				},
+				{
+					"Name": "LegalEntityFormDescription",
+					"Description": "The description of the Legal Entity Form.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityForm.cdm.json/LegalEntityForm",
+						"Name": "LegalEntityFormDescription"
+					}
+				},
+				{
+					"Name": "LegalEntityFormAbbreviation",
+					"Description": "The abbreviation of the Legal Entity Form.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 5,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityForm.cdm.json/LegalEntityForm",
+						"Name": "LegalEntityFormAbbreviation"
+					}
+				},
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LegalEntityForm.cdm.json/LegalEntityForm",
+						"Name": "CountryId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "5a2c15b0-d88e-4f37-a757-ce5ac94aab85",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LegalEntityForm",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LegalEntityForm",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityFormId\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormId\"},\"LegalEntityFormName\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormName\"},\"LegalEntityFormDescription\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormDescription\"},\"LegalEntityFormAbbreviation\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormAbbreviation\"},\"CountryId\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"CountryId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LegalEntityForm\",\"path\":\"LegalEntityForm.cdm.json/LegalEntityForm\"},\"description\":\"A categorization of Legal Entities based upon common legal or operating characteristics, attributes or functions performed.\\n\\nLarger commercial Legal Entities buy in larger quantities and therefore are offered different credit terms than individuals.   Therefore, it is important to know what type of Legal Entity you are dealing with in establishing credit terms and performing collection activities.\\n\\nCommercial Legal Entities are also more complex and difficult to analyze.\\n\\nIt may be important to analyze financial statements and business ratios in determining their credit worthiness.\\n\\nEx. (US):  \\nPartnership \\nLimited partnership (LP) \\nLimited liability partnership (LLP) \\nLimited liability limited partnership (LLLP) \\nLimited liability company (LLC) \\nLimited company (Ltd.) \\nNot-for-profit corporation \\nSole proprietorship \\nTrust company\\n\\nWithin a country the specific type of legal entity form may be defined.\\n\\nEx. (Country Specific):\\nA.C. (Mexico)\\nA.en P. (Mexico)\\nA.S. (Czech Rep)\\nA.S. (Estonia)\\nA.S. (Slovakia)\\nA.S. (TÜrkiye)\\nA/S (Denmark)\\nAB (Finland)(\\nAB (Sweden)\\nACE (Portugal)\\nAD (Bulgaria)\\nAE (Greece)\\nAG (Austria)\\nAG (Germany)\\nAG (Switzerland)\\nAL (Norway)\\nAmbA (Denmark)\\nAmbA (Denmark)\\nANS (Norway)\\nApb (Finland)\\nApS & Co K/S (Denmark)\\nApS (Denmark)\\nAS (Norway)\\nASA (Norway)\\nAVV (Aruba)\\nB.V. (Belgium)\\nB.V. (Netherlands)\\nBpK (South Africa)\\nBt (Hungary)\\nBVBA (Belgium)\\nC.V. (Netherlands)\\nCA (Ecuador)\\nCVoA (Netherlands)\\nDA (Norway)\\ndba (USA)\\ne.V. (Germany)\\nEE (Greece)\\nEEG (Austria)\\nEIRL (Peru)\\nELP (Bahamas)\\nEPE (Greece)\\nEURL (France)\\nGbR (Germany)\\nGCV (Belgium)\\nGesmbH (Austria)\\nGIE (France)\\nGmbH ( Switzerland)\\nGmbH (Germany)\\nHB (Sweden)\\nhf (Iceland)\\nI/S (Denmark)\\nIBC (Various)\\nInc. (Canada)\\nInc. (USA)\\nK/S (Denmark)\\nKA/S (Denmark)\\nKb (Finland)\\nKb (Sweden)\\nKft (Hungary)\\nKG (Austria)\\nKG (Germany)\\nKGaA (Germany)\\nKK (Japan)\\nKol.SrK (TÜrkiye)\\nKS (Norway)\\nKy (Finland)\\nLda (Portugal)\\nLDC (Bahamas)\\nLLC (USA)\\nLLP (USA)\\nLtd (Various)\\nLtda (Brazil)\\nN.A. (USA)\\nNT (Canada)\\nNV (Belgium)\\nNV (Netherlands)\\nNV (Netherlands)\\nOE (Greece)\\nOHG (Austria)\\nOy (Finland)\\nOYj (Finland)\\nP/L (Australia)\\nPC Ltd. (Australia)\\nPLC (Various)\\nPMA (Indonesia)\\nPMDN (Indonesia)\\nPrC (Ireland)\\nPty. (Various)\\nS. de R.L. (Mexico)\\nS.A. (Brazil)\\nS.A.I.C.A (Venezuela)\\nS.C. (Spain)\\nS.en C. (Mexico)\\nS/A (Brazil)\\nSA (Belgium)\\nSA (France)\\nSA (Greece)\\nsa (Italy)\\nSA (Luxembourg)\\nSA (Mexico)\\nSA (Poland)\\nSA (Portugal)\\nSA (Romania)\\nSA de CV (Mexico)\\nSApA (Italy)\\nSarl (France)\\nSAS (Italy)\\nSC (France)\\nSC (Poland)\\nSCA (Belgium)\\nSCP (Brazil)\\nSCS (France/Belgium)\\nSENC (Luxembourg)\\nSGPS (Portugal)\\nSK (Poland)\\nSNC (France)\\nSNC (Italy)\\nSNC (Spain)\\nSOPARFI (Luxembourg)\\nsp (France)\\nSpa (Italy)\\nSPRL (Belgium)\\nSrl (Mexico)\\nSrl (Spain)\\nVOF (Netherlands)\",\"primaryKey\":[\"LegalEntityFormId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Legal Entity Form.\",\"isNullable\":false,\"name\":\"LegalEntityFormId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Legal Entity Form.\",\"isNullable\":true,\"name\":\"LegalEntityFormName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Legal Entity Form.\",\"isNullable\":true,\"name\":\"LegalEntityFormDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"LegalEntityFormAbbreviation\"},\"dataType\":\"string\",\"dataTypeLength\":5,\"description\":\"The abbreviation of the Legal Entity Form.\",\"isNullable\":true,\"name\":\"LegalEntityFormAbbreviation\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LegalEntityForm.cdm.json/LegalEntityForm\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":true,\"name\":\"CountryId\"}]}}}",
+			"Description": "A categorization of Legal Entities based upon common legal or operating characteristics, attributes or functions performed.\n\nLarger commercial Legal Entities buy in larger quantities and therefore are offered different credit terms than individuals.   Therefore, it is important to know what type of Legal Entity you are dealing with in establishing credit terms and performing collection activities.\n\nCommercial Legal Entities are also more complex and difficult to analyze.\n\nIt may be important to analyze financial statements and business ratios in determining their credit worthiness.\n\nEx. (US):  \nPartnership \nLimited partnership (LP) \nLimited liability partnership (LLP) \nLimited liability limited partnership (LLLP) \nLimited liability company (LLC) \nLimited company (Ltd.) \nNot-for-profit corporation \nSole proprietorship \nTrust company\n\nWithin a country the specific type of legal entity form may be defined.\n\nEx. (Country Specific):\nA.C. (Mexico)\nA.en P. (Mexico)\nA.S. (Czech Rep)\nA.S. (Estonia)\nA.S. (Slovakia)\nA.S. (TÜrkiye)\nA/S (Denmark)\nAB (Finland)(\nAB (Sweden)\nACE (Portugal)\nAD (Bulgaria)\nAE (Greece)\nAG (Austria)\nAG (Germany)\nAG (Switzerland)\nAL (Norway)\nAmbA (Denmark)\nAmbA (Denmark)\nANS (Norway)\nApb (Finland)\nApS & Co K/S (Denmark)\nApS (Denmark)\nAS (Norway)\nASA (Norway)\nAVV (Aruba)\nB.V. (Belgium)\nB.V. (Netherlands)\nBpK (South Africa)\nBt (Hungary)\nBVBA (Belgium)\nC.V. (Netherlands)\nCA (Ecuador)\nCVoA (Netherlands)\nDA (Norway)\ndba (USA)\ne.V. (Germany)\nEE (Greece)\nEEG (Austria)\nEIRL (Peru)\nELP (Bahamas)\nEPE (Greece)\nEURL (France)\nGbR (Germany)\nGCV (Belgium)\nGesmbH (Austria)\nGIE (France)\nGmbH ( Switzerland)\nGmbH (Germany)\nHB (Sweden)\nhf (Iceland)\nI/S (Denmark)\nIBC (Various)\nInc. (Canada)\nInc. (USA)\nK/S (Denmark)\nKA/S (Denmark)\nKb (Finland)\nKb (Sweden)\nKft (Hungary)\nKG (Austria)\nKG (Germany)\nKGaA (Germany)\nKK (Japan)\nKol.SrK (TÜrkiye)\nKS (Norway)\nKy (Finland)\nLda (Portugal)\nLDC (Bahamas)\nLLC (USA)\nLLP (USA)\nLtd (Various)\nLtda (Brazil)\nN.A. (USA)\nNT (Canada)\nNV (Belgium)\nNV (Netherlands)\nNV (Netherlands)\nOE (Greece)\nOHG (Austria)\nOy (Finland)\nOYj (Finland)\nP/L (Australia)\nPC Ltd. (Australia)\nPLC (Various)\nPMA (Indonesia)\nPMDN (Indonesia)\nPrC (Ireland)\nPty. (Various)\nS. de R.L. (Mexico)\nS.A. (Brazil)\nS.A.I.C.A (Venezuela)\nS.C. (Spain)\nS.en C. (Mexico)\nS/A (Brazil)\nSA (Belgium)\nSA (France)\nSA (Greece)\nsa (Italy)\nSA (Luxembourg)\nSA (Mexico)\nSA (Poland)\nSA (Portugal)\nSA (Romania)\nSA de CV (Mexico)\nSApA (Italy)\nSarl (France)\nSAS (Italy)\nSC (France)\nSC (Poland)\nSCA (Belgium)\nSCP (Brazil)\nSCS (France/Belgium)\nSENC (Luxembourg)\nSGPS (Portugal)\nSK (Poland)\nSNC (France)\nSNC (Italy)\nSNC (Spain)\nSOPARFI (Luxembourg)\nsp (France)\nSpa (Italy)\nSPRL (Belgium)\nSrl (Mexico)\nSrl (Spain)\nVOF (Netherlands)",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#003C96\"}",
+			"PrimaryKeys": "LegalEntityFormId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityFormId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LegalEntityFormName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LegalEntityFormDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LegalEntityFormAbbreviation\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "1dd50a37-86e4-4565-aa95-393841dec6a1",
+		"Description": "A categorization of Legal Entities based upon common legal or operating characteristics, attributes or functions performed.\n\nLarger commercial Legal Entities buy in larger quantities and therefore are offered different credit terms than individuals.   Therefore, it is important to know what type of Legal Entity you are dealing with in establishing credit terms and performing collection activities.\n\nCommercial Legal Entities are also more complex and difficult to analyze.\n\nIt may be important to analyze financial statements and business ratios in determining their credit worthiness.\n\nEx. (US):  \nPartnership \nLimited partnership (LP) \nLimited liability partnership (LLP) \nLimited liability limited partnership (LLLP) \nLimited liability company (LLC) \nLimited company (Ltd.) \nNot-for-profit corporation \nSole proprietorship \nTrust company\n\nWithin a country the specific type of legal entity form may be defined.\n\nEx. (Country Specific):\nA.C. (Mexico)\nA.en P. (Mexico)\nA.S. (Czech Rep)\nA.S. (Estonia)\nA.S. (Slovakia)\nA.S. (TÜrkiye)\nA/S (Denmark)\nAB (Finland)(\nAB (Sweden)\nACE (Portugal)\nAD (Bulgaria)\nAE (Greece)\nAG (Austria)\nAG (Germany)\nAG (Switzerland)\nAL (Norway)\nAmbA (Denmark)\nAmbA (Denmark)\nANS (Norway)\nApb (Finland)\nApS & Co K/S (Denmark)\nApS (Denmark)\nAS (Norway)\nASA (Norway)\nAVV (Aruba)\nB.V. (Belgium)\nB.V. (Netherlands)\nBpK (South Africa)\nBt (Hungary)\nBVBA (Belgium)\nC.V. (Netherlands)\nCA (Ecuador)\nCVoA (Netherlands)\nDA (Norway)\ndba (USA)\ne.V. (Germany)\nEE (Greece)\nEEG (Austria)\nEIRL (Peru)\nELP (Bahamas)\nEPE (Greece)\nEURL (France)\nGbR (Germany)\nGCV (Belgium)\nGesmbH (Austria)\nGIE (France)\nGmbH ( Switzerland)\nGmbH (Germany)\nHB (Sweden)\nhf (Iceland)\nI/S (Denmark)\nIBC (Various)\nInc. (Canada)\nInc. (USA)\nK/S (Denmark)\nKA/S (Denmark)\nKb (Finland)\nKb (Sweden)\nKft (Hungary)\nKG (Austria)\nKG (Germany)\nKGaA (Germany)\nKK (Japan)\nKol.SrK (TÜrkiye)\nKS (Norway)\nKy (Finland)\nLda (Portugal)\nLDC (Bahamas)\nLLC (USA)\nLLP (USA)\nLtd (Various)\nLtda (Brazil)\nN.A. (USA)\nNT (Canada)\nNV (Belgium)\nNV (Netherlands)\nNV (Netherlands)\nOE (Greece)\nOHG (Austria)\nOy (Finland)\nOYj (Finland)\nP/L (Australia)\nPC Ltd. (Australia)\nPLC (Various)\nPMA (Indonesia)\nPMDN (Indonesia)\nPrC (Ireland)\nPty. (Various)\nS. de R.L. (Mexico)\nS.A. (Brazil)\nS.A.I.C.A (Venezuela)\nS.C. (Spain)\nS.en C. (Mexico)\nS/A (Brazil)\nSA (Belgium)\nSA (France)\nSA (Greece)\nsa (Italy)\nSA (Luxembourg)\nSA (Mexico)\nSA (Poland)\nSA (Portugal)\nSA (Romania)\nSA de CV (Mexico)\nSApA (Italy)\nSarl (France)\nSAS (Italy)\nSC (France)\nSC (Poland)\nSCA (Belgium)\nSCP (Brazil)\nSCS (France/Belgium)\nSENC (Luxembourg)\nSGPS (Portugal)\nSK (Poland)\nSNC (France)\nSNC (Italy)\nSNC (Spain)\nSOPARFI (Luxembourg)\nsp (France)\nSpa (Italy)\nSPRL (Belgium)\nSrl (Mexico)\nSrl (Spain)\nVOF (Netherlands)"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mhiwjqzdaq",
+	"properties": {
+		"Name": "relationship-mhiwjqzdaq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Website",
+		"ToTableName": "OnLineBanking",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "WebsiteUrl",
+				"ToColumnName": "WebsiteUrl"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Website.cdm.json/Website\",\"toEntity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"joinPairs\":[{\"fromAttribute\":\"WebsiteUrl\",\"toAttribute\":\"WebsiteUrl\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "65825a6c-7552-45f1-9482-80485699681f"
+	},
+	"type": "RELATIONSHIP"
+}

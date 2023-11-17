@@ -1,0 +1,29 @@
+{
+	"name": "relationship-drnigjkpnp",
+	"properties": {
+		"Name": "relationship-drnigjkpnp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Channel",
+		"ToTableName": "CustomerAccountChannelProductSummary",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelId",
+				"ToColumnName": "ChannelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Channel.cdm.json/Channel\",\"toEntity\":\"CustomerAccountChannelProductSummary.cdm.json/CustomerAccountChannelProductSummary\",\"joinPairs\":[{\"fromAttribute\":\"ChannelId\",\"toAttribute\":\"ChannelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "72676fa1-0dd2-4e16-8369-c1380a6d6a36"
+	},
+	"type": "RELATIONSHIP"
+}

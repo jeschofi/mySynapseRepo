@@ -1,0 +1,29 @@
+{
+	"name": "relationship-njdjxqlcqw",
+	"properties": {
+		"Name": "relationship-njdjxqlcqw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DividendType",
+		"ToTableName": "Dividend",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DividendTypeId",
+				"ToColumnName": "DividendTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DividendType.cdm.json/DividendType\",\"toEntity\":\"Dividend.cdm.json/Dividend\",\"joinPairs\":[{\"fromAttribute\":\"DividendTypeId\",\"toAttribute\":\"DividendTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "25c8fe80-e6a2-4986-8f56-40973385d037"
+	},
+	"type": "RELATIONSHIP"
+}

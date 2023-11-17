@@ -1,0 +1,130 @@
+{
+	"name": "ProgramProductRelationshipType",
+	"properties": {
+		"Name": "ProgramProductRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProgramProductRelationshipTypeId",
+					"Description": "The unique identifier of a Program Product Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType",
+						"Name": "ProgramProductRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "ProgramProductRelationshipTypeName",
+					"Description": "The name of a Program Product Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType",
+						"Name": "ProgramProductRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "ProgramProductRelationshipTypeDescription",
+					"Description": "The description of a Program Product Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType",
+						"Name": "ProgramProductRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3bd958c3-d89a-40b3-a6f9-b12996723f0a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProgramProductRelationshipType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProgramProductRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProgramProductRelationshipTypeId\":{\"entity\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\",\"name\":\"ProgramProductRelationshipTypeId\"},\"ProgramProductRelationshipTypeName\":{\"entity\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\",\"name\":\"ProgramProductRelationshipTypeName\"},\"ProgramProductRelationshipTypeDescription\":{\"entity\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\",\"name\":\"ProgramProductRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProgramProductRelationshipType\",\"path\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\"},\"description\":\"The nature of the relationship between a program and a product.\\n\\nEx:\\n- Only Available Via Channel Partner\\n- Must Be Purchased from Issuer\\n- Bank Authorization Required\",\"primaryKey\":[\"ProgramProductRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\",\"name\":\"ProgramProductRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Program Product Relationship Type.\",\"isNullable\":false,\"name\":\"ProgramProductRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\",\"name\":\"ProgramProductRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Program Product Relationship Type.\",\"isNullable\":true,\"name\":\"ProgramProductRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\",\"name\":\"ProgramProductRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Program Product Relationship Type.\",\"isNullable\":true,\"name\":\"ProgramProductRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between a program and a product.\n\nEx:\n- Only Available Via Channel Partner\n- Must Be Purchased from Issuer\n- Bank Authorization Required",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ProgramProductRelationshipTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProgramProductRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProgramProductRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProgramProductRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "7095abab-ef55-48d5-9664-ca9b4d2dd956",
+		"Description": "The nature of the relationship between a program and a product.\n\nEx:\n- Only Available Via Channel Partner\n- Must Be Purchased from Issuer\n- Bank Authorization Required"
+	},
+	"type": "TABLE"
+}

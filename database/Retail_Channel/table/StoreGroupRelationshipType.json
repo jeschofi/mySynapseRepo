@@ -1,0 +1,130 @@
+{
+	"name": "StoreGroupRelationshipType",
+	"properties": {
+		"Name": "StoreGroupRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreGroupRelationshipTypeId",
+					"Description": "The unique identifier of a Store Group Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType",
+						"Name": "StoreGroupRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "StoreGroupRelationshipTypeName",
+					"Description": "The name of a Store Group Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType",
+						"Name": "StoreGroupRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "StoreGroupRelationshipTypeDescription",
+					"Description": "The description of a Store Group Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType",
+						"Name": "StoreGroupRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c218ed56-d0a7-4609-b09a-08e152eb4d03",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreGroupRelationshipType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreGroupRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreGroupRelationshipTypeId\":{\"entity\":\"StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType\",\"name\":\"StoreGroupRelationshipTypeId\"},\"StoreGroupRelationshipTypeName\":{\"entity\":\"StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType\",\"name\":\"StoreGroupRelationshipTypeName\"},\"StoreGroupRelationshipTypeDescription\":{\"entity\":\"StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType\",\"name\":\"StoreGroupRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreGroupRelationshipType\",\"path\":\"StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType\"},\"description\":\"The nature of the relationship between Store Groups.\",\"primaryKey\":[\"StoreGroupRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType\",\"name\":\"StoreGroupRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Group Relationship Type.\",\"isNullable\":false,\"name\":\"StoreGroupRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType\",\"name\":\"StoreGroupRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Store Group Relationship Type.\",\"isNullable\":true,\"name\":\"StoreGroupRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreGroupRelationshipType.cdm.json/StoreGroupRelationshipType\",\"name\":\"StoreGroupRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Store Group Relationship Type.\",\"isNullable\":true,\"name\":\"StoreGroupRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between Store Groups.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "StoreGroupRelationshipTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreGroupRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreGroupRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreGroupRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "5c202a66-9f7e-474a-9e6c-55000f040e64",
+		"Description": "The nature of the relationship between Store Groups."
+	},
+	"type": "TABLE"
+}

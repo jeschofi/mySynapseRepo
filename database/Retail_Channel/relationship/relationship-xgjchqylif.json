@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xgjchqylif",
+	"properties": {
+		"Name": "relationship-xgjchqylif",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreAmenityType",
+		"ToTableName": "StoreAmenity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreAmenityTypeId",
+				"ToColumnName": "StoreAmenityTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreAmenityType.cdm.json/StoreAmenityType\",\"toEntity\":\"StoreAmenity.cdm.json/StoreAmenity\",\"joinPairs\":[{\"fromAttribute\":\"StoreAmenityTypeId\",\"toAttribute\":\"StoreAmenityTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2c937a60-a943-4d0c-8f05-23425dbfb80c"
+	},
+	"type": "RELATIONSHIP"
+}

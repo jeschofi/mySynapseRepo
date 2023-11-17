@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tdchaiqxln",
+	"properties": {
+		"Name": "relationship-tdchaiqxln",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Brand",
+		"ToTableName": "Store",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BrandId",
+				"ToColumnName": "BrandId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Brand.cdm.json/Brand\",\"toEntity\":\"Store.cdm.json/Store\",\"joinPairs\":[{\"fromAttribute\":\"BrandId\",\"toAttribute\":\"BrandId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6c7258c1-8c0e-4ad6-9e4f-72371f22bd61"
+	},
+	"type": "RELATIONSHIP"
+}

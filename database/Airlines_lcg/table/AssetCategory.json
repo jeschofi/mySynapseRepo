@@ -1,0 +1,136 @@
+{
+	"name": "AssetCategory",
+	"properties": {
+		"Name": "AssetCategory",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetCategoryId",
+					"Description": "The unique identifier of an Asset Category.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCategory.cdm.json/AssetCategory",
+						"Name": "AssetCategoryId"
+					}
+				},
+				{
+					"Name": "AssetCategoryName",
+					"Description": "The name of an Asset Category.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCategory.cdm.json/AssetCategory",
+						"Name": "AssetCategoryName"
+					}
+				},
+				{
+					"Name": "AssetCategoryDescription",
+					"Description": "The description of an Asset Category.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetCategory.cdm.json/AssetCategory",
+						"Name": "AssetCategoryDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "27b1610e-58cd-4650-aa89-6dcb700002c1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetCategory",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetCategory",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetCategoryId\":{\"entity\":\"AssetCategory.cdm.json/AssetCategory\",\"name\":\"AssetCategoryId\"},\"AssetCategoryName\":{\"entity\":\"AssetCategory.cdm.json/AssetCategory\",\"name\":\"AssetCategoryName\"},\"AssetCategoryDescription\":{\"entity\":\"AssetCategory.cdm.json/AssetCategory\",\"name\":\"AssetCategoryDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetCategory\",\"path\":\"AssetCategory.cdm.json/AssetCategory\"},\"description\":\"Assets are normally divided into 4 categories:\\n\\n1 - CURRENT ASSETS\\nCash and other assets that can be converted to cash, used up or sold within one year or less.\\n\\n2 - INVESTMENTS\\nLong-term investments that are not used for normal operations of the organization and are not expected to be converted to cash within one year.\\n\\n3 - PROPERTY, PLANT AND EQUIPMENT\\nLong term or long-life assets that are used for the continuing operations of the organization and are expected to be used for more than one year.\\n\\n4 - INTANGIBLE ASSETS\\nUsually long-term assets that have no physical substance but are of value to the owners of the organization such as patents, copyrights, goodwill, franchises and trademarks,\",\"primaryKey\":[\"AssetCategoryId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCategory.cdm.json/AssetCategory\",\"name\":\"AssetCategoryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Asset Category.\",\"isNullable\":false,\"name\":\"AssetCategoryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCategory.cdm.json/AssetCategory\",\"name\":\"AssetCategoryName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Asset Category.\",\"isNullable\":true,\"name\":\"AssetCategoryName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetCategory.cdm.json/AssetCategory\",\"name\":\"AssetCategoryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Asset Category.\",\"isNullable\":true,\"name\":\"AssetCategoryDescription\"}]}}}",
+			"Description": "Assets are normally divided into 4 categories:\n\n1 - CURRENT ASSETS\nCash and other assets that can be converted to cash, used up or sold within one year or less.\n\n2 - INVESTMENTS\nLong-term investments that are not used for normal operations of the organization and are not expected to be converted to cash within one year.\n\n3 - PROPERTY, PLANT AND EQUIPMENT\nLong term or long-life assets that are used for the continuing operations of the organization and are expected to be used for more than one year.\n\n4 - INTANGIBLE ASSETS\nUsually long-term assets that have no physical substance but are of value to the owners of the organization such as patents, copyrights, goodwill, franchises and trademarks,",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetCategoryId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetCategoryId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetCategoryName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetCategoryDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "1e3668b2-9971-4e9b-887e-a1386be8f028",
+		"Description": "Assets are normally divided into 4 categories:\n\n1 - CURRENT ASSETS\nCash and other assets that can be converted to cash, used up or sold within one year or less.\n\n2 - INVESTMENTS\nLong-term investments that are not used for normal operations of the organization and are not expected to be converted to cash within one year.\n\n3 - PROPERTY, PLANT AND EQUIPMENT\nLong term or long-life assets that are used for the continuing operations of the organization and are expected to be used for more than one year.\n\n4 - INTANGIBLE ASSETS\nUsually long-term assets that have no physical substance but are of value to the owners of the organization such as patents, copyrights, goodwill, franchises and trademarks,"
+	},
+	"type": "TABLE"
+}

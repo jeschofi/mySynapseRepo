@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rcttlhylhi",
+	"properties": {
+		"Name": "relationship-rcttlhylhi",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelTypeAssortment",
+		"ToTableName": "ChannelTypeAssortmentProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssortmentTypeId",
+				"ToColumnName": "AssortmentTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelTypeAssortment.cdm.json/ChannelTypeAssortment\",\"toEntity\":\"ChannelTypeAssortmentProduct.cdm.json/ChannelTypeAssortmentProduct\",\"joinPairs\":[{\"fromAttribute\":\"AssortmentTypeId\",\"toAttribute\":\"AssortmentTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "75905dc4-a00b-44a4-9da4-0c39b019f9a4"
+	},
+	"type": "RELATIONSHIP"
+}

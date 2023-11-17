@@ -1,0 +1,169 @@
+{
+	"name": "ShopperItemInteractionEvent",
+	"properties": {
+		"Name": "ShopperItemInteractionEvent",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ShopperSessionId",
+					"Description": "The unique identifier of a Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent",
+						"Name": "ShopperSessionId"
+					}
+				},
+				{
+					"Name": "ShopperPositionId",
+					"Description": "The unique identifier of a Shopper Position within a Shopper Session.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent",
+						"Name": "ShopperPositionId"
+					}
+				},
+				{
+					"Name": "ItemDisplayInteractionId",
+					"Description": "The unique identifier of an Item Display Interaction.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent",
+						"Name": "ItemDisplayInteractionId"
+					}
+				},
+				{
+					"Name": "ShopperItemInteractionEventEndTimestamp",
+					"Description": "The end timestamp for which the Shopper Item Interaction Event is in-effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent",
+						"Name": "ShopperItemInteractionEventEndTimestamp"
+					}
+				},
+				{
+					"Name": "ShopperItemInteractionEventNote",
+					"Description": "A note, comment or additional information regarding the Shopper Item Interaction Event.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent",
+						"Name": "ShopperItemInteractionEventNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "62bb907a-1afb-4a5b-bda3-08d8c0689b46",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperItemInteractionEvent",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ShopperItemInteractionEvent",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ShopperSessionId\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperSessionId\"},\"ShopperPositionId\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperPositionId\"},\"ItemDisplayInteractionId\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ItemDisplayInteractionId\"},\"ShopperItemInteractionEventEndTimestamp\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperItemInteractionEventEndTimestamp\"},\"ShopperItemInteractionEventNote\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperItemInteractionEventNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ShopperItemInteractionEvent\",\"path\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\"},\"description\":\"A Shopper Item Interaction Event is an event that occurs through specific Shopper Positions in the store and specific item displays(stock)  in the store at a specific time interval.  For example, a shopper may be in front of a fixture for several minutes, interacting with 1 or more items in different positions on that shelf (or shelves in a fixture). The interaction with each item may be determined through 1 or more shopper position parameters.\",\"primaryKey\":[\"ShopperSessionId\",\"ShopperPositionId\",\"ItemDisplayInteractionId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperSessionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Shopper Session.\",\"isNullable\":false,\"name\":\"ShopperSessionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperPositionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Shopper Position within a Shopper Session.\",\"isNullable\":false,\"name\":\"ShopperPositionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ItemDisplayInteractionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Item Display Interaction.\",\"isNullable\":false,\"name\":\"ItemDisplayInteractionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperItemInteractionEventEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The end timestamp for which the Shopper Item Interaction Event is in-effect.\",\"isNullable\":true,\"name\":\"ShopperItemInteractionEventEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ShopperItemInteractionEvent.cdm.json/ShopperItemInteractionEvent\",\"name\":\"ShopperItemInteractionEventNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Shopper Item Interaction Event.\",\"isNullable\":true,\"name\":\"ShopperItemInteractionEventNote\"}]}}}",
+			"Description": "A Shopper Item Interaction Event is an event that occurs through specific Shopper Positions in the store and specific item displays(stock)  in the store at a specific time interval.  For example, a shopper may be in front of a fixture for several minutes, interacting with 1 or more items in different positions on that shelf (or shelves in a fixture). The interaction with each item may be determined through 1 or more shopper position parameters.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ShopperSessionId,ShopperPositionId,ItemDisplayInteractionId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ShopperSessionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShopperPositionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ItemDisplayInteractionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShopperItemInteractionEventEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShopperItemInteractionEventNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "c336683f-99d9-48e5-a25d-615109d35633",
+		"Description": "A Shopper Item Interaction Event is an event that occurs through specific Shopper Positions in the store and specific item displays(stock)  in the store at a specific time interval.  For example, a shopper may be in front of a fixture for several minutes, interacting with 1 or more items in different positions on that shelf (or shelves in a fixture). The interaction with each item may be determined through 1 or more shopper position parameters."
+	},
+	"type": "TABLE"
+}

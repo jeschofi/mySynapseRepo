@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bjxwvzdpcu",
+	"properties": {
+		"Name": "relationship-bjxwvzdpcu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProductStoreDisplayLocation",
+		"ToTableName": "ProductDisplayInteraction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DisplayLocationId",
+				"ToColumnName": "DisplayLocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"toEntity\":\"ProductDisplayInteraction.cdm.json/ProductDisplayInteraction\",\"joinPairs\":[{\"fromAttribute\":\"DisplayLocationId\",\"toAttribute\":\"DisplayLocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1192214d-f885-4010-85b0-e7f7412c24af"
+	},
+	"type": "RELATIONSHIP"
+}

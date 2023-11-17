@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wkxptxzmji",
+	"properties": {
+		"Name": "relationship-wkxptxzmji",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Country",
+		"ToTableName": "ProductDistributionChannelType",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CountryId",
+				"ToColumnName": "CountryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Country.cdm.json/Country\",\"toEntity\":\"ProductDistributionChannelType.cdm.json/ProductDistributionChannelType\",\"joinPairs\":[{\"fromAttribute\":\"CountryId\",\"toAttribute\":\"CountryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "737af17b-9fe1-464d-84e1-9aa25eb07e18"
+	},
+	"type": "RELATIONSHIP"
+}

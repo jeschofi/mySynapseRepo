@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zbglomwfth",
+	"properties": {
+		"Name": "relationship-zbglomwfth",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Channel",
+		"ToTableName": "ProductSalesChannelSalesGoal",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelId",
+				"ToColumnName": "ChannelId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Channel.cdm.json/Channel\",\"toEntity\":\"ProductSalesChannelSalesGoal.cdm.json/ProductSalesChannelSalesGoal\",\"joinPairs\":[{\"fromAttribute\":\"ChannelId\",\"toAttribute\":\"ChannelId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4d695d9f-2061-4f4d-8f41-d22b13e69727"
+	},
+	"type": "RELATIONSHIP"
+}

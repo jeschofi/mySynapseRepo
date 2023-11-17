@@ -1,0 +1,29 @@
+{
+	"name": "relationship-opumnavjio",
+	"properties": {
+		"Name": "relationship-opumnavjio",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Stock",
+		"ToTableName": "TreasuryStock",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StockId",
+				"ToColumnName": "StockId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Stock.cdm.json/Stock\",\"toEntity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"joinPairs\":[{\"fromAttribute\":\"StockId\",\"toAttribute\":\"StockId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d8812c7b-03c4-4cf5-a61a-2c2e95f108c6"
+	},
+	"type": "RELATIONSHIP"
+}

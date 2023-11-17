@@ -1,0 +1,212 @@
+{
+	"name": "AssetType",
+	"properties": {
+		"Name": "AssetType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetTypeId",
+					"Description": "The unique identifier of an Asset Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetType.cdm.json/AssetType",
+						"Name": "AssetTypeId"
+					}
+				},
+				{
+					"Name": "AssetTypeName",
+					"Description": "The name of an Asset Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetType.cdm.json/AssetType",
+						"Name": "AssetTypeName"
+					}
+				},
+				{
+					"Name": "AssetTypeDescription",
+					"Description": "The description of an Asset Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetType.cdm.json/AssetType",
+						"Name": "AssetTypeDescription"
+					}
+				},
+				{
+					"Name": "GlobalReturnableAssetIdentifier",
+					"Description": "The Global Returnable Asset Identifier (GRAI) was developed by GS1 to be used to identify assets by type. It can also be used to uniquely identify assets by including the serial number. \n\nThe GRAI is used to identify Returnable Transport Items (RTI) such as pallets, roll container, crates. The GRAI identifies the type of returnable asset.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 29,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetType.cdm.json/AssetType",
+						"Name": "GlobalReturnableAssetIdentifier"
+					}
+				},
+				{
+					"Name": "AssetTypeEmissionFactorUnits",
+					"Description": "The asset type emission factor units.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetType.cdm.json/AssetType",
+						"Name": "AssetTypeEmissionFactorUnits"
+					}
+				},
+				{
+					"Name": "AssetTypeEmissionFactorUomId",
+					"Description": "The asset type emission factor UOM.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetType.cdm.json/AssetType",
+						"Name": "AssetTypeEmissionFactorUomId"
+					}
+				},
+				{
+					"Name": "MaintenancePeriodId",
+					"Description": "The unique identifier of a Maintenance Period.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetType.cdm.json/AssetType",
+						"Name": "MaintenancePeriodId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ca29edf6-4885-4ff8-8481-7f16d8b5b694",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetTypeId\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeId\"},\"AssetTypeName\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeName\"},\"AssetTypeDescription\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeDescription\"},\"GlobalReturnableAssetIdentifier\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"GlobalReturnableAssetIdentifier\"},\"AssetTypeEmissionFactorUnits\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeEmissionFactorUnits\"},\"AssetTypeEmissionFactorUomId\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeEmissionFactorUomId\"},\"MaintenancePeriodId\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"MaintenancePeriodId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetType\",\"path\":\"AssetType.cdm.json/AssetType\"},\"description\":\"A classification of Asset based upon common characteristics, attributes, or functions.\\n\\nEx:\\n- Land\\n- Building\\n- Lease\\n- Intellectual Property\\n- Right\\n- Software\\n- Furniture\\n- Computer\\n- Machinery\\n- Vehicle\\n- Investment Property\\n- Residential Property\\n- Real Property\\n- Cash\\n- Equities\\n- Treasury bonds\",\"primaryKey\":[\"AssetTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Asset Type.\",\"isNullable\":false,\"name\":\"AssetTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Asset Type.\",\"isNullable\":true,\"name\":\"AssetTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Asset Type.\",\"isNullable\":true,\"name\":\"AssetTypeDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"GlobalReturnableAssetIdentifier\"},\"dataType\":\"string\",\"dataTypeLength\":29,\"description\":\"The Global Returnable Asset Identifier (GRAI) was developed by GS1 to be used to identify assets by type. It can also be used to uniquely identify assets by including the serial number. \\n\\nThe GRAI is used to identify Returnable Transport Items (RTI) such as pallets, roll container, crates. The GRAI identifies the type of returnable asset.\",\"isNullable\":true,\"name\":\"GlobalReturnableAssetIdentifier\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeEmissionFactorUnits\"},\"dataType\":\"integer\",\"description\":\"The asset type emission factor units.\",\"isNullable\":true,\"name\":\"AssetTypeEmissionFactorUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"AssetTypeEmissionFactorUomId\"},\"dataType\":\"integer\",\"description\":\"The asset type emission factor UOM.\",\"isNullable\":true,\"name\":\"AssetTypeEmissionFactorUomId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetType.cdm.json/AssetType\",\"name\":\"MaintenancePeriodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Maintenance Period.\",\"isNullable\":true,\"name\":\"MaintenancePeriodId\"}]}}}",
+			"Description": "A classification of Asset based upon common characteristics, attributes, or functions.\n\nEx:\n- Land\n- Building\n- Lease\n- Intellectual Property\n- Right\n- Software\n- Furniture\n- Computer\n- Machinery\n- Vehicle\n- Investment Property\n- Residential Property\n- Real Property\n- Cash\n- Equities\n- Treasury bonds",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GlobalReturnableAssetIdentifier\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetTypeEmissionFactorUnits\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetTypeEmissionFactorUomId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"MaintenancePeriodId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "2e5a70a3-4160-4f8f-b1f7-6ce027e60abd",
+		"Description": "A classification of Asset based upon common characteristics, attributes, or functions.\n\nEx:\n- Land\n- Building\n- Lease\n- Intellectual Property\n- Right\n- Software\n- Furniture\n- Computer\n- Machinery\n- Vehicle\n- Investment Property\n- Residential Property\n- Real Property\n- Cash\n- Equities\n- Treasury bonds"
+	},
+	"type": "TABLE"
+}

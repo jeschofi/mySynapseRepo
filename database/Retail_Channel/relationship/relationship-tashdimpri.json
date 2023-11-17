@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tashdimpri",
+	"properties": {
+		"Name": "relationship-tashdimpri",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AtmConfigurationType",
+		"ToTableName": "Atm",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmConfigurationTypeId",
+				"ToColumnName": "AtmConfigurationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AtmConfigurationType.cdm.json/AtmConfigurationType\",\"toEntity\":\"Atm.cdm.json/Atm\",\"joinPairs\":[{\"fromAttribute\":\"AtmConfigurationTypeId\",\"toAttribute\":\"AtmConfigurationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "436ec54e-752d-40d0-b08c-e5a5ccb0e431"
+	},
+	"type": "RELATIONSHIP"
+}

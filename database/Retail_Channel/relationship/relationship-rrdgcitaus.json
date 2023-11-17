@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rrdgcitaus",
+	"properties": {
+		"Name": "relationship-rrdgcitaus",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Commission",
+		"ToTableName": "RelatedCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionId",
+				"ToColumnName": "CommissionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Commission.cdm.json/Commission\",\"toEntity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionId\",\"toAttribute\":\"CommissionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f6d9f292-5a1d-4e54-99da-75379e5dba61"
+	},
+	"type": "RELATIONSHIP"
+}

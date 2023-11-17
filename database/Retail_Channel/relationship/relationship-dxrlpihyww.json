@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dxrlpihyww",
+	"properties": {
+		"Name": "relationship-dxrlpihyww",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AnzsicGroup",
+		"ToTableName": "AnzsicClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AnzsicGroupCode",
+				"ToColumnName": "AnzsicGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnzsicGroup.cdm.json/AnzsicGroup\",\"toEntity\":\"AnzsicClass.cdm.json/AnzsicClass\",\"joinPairs\":[{\"fromAttribute\":\"AnzsicGroupCode\",\"toAttribute\":\"AnzsicGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ee4100f7-a510-4879-9265-1595f6f0175c"
+	},
+	"type": "RELATIONSHIP"
+}

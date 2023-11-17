@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nouqyabjux",
+	"properties": {
+		"Name": "relationship-nouqyabjux",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LanguageUsage",
+		"ToTableName": "ChannelLanguageUsage",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LanguageUsageId",
+				"ToColumnName": "LanguageUsageId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LanguageUsage.cdm.json/LanguageUsage\",\"toEntity\":\"ChannelLanguageUsage.cdm.json/ChannelLanguageUsage\",\"joinPairs\":[{\"fromAttribute\":\"LanguageUsageId\",\"toAttribute\":\"LanguageUsageId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1ec22235-70ad-459a-ab66-9010ca4fe085"
+	},
+	"type": "RELATIONSHIP"
+}

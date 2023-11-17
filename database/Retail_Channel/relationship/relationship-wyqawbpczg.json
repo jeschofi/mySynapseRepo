@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wyqawbpczg",
+	"properties": {
+		"Name": "relationship-wyqawbpczg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelRestrictionType",
+		"ToTableName": "ChannelRestriction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelRestrictionTypeId",
+				"ToColumnName": "ChannelRestrictionTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelRestrictionType.cdm.json/ChannelRestrictionType\",\"toEntity\":\"ChannelRestriction.cdm.json/ChannelRestriction\",\"joinPairs\":[{\"fromAttribute\":\"ChannelRestrictionTypeId\",\"toAttribute\":\"ChannelRestrictionTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f9fde0f3-8537-495a-a719-6bcb59671580"
+	},
+	"type": "RELATIONSHIP"
+}

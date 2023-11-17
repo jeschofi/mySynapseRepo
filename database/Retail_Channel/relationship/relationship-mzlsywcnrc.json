@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mzlsywcnrc",
+	"properties": {
+		"Name": "relationship-mzlsywcnrc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelTypeAssortment",
+		"ToTableName": "ChannelTypeAssortmentProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SizeClassId",
+				"ToColumnName": "SizeClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelTypeAssortment.cdm.json/ChannelTypeAssortment\",\"toEntity\":\"ChannelTypeAssortmentProduct.cdm.json/ChannelTypeAssortmentProduct\",\"joinPairs\":[{\"fromAttribute\":\"SizeClassId\",\"toAttribute\":\"SizeClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cbb656cb-c034-4154-8a14-dc5ed36431c4"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-skrjttirzr",
+	"properties": {
+		"Name": "relationship-skrjttirzr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Calendar",
+		"ToTableName": "CalendarYear",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Calendar.cdm.json/Calendar\",\"toEntity\":\"CalendarYear.cdm.json/CalendarYear\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "66e41ad1-c9be-4421-9088-117ef8034ab8"
+	},
+	"type": "RELATIONSHIP"
+}

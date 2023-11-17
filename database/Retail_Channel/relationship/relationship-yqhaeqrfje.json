@@ -1,0 +1,29 @@
+{
+	"name": "relationship-yqhaeqrfje",
+	"properties": {
+		"Name": "relationship-yqhaeqrfje",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreWarehouseRelationshipType",
+		"ToTableName": "StoreRelatedWarehouse",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreWarehouseRelationshipTypeId",
+				"ToColumnName": "StoreWarehouseRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreWarehouseRelationshipType.cdm.json/StoreWarehouseRelationshipType\",\"toEntity\":\"StoreRelatedWarehouse.cdm.json/StoreRelatedWarehouse\",\"joinPairs\":[{\"fromAttribute\":\"StoreWarehouseRelationshipTypeId\",\"toAttribute\":\"StoreWarehouseRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2e6c1c1e-3d3e-43b9-9bbd-466a64602eaf"
+	},
+	"type": "RELATIONSHIP"
+}

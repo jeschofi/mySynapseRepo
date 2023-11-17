@@ -1,0 +1,29 @@
+{
+	"name": "relationship-regoeekwfp",
+	"properties": {
+		"Name": "relationship-regoeekwfp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssortmentStatus",
+		"ToTableName": "ChannelAssortment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssortmentStatusId",
+				"ToColumnName": "AssortmentStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssortmentStatus.cdm.json/AssortmentStatus\",\"toEntity\":\"ChannelAssortment.cdm.json/ChannelAssortment\",\"joinPairs\":[{\"fromAttribute\":\"AssortmentStatusId\",\"toAttribute\":\"AssortmentStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4edb122c-3901-4ae0-8422-9d72ea3dae07"
+	},
+	"type": "RELATIONSHIP"
+}

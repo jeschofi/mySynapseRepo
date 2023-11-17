@@ -1,0 +1,136 @@
+{
+	"name": "BondPayFrequency",
+	"properties": {
+		"Name": "BondPayFrequency",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BondPayFrequencyId",
+					"Description": "The unique identifier of a Bond Pay Frequency.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondPayFrequency.cdm.json/BondPayFrequency",
+						"Name": "BondPayFrequencyId"
+					}
+				},
+				{
+					"Name": "BondPayFrequencyName",
+					"Description": "The name of a Bond Pay Frequency.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondPayFrequency.cdm.json/BondPayFrequency",
+						"Name": "BondPayFrequencyName"
+					}
+				},
+				{
+					"Name": "BondPayFrequencyDescription",
+					"Description": "The description of a Bond Pay Frequency.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondPayFrequency.cdm.json/BondPayFrequency",
+						"Name": "BondPayFrequencyDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "539f042d-f9da-4f6f-b879-7e8f88f2bd2e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondPayFrequency",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondPayFrequency",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BondPayFrequencyId\":{\"entity\":\"BondPayFrequency.cdm.json/BondPayFrequency\",\"name\":\"BondPayFrequencyId\"},\"BondPayFrequencyName\":{\"entity\":\"BondPayFrequency.cdm.json/BondPayFrequency\",\"name\":\"BondPayFrequencyName\"},\"BondPayFrequencyDescription\":{\"entity\":\"BondPayFrequency.cdm.json/BondPayFrequency\",\"name\":\"BondPayFrequencyDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BondPayFrequency\",\"path\":\"BondPayFrequency.cdm.json/BondPayFrequency\"},\"description\":\"The pay frequency refers to the frequency that the bond pays interest. The most common pay frequency is semi-annually (twice per year), but bonds can also pay interest monthly, quarterly, annually, or at maturity. \\n\\nMost bonds pay interest semi-annually (twice per year).\",\"primaryKey\":[\"BondPayFrequencyId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondPayFrequency.cdm.json/BondPayFrequency\",\"name\":\"BondPayFrequencyId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Bond Pay Frequency.\",\"isNullable\":false,\"name\":\"BondPayFrequencyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondPayFrequency.cdm.json/BondPayFrequency\",\"name\":\"BondPayFrequencyName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Bond Pay Frequency.\",\"isNullable\":true,\"name\":\"BondPayFrequencyName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondPayFrequency.cdm.json/BondPayFrequency\",\"name\":\"BondPayFrequencyDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Bond Pay Frequency.\",\"isNullable\":true,\"name\":\"BondPayFrequencyDescription\"}]}}}",
+			"Description": "The pay frequency refers to the frequency that the bond pays interest. The most common pay frequency is semi-annually (twice per year), but bonds can also pay interest monthly, quarterly, annually, or at maturity. \n\nMost bonds pay interest semi-annually (twice per year).",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "BondPayFrequencyId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BondPayFrequencyId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BondPayFrequencyName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BondPayFrequencyDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "77ef1861-b0b6-48da-8cd4-11f7cd31dc83",
+		"Description": "The pay frequency refers to the frequency that the bond pays interest. The most common pay frequency is semi-annually (twice per year), but bonds can also pay interest monthly, quarterly, annually, or at maturity. \n\nMost bonds pay interest semi-annually (twice per year)."
+	},
+	"type": "TABLE"
+}

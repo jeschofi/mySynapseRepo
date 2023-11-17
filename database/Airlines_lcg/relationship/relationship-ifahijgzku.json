@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ifahijgzku",
+	"properties": {
+		"Name": "relationship-ifahijgzku",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialProduct",
+		"ToTableName": "Bond",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialProductId",
+				"ToColumnName": "BondId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialProduct.cdm.json/FinancialProduct\",\"toEntity\":\"Bond.cdm.json/Bond\",\"joinPairs\":[{\"fromAttribute\":\"FinancialProductId\",\"toAttribute\":\"BondId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "53494370-6d0a-48e8-a3b2-a6c8870c1f18"
+	},
+	"type": "RELATIONSHIP"
+}

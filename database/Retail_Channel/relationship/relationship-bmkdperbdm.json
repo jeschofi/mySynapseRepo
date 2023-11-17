@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bmkdperbdm",
+	"properties": {
+		"Name": "relationship-bmkdperbdm",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Promotion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PromotingPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Promotion.cdm.json/Promotion\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PromotingPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e62c7d01-1bb1-46d0-b540-92a0fa659973"
+	},
+	"type": "RELATIONSHIP"
+}

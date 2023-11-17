@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cbnggmuuta",
+	"properties": {
+		"Name": "relationship-cbnggmuuta",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShopperPositionType",
+		"ToTableName": "ShopperPosition",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShopperPositionTypeId",
+				"ToColumnName": "ShopperPositionTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShopperPositionType.cdm.json/ShopperPositionType\",\"toEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"joinPairs\":[{\"fromAttribute\":\"ShopperPositionTypeId\",\"toAttribute\":\"ShopperPositionTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "651b59f3-aa24-4a97-bae2-bac34f60722f"
+	},
+	"type": "RELATIONSHIP"
+}

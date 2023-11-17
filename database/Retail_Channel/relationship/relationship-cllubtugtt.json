@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cllubtugtt",
+	"properties": {
+		"Name": "relationship-cllubtugtt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Commission",
+		"ToTableName": "RelatedCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionId",
+				"ToColumnName": "RelatedCommissionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Commission.cdm.json/Commission\",\"toEntity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionId\",\"toAttribute\":\"RelatedCommissionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f6d6396f-5904-48b5-87b4-2d9dae0ee285"
+	},
+	"type": "RELATIONSHIP"
+}

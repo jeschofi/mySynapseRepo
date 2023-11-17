@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mbahemuooe",
+	"properties": {
+		"Name": "relationship-mbahemuooe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FuelPump",
+		"ToTableName": "FuelPumpPos",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FuelPumpId",
+				"ToColumnName": "FuelPumpId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FuelPump.cdm.json/FuelPump\",\"toEntity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"joinPairs\":[{\"fromAttribute\":\"FuelPumpId\",\"toAttribute\":\"FuelPumpId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "30f61a80-732a-4dd0-8781-bf3f8081509c"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,157 @@
+{
+	"name": "BondAccruedInterest",
+	"properties": {
+		"Name": "BondAccruedInterest",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BondId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondAccruedInterest.cdm.json/BondAccruedInterest",
+						"Name": "BondId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date for which the associated accrued interest is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondAccruedInterest.cdm.json/BondAccruedInterest",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "LastInterestPaymentDate",
+					"Description": "The last or previous interest payment date for which subsequent accrued interest is earned.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondAccruedInterest.cdm.json/BondAccruedInterest",
+						"Name": "LastInterestPaymentDate"
+					}
+				},
+				{
+					"Name": "AccruedInterestAmount",
+					"Description": "The amount of accrued interest earned to date.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondAccruedInterest.cdm.json/BondAccruedInterest",
+						"Name": "AccruedInterestAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7356eb7b-3acb-4502-96e0-560806f70f96",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondAccruedInterest",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondAccruedInterest",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BondId\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"BondId\"},\"Date\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"Date\"},\"LastInterestPaymentDate\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"LastInterestPaymentDate\"},\"AccruedInterestAmount\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"AccruedInterestAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BondAccruedInterest\",\"path\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\"},\"description\":\"Accrued interest is the amount of interest that has been earned since the last interest payment date. \\n\\nAccrued interest is the fraction of the coupon payment the bond seller earns for holding the bond for a period of time between bond payments. \\n\\nThe bond price's inclusion of any interest accrued since the last payment period determines whether the bond's price is dirty or clean.   Dirty bond prices include any accrued interest that has accumulated since the last coupon payment while clean bond prices do not. In newspapers, bond prices quoted are often their clean prices. \\n\\nWhen a bond trades, the buyer pays the seller the accrued interest - a pro rata portion of the next interest payment, which will be paid to the buyer of the bond.\\n\\nAccrued Interest = Coupon(Days Between Settlement And Coupon Dates/Total Days In Period)\",\"primaryKey\":[\"BondId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"BondId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"BondId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date for which the associated accrued interest is calculated.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"LastInterestPaymentDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The last or previous interest payment date for which subsequent accrued interest is earned.\",\"isNullable\":true,\"name\":\"LastInterestPaymentDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondAccruedInterest.cdm.json/BondAccruedInterest\",\"name\":\"AccruedInterestAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of accrued interest earned to date.\",\"isNullable\":true,\"scale\":2,\"name\":\"AccruedInterestAmount\"}]}}}",
+			"Description": "Accrued interest is the amount of interest that has been earned since the last interest payment date. \n\nAccrued interest is the fraction of the coupon payment the bond seller earns for holding the bond for a period of time between bond payments. \n\nThe bond price's inclusion of any interest accrued since the last payment period determines whether the bond's price is dirty or clean.   Dirty bond prices include any accrued interest that has accumulated since the last coupon payment while clean bond prices do not. In newspapers, bond prices quoted are often their clean prices. \n\nWhen a bond trades, the buyer pays the seller the accrued interest - a pro rata portion of the next interest payment, which will be paid to the buyer of the bond.\n\nAccrued Interest = Coupon(Days Between Settlement And Coupon Dates/Total Days In Period)",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "BondId,Date",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BondId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LastInterestPaymentDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AccruedInterestAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c04c9d16-475b-4d7a-984e-550bea30318d",
+		"Description": "Accrued interest is the amount of interest that has been earned since the last interest payment date. \n\nAccrued interest is the fraction of the coupon payment the bond seller earns for holding the bond for a period of time between bond payments. \n\nThe bond price's inclusion of any interest accrued since the last payment period determines whether the bond's price is dirty or clean.   Dirty bond prices include any accrued interest that has accumulated since the last coupon payment while clean bond prices do not. In newspapers, bond prices quoted are often their clean prices. \n\nWhen a bond trades, the buyer pays the seller the accrued interest - a pro rata portion of the next interest payment, which will be paid to the buyer of the bond.\n\nAccrued Interest = Coupon(Days Between Settlement And Coupon Dates/Total Days In Period)"
+	},
+	"type": "TABLE"
+}

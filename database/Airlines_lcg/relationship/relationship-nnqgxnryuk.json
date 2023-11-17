@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nnqgxnryuk",
+	"properties": {
+		"Name": "relationship-nnqgxnryuk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SourceDocument",
+		"ToTableName": "JournalTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SourceDocumentId",
+				"ToColumnName": "SourceDocumentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SourceDocument.cdm.json/SourceDocument\",\"toEntity\":\"JournalTransaction.cdm.json/JournalTransaction\",\"joinPairs\":[{\"fromAttribute\":\"SourceDocumentId\",\"toAttribute\":\"SourceDocumentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e9c5fa34-2931-4152-8cc7-ef60c8e0ebf1"
+	},
+	"type": "RELATIONSHIP"
+}

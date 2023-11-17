@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rvlvipyqgn",
+	"properties": {
+		"Name": "relationship-rvlvipyqgn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Commission",
+		"ToTableName": "TransactionCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionId",
+				"ToColumnName": "CommissionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Commission.cdm.json/Commission\",\"toEntity\":\"TransactionCommission.cdm.json/TransactionCommission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionId\",\"toAttribute\":\"CommissionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f086be51-2bfc-42b7-b007-5ba4ddd6c590"
+	},
+	"type": "RELATIONSHIP"
+}

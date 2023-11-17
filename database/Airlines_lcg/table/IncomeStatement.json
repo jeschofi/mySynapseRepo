@@ -1,0 +1,613 @@
+{
+	"name": "IncomeStatement",
+	"properties": {
+		"Name": "IncomeStatement",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "FinancialStatementId",
+					"Description": "The unique identifier of a Financial Statement.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "FinancialStatementId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the financial statement is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the financial statement is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "SalesOfGoodOrServicesAmount",
+					"Description": "The sales of goods and services to customers.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "SalesOfGoodOrServicesAmount"
+					}
+				},
+				{
+					"Name": "SalesReturnsAmount",
+					"Description": "The amount of any returns or return credits from customers during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "SalesReturnsAmount"
+					}
+				},
+				{
+					"Name": "SalesDiscountsAmount",
+					"Description": "The amount of sales discounts to customers during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "SalesDiscountsAmount"
+					}
+				},
+				{
+					"Name": "TotalNetSalesAmount",
+					"Description": "The increase in capital as a result of the sale of goods and services by the business.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "TotalNetSalesAmount"
+					}
+				},
+				{
+					"Name": "InventoryAmount",
+					"Description": "The cost of goods sold attributed to inventory.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "InventoryAmount"
+					}
+				},
+				{
+					"Name": "PurchasesAmount",
+					"Description": "The cost of goods sold attributed to purchases.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "PurchasesAmount"
+					}
+				},
+				{
+					"Name": "GoodsAvailableForSaleAmount",
+					"Description": "The cost of goods sold attributed to cost of goods available for sale.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "GoodsAvailableForSaleAmount"
+					}
+				},
+				{
+					"Name": "CostOfGoodsSoldAmount",
+					"Description": "The cost of goods sold attributed to inventory.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "CostOfGoodsSoldAmount"
+					}
+				},
+				{
+					"Name": "TotalCostOfGoodsSoldAmount",
+					"Description": "The total costs of goods sold amount.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "TotalCostOfGoodsSoldAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseSellingAndAdministrativeExpensesAmount",
+					"Description": "An operating expense is an expense arising in the normal course of running a business.\n\nSelling and Administrative expenses relate to the sale of products or services and to the management of the business.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseSellingAndAdministrativeExpensesAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseAdvertisingAmount",
+					"Description": "Advertising costs relate to the advertising function within marketing.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseAdvertisingAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseLeasePaymentsAmount",
+					"Description": "Lease payments include rentals of leased facilities etc.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseLeasePaymentsAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseDepreciationAndAmortizationAmount",
+					"Description": "The cost of assets other than land are allocated over the assets service life rather than expensed in the year of purchase.\n\nThe cost allocation procedure is depreciation and is used to allocate the cost of the tangible fixed assets.\n\nAmortization is the term applied to the cost expiration of intangible assets such as patents, copyrights, trademarks, licenses, franchises and goodwill.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseDepreciationAndAmortizationAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseRepairsAndMaintenanceAmount",
+					"Description": "Repairs and maintenance are the annual costs of repairing and maintaining the property, plant and equipment (fixed assets).",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseRepairsAndMaintenanceAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseSalariesExpensesAmount",
+					"Description": "Operating expenses for non-officer salaries during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseSalariesExpensesAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseOfficersSalariesExpenseAmount",
+					"Description": "Operating expenses for officer salaries during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseOfficersSalariesExpenseAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseTravelExpensesAmount",
+					"Description": "Operating expenses for travel expenses during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseTravelExpensesAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseInsuranceExpensesAmount",
+					"Description": "Operating expenses for insurance expenses during the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseInsuranceExpensesAmount"
+					}
+				},
+				{
+					"Name": "OperatingExpenseTotalOperatingExpensesAmount",
+					"Description": "The total of operating expenses for the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OperatingExpenseTotalOperatingExpensesAmount"
+					}
+				},
+				{
+					"Name": "TotalNetIncomeFromOperationsAmount",
+					"Description": "Income from operations is generated from running the primary business and excludes income from other sources.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "TotalNetIncomeFromOperationsAmount"
+					}
+				},
+				{
+					"Name": "InterestExpenseAmount",
+					"Description": "The amount reported by a company or individual as an expense for borrowed money.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "InterestExpenseAmount"
+					}
+				},
+				{
+					"Name": "OtherExpensesAmount",
+					"Description": "Other or miscellaneous expenses.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "OtherExpensesAmount"
+					}
+				},
+				{
+					"Name": "TotalNetIncomeLossAmount",
+					"Description": "The net income/loss reported for the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "TotalNetIncomeLossAmount"
+					}
+				},
+				{
+					"Name": "TotalGrossProfitAmount",
+					"Description": "Gross profit or sales profit is the difference between revenue and the cost of making a product or providing a service, before deducting overhead, payroll, taxation, and interest payments.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IncomeStatement.cdm.json/IncomeStatement",
+						"Name": "TotalGrossProfitAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0fa7d5fc-0347-4117-a402-ddfe4db8ecbf",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/IncomeStatement",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/IncomeStatement",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"LegalEntityId\"},\"FinancialStatementId\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"FinancialStatementId\"},\"PeriodStartDate\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"PeriodEndDate\"},\"SalesOfGoodOrServicesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"SalesOfGoodOrServicesAmount\"},\"SalesReturnsAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"SalesReturnsAmount\"},\"SalesDiscountsAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"SalesDiscountsAmount\"},\"TotalNetSalesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalNetSalesAmount\"},\"InventoryAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"InventoryAmount\"},\"PurchasesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"PurchasesAmount\"},\"GoodsAvailableForSaleAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"GoodsAvailableForSaleAmount\"},\"CostOfGoodsSoldAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"CostOfGoodsSoldAmount\"},\"TotalCostOfGoodsSoldAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalCostOfGoodsSoldAmount\"},\"OperatingExpenseSellingAndAdministrativeExpensesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseSellingAndAdministrativeExpensesAmount\"},\"OperatingExpenseAdvertisingAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseAdvertisingAmount\"},\"OperatingExpenseLeasePaymentsAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseLeasePaymentsAmount\"},\"OperatingExpenseDepreciationAndAmortizationAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseDepreciationAndAmortizationAmount\"},\"OperatingExpenseRepairsAndMaintenanceAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseRepairsAndMaintenanceAmount\"},\"OperatingExpenseSalariesExpensesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseSalariesExpensesAmount\"},\"OperatingExpenseOfficersSalariesExpenseAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseOfficersSalariesExpenseAmount\"},\"OperatingExpenseTravelExpensesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseTravelExpensesAmount\"},\"OperatingExpenseInsuranceExpensesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseInsuranceExpensesAmount\"},\"OperatingExpenseTotalOperatingExpensesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseTotalOperatingExpensesAmount\"},\"TotalNetIncomeFromOperationsAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalNetIncomeFromOperationsAmount\"},\"InterestExpenseAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"InterestExpenseAmount\"},\"OtherExpensesAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OtherExpensesAmount\"},\"TotalNetIncomeLossAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalNetIncomeLossAmount\"},\"TotalGrossProfitAmount\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalGrossProfitAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"IncomeStatement\",\"path\":\"IncomeStatement.cdm.json/IncomeStatement\"},\"description\":\"The income statement details the amount of income and how it was earned. \\n\\nIt is a summary of the revenue, expenses and net income/net loss of the legal entity for a specific period where:\\n\\nREVENUE = The increase in capital as a result of the sale of goods or services provided by the business.   The revenue is equal to the cash, accounts receivable and other assets gained in compensation for goods sold or services rendered.\\n\\nEXPENSES = The decrease in capital that is the result of the business' revenue-producing operations.   The expenses amount is equal to the value of the goods and services used up or consumed in obtaining the revenue.\\n\\nNET INCOME = The increase in capital that is the result from profitable operation of the business during the period.   It is the excess of revenues over expenses for the accounting period.\\n\\nNET LOSS = The decrease in capital resulting from the operations of the business.   It is the excess of expenses over revenue for the operating period.\\n\\nThe statement of retained earnings is often combined with the income statement or incorporated into the statement of shareholder's equity (see bottom of this example).\\n\\nIt is a record of its earnings or losses for a given period. It shows all of the money a company earned (revenues) and all of the money a company spent (expenses) during this period. \\n\\nIt documents the changes in the balance sheet retained earnings account from one period to the next (see Stockholders Equity Retained Earnings).\\n\\nIt also accounts for the effects of some basic accounting principles such as depreciation.\\n\\nIt is for a specific period of time, where the balance sheet is at a specific instance of time.\\n\\nThe Income Statement reports cash flows on the accrual basis or inflows measured as revenues and outflows measured as expenses.\\n\\nAnother name for the Income Statement is the Profit & Loss Statement.\",\"primaryKey\":[\"LegalEntityId\",\"FinancialStatementId\",\"PeriodStartDate\",\"PeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"FinancialStatementId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Financial Statement.\",\"isNullable\":false,\"name\":\"FinancialStatementId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the financial statement is prepared.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the financial statement is prepared.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"SalesOfGoodOrServicesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The sales of goods and services to customers.\",\"isNullable\":true,\"scale\":2,\"name\":\"SalesOfGoodOrServicesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"SalesReturnsAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of any returns or return credits from customers during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"SalesReturnsAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"SalesDiscountsAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of sales discounts to customers during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"SalesDiscountsAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalNetSalesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The increase in capital as a result of the sale of goods and services by the business.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalNetSalesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"InventoryAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The cost of goods sold attributed to inventory.\",\"isNullable\":true,\"scale\":2,\"name\":\"InventoryAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"PurchasesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The cost of goods sold attributed to purchases.\",\"isNullable\":true,\"scale\":2,\"name\":\"PurchasesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"GoodsAvailableForSaleAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The cost of goods sold attributed to cost of goods available for sale.\",\"isNullable\":true,\"scale\":2,\"name\":\"GoodsAvailableForSaleAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"CostOfGoodsSoldAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The cost of goods sold attributed to inventory.\",\"isNullable\":true,\"scale\":2,\"name\":\"CostOfGoodsSoldAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalCostOfGoodsSoldAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total costs of goods sold amount.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalCostOfGoodsSoldAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseSellingAndAdministrativeExpensesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"An operating expense is an expense arising in the normal course of running a business.\\n\\nSelling and Administrative expenses relate to the sale of products or services and to the management of the business.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseSellingAndAdministrativeExpensesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseAdvertisingAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Advertising costs relate to the advertising function within marketing.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseAdvertisingAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseLeasePaymentsAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Lease payments include rentals of leased facilities etc.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseLeasePaymentsAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseDepreciationAndAmortizationAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The cost of assets other than land are allocated over the assets service life rather than expensed in the year of purchase.\\n\\nThe cost allocation procedure is depreciation and is used to allocate the cost of the tangible fixed assets.\\n\\nAmortization is the term applied to the cost expiration of intangible assets such as patents, copyrights, trademarks, licenses, franchises and goodwill.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseDepreciationAndAmortizationAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseRepairsAndMaintenanceAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Repairs and maintenance are the annual costs of repairing and maintaining the property, plant and equipment (fixed assets).\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseRepairsAndMaintenanceAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseSalariesExpensesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Operating expenses for non-officer salaries during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseSalariesExpensesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseOfficersSalariesExpenseAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Operating expenses for officer salaries during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseOfficersSalariesExpenseAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseTravelExpensesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Operating expenses for travel expenses during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseTravelExpensesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseInsuranceExpensesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Operating expenses for insurance expenses during the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseInsuranceExpensesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OperatingExpenseTotalOperatingExpensesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total of operating expenses for the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"OperatingExpenseTotalOperatingExpensesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalNetIncomeFromOperationsAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Income from operations is generated from running the primary business and excludes income from other sources.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalNetIncomeFromOperationsAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"InterestExpenseAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount reported by a company or individual as an expense for borrowed money.\",\"isNullable\":true,\"scale\":2,\"name\":\"InterestExpenseAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"OtherExpensesAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Other or miscellaneous expenses.\",\"isNullable\":true,\"scale\":2,\"name\":\"OtherExpensesAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalNetIncomeLossAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The net income/loss reported for the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalNetIncomeLossAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IncomeStatement.cdm.json/IncomeStatement\",\"name\":\"TotalGrossProfitAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Gross profit or sales profit is the difference between revenue and the cost of making a product or providing a service, before deducting overhead, payroll, taxation, and interest payments.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalGrossProfitAmount\"}]}}}",
+			"Description": "The income statement details the amount of income and how it was earned. \n\nIt is a summary of the revenue, expenses and net income/net loss of the legal entity for a specific period where:\n\nREVENUE = The increase in capital as a result of the sale of goods or services provided by the business.   The revenue is equal to the cash, accounts receivable and other assets gained in compensation for goods sold or services rendered.\n\nEXPENSES = The decrease in capital that is the result of the business' revenue-producing operations.   The expenses amount is equal to the value of the goods and services used up or consumed in obtaining the revenue.\n\nNET INCOME = The increase in capital that is the result from profitable operation of the business during the period.   It is the excess of revenues over expenses for the accounting period.\n\nNET LOSS = The decrease in capital resulting from the operations of the business.   It is the excess of expenses over revenue for the operating period.\n\nThe statement of retained earnings is often combined with the income statement or incorporated into the statement of shareholder's equity (see bottom of this example).\n\nIt is a record of its earnings or losses for a given period. It shows all of the money a company earned (revenues) and all of the money a company spent (expenses) during this period. \n\nIt documents the changes in the balance sheet retained earnings account from one period to the next (see Stockholders Equity Retained Earnings).\n\nIt also accounts for the effects of some basic accounting principles such as depreciation.\n\nIt is for a specific period of time, where the balance sheet is at a specific instance of time.\n\nThe Income Statement reports cash flows on the accrual basis or inflows measured as revenues and outflows measured as expenses.\n\nAnother name for the Income Statement is the Profit & Loss Statement.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,FinancialStatementId,PeriodStartDate,PeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialStatementId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SalesOfGoodOrServicesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesReturnsAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalesDiscountsAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalNetSalesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InventoryAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PurchasesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GoodsAvailableForSaleAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CostOfGoodsSoldAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalCostOfGoodsSoldAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseSellingAndAdministrativeExpensesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseAdvertisingAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseLeasePaymentsAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseDepreciationAndAmortizationAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseRepairsAndMaintenanceAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseSalariesExpensesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseOfficersSalariesExpenseAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseTravelExpensesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseInsuranceExpensesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperatingExpenseTotalOperatingExpensesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalNetIncomeFromOperationsAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"InterestExpenseAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OtherExpensesAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalNetIncomeLossAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalGrossProfitAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "84e77263-84bf-4868-9fd9-10b2b115d72e",
+		"Description": "The income statement details the amount of income and how it was earned. \n\nIt is a summary of the revenue, expenses and net income/net loss of the legal entity for a specific period where:\n\nREVENUE = The increase in capital as a result of the sale of goods or services provided by the business.   The revenue is equal to the cash, accounts receivable and other assets gained in compensation for goods sold or services rendered.\n\nEXPENSES = The decrease in capital that is the result of the business' revenue-producing operations.   The expenses amount is equal to the value of the goods and services used up or consumed in obtaining the revenue.\n\nNET INCOME = The increase in capital that is the result from profitable operation of the business during the period.   It is the excess of revenues over expenses for the accounting period.\n\nNET LOSS = The decrease in capital resulting from the operations of the business.   It is the excess of expenses over revenue for the operating period.\n\nThe statement of retained earnings is often combined with the income statement or incorporated into the statement of shareholder's equity (see bottom of this example).\n\nIt is a record of its earnings or losses for a given period. It shows all of the money a company earned (revenues) and all of the money a company spent (expenses) during this period. \n\nIt documents the changes in the balance sheet retained earnings account from one period to the next (see Stockholders Equity Retained Earnings).\n\nIt also accounts for the effects of some basic accounting principles such as depreciation.\n\nIt is for a specific period of time, where the balance sheet is at a specific instance of time.\n\nThe Income Statement reports cash flows on the accrual basis or inflows measured as revenues and outflows measured as expenses.\n\nAnother name for the Income Statement is the Profit & Loss Statement."
+	},
+	"type": "TABLE"
+}

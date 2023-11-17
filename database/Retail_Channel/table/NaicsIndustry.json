@@ -1,0 +1,149 @@
+{
+	"name": "NaicsIndustry",
+	"properties": {
+		"Name": "NaicsIndustry",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "NaicsIndustryCode",
+					"Description": "The unique identifier of a NAICS Industry.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 5,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsIndustry.cdm.json/NaicsIndustry",
+						"Name": "NaicsIndustryCode"
+					}
+				},
+				{
+					"Name": "NaicsIndustryName",
+					"Description": "The name of a NAICS Industry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsIndustry.cdm.json/NaicsIndustry",
+						"Name": "NaicsIndustryName"
+					}
+				},
+				{
+					"Name": "NaicsIndustryDescription",
+					"Description": "The description of a NAICS Industry.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsIndustry.cdm.json/NaicsIndustry",
+						"Name": "NaicsIndustryDescription"
+					}
+				},
+				{
+					"Name": "NaicsIndustryGroupCode",
+					"Description": "The unique identifier of a NAICS Industry Group.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 4,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsIndustry.cdm.json/NaicsIndustry",
+						"Name": "NaicsIndustryGroupCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "22a2d7c8-e2d3-49f5-a518-de734390693f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/NaicsIndustry",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/NaicsIndustry",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"NaicsIndustryCode\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryCode\"},\"NaicsIndustryName\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryName\"},\"NaicsIndustryDescription\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryDescription\"},\"NaicsIndustryGroupCode\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryGroupCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"NaicsIndustry\",\"path\":\"NaicsIndustry.cdm.json/NaicsIndustry\"},\"description\":\"The NAICS Industry.\",\"primaryKey\":[\"NaicsIndustryCode\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":5,\"description\":\"The unique identifier of a NAICS Industry.\",\"isNullable\":false,\"scale\":0,\"name\":\"NaicsIndustryCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a NAICS Industry.\",\"isNullable\":true,\"name\":\"NaicsIndustryName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a NAICS Industry.\",\"isNullable\":true,\"name\":\"NaicsIndustryDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsIndustry.cdm.json/NaicsIndustry\",\"name\":\"NaicsIndustryGroupCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":4,\"description\":\"The unique identifier of a NAICS Industry Group.\",\"isNullable\":false,\"scale\":0,\"name\":\"NaicsIndustryGroupCode\"}]}}}",
+			"Description": "The NAICS Industry.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "NaicsIndustryCode",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"NaicsIndustryCode\",\"type\":\"decimal(5,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NaicsIndustryName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NaicsIndustryDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NaicsIndustryGroupCode\",\"type\":\"decimal(4,0)\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "011e7e3a-ca3a-4ba6-9790-ee43d199f439",
+		"Description": "The NAICS Industry."
+	},
+	"type": "TABLE"
+}

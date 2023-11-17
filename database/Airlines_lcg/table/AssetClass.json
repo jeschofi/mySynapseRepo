@@ -1,0 +1,136 @@
+{
+	"name": "AssetClass",
+	"properties": {
+		"Name": "AssetClass",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetClassId",
+					"Description": "The unique identifier of an Asset Class.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetClass.cdm.json/AssetClass",
+						"Name": "AssetClassId"
+					}
+				},
+				{
+					"Name": "AssetClassName",
+					"Description": "The name of an Asset Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetClass.cdm.json/AssetClass",
+						"Name": "AssetClassName"
+					}
+				},
+				{
+					"Name": "AssetClassDescription",
+					"Description": "The description of an Asset Class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetClass.cdm.json/AssetClass",
+						"Name": "AssetClassDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "25b695a4-13a9-495c-9160-5f150cb796df",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetClass",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetClass",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetClassId\":{\"entity\":\"AssetClass.cdm.json/AssetClass\",\"name\":\"AssetClassId\"},\"AssetClassName\":{\"entity\":\"AssetClass.cdm.json/AssetClass\",\"name\":\"AssetClassName\"},\"AssetClassDescription\":{\"entity\":\"AssetClass.cdm.json/AssetClass\",\"name\":\"AssetClassDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetClass\",\"path\":\"AssetClass.cdm.json/AssetClass\"},\"description\":\"A method of grouping assets for tax, amortization or depreciation purposes.\",\"primaryKey\":[\"AssetClassId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetClass.cdm.json/AssetClass\",\"name\":\"AssetClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Asset Class.\",\"isNullable\":false,\"name\":\"AssetClassId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetClass.cdm.json/AssetClass\",\"name\":\"AssetClassName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Asset Class.\",\"isNullable\":true,\"name\":\"AssetClassName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetClass.cdm.json/AssetClass\",\"name\":\"AssetClassDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Asset Class.\",\"isNullable\":true,\"name\":\"AssetClassDescription\"}]}}}",
+			"Description": "A method of grouping assets for tax, amortization or depreciation purposes.",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetClassId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetClassId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetClassName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetClassDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8f1a6ce5-e22d-4856-9cc3-576ae1434563",
+		"Description": "A method of grouping assets for tax, amortization or depreciation purposes."
+	},
+	"type": "TABLE"
+}

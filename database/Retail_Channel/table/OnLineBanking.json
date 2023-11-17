@@ -1,0 +1,149 @@
+{
+	"name": "OnLineBanking",
+	"properties": {
+		"Name": "OnLineBanking",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "OnLineBankingId",
+					"Description": "The unique identifier of an On-Line Banking Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OnLineBanking.cdm.json/OnLineBanking",
+						"Name": "OnLineBankingId"
+					}
+				},
+				{
+					"Name": "FinancialInstitutionId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OnLineBanking.cdm.json/OnLineBanking",
+						"Name": "FinancialInstitutionId"
+					}
+				},
+				{
+					"Name": "WebsiteUrl",
+					"Description": "The URL associated with the website. Often referred to as the domain name or registered domain name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2083,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OnLineBanking.cdm.json/OnLineBanking",
+						"Name": "WebsiteUrl"
+					}
+				},
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "OnLineBanking.cdm.json/OnLineBanking",
+						"Name": "ChannelId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c4b2eb5b-6632-4696-b48b-b9205a7b4891",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/OnLineBanking",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/OnLineBanking",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"OnLineBankingId\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"OnLineBankingId\"},\"FinancialInstitutionId\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"FinancialInstitutionId\"},\"WebsiteUrl\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"WebsiteUrl\"},\"ChannelId\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"ChannelId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"OnLineBanking\",\"path\":\"OnLineBanking.cdm.json/OnLineBanking\"},\"description\":\"The online website that offers on-line banking services.\",\"primaryKey\":[\"OnLineBankingId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"OnLineBankingId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an On-Line Banking Channel.\",\"isNullable\":false,\"name\":\"OnLineBankingId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"FinancialInstitutionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":true,\"name\":\"FinancialInstitutionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"WebsiteUrl\"},\"dataType\":\"string\",\"dataTypeLength\":2083,\"description\":\"The URL associated with the website. Often referred to as the domain name or registered domain name.\",\"isNullable\":true,\"name\":\"WebsiteUrl\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"OnLineBanking.cdm.json/OnLineBanking\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":true,\"name\":\"ChannelId\"}]}}}",
+			"Description": "The online website that offers on-line banking services.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "OnLineBankingId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"OnLineBankingId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialInstitutionId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WebsiteUrl\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "c8aea3b4-0d16-4b1c-b8c9-ca4927ff8489",
+		"Description": "The online website that offers on-line banking services."
+	},
+	"type": "TABLE"
+}

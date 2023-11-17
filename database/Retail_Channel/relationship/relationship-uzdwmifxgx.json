@@ -1,0 +1,29 @@
+{
+	"name": "relationship-uzdwmifxgx",
+	"properties": {
+		"Name": "relationship-uzdwmifxgx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShipmentMethod",
+		"ToTableName": "Transaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShipmentMethodId",
+				"ToColumnName": "ShipmentMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShipmentMethod.cdm.json/ShipmentMethod\",\"toEntity\":\"Transaction.cdm.json/Transaction\",\"joinPairs\":[{\"fromAttribute\":\"ShipmentMethodId\",\"toAttribute\":\"ShipmentMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cff55c11-c412-4255-a77d-0d80693ec646"
+	},
+	"type": "RELATIONSHIP"
+}

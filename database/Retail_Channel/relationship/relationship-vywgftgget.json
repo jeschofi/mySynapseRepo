@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vywgftgget",
+	"properties": {
+		"Name": "relationship-vywgftgget",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PriceListType",
+		"ToTableName": "ChannelProductPriceList",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PriceListTypeId",
+				"ToColumnName": "PriceListTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PriceListType.cdm.json/PriceListType\",\"toEntity\":\"ChannelProductPriceList.cdm.json/ChannelProductPriceList\",\"joinPairs\":[{\"fromAttribute\":\"PriceListTypeId\",\"toAttribute\":\"PriceListTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ba59ab94-0ace-4d5d-b0e2-b0011d75cf6d"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kyiionxhjh",
+	"properties": {
+		"Name": "relationship-kyiionxhjh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Calendar",
+		"ToTableName": "ChannelCalendar",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarId",
+				"ToColumnName": "CalendarId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Calendar.cdm.json/Calendar\",\"toEntity\":\"ChannelCalendar.cdm.json/ChannelCalendar\",\"joinPairs\":[{\"fromAttribute\":\"CalendarId\",\"toAttribute\":\"CalendarId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "67a1ea5f-0c70-4f55-98ed-c71a193eb11d"
+	},
+	"type": "RELATIONSHIP"
+}

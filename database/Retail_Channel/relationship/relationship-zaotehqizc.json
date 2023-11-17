@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zaotehqizc",
+	"properties": {
+		"Name": "relationship-zaotehqizc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelEmployeeRelationshipType",
+		"ToTableName": "ChannelRelatedEmployee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelEmployeeRelationshipTypeId",
+				"ToColumnName": "ChannelEmployeeRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelEmployeeRelationshipType.cdm.json/ChannelEmployeeRelationshipType\",\"toEntity\":\"ChannelRelatedEmployee.cdm.json/ChannelRelatedEmployee\",\"joinPairs\":[{\"fromAttribute\":\"ChannelEmployeeRelationshipTypeId\",\"toAttribute\":\"ChannelEmployeeRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "85b04137-ee5d-4477-8603-96f3fd55e978"
+	},
+	"type": "RELATIONSHIP"
+}

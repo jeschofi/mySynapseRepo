@@ -1,0 +1,29 @@
+{
+	"name": "relationship-xdelicorvb",
+	"properties": {
+		"Name": "relationship-xdelicorvb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayAisle",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AislePeriodStartDate",
+				"ToColumnName": "AislePeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayAisle.cdm.json/StoreDisplayAisle\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"AislePeriodStartDate\",\"toAttribute\":\"AislePeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ce723b38-0611-43e6-9572-4b3d05a82ebf"
+	},
+	"type": "RELATIONSHIP"
+}

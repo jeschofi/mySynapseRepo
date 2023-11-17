@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gnxxpmexfs",
+	"properties": {
+		"Name": "relationship-gnxxpmexfs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Market",
+		"ToTableName": "ChannelTargetMarket",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketId",
+				"ToColumnName": "MarketId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Market.cdm.json/Market\",\"toEntity\":\"ChannelTargetMarket.cdm.json/ChannelTargetMarket\",\"joinPairs\":[{\"fromAttribute\":\"MarketId\",\"toAttribute\":\"MarketId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9f888968-8bcc-4352-883b-9b2298d6f405"
+	},
+	"type": "RELATIONSHIP"
+}

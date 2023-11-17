@@ -1,0 +1,29 @@
+{
+	"name": "relationship-stqoudzbkn",
+	"properties": {
+		"Name": "relationship-stqoudzbkn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Brand",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "BrandOwningPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Brand.cdm.json/Brand\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"BrandOwningPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a78ac4f8-7f85-425b-8f96-a6e278152eaa"
+	},
+	"type": "RELATIONSHIP"
+}

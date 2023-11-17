@@ -1,0 +1,29 @@
+{
+	"name": "relationship-exoilpgjst",
+	"properties": {
+		"Name": "relationship-exoilpgjst",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "VisitType",
+		"ToTableName": "Visit",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "VisitTypeId",
+				"ToColumnName": "VisitTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"VisitType.cdm.json/VisitType\",\"toEntity\":\"Visit.cdm.json/Visit\",\"joinPairs\":[{\"fromAttribute\":\"VisitTypeId\",\"toAttribute\":\"VisitTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6acfea99-e42a-4bf4-8ddb-85320ade3e35"
+	},
+	"type": "RELATIONSHIP"
+}

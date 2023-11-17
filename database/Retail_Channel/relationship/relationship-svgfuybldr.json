@@ -1,0 +1,29 @@
+{
+	"name": "relationship-svgfuybldr",
+	"properties": {
+		"Name": "relationship-svgfuybldr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SizeClass",
+		"ToTableName": "ChannelProductGroupSizeClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SizeClassId",
+				"ToColumnName": "SizeClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SizeClass.cdm.json/SizeClass\",\"toEntity\":\"ChannelProductGroupSizeClass.cdm.json/ChannelProductGroupSizeClass\",\"joinPairs\":[{\"fromAttribute\":\"SizeClassId\",\"toAttribute\":\"SizeClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2221a68a-c92a-43a8-a8c2-6432df70fcd4"
+	},
+	"type": "RELATIONSHIP"
+}

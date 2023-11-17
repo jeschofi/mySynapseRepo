@@ -1,0 +1,29 @@
+{
+	"name": "relationship-niqvqdwkwx",
+	"properties": {
+		"Name": "relationship-niqvqdwkwx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionScheduleDetailByRevenue",
+		"ToTableName": "Commission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionMinimumSalesRevenueAmount",
+				"ToColumnName": "CommissionMinimumSalesRevenueAmount"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionScheduleDetailByRevenue.cdm.json/CommissionScheduleDetailByRevenue\",\"toEntity\":\"Commission.cdm.json/Commission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionMinimumSalesRevenueAmount\",\"toAttribute\":\"CommissionMinimumSalesRevenueAmount\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "e5d3db30-58d1-4a71-a6f0-144967cfa212"
+	},
+	"type": "RELATIONSHIP"
+}

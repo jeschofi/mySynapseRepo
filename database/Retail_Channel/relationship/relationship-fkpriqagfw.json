@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fkpriqagfw",
+	"properties": {
+		"Name": "relationship-fkpriqagfw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Coupon",
+		"ToTableName": "ChannelCoupon",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CouponId",
+				"ToColumnName": "CouponId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Coupon.cdm.json/Coupon\",\"toEntity\":\"ChannelCoupon.cdm.json/ChannelCoupon\",\"joinPairs\":[{\"fromAttribute\":\"CouponId\",\"toAttribute\":\"CouponId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c907405f-f44e-4d96-953c-570e82578759"
+	},
+	"type": "RELATIONSHIP"
+}

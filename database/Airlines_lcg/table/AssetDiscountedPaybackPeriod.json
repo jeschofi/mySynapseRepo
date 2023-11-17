@@ -1,0 +1,195 @@
+{
+	"name": "AssetDiscountedPaybackPeriod",
+	"properties": {
+		"Name": "AssetDiscountedPaybackPeriod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the Asset discounted payback is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the Asset discounted payback is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "InitialCashOutlayAmount",
+					"Description": "The initial amount of outlay for the Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod",
+						"Name": "InitialCashOutlayAmount"
+					}
+				},
+				{
+					"Name": "DiscountedAnnualCashInflowsAmount",
+					"Description": "The discounted annual cash inflows associated with the Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod",
+						"Name": "DiscountedAnnualCashInflowsAmount"
+					}
+				},
+				{
+					"Name": "DiscountedPaybackAmount",
+					"Description": "Discounted Payback = (Initial Cash Outlay/Discounted Annual Cash Inflows)",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod",
+						"Name": "DiscountedPaybackAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "90380db2-692d-4c37-9192-b9d0e79f7e6a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetDiscountedPaybackPeriod",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetDiscountedPaybackPeriod",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetId\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"AssetId\"},\"PeriodStartDate\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"PeriodEndDate\"},\"InitialCashOutlayAmount\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"InitialCashOutlayAmount\"},\"DiscountedAnnualCashInflowsAmount\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"DiscountedAnnualCashInflowsAmount\"},\"DiscountedPaybackAmount\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"DiscountedPaybackAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetDiscountedPaybackPeriod\",\"path\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\"},\"description\":\"Discounted Payback is computed by adding the present value of each year's cash inflows until they equal the investment.\\n\\nDISCOUNTED PAYBACK = (INITIAL CASH OUTLAY/DISCOUNTED ANNUAL CASH INFLOWS)\",\"primaryKey\":[\"AssetId\",\"PeriodStartDate\",\"PeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Asset discounted payback is calculated.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the Asset discounted payback is calculated.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"InitialCashOutlayAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The initial amount of outlay for the Asset.\",\"isNullable\":true,\"scale\":2,\"name\":\"InitialCashOutlayAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"DiscountedAnnualCashInflowsAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The discounted annual cash inflows associated with the Asset.\",\"isNullable\":true,\"scale\":2,\"name\":\"DiscountedAnnualCashInflowsAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetDiscountedPaybackPeriod.cdm.json/AssetDiscountedPaybackPeriod\",\"name\":\"DiscountedPaybackAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Discounted Payback = (Initial Cash Outlay/Discounted Annual Cash Inflows)\",\"isNullable\":true,\"scale\":2,\"name\":\"DiscountedPaybackAmount\"}]}}}",
+			"Description": "Discounted Payback is computed by adding the present value of each year's cash inflows until they equal the investment.\n\nDISCOUNTED PAYBACK = (INITIAL CASH OUTLAY/DISCOUNTED ANNUAL CASH INFLOWS)",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetId,PeriodStartDate,PeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"InitialCashOutlayAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DiscountedAnnualCashInflowsAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DiscountedPaybackAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "8ccb58a9-9c95-4e5d-8384-ae85c75cf4eb",
+		"Description": "Discounted Payback is computed by adding the present value of each year's cash inflows until they equal the investment.\n\nDISCOUNTED PAYBACK = (INITIAL CASH OUTLAY/DISCOUNTED ANNUAL CASH INFLOWS)"
+	},
+	"type": "TABLE"
+}

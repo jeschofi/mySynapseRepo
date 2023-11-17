@@ -1,0 +1,156 @@
+{
+	"name": "FinancialProductIssuedByLegalEntity",
+	"properties": {
+		"Name": "FinancialProductIssuedByLegalEntity",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.\n\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "FinancialProductId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity",
+						"Name": "FinancialProductId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is valid or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "IssuedQuantity",
+					"Description": "The quantity of the financial product issued.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity",
+						"Name": "IssuedQuantity"
+					}
+				}
+			],
+			"ColumnSetEntityName": "59e63db0-bdeb-4c62-8b73-7d37592ee36f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialProductIssuedByLegalEntity",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/FinancialProductIssuedByLegalEntity",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"LegalEntityId\"},\"FinancialProductId\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"FinancialProductId\"},\"Timestamp\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"Timestamp\"},\"IssuedQuantity\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"IssuedQuantity\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FinancialProductIssuedByLegalEntity\",\"path\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\"},\"description\":\"The quantity of associated financial product issued as of the indicated date.\",\"primaryKey\":[\"LegalEntityId\",\"FinancialProductId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\\n\\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"FinancialProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"FinancialProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is valid or effective as-of.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"name\":\"IssuedQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The quantity of the financial product issued.\",\"isNullable\":true,\"scale\":2,\"name\":\"IssuedQuantity\"}]}}}",
+			"Description": "The quantity of associated financial product issued as of the indicated date.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "LegalEntityId,FinancialProductId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IssuedQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "5bcfdc8e-601a-49f6-9120-b6bb0a441be6",
+		"Description": "The quantity of associated financial product issued as of the indicated date."
+	},
+	"type": "TABLE"
+}

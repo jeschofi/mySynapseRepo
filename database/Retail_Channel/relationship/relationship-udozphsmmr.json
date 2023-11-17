@@ -1,0 +1,29 @@
+{
+	"name": "relationship-udozphsmmr",
+	"properties": {
+		"Name": "relationship-udozphsmmr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Visit",
+		"ToTableName": "ShopperSession",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "VisitId",
+				"ToColumnName": "VisitId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Visit.cdm.json/Visit\",\"toEntity\":\"ShopperSession.cdm.json/ShopperSession\",\"joinPairs\":[{\"fromAttribute\":\"VisitId\",\"toAttribute\":\"VisitId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7fadfe31-eb1e-494c-bd1f-542e55614230"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-udlnbltrvw",
+	"properties": {
+		"Name": "relationship-udlnbltrvw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Commission",
+		"ToTableName": "ChannelCommission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionId",
+				"ToColumnName": "CommissionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Commission.cdm.json/Commission\",\"toEntity\":\"ChannelCommission.cdm.json/ChannelCommission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionId\",\"toAttribute\":\"CommissionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "1043c365-5aa0-4f79-9ced-d0233cfffd95"
+	},
+	"type": "RELATIONSHIP"
+}

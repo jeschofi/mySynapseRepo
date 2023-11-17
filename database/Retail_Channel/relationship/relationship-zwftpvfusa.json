@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zwftpvfusa",
+	"properties": {
+		"Name": "relationship-zwftpvfusa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProductGroup",
+		"ToTableName": "StoreGroupProductGroup",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductGroupId",
+				"ToColumnName": "ProductGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProductGroup.cdm.json/ProductGroup\",\"toEntity\":\"StoreGroupProductGroup.cdm.json/StoreGroupProductGroup\",\"joinPairs\":[{\"fromAttribute\":\"ProductGroupId\",\"toAttribute\":\"ProductGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f8691251-8e3c-4869-bef3-85c8aea5a706"
+	},
+	"type": "RELATIONSHIP"
+}

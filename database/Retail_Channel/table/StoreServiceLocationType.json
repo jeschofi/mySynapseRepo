@@ -1,0 +1,130 @@
+{
+	"name": "StoreServiceLocationType",
+	"properties": {
+		"Name": "StoreServiceLocationType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreServiceLocationTypeId",
+					"Description": "The unique identifier of a Store Service Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationType.cdm.json/StoreServiceLocationType",
+						"Name": "StoreServiceLocationTypeId"
+					}
+				},
+				{
+					"Name": "StoreServiceLocationTypeName",
+					"Description": "The name of a Store Service Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationType.cdm.json/StoreServiceLocationType",
+						"Name": "StoreServiceLocationTypeName"
+					}
+				},
+				{
+					"Name": "StoreServiceLocationTypeDescription",
+					"Description": "The description of a Store Service Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationType.cdm.json/StoreServiceLocationType",
+						"Name": "StoreServiceLocationTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "256c2f0e-a476-4888-b4a0-c8db732e400e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreServiceLocationType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreServiceLocationType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreServiceLocationTypeId\":{\"entity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"name\":\"StoreServiceLocationTypeId\"},\"StoreServiceLocationTypeName\":{\"entity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"name\":\"StoreServiceLocationTypeName\"},\"StoreServiceLocationTypeDescription\":{\"entity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"name\":\"StoreServiceLocationTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreServiceLocationType\",\"path\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\"},\"description\":\"The type of store service location.\\n\\nEx:\\n- Check-Out Aisle\\n- Express Check-Out\\n- Gas Pump\\n- Pump Island\\n- Table\\n- Bar\\n- Buffet\\n- Customer Service\\n- Restaurant\\n- Drive-through Window\\n- Self-Serve\\n- Kiosk\\n- Coffee Bar\",\"primaryKey\":[\"StoreServiceLocationTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"name\":\"StoreServiceLocationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Service Location Type.\",\"isNullable\":false,\"name\":\"StoreServiceLocationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"name\":\"StoreServiceLocationTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Store Service Location Type.\",\"isNullable\":true,\"name\":\"StoreServiceLocationTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationType.cdm.json/StoreServiceLocationType\",\"name\":\"StoreServiceLocationTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Store Service Location Type.\",\"isNullable\":true,\"name\":\"StoreServiceLocationTypeDescription\"}]}}}",
+			"Description": "The type of store service location.\n\nEx:\n- Check-Out Aisle\n- Express Check-Out\n- Gas Pump\n- Pump Island\n- Table\n- Bar\n- Buffet\n- Customer Service\n- Restaurant\n- Drive-through Window\n- Self-Serve\n- Kiosk\n- Coffee Bar",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreServiceLocationTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreServiceLocationTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreServiceLocationTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreServiceLocationTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "f117fbf2-1f95-43e4-83ab-dbe85683baa3",
+		"Description": "The type of store service location.\n\nEx:\n- Check-Out Aisle\n- Express Check-Out\n- Gas Pump\n- Pump Island\n- Table\n- Bar\n- Buffet\n- Customer Service\n- Restaurant\n- Drive-through Window\n- Self-Serve\n- Kiosk\n- Coffee Bar"
+	},
+	"type": "TABLE"
+}

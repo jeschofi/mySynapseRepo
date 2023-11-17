@@ -17,7 +17,10 @@
 				"FormatType": "csv",
 				"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage"
 			}
-		}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cc36e0e2-2ec4-4d8e-b93f-9d7d0c1c4530"
 	},
 	"type": "DATABASE"
 }

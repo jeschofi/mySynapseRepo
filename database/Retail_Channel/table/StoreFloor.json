@@ -1,0 +1,227 @@
+{
+	"name": "StoreFloor",
+	"properties": {
+		"Name": "StoreFloor",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "FloorId",
+					"Description": "The unique identifier of a Floor.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "FloorId"
+					}
+				},
+				{
+					"Name": "FloorPeriodStartDate",
+					"Description": "The period start date for which the store floor is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "FloorPeriodStartDate"
+					}
+				},
+				{
+					"Name": "FloorPeriodEndDate",
+					"Description": "The period end date until which the store floor is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "FloorPeriodEndDate"
+					}
+				},
+				{
+					"Name": "FloorName",
+					"Description": "The name of the Floor.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "FloorName"
+					}
+				},
+				{
+					"Name": "TotalFloorSpace",
+					"Description": "The total floor space of the floor measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "TotalFloorSpace"
+					}
+				},
+				{
+					"Name": "FloorSpaceUnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "FloorSpaceUnitOfMeasureId"
+					}
+				},
+				{
+					"Name": "CoordinatesUnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreFloor.cdm.json/StoreFloor",
+						"Name": "CoordinatesUnitOfMeasureId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "5988e51d-bdc1-47ef-802a-d8cde658b395",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreFloor",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreFloor",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"StoreId\"},\"FloorId\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorId\"},\"FloorPeriodStartDate\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorPeriodStartDate\"},\"FloorPeriodEndDate\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorPeriodEndDate\"},\"FloorName\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorName\"},\"TotalFloorSpace\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"TotalFloorSpace\"},\"FloorSpaceUnitOfMeasureId\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorSpaceUnitOfMeasureId\"},\"CoordinatesUnitOfMeasureId\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"CoordinatesUnitOfMeasureId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreFloor\",\"path\":\"StoreFloor.cdm.json/StoreFloor\"},\"description\":\"A grocery store/department row is divided into Shelves that are stored at tier level.\\n\\nTier is the height of the location (shelf or bin) from floor level, measured in storage locations where the floor is tier 1 (not 0).\\n\\nThe level above ground of the shelf or bin.\",\"primaryKey\":[\"StoreId\",\"FloorId\",\"FloorPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Floor.\",\"isNullable\":false,\"name\":\"FloorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the store floor is available for merchandising.\",\"isNullable\":false,\"name\":\"FloorPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date until which the store floor is available for merchandising.\",\"isNullable\":true,\"name\":\"FloorPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Floor.\",\"isNullable\":true,\"name\":\"FloorName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"TotalFloorSpace\"},\"dataType\":\"integer\",\"description\":\"The total floor space of the floor measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"name\":\"TotalFloorSpace\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"FloorSpaceUnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"FloorSpaceUnitOfMeasureId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreFloor.cdm.json/StoreFloor\",\"name\":\"CoordinatesUnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"CoordinatesUnitOfMeasureId\"}]}}}",
+			"Description": "A grocery store/department row is divided into Shelves that are stored at tier level.\n\nTier is the height of the location (shelf or bin) from floor level, measured in storage locations where the floor is tier 1 (not 0).\n\nThe level above ground of the shelf or bin.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,FloorId,FloorPeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FloorId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FloorPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FloorPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalFloorSpace\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorSpaceUnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CoordinatesUnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "027518c7-25d9-40bc-944a-81c028c4fc73",
+		"Description": "A grocery store/department row is divided into Shelves that are stored at tier level.\n\nTier is the height of the location (shelf or bin) from floor level, measured in storage locations where the floor is tier 1 (not 0).\n\nThe level above ground of the shelf or bin."
+	},
+	"type": "TABLE"
+}

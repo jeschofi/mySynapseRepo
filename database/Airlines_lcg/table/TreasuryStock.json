@@ -1,0 +1,156 @@
+{
+	"name": "TreasuryStock",
+	"properties": {
+		"Name": "TreasuryStock",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.\n\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStock.cdm.json/TreasuryStock",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "StockId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStock.cdm.json/TreasuryStock",
+						"Name": "StockId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is current or reported as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStock.cdm.json/TreasuryStock",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "TotalNumberShares",
+					"Description": "The total number of Treasury Stock shares held by the corporation as of the associated timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TreasuryStock.cdm.json/TreasuryStock",
+						"Name": "TotalNumberShares"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ae9dcbe0-903a-4d21-a167-f534c9e48052",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/TreasuryStock",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/TreasuryStock",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"LegalEntityId\"},\"StockId\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"StockId\"},\"Timestamp\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"Timestamp\"},\"TotalNumberShares\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"TotalNumberShares\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TreasuryStock\",\"path\":\"TreasuryStock.cdm.json/TreasuryStock\"},\"description\":\"A corporation's own stock that has been issued, fully paid for, and reacquired by the corporation but not retired.\\n\\nIf the repurchased shares are not retired, they are designated as treasury stock and shown as an offsetting account in the stockholders' equity section of the balance sheet.\",\"primaryKey\":[\"LegalEntityId\",\"StockId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\\n\\nIn this case it is the business, organization or legal entity whose books are being recorded and financial statements presented.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"StockId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"StockId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is current or reported as-of.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TreasuryStock.cdm.json/TreasuryStock\",\"name\":\"TotalNumberShares\"},\"dataType\":\"integer\",\"description\":\"The total number of Treasury Stock shares held by the corporation as of the associated timestamp.\",\"isNullable\":true,\"name\":\"TotalNumberShares\"}]}}}",
+			"Description": "A corporation's own stock that has been issued, fully paid for, and reacquired by the corporation but not retired.\n\nIf the repurchased shares are not retired, they are designated as treasury stock and shown as an offsetting account in the stockholders' equity section of the balance sheet.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "LegalEntityId,StockId,Timestamp",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StockId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TotalNumberShares\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "219e9dcc-4f43-46c4-a2c5-fdb84a2a559c",
+		"Description": "A corporation's own stock that has been issued, fully paid for, and reacquired by the corporation but not retired.\n\nIf the repurchased shares are not retired, they are designated as treasury stock and shown as an offsetting account in the stockholders' equity section of the balance sheet."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hupcgrincp",
+	"properties": {
+		"Name": "relationship-hupcgrincp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Auditor",
+		"ToTableName": "AuditorReport",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AuditorId",
+				"ToColumnName": "AuditorId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Auditor.cdm.json/Auditor\",\"toEntity\":\"AuditorReport.cdm.json/AuditorReport\",\"joinPairs\":[{\"fromAttribute\":\"AuditorId\",\"toAttribute\":\"AuditorId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "859cdd74-3c79-4e9d-a243-1e8bcaa1c059"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "CalendarType",
+	"properties": {
+		"Name": "CalendarType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CalendarTypeId",
+					"Description": "The unique identifier of a Calendar Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarType.cdm.json/CalendarType",
+						"Name": "CalendarTypeId"
+					}
+				},
+				{
+					"Name": "CalendarTypeName",
+					"Description": "The unique identifier of a Calendar Type Name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarType.cdm.json/CalendarType",
+						"Name": "CalendarTypeName"
+					}
+				},
+				{
+					"Name": "CalendarTypeDescription",
+					"Description": "The description of a Calendar Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarType.cdm.json/CalendarType",
+						"Name": "CalendarTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d15d7237-8a29-4804-bfbe-655b98d344e9",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CalendarType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CalendarType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CalendarTypeId\":{\"entity\":\"CalendarType.cdm.json/CalendarType\",\"name\":\"CalendarTypeId\"},\"CalendarTypeName\":{\"entity\":\"CalendarType.cdm.json/CalendarType\",\"name\":\"CalendarTypeName\"},\"CalendarTypeDescription\":{\"entity\":\"CalendarType.cdm.json/CalendarType\",\"name\":\"CalendarTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CalendarType\",\"path\":\"CalendarType.cdm.json/CalendarType\"},\"description\":\"A type of Calendar based on the use of the calendar.\\n\\nEx:\\n- Store Calendar\\n- Seasonal Calendar\\n- Statutory Holiday Calendar\\n- Vendor Calendar\\n- Operating Calendar\\n- Warehouse Calendar\",\"primaryKey\":[\"CalendarTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarType.cdm.json/CalendarType\",\"name\":\"CalendarTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar Type.\",\"isNullable\":false,\"name\":\"CalendarTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarType.cdm.json/CalendarType\",\"name\":\"CalendarTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The unique identifier of a Calendar Type Name.\",\"isNullable\":true,\"name\":\"CalendarTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarType.cdm.json/CalendarType\",\"name\":\"CalendarTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Calendar Type.\",\"isNullable\":true,\"name\":\"CalendarTypeDescription\"}]}}}",
+			"Description": "A type of Calendar based on the use of the calendar.\n\nEx:\n- Store Calendar\n- Seasonal Calendar\n- Statutory Holiday Calendar\n- Vendor Calendar\n- Operating Calendar\n- Warehouse Calendar",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "CalendarTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CalendarTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CalendarTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "4c83291a-a226-478a-a8ca-7847cb4c78ae",
+		"Description": "A type of Calendar based on the use of the calendar.\n\nEx:\n- Store Calendar\n- Seasonal Calendar\n- Statutory Holiday Calendar\n- Vendor Calendar\n- Operating Calendar\n- Warehouse Calendar"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jdgopyrtjy",
+	"properties": {
+		"Name": "relationship-jdgopyrtjy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProgramProductRelationshipType",
+		"ToTableName": "ProgramProductRelationship",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProgramProductRelationshipTypeId",
+				"ToColumnName": "ProgramProductRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProgramProductRelationshipType.cdm.json/ProgramProductRelationshipType\",\"toEntity\":\"ProgramProductRelationship.cdm.json/ProgramProductRelationship\",\"joinPairs\":[{\"fromAttribute\":\"ProgramProductRelationshipTypeId\",\"toAttribute\":\"ProgramProductRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2f295c11-cc87-4b39-975c-840b506cff6f"
+	},
+	"type": "RELATIONSHIP"
+}

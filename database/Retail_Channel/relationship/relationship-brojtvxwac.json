@@ -1,0 +1,29 @@
+{
+	"name": "relationship-brojtvxwac",
+	"properties": {
+		"Name": "relationship-brojtvxwac",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LicenseType",
+		"ToTableName": "ChannelLicense",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LicenseTypeId",
+				"ToColumnName": "LicenseTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LicenseType.cdm.json/LicenseType\",\"toEntity\":\"ChannelLicense.cdm.json/ChannelLicense\",\"joinPairs\":[{\"fromAttribute\":\"LicenseTypeId\",\"toAttribute\":\"LicenseTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "473e4493-033f-41ce-a6d9-780bf26fd5b9"
+	},
+	"type": "RELATIONSHIP"
+}

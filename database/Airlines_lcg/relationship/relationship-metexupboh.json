@@ -1,0 +1,29 @@
+{
+	"name": "relationship-metexupboh",
+	"properties": {
+		"Name": "relationship-metexupboh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialStatementRelationshipType",
+		"ToTableName": "RelatedFinancialStatement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialStatementRelationshipTypeId",
+				"ToColumnName": "FinancialStatementRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialStatementRelationshipType.cdm.json/FinancialStatementRelationshipType\",\"toEntity\":\"RelatedFinancialStatement.cdm.json/RelatedFinancialStatement\",\"joinPairs\":[{\"fromAttribute\":\"FinancialStatementRelationshipTypeId\",\"toAttribute\":\"FinancialStatementRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "100cef57-82ac-4992-9001-28f8f30b74c1"
+	},
+	"type": "RELATIONSHIP"
+}

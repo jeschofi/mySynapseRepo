@@ -1,0 +1,130 @@
+{
+	"name": "RatingCriteria",
+	"properties": {
+		"Name": "RatingCriteria",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "RatingCriteriaId",
+					"Description": "The unique identifier of a Rating Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatingCriteria.cdm.json/RatingCriteria",
+						"Name": "RatingCriteriaId"
+					}
+				},
+				{
+					"Name": "RatingCriteriaName",
+					"Description": "The name of a Rating Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatingCriteria.cdm.json/RatingCriteria",
+						"Name": "RatingCriteriaName"
+					}
+				},
+				{
+					"Name": "RatingCriteriaDescription",
+					"Description": "The description of a Rating Criteria.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RatingCriteria.cdm.json/RatingCriteria",
+						"Name": "RatingCriteriaDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "b2466795-a682-46b2-8e6b-b981851570b6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RatingCriteria",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RatingCriteria",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"RatingCriteriaId\":{\"entity\":\"RatingCriteria.cdm.json/RatingCriteria\",\"name\":\"RatingCriteriaId\"},\"RatingCriteriaName\":{\"entity\":\"RatingCriteria.cdm.json/RatingCriteria\",\"name\":\"RatingCriteriaName\"},\"RatingCriteriaDescription\":{\"entity\":\"RatingCriteria.cdm.json/RatingCriteria\",\"name\":\"RatingCriteriaDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RatingCriteria\",\"path\":\"RatingCriteria.cdm.json/RatingCriteria\"},\"description\":\"The criteria by which Satisfaction is rated.\\n\\nEx:\\n- Service\\n- Cost\\n- Quality\\n- Charges\\n- Customer Support\\n- Cleanliness\",\"primaryKey\":[\"RatingCriteriaId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatingCriteria.cdm.json/RatingCriteria\",\"name\":\"RatingCriteriaId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Rating Criteria.\",\"isNullable\":false,\"name\":\"RatingCriteriaId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatingCriteria.cdm.json/RatingCriteria\",\"name\":\"RatingCriteriaName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Rating Criteria.\",\"isNullable\":true,\"name\":\"RatingCriteriaName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RatingCriteria.cdm.json/RatingCriteria\",\"name\":\"RatingCriteriaDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Rating Criteria.\",\"isNullable\":true,\"name\":\"RatingCriteriaDescription\"}]}}}",
+			"Description": "The criteria by which Satisfaction is rated.\n\nEx:\n- Service\n- Cost\n- Quality\n- Charges\n- Customer Support\n- Cleanliness",
+			"DisplayFolderInfo": "{\"name\":\"Customer Service & Contact Management\",\"colorCode\":\"#502006\"}",
+			"PrimaryKeys": "RatingCriteriaId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"RatingCriteriaId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RatingCriteriaName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"RatingCriteriaDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "97e29b86-6b90-472b-857a-a1a1afba6031",
+		"Description": "The criteria by which Satisfaction is rated.\n\nEx:\n- Service\n- Cost\n- Quality\n- Charges\n- Customer Support\n- Cleanliness"
+	},
+	"type": "TABLE"
+}

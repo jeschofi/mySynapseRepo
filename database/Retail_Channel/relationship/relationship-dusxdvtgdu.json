@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dusxdvtgdu",
+	"properties": {
+		"Name": "relationship-dusxdvtgdu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionSchedule",
+		"ToTableName": "CommissionScheduleDetailByRevenue",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionScheduleId",
+				"ToColumnName": "CommissionScheduleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionSchedule.cdm.json/CommissionSchedule\",\"toEntity\":\"CommissionScheduleDetailByRevenue.cdm.json/CommissionScheduleDetailByRevenue\",\"joinPairs\":[{\"fromAttribute\":\"CommissionScheduleId\",\"toAttribute\":\"CommissionScheduleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4fe411d5-13e5-428a-917c-895a68dddd69"
+	},
+	"type": "RELATIONSHIP"
+}

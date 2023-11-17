@@ -1,0 +1,130 @@
+{
+	"name": "CustomerAccountStatusType",
+	"properties": {
+		"Name": "CustomerAccountStatusType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerAccountStatusTypeId",
+					"Description": "The unique identifier of a Customer Account Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountStatusType.cdm.json/CustomerAccountStatusType",
+						"Name": "CustomerAccountStatusTypeId"
+					}
+				},
+				{
+					"Name": "CustomerAccountStatusTypeName",
+					"Description": "The name of a Customer Account Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountStatusType.cdm.json/CustomerAccountStatusType",
+						"Name": "CustomerAccountStatusTypeName"
+					}
+				},
+				{
+					"Name": "CustomerAccountStatusTypeDescription",
+					"Description": "The description of a Customer Account Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountStatusType.cdm.json/CustomerAccountStatusType",
+						"Name": "CustomerAccountStatusTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "2f2ee916-cf40-4ff3-85c8-bb1313055114",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerAccountStatusType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerAccountStatusType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerAccountStatusTypeId\":{\"entity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"name\":\"CustomerAccountStatusTypeId\"},\"CustomerAccountStatusTypeName\":{\"entity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"name\":\"CustomerAccountStatusTypeName\"},\"CustomerAccountStatusTypeDescription\":{\"entity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"name\":\"CustomerAccountStatusTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerAccountStatusType\",\"path\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\"},\"description\":\"A type of status that may be associated with a  Customer Account for a period of time.\\n\\nEx:\\n- Active\\n- Current\\n- Dormant\\n- Blocked\\n- Exceeds requirements\\n- Needs to be funded\\n- Closed\\n- Inactive\\n- Frozen\\n- Collection Suspended\\n- Suspended\\n- Delinquent\\n- In Default\\n- Unknown\",\"primaryKey\":[\"CustomerAccountStatusTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"name\":\"CustomerAccountStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Customer Account Status Type.\",\"isNullable\":false,\"name\":\"CustomerAccountStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"name\":\"CustomerAccountStatusTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Customer Account Status Type.\",\"isNullable\":true,\"name\":\"CustomerAccountStatusTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"name\":\"CustomerAccountStatusTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Customer Account Status Type.\",\"isNullable\":true,\"name\":\"CustomerAccountStatusTypeDescription\"}]}}}",
+			"Description": "A type of status that may be associated with a  Customer Account for a period of time.\n\nEx:\n- Active\n- Current\n- Dormant\n- Blocked\n- Exceeds requirements\n- Needs to be funded\n- Closed\n- Inactive\n- Frozen\n- Collection Suspended\n- Suspended\n- Delinquent\n- In Default\n- Unknown",
+			"DisplayFolderInfo": "{\"name\":\"Customer Account\",\"colorCode\":\"#022F22\"}",
+			"PrimaryKeys": "CustomerAccountStatusTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerAccountStatusTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CustomerAccountStatusTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CustomerAccountStatusTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "4d9b388b-0801-4475-93cf-0a00f19adb08",
+		"Description": "A type of status that may be associated with a  Customer Account for a period of time.\n\nEx:\n- Active\n- Current\n- Dormant\n- Blocked\n- Exceeds requirements\n- Needs to be funded\n- Closed\n- Inactive\n- Frozen\n- Collection Suspended\n- Suspended\n- Delinquent\n- In Default\n- Unknown"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,188 @@
+{
+	"name": "ChannelOrderPartyCommission",
+	"properties": {
+		"Name": "ChannelOrderPartyCommission",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "TransactionId",
+					"Description": "The unique identifier of a Transaction.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission",
+						"Name": "TransactionId"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "CommissionAwardedDate",
+					"Description": "The assignment or crediting date of the Commissions.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission",
+						"Name": "CommissionAwardedDate"
+					}
+				},
+				{
+					"Name": "OrderCommissionAmount",
+					"Description": "The amount of the Commission.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission",
+						"Name": "OrderCommissionAmount"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission",
+						"Name": "IsoCurrencyCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f9b874a0-3ad5-4bc2-bdc3-48afeb085280",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelOrderPartyCommission",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelOrderPartyCommission",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"ChannelId\"},\"TransactionId\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"TransactionId\"},\"PartyId\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"PartyId\"},\"CommissionAwardedDate\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"CommissionAwardedDate\"},\"OrderCommissionAmount\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"OrderCommissionAmount\"},\"IsoCurrencyCode\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"IsoCurrencyCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelOrderPartyCommission\",\"path\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\"},\"description\":\"Commission(s) paid to the indicated Party as a result of the Channel Commission earned on the Order.\",\"primaryKey\":[\"ChannelId\",\"TransactionId\",\"PartyId\",\"CommissionAwardedDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"TransactionId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Transaction.\",\"isNullable\":false,\"name\":\"TransactionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"CommissionAwardedDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The assignment or crediting date of the Commissions.\",\"isNullable\":false,\"name\":\"CommissionAwardedDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"OrderCommissionAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the Commission.\",\"isNullable\":true,\"scale\":2,\"name\":\"OrderCommissionAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelOrderPartyCommission.cdm.json/ChannelOrderPartyCommission\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":true,\"name\":\"IsoCurrencyCode\"}]}}}",
+			"Description": "Commission(s) paid to the indicated Party as a result of the Channel Commission earned on the Order.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,TransactionId,PartyId,CommissionAwardedDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TransactionId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionAwardedDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OrderCommissionAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d0fdf58b-20da-46f6-b3d6-a890223d810b",
+		"Description": "Commission(s) paid to the indicated Party as a result of the Channel Commission earned on the Order."
+	},
+	"type": "TABLE"
+}

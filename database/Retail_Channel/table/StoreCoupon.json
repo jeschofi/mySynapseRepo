@@ -1,0 +1,130 @@
+{
+	"name": "StoreCoupon",
+	"properties": {
+		"Name": "StoreCoupon",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreCoupon.cdm.json/StoreCoupon",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "CouponId",
+					"Description": "The unique identifier of a coupon.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreCoupon.cdm.json/StoreCoupon",
+						"Name": "CouponId"
+					}
+				},
+				{
+					"Name": "StoreCouponNote",
+					"Description": "A note, comment or additional information regarding the store coupon.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreCoupon.cdm.json/StoreCoupon",
+						"Name": "StoreCouponNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9305f6bd-ea4a-4e7b-bc10-9dc63101d497",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreCoupon",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreCoupon",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreCoupon.cdm.json/StoreCoupon\",\"name\":\"StoreId\"},\"CouponId\":{\"entity\":\"StoreCoupon.cdm.json/StoreCoupon\",\"name\":\"CouponId\"},\"StoreCouponNote\":{\"entity\":\"StoreCoupon.cdm.json/StoreCoupon\",\"name\":\"StoreCouponNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreCoupon\",\"path\":\"StoreCoupon.cdm.json/StoreCoupon\"},\"description\":\"The coupon(s) associated with a Store.\",\"primaryKey\":[\"StoreId\",\"CouponId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreCoupon.cdm.json/StoreCoupon\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreCoupon.cdm.json/StoreCoupon\",\"name\":\"CouponId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a coupon.\",\"isNullable\":false,\"name\":\"CouponId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreCoupon.cdm.json/StoreCoupon\",\"name\":\"StoreCouponNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the store coupon.\",\"isNullable\":true,\"name\":\"StoreCouponNote\"}]}}}",
+			"Description": "The coupon(s) associated with a Store.",
+			"DisplayFolderInfo": "{\"name\":\"Marketing & Advertising\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "StoreId,CouponId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CouponId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreCouponNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "28d80df8-8172-4b20-b422-a4c0506b735d",
+		"Description": "The coupon(s) associated with a Store."
+	},
+	"type": "TABLE"
+}

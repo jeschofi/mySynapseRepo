@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nipqcdnqzf",
+	"properties": {
+		"Name": "relationship-nipqcdnqzf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "Invoice",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "InvoiceToPartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"Invoice.cdm.json/Invoice\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"InvoiceToPartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7cbf5e3c-6820-46b9-a1b9-6d3b5605afe3"
+	},
+	"type": "RELATIONSHIP"
+}

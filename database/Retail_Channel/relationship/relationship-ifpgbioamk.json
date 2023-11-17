@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ifpgbioamk",
+	"properties": {
+		"Name": "relationship-ifpgbioamk",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Territory",
+		"ToTableName": "Channel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TerritoryId",
+				"ToColumnName": "DistrictId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Territory.cdm.json/Territory\",\"toEntity\":\"Channel.cdm.json/Channel\",\"joinPairs\":[{\"fromAttribute\":\"TerritoryId\",\"toAttribute\":\"DistrictId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d6b59321-16e3-4ae7-92ae-47797e94a09f"
+	},
+	"type": "RELATIONSHIP"
+}

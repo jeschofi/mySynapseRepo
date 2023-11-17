@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bmengvunhf",
+	"properties": {
+		"Name": "relationship-bmengvunhf",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CustomerAccountStatusType",
+		"ToTableName": "CustomerAccountStatus",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CustomerAccountStatusTypeId",
+				"ToColumnName": "CustomerAccountStatusTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CustomerAccountStatusType.cdm.json/CustomerAccountStatusType\",\"toEntity\":\"CustomerAccountStatus.cdm.json/CustomerAccountStatus\",\"joinPairs\":[{\"fromAttribute\":\"CustomerAccountStatusTypeId\",\"toAttribute\":\"CustomerAccountStatusTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2779ea1a-4087-4dff-b998-dd2162c8df47"
+	},
+	"type": "RELATIONSHIP"
+}

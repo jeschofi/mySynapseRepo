@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cjusglfiuc",
+	"properties": {
+		"Name": "relationship-cjusglfiuc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelTypeAssortment",
+		"ToTableName": "ChannelTypeAssortmentProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssortmentPeriodStartDate",
+				"ToColumnName": "AssortmentPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelTypeAssortment.cdm.json/ChannelTypeAssortment\",\"toEntity\":\"ChannelTypeAssortmentProduct.cdm.json/ChannelTypeAssortmentProduct\",\"joinPairs\":[{\"fromAttribute\":\"AssortmentPeriodStartDate\",\"toAttribute\":\"AssortmentPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "0691990f-3163-4977-b983-9b7792cd715f"
+	},
+	"type": "RELATIONSHIP"
+}

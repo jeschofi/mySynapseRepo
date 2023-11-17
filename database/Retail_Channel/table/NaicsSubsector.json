@@ -1,0 +1,149 @@
+{
+	"name": "NaicsSubsector",
+	"properties": {
+		"Name": "NaicsSubsector",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "NaicsSubsectorCode",
+					"Description": "The unique identifier of a NAICS Subsector.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 3,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsSubsector.cdm.json/NaicsSubsector",
+						"Name": "NaicsSubsectorCode"
+					}
+				},
+				{
+					"Name": "NaicsSubsectorName",
+					"Description": "The name of a NAICS Subsector.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsSubsector.cdm.json/NaicsSubsector",
+						"Name": "NaicsSubsectorName"
+					}
+				},
+				{
+					"Name": "NaicsSubsectorDescription",
+					"Description": "The description of a NAICS Subsector.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsSubsector.cdm.json/NaicsSubsector",
+						"Name": "NaicsSubsectorDescription"
+					}
+				},
+				{
+					"Name": "NaicsSectorCode",
+					"Description": "The unique identifier of a NAICS Sector.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 2,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "NaicsSubsector.cdm.json/NaicsSubsector",
+						"Name": "NaicsSectorCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f09af6d0-b5db-47d6-8614-1e824622455d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/NaicsSubsector",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/NaicsSubsector",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"NaicsSubsectorCode\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSubsectorCode\"},\"NaicsSubsectorName\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSubsectorName\"},\"NaicsSubsectorDescription\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSubsectorDescription\"},\"NaicsSectorCode\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSectorCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"NaicsSubsector\",\"path\":\"NaicsSubsector.cdm.json/NaicsSubsector\"},\"description\":\"The NAICS Subsector.\",\"primaryKey\":[\"NaicsSubsectorCode\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSubsectorCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":3,\"description\":\"The unique identifier of a NAICS Subsector.\",\"isNullable\":false,\"scale\":0,\"name\":\"NaicsSubsectorCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSubsectorName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a NAICS Subsector.\",\"isNullable\":true,\"name\":\"NaicsSubsectorName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSubsectorDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a NAICS Subsector.\",\"isNullable\":true,\"name\":\"NaicsSubsectorDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"name\":\"NaicsSectorCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":2,\"description\":\"The unique identifier of a NAICS Sector.\",\"isNullable\":false,\"scale\":0,\"name\":\"NaicsSectorCode\"}]}}}",
+			"Description": "The NAICS Subsector.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "NaicsSubsectorCode",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"NaicsSubsectorCode\",\"type\":\"decimal(3,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"NaicsSubsectorName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NaicsSubsectorDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NaicsSectorCode\",\"type\":\"decimal(2,0)\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "2ded83fa-691e-4a23-b3c3-6815fd3e2771",
+		"Description": "The NAICS Subsector."
+	},
+	"type": "TABLE"
+}

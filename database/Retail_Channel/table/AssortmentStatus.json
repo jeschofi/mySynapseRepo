@@ -1,0 +1,130 @@
+{
+	"name": "AssortmentStatus",
+	"properties": {
+		"Name": "AssortmentStatus",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssortmentStatusId",
+					"Description": "The unique identifier of an Assortment Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssortmentStatus.cdm.json/AssortmentStatus",
+						"Name": "AssortmentStatusId"
+					}
+				},
+				{
+					"Name": "AssortmentStatusName",
+					"Description": "The name given to an Assortment Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssortmentStatus.cdm.json/AssortmentStatus",
+						"Name": "AssortmentStatusName"
+					}
+				},
+				{
+					"Name": "AssortmentStatusDescription",
+					"Description": "The description of an Assortment Status.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssortmentStatus.cdm.json/AssortmentStatus",
+						"Name": "AssortmentStatusDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "bbf6d769-6f69-440c-98e0-3f285b7f066e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AssortmentStatus",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AssortmentStatus",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssortmentStatusId\":{\"entity\":\"AssortmentStatus.cdm.json/AssortmentStatus\",\"name\":\"AssortmentStatusId\"},\"AssortmentStatusName\":{\"entity\":\"AssortmentStatus.cdm.json/AssortmentStatus\",\"name\":\"AssortmentStatusName\"},\"AssortmentStatusDescription\":{\"entity\":\"AssortmentStatus.cdm.json/AssortmentStatus\",\"name\":\"AssortmentStatusDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssortmentStatus\",\"path\":\"AssortmentStatus.cdm.json/AssortmentStatus\"},\"description\":\"The status of an assortment.\\n\\nEx.\\n- Planned\\n- In Review\\n- Approved\\n- Actual\",\"primaryKey\":[\"AssortmentStatusId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssortmentStatus.cdm.json/AssortmentStatus\",\"name\":\"AssortmentStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Assortment Type.\",\"isNullable\":false,\"name\":\"AssortmentStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssortmentStatus.cdm.json/AssortmentStatus\",\"name\":\"AssortmentStatusName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name given to an Assortment Type.\",\"isNullable\":true,\"name\":\"AssortmentStatusName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssortmentStatus.cdm.json/AssortmentStatus\",\"name\":\"AssortmentStatusDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Assortment Status.\",\"isNullable\":true,\"name\":\"AssortmentStatusDescription\"}]}}}",
+			"Description": "The status of an assortment.\n\nEx.\n- Planned\n- In Review\n- Approved\n- Actual",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "AssortmentStatusId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssortmentStatusId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssortmentStatusName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssortmentStatusDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "6f43ef21-9971-4ee9-9758-492c2da874ad",
+		"Description": "The status of an assortment.\n\nEx.\n- Planned\n- In Review\n- Approved\n- Actual"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,137 @@
+{
+	"name": "BondYield",
+	"properties": {
+		"Name": "BondYield",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BondId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondYield.cdm.json/BondYield",
+						"Name": "BondId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date for which the bond 'current' yield is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondYield.cdm.json/BondYield",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "CurrentYieldPercentage",
+					"Description": "Current yield is the rate of return an investor will get, without taking into account the value of the premium or discount of the purchase price. It is calculated by dividing the coupon by the price",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondYield.cdm.json/BondYield",
+						"Name": "CurrentYieldPercentage"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9354df2c-b485-43b1-b894-445c961a97c5",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondYield",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondYield",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BondId\":{\"entity\":\"BondYield.cdm.json/BondYield\",\"name\":\"BondId\"},\"Date\":{\"entity\":\"BondYield.cdm.json/BondYield\",\"name\":\"Date\"},\"CurrentYieldPercentage\":{\"entity\":\"BondYield.cdm.json/BondYield\",\"name\":\"CurrentYieldPercentage\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BondYield\",\"path\":\"BondYield.cdm.json/BondYield\"},\"description\":\"Current yield is the rate of return an investor will get, without taking into account the value of the premium or discount of the purchase price. \\n\\nIt is calculated by dividing the coupon by the price, which is the annual payout as a percentage of the current market price you'll actually pay\\n\\nThe simplest version of yield is calculated using the following formula: yield = coupon amount/price. When you buy a bond at par, yield is equal to the interest rate. When the price changes, so does the yield.\\n\\nCurrent Yield = (Annual Dollar Interest Paid/Market Price)*100\\n\\nNotice how this calculation does not include any capital gains or losses the investor would make if the bond were bought at a discount or premium.\",\"primaryKey\":[\"BondId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondYield.cdm.json/BondYield\",\"name\":\"BondId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"BondId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondYield.cdm.json/BondYield\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date for which the bond 'current' yield is calculated.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondYield.cdm.json/BondYield\",\"name\":\"CurrentYieldPercentage\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Current yield is the rate of return an investor will get, without taking into account the value of the premium or discount of the purchase price. It is calculated by dividing the coupon by the price\",\"isNullable\":true,\"scale\":8,\"name\":\"CurrentYieldPercentage\"}]}}}",
+			"Description": "Current yield is the rate of return an investor will get, without taking into account the value of the premium or discount of the purchase price. \n\nIt is calculated by dividing the coupon by the price, which is the annual payout as a percentage of the current market price you'll actually pay\n\nThe simplest version of yield is calculated using the following formula: yield = coupon amount/price. When you buy a bond at par, yield is equal to the interest rate. When the price changes, so does the yield.\n\nCurrent Yield = (Annual Dollar Interest Paid/Market Price)*100\n\nNotice how this calculation does not include any capital gains or losses the investor would make if the bond were bought at a discount or premium.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "BondId,Date",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BondId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CurrentYieldPercentage\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "47f11a6a-d33d-467f-94ce-ef349c84ecfc",
+		"Description": "Current yield is the rate of return an investor will get, without taking into account the value of the premium or discount of the purchase price. \n\nIt is calculated by dividing the coupon by the price, which is the annual payout as a percentage of the current market price you'll actually pay\n\nThe simplest version of yield is calculated using the following formula: yield = coupon amount/price. When you buy a bond at par, yield is equal to the interest rate. When the price changes, so does the yield.\n\nCurrent Yield = (Annual Dollar Interest Paid/Market Price)*100\n\nNotice how this calculation does not include any capital gains or losses the investor would make if the bond were bought at a discount or premium."
+	},
+	"type": "TABLE"
+}

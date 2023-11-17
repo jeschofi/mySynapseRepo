@@ -1,0 +1,136 @@
+{
+	"name": "LedgerAccountRelationshipType",
+	"properties": {
+		"Name": "LedgerAccountRelationshipType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LedgerAccountRelationshipTypeId",
+					"Description": "The unique identifier of a Ledger Account Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType",
+						"Name": "LedgerAccountRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "LedgerAccountRelationshipTypeName",
+					"Description": "The name of a Ledger Account Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType",
+						"Name": "LedgerAccountRelationshipTypeName"
+					}
+				},
+				{
+					"Name": "LedgerAccountRelationshipTypeDescription",
+					"Description": "The description of a Ledger Account Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType",
+						"Name": "LedgerAccountRelationshipTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "861f8737-d852-4a20-a520-2861c2520072",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LedgerAccountRelationshipType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/LedgerAccountRelationshipType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LedgerAccountRelationshipTypeId\":{\"entity\":\"LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType\",\"name\":\"LedgerAccountRelationshipTypeId\"},\"LedgerAccountRelationshipTypeName\":{\"entity\":\"LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType\",\"name\":\"LedgerAccountRelationshipTypeName\"},\"LedgerAccountRelationshipTypeDescription\":{\"entity\":\"LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType\",\"name\":\"LedgerAccountRelationshipTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LedgerAccountRelationshipType\",\"path\":\"LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType\"},\"description\":\"The nature of the relationship between two or more ledger accounts.\\n\\nEx:\\nAccount/Subaccount relationship\",\"primaryKey\":[\"LedgerAccountRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType\",\"name\":\"LedgerAccountRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Ledger Account Relationship Type.\",\"isNullable\":false,\"name\":\"LedgerAccountRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType\",\"name\":\"LedgerAccountRelationshipTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Ledger Account Relationship Type.\",\"isNullable\":true,\"name\":\"LedgerAccountRelationshipTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LedgerAccountRelationshipType.cdm.json/LedgerAccountRelationshipType\",\"name\":\"LedgerAccountRelationshipTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Ledger Account Relationship Type.\",\"isNullable\":true,\"name\":\"LedgerAccountRelationshipTypeDescription\"}]}}}",
+			"Description": "The nature of the relationship between two or more ledger accounts.\n\nEx:\nAccount/Subaccount relationship",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LedgerAccountRelationshipTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LedgerAccountRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LedgerAccountRelationshipTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LedgerAccountRelationshipTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "37a86595-09c1-4944-8fa2-2569cdf6c03d",
+		"Description": "The nature of the relationship between two or more ledger accounts.\n\nEx:\nAccount/Subaccount relationship"
+	},
+	"type": "TABLE"
+}

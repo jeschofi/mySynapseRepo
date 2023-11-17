@@ -1,0 +1,29 @@
+{
+	"name": "relationship-brafqyotlo",
+	"properties": {
+		"Name": "relationship-brafqyotlo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IdentificationType",
+		"ToTableName": "Identification",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IdentificationTypeId",
+				"ToColumnName": "IdentificationTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IdentificationType.cdm.json/IdentificationType\",\"toEntity\":\"Identification.cdm.json/Identification\",\"joinPairs\":[{\"fromAttribute\":\"IdentificationTypeId\",\"toAttribute\":\"IdentificationTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6d9f8bfd-f767-4acd-b205-455b0a05153c"
+	},
+	"type": "RELATIONSHIP"
+}

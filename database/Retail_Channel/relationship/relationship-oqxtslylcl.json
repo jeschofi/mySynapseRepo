@@ -1,0 +1,29 @@
+{
+	"name": "relationship-oqxtslylcl",
+	"properties": {
+		"Name": "relationship-oqxtslylcl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarYear",
+		"ToTableName": "CalendarQuarter",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarYearId",
+				"ToColumnName": "CalendarYearId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarYear.cdm.json/CalendarYear\",\"toEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"joinPairs\":[{\"fromAttribute\":\"CalendarYearId\",\"toAttribute\":\"CalendarYearId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4e990b7e-aff2-46f9-8215-611e2f27d2b9"
+	},
+	"type": "RELATIONSHIP"
+}

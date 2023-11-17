@@ -1,0 +1,168 @@
+{
+	"name": "Language",
+	"properties": {
+		"Name": "Language",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IsoLanguageId",
+					"Description": "The unique identifier of an ISO Language.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Language.cdm.json/Language",
+						"Name": "IsoLanguageId"
+					}
+				},
+				{
+					"Name": "Iso6391LanguageCode",
+					"Description": "The ISO 639-1 Language Code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Language.cdm.json/Language",
+						"Name": "Iso6391LanguageCode"
+					}
+				},
+				{
+					"Name": "Iso6392LanguageCode",
+					"Description": "The ISO 639-2 Language Code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Language.cdm.json/Language",
+						"Name": "Iso6392LanguageCode"
+					}
+				},
+				{
+					"Name": "IsoLanguageName",
+					"Description": "The ISO 639 Language Name.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 64,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Language.cdm.json/Language",
+						"Name": "IsoLanguageName"
+					}
+				},
+				{
+					"Name": "IsoLanguageFamily",
+					"Description": "The ISO 639 Language Family.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 32,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Language.cdm.json/Language",
+						"Name": "IsoLanguageFamily"
+					}
+				}
+			],
+			"ColumnSetEntityName": "43dd7238-24ae-4649-9b71-d0bc79e20951",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Language",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Language",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IsoLanguageId\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"IsoLanguageId\"},\"Iso6391LanguageCode\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"Iso6391LanguageCode\"},\"Iso6392LanguageCode\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"Iso6392LanguageCode\"},\"IsoLanguageName\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"IsoLanguageName\"},\"IsoLanguageFamily\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"IsoLanguageFamily\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Language\",\"path\":\"Language.cdm.json/Language\"},\"description\":\"Language definitions are based on ISO 639.\\n\\nISO 639 contains much other information about the use of language symbols and registration of new symbols.\\n\\nThe language codes of ISO 639 are said to be \\\"devised primarily for use in terminology, lexicography and linguistics, but they may be used for any application requiring the expression of languages in coded form.\\\"\\n\\nExamples include:\\n\\nISO 639 CODES  LANGUAGE NAME  CODE     LANGUAGE FAMILY\\n\\nENGLISH         EN     GERMANIC\\nIRISH           GA     CELTIC\\nLATIN           LA     LATIN/GREEK\\nSWEDISH         SV     GERMANIC\\n\\nLANGUAGE NAME  CODE     LANGUAGE FAMILY\\n\\nENGLISH         EN     GERMANIC\\nIRISH           GA     CELTIC\\nLATIN           LA     LATIN/GREEK\\nSWEDISH         SV     GERMANIC\",\"primaryKey\":[\"IsoLanguageId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"IsoLanguageId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an ISO Language.\",\"isNullable\":false,\"name\":\"IsoLanguageId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"Iso6391LanguageCode\"},\"dataType\":\"string\",\"dataTypeLength\":2,\"description\":\"The ISO 639-1 Language Code.\",\"isNullable\":true,\"name\":\"Iso6391LanguageCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"Iso6392LanguageCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 639-2 Language Code.\",\"isNullable\":true,\"name\":\"Iso6392LanguageCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"IsoLanguageName\"},\"dataType\":\"string\",\"dataTypeLength\":64,\"description\":\"The ISO 639 Language Name.\",\"isNullable\":true,\"name\":\"IsoLanguageName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Language.cdm.json/Language\",\"name\":\"IsoLanguageFamily\"},\"dataType\":\"string\",\"dataTypeLength\":32,\"description\":\"The ISO 639 Language Family.\",\"isNullable\":true,\"name\":\"IsoLanguageFamily\"}]}}}",
+			"Description": "Language definitions are based on ISO 639.\n\nISO 639 contains much other information about the use of language symbols and registration of new symbols.\n\nThe language codes of ISO 639 are said to be \"devised primarily for use in terminology, lexicography and linguistics, but they may be used for any application requiring the expression of languages in coded form.\"\n\nExamples include:\n\nISO 639 CODES  LANGUAGE NAME  CODE     LANGUAGE FAMILY\n\nENGLISH         EN     GERMANIC\nIRISH           GA     CELTIC\nLATIN           LA     LATIN/GREEK\nSWEDISH         SV     GERMANIC\n\nLANGUAGE NAME  CODE     LANGUAGE FAMILY\n\nENGLISH         EN     GERMANIC\nIRISH           GA     CELTIC\nLATIN           LA     LATIN/GREEK\nSWEDISH         SV     GERMANIC",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "IsoLanguageId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IsoLanguageId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Iso6391LanguageCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Iso6392LanguageCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoLanguageName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoLanguageFamily\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d7e26825-c44c-4ee4-96b6-98ab0c35050b",
+		"Description": "Language definitions are based on ISO 639.\n\nISO 639 contains much other information about the use of language symbols and registration of new symbols.\n\nThe language codes of ISO 639 are said to be \"devised primarily for use in terminology, lexicography and linguistics, but they may be used for any application requiring the expression of languages in coded form.\"\n\nExamples include:\n\nISO 639 CODES  LANGUAGE NAME  CODE     LANGUAGE FAMILY\n\nENGLISH         EN     GERMANIC\nIRISH           GA     CELTIC\nLATIN           LA     LATIN/GREEK\nSWEDISH         SV     GERMANIC\n\nLANGUAGE NAME  CODE     LANGUAGE FAMILY\n\nENGLISH         EN     GERMANIC\nIRISH           GA     CELTIC\nLATIN           LA     LATIN/GREEK\nSWEDISH         SV     GERMANIC"
+	},
+	"type": "TABLE"
+}

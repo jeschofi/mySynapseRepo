@@ -1,0 +1,29 @@
+{
+	"name": "relationship-chcgllvpdn",
+	"properties": {
+		"Name": "relationship-chcgllvpdn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FuelPump",
+		"ToTableName": "FuelPumpProductAvailability",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FuelPumpId",
+				"ToColumnName": "FuelPumpId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FuelPump.cdm.json/FuelPump\",\"toEntity\":\"FuelPumpProductAvailability.cdm.json/FuelPumpProductAvailability\",\"joinPairs\":[{\"fromAttribute\":\"FuelPumpId\",\"toAttribute\":\"FuelPumpId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6bc2795f-f5c7-4791-b54f-9f9d30eb819a"
+	},
+	"type": "RELATIONSHIP"
+}

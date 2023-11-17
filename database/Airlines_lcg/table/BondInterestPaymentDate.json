@@ -1,0 +1,137 @@
+{
+	"name": "BondInterestPaymentDate",
+	"properties": {
+		"Name": "BondInterestPaymentDate",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BondId",
+					"Description": "The unique identifier of a Financial Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondInterestPaymentDate.cdm.json/BondInterestPaymentDate",
+						"Name": "BondId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date of the associated interest payment.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondInterestPaymentDate.cdm.json/BondInterestPaymentDate",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "InterestPaymentAmount",
+					"Description": "The amount of the interest payment.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "BondInterestPaymentDate.cdm.json/BondInterestPaymentDate",
+						"Name": "InterestPaymentAmount"
+					}
+				}
+			],
+			"ColumnSetEntityName": "402176af-2ec3-4ebf-a57a-1ce67ddf6d57",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondInterestPaymentDate",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/BondInterestPaymentDate",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BondId\":{\"entity\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\",\"name\":\"BondId\"},\"Date\":{\"entity\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\",\"name\":\"Date\"},\"InterestPaymentAmount\":{\"entity\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\",\"name\":\"InterestPaymentAmount\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"BondInterestPaymentDate\",\"path\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\"},\"description\":\"The date(s) upon which the bond pays interest.\\n\\nMost bonds pay interest twice per year. \\n\\nThe interest payment dates are usually the same month and day as the maturity date of the bond, and the six month anniversary. \\n\\nFor example, a bond with a stated interest rate (coupon) of 5.0% and a maturity of 02/15/2005 will pay $25 every February 15 (the same month and day as the maturity date) and $25 every August 15 (the 6 month anniversary). Note that each payment is half of the stated interest rate of 5% ($50) per year per $1,000 bond.\",\"primaryKey\":[\"BondId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\",\"name\":\"BondId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Financial Product.\",\"isNullable\":false,\"name\":\"BondId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of the associated interest payment.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"BondInterestPaymentDate.cdm.json/BondInterestPaymentDate\",\"name\":\"InterestPaymentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the interest payment.\",\"isNullable\":false,\"scale\":2,\"name\":\"InterestPaymentAmount\"}]}}}",
+			"Description": "The date(s) upon which the bond pays interest.\n\nMost bonds pay interest twice per year. \n\nThe interest payment dates are usually the same month and day as the maturity date of the bond, and the six month anniversary. \n\nFor example, a bond with a stated interest rate (coupon) of 5.0% and a maturity of 02/15/2005 will pay $25 every February 15 (the same month and day as the maturity date) and $25 every August 15 (the 6 month anniversary). Note that each payment is half of the stated interest rate of 5% ($50) per year per $1,000 bond.",
+			"DisplayFolderInfo": "{\"name\":\"Financial Product\",\"colorCode\":\"#EA279F\"}",
+			"PrimaryKeys": "BondId,Date",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BondId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"InterestPaymentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "34373e73-b057-45a5-906f-91364e2a8f6c",
+		"Description": "The date(s) upon which the bond pays interest.\n\nMost bonds pay interest twice per year. \n\nThe interest payment dates are usually the same month and day as the maturity date of the bond, and the six month anniversary. \n\nFor example, a bond with a stated interest rate (coupon) of 5.0% and a maturity of 02/15/2005 will pay $25 every February 15 (the same month and day as the maturity date) and $25 every August 15 (the 6 month anniversary). Note that each payment is half of the stated interest rate of 5% ($50) per year per $1,000 bond."
+	},
+	"type": "TABLE"
+}

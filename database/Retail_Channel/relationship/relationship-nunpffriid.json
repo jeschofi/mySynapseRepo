@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nunpffriid",
+	"properties": {
+		"Name": "relationship-nunpffriid",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "UnitOfMeasure",
+		"ToTableName": "ShopperPosition",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "UnitOfMeasureId",
+				"ToColumnName": "ShopperAbsolutePositionUom"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"UnitOfMeasure.cdm.json/UnitOfMeasure\",\"toEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"joinPairs\":[{\"fromAttribute\":\"UnitOfMeasureId\",\"toAttribute\":\"ShopperAbsolutePositionUom\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "599f6ed1-f918-4170-bb75-b9dae46b9b67"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,234 @@
+{
+	"name": "SetOfFinancialStatements",
+	"properties": {
+		"Name": "SetOfFinancialStatements",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LegalEntityId",
+					"Description": "The unique identifier of a Legal Entity.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "LegalEntityId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the set of financial statements is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the set of financial statements is prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "FinancialStatementPreparationDate",
+					"Description": "The date that the Financial Statement was prepared.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "FinancialStatementPreparationDate"
+					}
+				},
+				{
+					"Name": "AccountantsOpinionStatement",
+					"Description": "A signed statement regarding the financial status of an entity from an independent public accountant after examination of that entities records and accounts.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "AccountantsOpinionStatement"
+					}
+				},
+				{
+					"Name": "FinancialStatementDurationTypeId",
+					"Description": "The unique identifier of an Accounting Period.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "FinancialStatementDurationTypeId"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "IsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "PreparedByPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SetOfFinancialStatements.cdm.json/SetOfFinancialStatements",
+						"Name": "PreparedByPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "40e4995d-01bd-4a58-917d-ac93274993a4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/SetOfFinancialStatements",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/SetOfFinancialStatements",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LegalEntityId\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"LegalEntityId\"},\"PeriodStartDate\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"PeriodEndDate\"},\"FinancialStatementPreparationDate\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"FinancialStatementPreparationDate\"},\"AccountantsOpinionStatement\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"AccountantsOpinionStatement\"},\"FinancialStatementDurationTypeId\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"FinancialStatementDurationTypeId\"},\"IsoCurrencyCode\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"IsoCurrencyCode\"},\"PreparedByPartyId\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"PreparedByPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SetOfFinancialStatements\",\"path\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\"},\"description\":\"Financial statements provide a format for the reporting of accounting information.\\n\\nA set of financial statements will vary depending on the accounting guideline that the organization is following.\",\"primaryKey\":[\"LegalEntityId\",\"PeriodStartDate\",\"PeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"LegalEntityId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Legal Entity.\",\"isNullable\":false,\"name\":\"LegalEntityId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the set of financial statements is prepared.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the set of financial statements is prepared.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"FinancialStatementPreparationDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the Financial Statement was prepared.\",\"isNullable\":true,\"name\":\"FinancialStatementPreparationDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"AccountantsOpinionStatement\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A signed statement regarding the financial status of an entity from an independent public accountant after examination of that entities records and accounts.\",\"isNullable\":true,\"name\":\"AccountantsOpinionStatement\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"FinancialStatementDurationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Accounting Period.\",\"isNullable\":true,\"name\":\"FinancialStatementDurationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":true,\"name\":\"IsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SetOfFinancialStatements.cdm.json/SetOfFinancialStatements\",\"name\":\"PreparedByPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PreparedByPartyId\"}]}}}",
+			"Description": "Financial statements provide a format for the reporting of accounting information.\n\nA set of financial statements will vary depending on the accounting guideline that the organization is following.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "LegalEntityId,PeriodStartDate,PeriodEndDate",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LegalEntityId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FinancialStatementPreparationDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AccountantsOpinionStatement\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FinancialStatementDurationTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PreparedByPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "edbfce1e-6bb8-431b-a4d5-def36946a9ab",
+		"Description": "Financial statements provide a format for the reporting of accounting information.\n\nA set of financial statements will vary depending on the accounting guideline that the organization is following."
+	},
+	"type": "TABLE"
+}

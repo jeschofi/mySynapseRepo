@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zgisadphyo",
+	"properties": {
+		"Name": "relationship-zgisadphyo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Reading",
+		"ToTableName": "ShopperPositionReading",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ReadingId",
+				"ToColumnName": "ReadingId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Reading.cdm.json/Reading\",\"toEntity\":\"ShopperPositionReading.cdm.json/ShopperPositionReading\",\"joinPairs\":[{\"fromAttribute\":\"ReadingId\",\"toAttribute\":\"ReadingId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6cab3fc1-7864-41e8-a34d-37f7264263a3"
+	},
+	"type": "RELATIONSHIP"
+}

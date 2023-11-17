@@ -1,0 +1,437 @@
+{
+	"name": "StoreDisplayShelf",
+	"properties": {
+		"Name": "StoreDisplayShelf",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "ShelfId",
+					"Description": "The unique identifier of a Shelf.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfId"
+					}
+				},
+				{
+					"Name": "ShelfPeriodStartDate",
+					"Description": "The period start date for which the Store Display Shelf is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ShelfPeriodEndDate",
+					"Description": "The period end date until which the Store Display Shelf is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfPeriodEndDate"
+					}
+				},
+				{
+					"Name": "SectionId",
+					"Description": "The unique identifier of a Row.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "SectionId"
+					}
+				},
+				{
+					"Name": "SectionPeriodStartDate",
+					"Description": "The period start date for which the store display section is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "SectionPeriodStartDate"
+					}
+				},
+				{
+					"Name": "LocationAddress",
+					"Description": "A unique address within a Warehouse that may identify a Building, Storeroom, Area, Aisle, Shelf, Tier, Bin etc.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 512,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "LocationAddress"
+					}
+				},
+				{
+					"Name": "FloorLocationXCoordinate",
+					"Description": "The floor location x-coordinate of the Shelf center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "FloorLocationXCoordinate"
+					}
+				},
+				{
+					"Name": "FloorLocationYCoordinate",
+					"Description": "The floor location y-coordinate of the Shelf center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "FloorLocationYCoordinate"
+					}
+				},
+				{
+					"Name": "FloorLocationZCoordinate",
+					"Description": "The floor location z-coordinate of the Shelf center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "FloorLocationZCoordinate"
+					}
+				},
+				{
+					"Name": "ShelfRotationX",
+					"Description": "Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\n\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfRotationX"
+					}
+				},
+				{
+					"Name": "ShelfRotationY",
+					"Description": "Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \n\nThe majority of store display shelves are level and parallel to the floor.  In those cases Rotation Y would be 0.  However, some display shelves are angled downward to allow better visibility into bins on the shelves, or wine racks that typically slant downward so that the corks remain wet.  This would be a negative Rotation Y value.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfRotationY"
+					}
+				},
+				{
+					"Name": "ShelfRotationZ",
+					"Description": "Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.\n\nThe majority of store display shelves are level and parallel to the floor, so the Rotation Z would be 0.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfRotationZ"
+					}
+				},
+				{
+					"Name": "ShelfLength",
+					"Description": "The length of the shelf measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfLength"
+					}
+				},
+				{
+					"Name": "ShelfHeightFromGround",
+					"Description": "The height of the shelf measured from the ground measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfHeightFromGround"
+					}
+				},
+				{
+					"Name": "ShelfHeight",
+					"Description": "The height of the shelf measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfHeight"
+					}
+				},
+				{
+					"Name": "ShelfDepth",
+					"Description": "The depth of the shelf measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "ShelfDepth"
+					}
+				},
+				{
+					"Name": "UnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "UnitOfMeasureId"
+					}
+				},
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayShelf.cdm.json/StoreDisplayShelf",
+						"Name": "AssetId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "87f167c9-4b00-44c2-a3cd-caf537ab7999",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplayShelf",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplayShelf",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"StoreId\"},\"ShelfId\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfId\"},\"ShelfPeriodStartDate\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfPeriodStartDate\"},\"ShelfPeriodEndDate\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfPeriodEndDate\"},\"SectionId\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"SectionId\"},\"SectionPeriodStartDate\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"SectionPeriodStartDate\"},\"LocationAddress\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"LocationAddress\"},\"FloorLocationXCoordinate\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"FloorLocationXCoordinate\"},\"FloorLocationYCoordinate\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"FloorLocationYCoordinate\"},\"FloorLocationZCoordinate\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"FloorLocationZCoordinate\"},\"ShelfRotationX\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfRotationX\"},\"ShelfRotationY\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfRotationY\"},\"ShelfRotationZ\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfRotationZ\"},\"ShelfLength\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfLength\"},\"ShelfHeightFromGround\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfHeightFromGround\"},\"ShelfHeight\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfHeight\"},\"ShelfDepth\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfDepth\"},\"UnitOfMeasureId\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"UnitOfMeasureId\"},\"AssetId\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"AssetId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreDisplayShelf\",\"path\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\"},\"description\":\"A storage device for small parts.   \\n\\nShelves-Board fixed horizontally and supported by a frame or uprights. May be of metal or wood. Shelves may be fixed or adjustable. Used for small stores. \\n\\nStorage locations on a shelf are divided into 'bins'.\",\"primaryKey\":[\"StoreId\",\"ShelfId\",\"ShelfPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Shelf.\",\"isNullable\":false,\"name\":\"ShelfId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Store Display Shelf is available for merchandising.\",\"isNullable\":false,\"name\":\"ShelfPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date until which the Store Display Shelf is available for merchandising.\",\"isNullable\":true,\"name\":\"ShelfPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"SectionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Row.\",\"isNullable\":false,\"name\":\"SectionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"SectionPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the store display section is available for merchandising.\",\"isNullable\":false,\"name\":\"SectionPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"LocationAddress\"},\"dataType\":\"string\",\"dataTypeLength\":512,\"description\":\"A unique address within a Warehouse that may identify a Building, Storeroom, Area, Aisle, Shelf, Tier, Bin etc.\",\"isNullable\":false,\"name\":\"LocationAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"FloorLocationXCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location x-coordinate of the Shelf center point.\",\"isNullable\":true,\"name\":\"FloorLocationXCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"FloorLocationYCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location y-coordinate of the Shelf center point.\",\"isNullable\":true,\"name\":\"FloorLocationYCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"FloorLocationZCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location z-coordinate of the Shelf center point.\",\"isNullable\":true,\"name\":\"FloorLocationZCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfRotationX\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\\n\\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShelfRotationX\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfRotationY\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \\n\\nThe majority of store display shelves are level and parallel to the floor.  In those cases Rotation Y would be 0.  However, some display shelves are angled downward to allow better visibility into bins on the shelves, or wine racks that typically slant downward so that the corks remain wet.  This would be a negative Rotation Y value.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShelfRotationY\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfRotationZ\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.\\n\\nThe majority of store display shelves are level and parallel to the floor, so the Rotation Z would be 0.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShelfRotationZ\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfLength\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The length of the shelf measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShelfLength\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfHeightFromGround\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The height of the shelf measured from the ground measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShelfHeightFromGround\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfHeight\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The height of the shelf measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"scale\":8,\"name\":\"ShelfHeight\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"ShelfDepth\"},\"dataType\":\"integer\",\"description\":\"The depth of the shelf measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"name\":\"ShelfDepth\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"UnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"UnitOfMeasureId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":true,\"name\":\"AssetId\"}]}}}",
+			"Description": "A storage device for small parts.   \n\nShelves-Board fixed horizontally and supported by a frame or uprights. May be of metal or wood. Shelves may be fixed or adjustable. Used for small stores. \n\nStorage locations on a shelf are divided into 'bins'.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,ShelfId,ShelfPeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShelfId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShelfPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ShelfPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SectionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SectionPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationAddress\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FloorLocationXCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationYCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationZCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfRotationX\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfRotationY\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfRotationZ\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfLength\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfHeightFromGround\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfHeight\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShelfDepth\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"UnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "b8a6c324-1a61-4c17-b2e0-6af17d57c98c",
+		"Description": "A storage device for small parts.   \n\nShelves-Board fixed horizontally and supported by a frame or uprights. May be of metal or wood. Shelves may be fixed or adjustable. Used for small stores. \n\nStorage locations on a shelf are divided into 'bins'."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "GeographicAreaType",
+	"properties": {
+		"Name": "GeographicAreaType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "GeographicAreaTypeId",
+					"Description": "The unique identifier of a Geographic Area Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GeographicAreaType.cdm.json/GeographicAreaType",
+						"Name": "GeographicAreaTypeId"
+					}
+				},
+				{
+					"Name": "GeographicAreaTypeName",
+					"Description": "The name of a Geographic Area Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GeographicAreaType.cdm.json/GeographicAreaType",
+						"Name": "GeographicAreaTypeName"
+					}
+				},
+				{
+					"Name": "GeographicAreaTypeDescription",
+					"Description": "The description of a Geographic Area Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "GeographicAreaType.cdm.json/GeographicAreaType",
+						"Name": "GeographicAreaTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6126e19b-d9ec-488f-9982-113f82fac49c",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/GeographicAreaType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/GeographicAreaType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"GeographicAreaTypeId\":{\"entity\":\"GeographicAreaType.cdm.json/GeographicAreaType\",\"name\":\"GeographicAreaTypeId\"},\"GeographicAreaTypeName\":{\"entity\":\"GeographicAreaType.cdm.json/GeographicAreaType\",\"name\":\"GeographicAreaTypeName\"},\"GeographicAreaTypeDescription\":{\"entity\":\"GeographicAreaType.cdm.json/GeographicAreaType\",\"name\":\"GeographicAreaTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"GeographicAreaType\",\"path\":\"GeographicAreaType.cdm.json/GeographicAreaType\"},\"description\":\"The type of geographic area.\\n\\nEx.:\\n- Service Area\\n- Maintenance Zone\\n- Marketing Area\\n- Weather Forecast Region\\n- Environmental Zone\\n- Watershed\\n- National Park\\n- Taxation Area\\n- Protected Area\\n- Mountain\\n- Lake\\n- District\\n- Basin\\n- Field\\n- Controlled Area\\n- Exclusion Area\\n- Food Desert (affordable and nutritious food are hard to obtain)\\n- Low Population Zone\\n- High Radiation Area\\n- Survey Area\\n- Shipping area\\n- Storage area\\n- Main Plant area\",\"primaryKey\":[\"GeographicAreaTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GeographicAreaType.cdm.json/GeographicAreaType\",\"name\":\"GeographicAreaTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Geographic Area Type.\",\"isNullable\":false,\"name\":\"GeographicAreaTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GeographicAreaType.cdm.json/GeographicAreaType\",\"name\":\"GeographicAreaTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Geographic Area Type.\",\"isNullable\":true,\"name\":\"GeographicAreaTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"GeographicAreaType.cdm.json/GeographicAreaType\",\"name\":\"GeographicAreaTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Geographic Area Type.\",\"isNullable\":true,\"name\":\"GeographicAreaTypeDescription\"}]}}}",
+			"Description": "The type of geographic area.\n\nEx.:\n- Service Area\n- Maintenance Zone\n- Marketing Area\n- Weather Forecast Region\n- Environmental Zone\n- Watershed\n- National Park\n- Taxation Area\n- Protected Area\n- Mountain\n- Lake\n- District\n- Basin\n- Field\n- Controlled Area\n- Exclusion Area\n- Food Desert (affordable and nutritious food are hard to obtain)\n- Low Population Zone\n- High Radiation Area\n- Survey Area\n- Shipping area\n- Storage area\n- Main Plant area",
+			"DisplayFolderInfo": "{\"name\":\"Geography\",\"colorCode\":\"#8170C2\"}",
+			"PrimaryKeys": "GeographicAreaTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"GeographicAreaTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"GeographicAreaTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GeographicAreaTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "db34edda-77ff-40ba-bc74-6f408f584667",
+		"Description": "The type of geographic area.\n\nEx.:\n- Service Area\n- Maintenance Zone\n- Marketing Area\n- Weather Forecast Region\n- Environmental Zone\n- Watershed\n- National Park\n- Taxation Area\n- Protected Area\n- Mountain\n- Lake\n- District\n- Basin\n- Field\n- Controlled Area\n- Exclusion Area\n- Food Desert (affordable and nutritious food are hard to obtain)\n- Low Population Zone\n- High Radiation Area\n- Survey Area\n- Shipping area\n- Storage area\n- Main Plant area"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lqeykzboqp",
+	"properties": {
+		"Name": "relationship-lqeykzboqp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreFloor",
+		"ToTableName": "StoreDisplayArea",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FloorPeriodStartDate",
+				"ToColumnName": "FloorPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreFloor.cdm.json/StoreFloor\",\"toEntity\":\"StoreDisplayArea.cdm.json/StoreDisplayArea\",\"joinPairs\":[{\"fromAttribute\":\"FloorPeriodStartDate\",\"toAttribute\":\"FloorPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "50e13420-cf99-44ff-8e41-669e8e6077ab"
+	},
+	"type": "RELATIONSHIP"
+}

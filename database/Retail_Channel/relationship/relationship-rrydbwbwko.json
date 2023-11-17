@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rrydbwbwko",
+	"properties": {
+		"Name": "relationship-rrydbwbwko",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionType",
+		"ToTableName": "Commission",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionTypeId",
+				"ToColumnName": "CommissionTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionType.cdm.json/CommissionType\",\"toEntity\":\"Commission.cdm.json/Commission\",\"joinPairs\":[{\"fromAttribute\":\"CommissionTypeId\",\"toAttribute\":\"CommissionTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "da35beab-9da4-47f4-8380-12098b0e4e7b"
+	},
+	"type": "RELATIONSHIP"
+}

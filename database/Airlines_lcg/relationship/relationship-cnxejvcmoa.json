@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cnxejvcmoa",
+	"properties": {
+		"Name": "relationship-cnxejvcmoa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SourceDocumentInputType",
+		"ToTableName": "SourceDocument",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SourceDocumentInputTypeId",
+				"ToColumnName": "SourceDocumentInputTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SourceDocumentInputType.cdm.json/SourceDocumentInputType\",\"toEntity\":\"SourceDocument.cdm.json/SourceDocument\",\"joinPairs\":[{\"fromAttribute\":\"SourceDocumentInputTypeId\",\"toAttribute\":\"SourceDocumentInputTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "4f2ce643-99e8-4e58-a9fd-feb42cc67059"
+	},
+	"type": "RELATIONSHIP"
+}

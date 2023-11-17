@@ -1,0 +1,149 @@
+{
+	"name": "ProductGroup",
+	"properties": {
+		"Name": "ProductGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProductGroupId",
+					"Description": "The unique identifier of a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroup.cdm.json/ProductGroup",
+						"Name": "ProductGroupId"
+					}
+				},
+				{
+					"Name": "ProductGroupName",
+					"Description": "The name of a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroup.cdm.json/ProductGroup",
+						"Name": "ProductGroupName"
+					}
+				},
+				{
+					"Name": "ProductGroupDescription",
+					"Description": "The description of a Product Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroup.cdm.json/ProductGroup",
+						"Name": "ProductGroupDescription"
+					}
+				},
+				{
+					"Name": "ClassificationAgencyPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductGroup.cdm.json/ProductGroup",
+						"Name": "ClassificationAgencyPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "90299cff-2461-4646-9238-5196c8bc381b",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductGroup",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductGroup",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductGroupId\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ProductGroupId\"},\"ProductGroupName\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ProductGroupName\"},\"ProductGroupDescription\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ProductGroupDescription\"},\"ClassificationAgencyPartyId\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ClassificationAgencyPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductGroup\",\"path\":\"ProductGroup.cdm.json/ProductGroup\"},\"description\":\"An arbitrary grouping of Products.\\n\\nEx:\\n- Products\\n- Software Products\\n- Retail Products\\n- Appliances\\n- Services\\n- Electric services\\n- Gas services\\n\\nImplementation Note:\\nThe primary use of the PRODUCT GROUP entity is to provide the foundation for creating a product hierarchy. There are 3 other entities that are used to provide support for this multi-level hierarchy that also allows products to belong to more than one hierarchy: RELATED PRODUCT GROUP, PRODUCT GROUP RELATIONSHIP TYPE and PRODUCT GROUP. \\n\\nPRODUCT GROUP is used to detail the levels in a product hierarchy. \\n\\nFor example your hierarchy may include:\\nLevel 1 - Region: North America, Europe, Asia, Australia, South America, Africa\\nLevel 2 - Channel: Online, Retail Outlet, Third Party Sales Channel\\nLevel 3 - Product Category: Clothing, Technology\\neach of these levels would be represented by PRODUCT GROUPs for each\\nthese groups would be related by RELATED PRODUCT GROUP\\nand finally PRODUCT GROUP RELATIONSHIP TYPE would describe the relationships between each of these related\",\"primaryKey\":[\"ProductGroupId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ProductGroupId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Product Group.\",\"isNullable\":false,\"name\":\"ProductGroupId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ProductGroupName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Product Group.\",\"isNullable\":true,\"name\":\"ProductGroupName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ProductGroupDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Product Group.\",\"isNullable\":true,\"name\":\"ProductGroupDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductGroup.cdm.json/ProductGroup\",\"name\":\"ClassificationAgencyPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"ClassificationAgencyPartyId\"}]}}}",
+			"Description": "An arbitrary grouping of Products.\n\nEx:\n- Products\n- Software Products\n- Retail Products\n- Appliances\n- Services\n- Electric services\n- Gas services\n\nImplementation Note:\nThe primary use of the PRODUCT GROUP entity is to provide the foundation for creating a product hierarchy. There are 3 other entities that are used to provide support for this multi-level hierarchy that also allows products to belong to more than one hierarchy: RELATED PRODUCT GROUP, PRODUCT GROUP RELATIONSHIP TYPE and PRODUCT GROUP. \n\nPRODUCT GROUP is used to detail the levels in a product hierarchy. \n\nFor example your hierarchy may include:\nLevel 1 - Region: North America, Europe, Asia, Australia, South America, Africa\nLevel 2 - Channel: Online, Retail Outlet, Third Party Sales Channel\nLevel 3 - Product Category: Clothing, Technology\neach of these levels would be represented by PRODUCT GROUPs for each\nthese groups would be related by RELATED PRODUCT GROUP\nand finally PRODUCT GROUP RELATIONSHIP TYPE would describe the relationships between each of these related",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "ProductGroupId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProductGroupId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductGroupName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductGroupDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ClassificationAgencyPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "2f76a26e-e7d9-4f8c-acbb-2957d3f0c22d",
+		"Description": "An arbitrary grouping of Products.\n\nEx:\n- Products\n- Software Products\n- Retail Products\n- Appliances\n- Services\n- Electric services\n- Gas services\n\nImplementation Note:\nThe primary use of the PRODUCT GROUP entity is to provide the foundation for creating a product hierarchy. There are 3 other entities that are used to provide support for this multi-level hierarchy that also allows products to belong to more than one hierarchy: RELATED PRODUCT GROUP, PRODUCT GROUP RELATIONSHIP TYPE and PRODUCT GROUP. \n\nPRODUCT GROUP is used to detail the levels in a product hierarchy. \n\nFor example your hierarchy may include:\nLevel 1 - Region: North America, Europe, Asia, Australia, South America, Africa\nLevel 2 - Channel: Online, Retail Outlet, Third Party Sales Channel\nLevel 3 - Product Category: Clothing, Technology\neach of these levels would be represented by PRODUCT GROUPs for each\nthese groups would be related by RELATED PRODUCT GROUP\nand finally PRODUCT GROUP RELATIONSHIP TYPE would describe the relationships between each of these related"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mgmpgkplli",
+	"properties": {
+		"Name": "relationship-mgmpgkplli",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Promotion",
+		"ToTableName": "Transaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PromotionId",
+				"ToColumnName": "PromotionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Promotion.cdm.json/Promotion\",\"toEntity\":\"Transaction.cdm.json/Transaction\",\"joinPairs\":[{\"fromAttribute\":\"PromotionId\",\"toAttribute\":\"PromotionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a435eb18-1024-45ec-9042-60533acd8cd2"
+	},
+	"type": "RELATIONSHIP"
+}

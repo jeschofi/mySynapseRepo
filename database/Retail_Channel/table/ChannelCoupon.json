@@ -1,0 +1,130 @@
+{
+	"name": "ChannelCoupon",
+	"properties": {
+		"Name": "ChannelCoupon",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelCoupon.cdm.json/ChannelCoupon",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "CouponId",
+					"Description": "The unique identifier of a coupon.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelCoupon.cdm.json/ChannelCoupon",
+						"Name": "CouponId"
+					}
+				},
+				{
+					"Name": "ChannelCouponNote",
+					"Description": "A note, comment or additional information regarding the channel coupon.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelCoupon.cdm.json/ChannelCoupon",
+						"Name": "ChannelCouponNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c428e009-b6d0-4ed0-849e-553438a4ecdd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelCoupon",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelCoupon",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelCoupon.cdm.json/ChannelCoupon\",\"name\":\"ChannelId\"},\"CouponId\":{\"entity\":\"ChannelCoupon.cdm.json/ChannelCoupon\",\"name\":\"CouponId\"},\"ChannelCouponNote\":{\"entity\":\"ChannelCoupon.cdm.json/ChannelCoupon\",\"name\":\"ChannelCouponNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelCoupon\",\"path\":\"ChannelCoupon.cdm.json/ChannelCoupon\"},\"description\":\"The coupon(s) associated with a Channel.\",\"primaryKey\":[\"ChannelId\",\"CouponId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelCoupon.cdm.json/ChannelCoupon\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelCoupon.cdm.json/ChannelCoupon\",\"name\":\"CouponId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a coupon.\",\"isNullable\":false,\"name\":\"CouponId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelCoupon.cdm.json/ChannelCoupon\",\"name\":\"ChannelCouponNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the channel coupon.\",\"isNullable\":true,\"name\":\"ChannelCouponNote\"}]}}}",
+			"Description": "The coupon(s) associated with a Channel.",
+			"DisplayFolderInfo": "{\"name\":\"Marketing & Advertising\",\"colorCode\":\"#000F5C\"}",
+			"PrimaryKeys": "ChannelId,CouponId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CouponId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelCouponNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "5295503a-f20c-4a4a-867d-f857a0057dbb",
+		"Description": "The coupon(s) associated with a Channel."
+	},
+	"type": "TABLE"
+}

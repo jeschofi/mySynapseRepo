@@ -1,0 +1,227 @@
+{
+	"name": "StoreDisplayLocationItemInventory",
+	"properties": {
+		"Name": "StoreDisplayLocationItemInventory",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "DisplayLocationId",
+					"Description": "The unique identifier of a location within a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "DisplayLocationId"
+					}
+				},
+				{
+					"Name": "DisplayLocationPeriodStartDate",
+					"Description": "The period start date for which the Store Display Location is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "DisplayLocationPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ItemSku",
+					"Description": "The Stock Keeping Unit identifier, which is typically used for inventory-related activities.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 40,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "ItemSku"
+					}
+				},
+				{
+					"Name": "StoreDisplayLocationItemInventoryTimestamp",
+					"Description": "The timestamp of the Store Display Location Item Inventory.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "StoreDisplayLocationItemInventoryTimestamp"
+					}
+				},
+				{
+					"Name": "StoreDisplayLocationItemInventoryPlanQuantity",
+					"Description": "The plan quantity of a specific item at the store display location as of the associated timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "StoreDisplayLocationItemInventoryPlanQuantity"
+					}
+				},
+				{
+					"Name": "StoreDisplayLocationItemInventoryActualQuantity",
+					"Description": "The actual quantity of a specific item at the store display location as of the associated timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "StoreDisplayLocationItemInventoryActualQuantity"
+					}
+				},
+				{
+					"Name": "StoreDisplayLocationItemInventoryNote",
+					"Description": "A note, comment or additional information regarding the Store Display Location Item Inventory.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory",
+						"Name": "StoreDisplayLocationItemInventoryNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "8bc12c28-318e-43ef-ab62-d6889bd52201",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplayLocationItemInventory",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplayLocationItemInventory",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreId\"},\"DisplayLocationId\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"DisplayLocationId\"},\"DisplayLocationPeriodStartDate\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"DisplayLocationPeriodStartDate\"},\"ItemSku\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"ItemSku\"},\"StoreDisplayLocationItemInventoryTimestamp\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryTimestamp\"},\"StoreDisplayLocationItemInventoryPlanQuantity\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryPlanQuantity\"},\"StoreDisplayLocationItemInventoryActualQuantity\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryActualQuantity\"},\"StoreDisplayLocationItemInventoryNote\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreDisplayLocationItemInventory\",\"path\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\"},\"description\":\"The quantity of an item displayed at the store display location as of the associated timestamp.\",\"primaryKey\":[\"StoreId\",\"DisplayLocationId\",\"DisplayLocationPeriodStartDate\",\"ItemSku\",\"StoreDisplayLocationItemInventoryTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"DisplayLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a location within a Store.\",\"isNullable\":false,\"name\":\"DisplayLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"DisplayLocationPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Store Display Location is available for merchandising.\",\"isNullable\":false,\"name\":\"DisplayLocationPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"ItemSku\"},\"dataType\":\"string\",\"dataTypeLength\":40,\"description\":\"The Stock Keeping Unit identifier, which is typically used for inventory-related activities.\",\"isNullable\":false,\"name\":\"ItemSku\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the Store Display Location Item Inventory.\",\"isNullable\":false,\"name\":\"StoreDisplayLocationItemInventoryTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryPlanQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The plan quantity of a specific item at the store display location as of the associated timestamp.\",\"isNullable\":true,\"scale\":2,\"name\":\"StoreDisplayLocationItemInventoryPlanQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryActualQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The actual quantity of a specific item at the store display location as of the associated timestamp.\",\"isNullable\":true,\"scale\":2,\"name\":\"StoreDisplayLocationItemInventoryActualQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"name\":\"StoreDisplayLocationItemInventoryNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Store Display Location Item Inventory.\",\"isNullable\":true,\"name\":\"StoreDisplayLocationItemInventoryNote\"}]}}}",
+			"Description": "The quantity of an item displayed at the store display location as of the associated timestamp.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,DisplayLocationId,DisplayLocationPeriodStartDate,ItemSku,StoreDisplayLocationItemInventoryTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DisplayLocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DisplayLocationPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ItemSku\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreDisplayLocationItemInventoryTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreDisplayLocationItemInventoryPlanQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreDisplayLocationItemInventoryActualQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreDisplayLocationItemInventoryNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "5e570e35-2963-439e-803a-b69faa5b0925",
+		"Description": "The quantity of an item displayed at the store display location as of the associated timestamp."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "SizeClass",
+	"properties": {
+		"Name": "SizeClass",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SizeClassId",
+					"Description": "The unique identifier of a size class.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SizeClass.cdm.json/SizeClass",
+						"Name": "SizeClassId"
+					}
+				},
+				{
+					"Name": "SizeClassName",
+					"Description": "The name of a size class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SizeClass.cdm.json/SizeClass",
+						"Name": "SizeClassName"
+					}
+				},
+				{
+					"Name": "SizeClassDescription",
+					"Description": "The description of a size class.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SizeClass.cdm.json/SizeClass",
+						"Name": "SizeClassDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "310136d2-b605-4ae9-b980-0e6ab142ca7d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/SizeClass",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/SizeClass",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SizeClassId\":{\"entity\":\"SizeClass.cdm.json/SizeClass\",\"name\":\"SizeClassId\"},\"SizeClassName\":{\"entity\":\"SizeClass.cdm.json/SizeClass\",\"name\":\"SizeClassName\"},\"SizeClassDescription\":{\"entity\":\"SizeClass.cdm.json/SizeClass\",\"name\":\"SizeClassDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SizeClass\",\"path\":\"SizeClass.cdm.json/SizeClass\"},\"description\":\"A categorization used to differentiate  product selections within a product group based on the number of products.\",\"primaryKey\":[\"SizeClassId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SizeClass.cdm.json/SizeClass\",\"name\":\"SizeClassId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a size class.\",\"isNullable\":false,\"name\":\"SizeClassId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SizeClass.cdm.json/SizeClass\",\"name\":\"SizeClassName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a size class.\",\"isNullable\":true,\"name\":\"SizeClassName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SizeClass.cdm.json/SizeClass\",\"name\":\"SizeClassDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a size class.\",\"isNullable\":true,\"name\":\"SizeClassDescription\"}]}}}",
+			"Description": "A categorization used to differentiate  product selections within a product group based on the number of products.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "SizeClassId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SizeClassId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SizeClassName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SizeClassDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "fa4b4ca4-af18-4122-8b5e-e964934d151b",
+		"Description": "A categorization used to differentiate  product selections within a product group based on the number of products."
+	},
+	"type": "TABLE"
+}

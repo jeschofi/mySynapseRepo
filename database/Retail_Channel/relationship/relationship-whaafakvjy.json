@@ -1,0 +1,29 @@
+{
+	"name": "relationship-whaafakvjy",
+	"properties": {
+		"Name": "relationship-whaafakvjy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "NaicsSector",
+		"ToTableName": "NaicsSubsector",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "NaicsSectorCode",
+				"ToColumnName": "NaicsSectorCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"NaicsSector.cdm.json/NaicsSector\",\"toEntity\":\"NaicsSubsector.cdm.json/NaicsSubsector\",\"joinPairs\":[{\"fromAttribute\":\"NaicsSectorCode\",\"toAttribute\":\"NaicsSectorCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "55aca6e9-399b-4061-b718-3217de0b54c1"
+	},
+	"type": "RELATIONSHIP"
+}

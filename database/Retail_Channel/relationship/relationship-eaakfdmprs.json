@@ -1,0 +1,29 @@
+{
+	"name": "relationship-eaakfdmprs",
+	"properties": {
+		"Name": "relationship-eaakfdmprs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelCategory",
+		"ToTableName": "Channel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelCategoryId",
+				"ToColumnName": "ChannelCategoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelCategory.cdm.json/ChannelCategory\",\"toEntity\":\"Channel.cdm.json/Channel\",\"joinPairs\":[{\"fromAttribute\":\"ChannelCategoryId\",\"toAttribute\":\"ChannelCategoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "efc0f98a-3136-4754-ae34-473cfe1b1182"
+	},
+	"type": "RELATIONSHIP"
+}

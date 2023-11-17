@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cgpmrzzpbs",
+	"properties": {
+		"Name": "relationship-cgpmrzzpbs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AtmFeeType",
+		"ToTableName": "AtmFee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmFeeTypeId",
+				"ToColumnName": "AtmFeeTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AtmFeeType.cdm.json/AtmFeeType\",\"toEntity\":\"AtmFee.cdm.json/AtmFee\",\"joinPairs\":[{\"fromAttribute\":\"AtmFeeTypeId\",\"toAttribute\":\"AtmFeeTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "67afc835-a621-4f93-a0aa-f4a5324328fb"
+	},
+	"type": "RELATIONSHIP"
+}

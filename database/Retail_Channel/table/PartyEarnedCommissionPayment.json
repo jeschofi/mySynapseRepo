@@ -1,0 +1,149 @@
+{
+	"name": "PartyEarnedCommissionPayment",
+	"properties": {
+		"Name": "PartyEarnedCommissionPayment",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "CommissionId",
+					"Description": "The unique identifier of a Commission.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment",
+						"Name": "CommissionId"
+					}
+				},
+				{
+					"Name": "PaymentId",
+					"Description": "The unique identifier of a Payment.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment",
+						"Name": "PaymentId"
+					}
+				},
+				{
+					"Name": "PartyEarnedCommissionPaymentNote",
+					"Description": "Notes, comments or additional information regarding the Party Earned Commission Payment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment",
+						"Name": "PartyEarnedCommissionPaymentNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "752b86f5-3b2d-4bd1-9640-8a5021698204",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/PartyEarnedCommissionPayment",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/PartyEarnedCommissionPayment",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PartyId\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"PartyId\"},\"CommissionId\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"CommissionId\"},\"PaymentId\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"PaymentId\"},\"PartyEarnedCommissionPaymentNote\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"PartyEarnedCommissionPaymentNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PartyEarnedCommissionPayment\",\"path\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\"},\"description\":\"A payment associated with one or more commissions.\",\"primaryKey\":[\"PartyId\",\"CommissionId\",\"PaymentId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":false,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"CommissionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission.\",\"isNullable\":false,\"name\":\"CommissionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"PaymentId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Payment.\",\"isNullable\":false,\"name\":\"PaymentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"name\":\"PartyEarnedCommissionPaymentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Party Earned Commission Payment.\",\"isNullable\":true,\"name\":\"PartyEarnedCommissionPaymentNote\"}]}}}",
+			"Description": "A payment associated with one or more commissions.",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "PartyId,CommissionId,PaymentId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PaymentId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PartyEarnedCommissionPaymentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "03be5175-3ec8-473e-a54c-8b070181b887",
+		"Description": "A payment associated with one or more commissions."
+	},
+	"type": "TABLE"
+}

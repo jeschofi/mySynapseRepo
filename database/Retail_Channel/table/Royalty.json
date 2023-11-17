@@ -1,0 +1,150 @@
+{
+	"name": "Royalty",
+	"properties": {
+		"Name": "Royalty",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FranchiseeId",
+					"Description": "The unique identifier of a Franchisee.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Royalty.cdm.json/Royalty",
+						"Name": "FranchiseeId"
+					}
+				},
+				{
+					"Name": "PaymentTimestamp",
+					"Description": "The timestamp of the royalty payment.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Royalty.cdm.json/Royalty",
+						"Name": "PaymentTimestamp"
+					}
+				},
+				{
+					"Name": "RoyaltyPaymentAmount",
+					"Description": "The amount of the royalty payment.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Royalty.cdm.json/Royalty",
+						"Name": "RoyaltyPaymentAmount"
+					}
+				},
+				{
+					"Name": "ContractId",
+					"Description": "The unique identifier of a Contract.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Royalty.cdm.json/Royalty",
+						"Name": "ContractId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ce949a25-e4e3-4f36-9f8d-97333350af44",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Royalty",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Royalty",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FranchiseeId\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"FranchiseeId\"},\"PaymentTimestamp\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"PaymentTimestamp\"},\"RoyaltyPaymentAmount\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"RoyaltyPaymentAmount\"},\"ContractId\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"ContractId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Royalty\",\"path\":\"Royalty.cdm.json/Royalty\"},\"description\":\"An ongoing payment made by franchisee to franchisor, usually a percentage of gross sales, made throughout the term of the franchise agreement.\",\"primaryKey\":[\"FranchiseeId\",\"PaymentTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"FranchiseeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Franchisee.\",\"isNullable\":false,\"name\":\"FranchiseeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"PaymentTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the royalty payment.\",\"isNullable\":false,\"name\":\"PaymentTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"RoyaltyPaymentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the royalty payment.\",\"isNullable\":true,\"scale\":2,\"name\":\"RoyaltyPaymentAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Royalty.cdm.json/Royalty\",\"name\":\"ContractId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Contract.\",\"isNullable\":true,\"name\":\"ContractId\"}]}}}",
+			"Description": "An ongoing payment made by franchisee to franchisor, usually a percentage of gross sales, made throughout the term of the franchise agreement.",
+			"DisplayFolderInfo": "{\"name\":\"Contract\",\"colorCode\":\"#4B003F\"}",
+			"PrimaryKeys": "FranchiseeId,PaymentTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FranchiseeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PaymentTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RoyaltyPaymentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ContractId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "1a05f7e5-83ee-4c45-8630-d7f0669c0e8a",
+		"Description": "An ongoing payment made by franchisee to franchisor, usually a percentage of gross sales, made throughout the term of the franchise agreement."
+	},
+	"type": "TABLE"
+}

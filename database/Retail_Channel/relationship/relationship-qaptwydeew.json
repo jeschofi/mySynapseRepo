@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qaptwydeew",
+	"properties": {
+		"Name": "relationship-qaptwydeew",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AnzsicDivision",
+		"ToTableName": "AnzsicSubdivision",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AnzsicDivisionCode",
+				"ToColumnName": "AnzsicDivisionCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AnzsicDivision.cdm.json/AnzsicDivision\",\"toEntity\":\"AnzsicSubdivision.cdm.json/AnzsicSubdivision\",\"joinPairs\":[{\"fromAttribute\":\"AnzsicDivisionCode\",\"toAttribute\":\"AnzsicDivisionCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "929bb68c-a39d-4429-8a4c-1fc382cff34a"
+	},
+	"type": "RELATIONSHIP"
+}

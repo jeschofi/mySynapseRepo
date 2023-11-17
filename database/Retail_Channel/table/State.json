@@ -1,0 +1,168 @@
+{
+	"name": "State",
+	"properties": {
+		"Name": "State",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StateId",
+					"Description": "The unique identifier of a State.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "State.cdm.json/State",
+						"Name": "StateId"
+					}
+				},
+				{
+					"Name": "StateName",
+					"Description": "The name of the State.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "State.cdm.json/State",
+						"Name": "StateName"
+					}
+				},
+				{
+					"Name": "CensusDivisionId",
+					"Description": "The unique identifier of the Census Division.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "State.cdm.json/State",
+						"Name": "CensusDivisionId"
+					}
+				},
+				{
+					"Name": "FipsCode",
+					"Description": "The unique identifier of a FIPS Code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "State.cdm.json/State",
+						"Name": "FipsCode"
+					}
+				},
+				{
+					"Name": "StateUspsCode",
+					"Description": "United States Postal Service (USPS) codes for states are used in all decennial census data products. The codes are two-character alphabetic abbreviations. These codes are the same as the Federal Information Processing Standards two-character alphabetic abbreviations.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "State.cdm.json/State",
+						"Name": "StateUspsCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ff1d5ff4-ca1c-4f89-924a-a5e27a681a58",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/State",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/State",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StateId\":{\"entity\":\"State.cdm.json/State\",\"name\":\"StateId\"},\"StateName\":{\"entity\":\"State.cdm.json/State\",\"name\":\"StateName\"},\"CensusDivisionId\":{\"entity\":\"State.cdm.json/State\",\"name\":\"CensusDivisionId\"},\"FipsCode\":{\"entity\":\"State.cdm.json/State\",\"name\":\"FipsCode\"},\"StateUspsCode\":{\"entity\":\"State.cdm.json/State\",\"name\":\"StateUspsCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"State\",\"path\":\"State.cdm.json/State\"},\"description\":\"States are the primary governmental divisions of the United States. \\n\\nThe District of Columbia is treated as a statistical equivalent of a state for data presentation purposes. \\n\\nFor Census 2000, the U.S. Census Bureau also treats a number of entities that are not legal divisions of the United States as statistically equivalent to a state: American Samoa, the Commonwealth of the Northern Mariana Islands, Guam, Puerto Rico, and the Virgin Islands of the United States.\\n\\nEach state and statistically equivalent entity is assigned a two-digit numeric Federal Information Processing Standards (FIPS) code in alphabetical order by state name, followed in alphabetical order by Puerto Rico and the Island Areas. Each state and statistically equivalent entity also is assigned a two-letter FIPS/U.S. Postal Service code and a two-digit census code. The census code is assigned on the basis of the geographic sequence of each state within each census division; the first digit of the code identifies the respective division, except for Puerto Rico and the Island Areas, which are not assigned to any region or division.\",\"primaryKey\":[\"StateId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"State.cdm.json/State\",\"name\":\"StateId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a State.\",\"isNullable\":false,\"name\":\"StateId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"State.cdm.json/State\",\"name\":\"StateName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the State.\",\"isNullable\":true,\"name\":\"StateName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"State.cdm.json/State\",\"name\":\"CensusDivisionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Census Division.\",\"isNullable\":true,\"name\":\"CensusDivisionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"State.cdm.json/State\",\"name\":\"FipsCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The unique identifier of a FIPS Code.\",\"isNullable\":true,\"name\":\"FipsCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"State.cdm.json/State\",\"name\":\"StateUspsCode\"},\"dataType\":\"string\",\"dataTypeLength\":2,\"description\":\"United States Postal Service (USPS) codes for states are used in all decennial census data products. The codes are two-character alphabetic abbreviations. These codes are the same as the Federal Information Processing Standards two-character alphabetic abbreviations.\",\"isNullable\":true,\"name\":\"StateUspsCode\"}]}}}",
+			"Description": "States are the primary governmental divisions of the United States. \n\nThe District of Columbia is treated as a statistical equivalent of a state for data presentation purposes. \n\nFor Census 2000, the U.S. Census Bureau also treats a number of entities that are not legal divisions of the United States as statistically equivalent to a state: American Samoa, the Commonwealth of the Northern Mariana Islands, Guam, Puerto Rico, and the Virgin Islands of the United States.\n\nEach state and statistically equivalent entity is assigned a two-digit numeric Federal Information Processing Standards (FIPS) code in alphabetical order by state name, followed in alphabetical order by Puerto Rico and the Island Areas. Each state and statistically equivalent entity also is assigned a two-letter FIPS/U.S. Postal Service code and a two-digit census code. The census code is assigned on the basis of the geographic sequence of each state within each census division; the first digit of the code identifies the respective division, except for Puerto Rico and the Island Areas, which are not assigned to any region or division.",
+			"DisplayFolderInfo": "{\"name\":\"Geography\",\"colorCode\":\"#8170C2\"}",
+			"PrimaryKeys": "StateId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StateId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StateName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CensusDivisionId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FipsCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StateUspsCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "962ec1ef-9375-4887-96ca-74b582551bc6",
+		"Description": "States are the primary governmental divisions of the United States. \n\nThe District of Columbia is treated as a statistical equivalent of a state for data presentation purposes. \n\nFor Census 2000, the U.S. Census Bureau also treats a number of entities that are not legal divisions of the United States as statistically equivalent to a state: American Samoa, the Commonwealth of the Northern Mariana Islands, Guam, Puerto Rico, and the Virgin Islands of the United States.\n\nEach state and statistically equivalent entity is assigned a two-digit numeric Federal Information Processing Standards (FIPS) code in alphabetical order by state name, followed in alphabetical order by Puerto Rico and the Island Areas. Each state and statistically equivalent entity also is assigned a two-letter FIPS/U.S. Postal Service code and a two-digit census code. The census code is assigned on the basis of the geographic sequence of each state within each census division; the first digit of the code identifies the respective division, except for Puerto Rico and the Island Areas, which are not assigned to any region or division."
+	},
+	"type": "TABLE"
+}

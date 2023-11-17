@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ylvwobblms",
+	"properties": {
+		"Name": "relationship-ylvwobblms",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "GeographicArea",
+		"ToTableName": "Territory",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GeographicAreaId",
+				"ToColumnName": "GeographicAreaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"GeographicArea.cdm.json/GeographicArea\",\"toEntity\":\"Territory.cdm.json/Territory\",\"joinPairs\":[{\"fromAttribute\":\"GeographicAreaId\",\"toAttribute\":\"GeographicAreaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "5aae6233-146f-4a08-8ed4-ee3029abc032"
+	},
+	"type": "RELATIONSHIP"
+}

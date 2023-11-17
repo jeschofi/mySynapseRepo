@@ -1,0 +1,149 @@
+{
+	"name": "ServiceLocation",
+	"properties": {
+		"Name": "ServiceLocation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ServiceLocationId",
+					"Description": "The unique identifier of a service location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ServiceLocation.cdm.json/ServiceLocation",
+						"Name": "ServiceLocationId"
+					}
+				},
+				{
+					"Name": "ServiceLocationName",
+					"Description": "The name of the Service Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ServiceLocation.cdm.json/ServiceLocation",
+						"Name": "ServiceLocationName"
+					}
+				},
+				{
+					"Name": "ServiceLocationDescription",
+					"Description": "The description of the Service Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ServiceLocation.cdm.json/ServiceLocation",
+						"Name": "ServiceLocationDescription"
+					}
+				},
+				{
+					"Name": "StoreServiceLocationTypeId",
+					"Description": "The unique identifier of a Service Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ServiceLocation.cdm.json/ServiceLocation",
+						"Name": "StoreServiceLocationTypeId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7d9deb0e-c663-4caf-8056-8d073bbab0d2",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ServiceLocation",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ServiceLocation",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ServiceLocationId\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"ServiceLocationId\"},\"ServiceLocationName\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"ServiceLocationName\"},\"ServiceLocationDescription\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"ServiceLocationDescription\"},\"StoreServiceLocationTypeId\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"StoreServiceLocationTypeId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ServiceLocation\",\"path\":\"ServiceLocation.cdm.json/ServiceLocation\"},\"description\":\"A location where services are provided.\",\"primaryKey\":[\"ServiceLocationId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"ServiceLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a service location.\",\"isNullable\":false,\"name\":\"ServiceLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"ServiceLocationName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Service Location.\",\"isNullable\":true,\"name\":\"ServiceLocationName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"ServiceLocationDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Service Location.\",\"isNullable\":true,\"name\":\"ServiceLocationDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"name\":\"StoreServiceLocationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Service Location Type.\",\"isNullable\":true,\"name\":\"StoreServiceLocationTypeId\"}]}}}",
+			"Description": "A location where services are provided.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ServiceLocationId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ServiceLocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ServiceLocationName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ServiceLocationDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreServiceLocationTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "f205b675-185f-4ccb-b4f1-5dd900cf6b94",
+		"Description": "A location where services are provided."
+	},
+	"type": "TABLE"
+}

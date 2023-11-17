@@ -1,0 +1,149 @@
+{
+	"name": "SicMajorGroup",
+	"properties": {
+		"Name": "SicMajorGroup",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "SicMajorGroupCode",
+					"Description": "The unique identifier of the SIC Major Group.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 2,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicMajorGroup.cdm.json/SicMajorGroup",
+						"Name": "SicMajorGroupCode"
+					}
+				},
+				{
+					"Name": "SicMajorGroupName",
+					"Description": "The name of the SIC Major Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicMajorGroup.cdm.json/SicMajorGroup",
+						"Name": "SicMajorGroupName"
+					}
+				},
+				{
+					"Name": "SicMajorGroupDescription",
+					"Description": "The description of the SIC Major Group.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicMajorGroup.cdm.json/SicMajorGroup",
+						"Name": "SicMajorGroupDescription"
+					}
+				},
+				{
+					"Name": "SicDivisionCode",
+					"Description": "The code that uniquely identifies the SIC Division.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 2,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "SicMajorGroup.cdm.json/SicMajorGroup",
+						"Name": "SicDivisionCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "7a0f2fec-7d46-494a-9673-f0951ec784d1",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/SicMajorGroup",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/SicMajorGroup",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"SicMajorGroupCode\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicMajorGroupCode\"},\"SicMajorGroupName\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicMajorGroupName\"},\"SicMajorGroupDescription\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicMajorGroupDescription\"},\"SicDivisionCode\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicDivisionCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"SicMajorGroup\",\"path\":\"SicMajorGroup.cdm.json/SicMajorGroup\"},\"description\":\"The Standard Industrial Classification (SIC) code is a numbering system established by the Office of Management and Budget that identifies companies by industry. It is used to promote the comparability of economic statistics from various facets of the U.S. economy. \\n\\nThe SIC Major Group.\",\"primaryKey\":[\"SicMajorGroupCode\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicMajorGroupCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":2,\"description\":\"The unique identifier of the SIC Major Group.\",\"isNullable\":false,\"scale\":0,\"name\":\"SicMajorGroupCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicMajorGroupName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the SIC Major Group.\",\"isNullable\":true,\"name\":\"SicMajorGroupName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicMajorGroupDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the SIC Major Group.\",\"isNullable\":true,\"name\":\"SicMajorGroupDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"SicMajorGroup.cdm.json/SicMajorGroup\",\"name\":\"SicDivisionCode\"},\"dataType\":\"decimal\",\"dataTypeLength\":2,\"description\":\"The code that uniquely identifies the SIC Division.\",\"isNullable\":false,\"scale\":0,\"name\":\"SicDivisionCode\"}]}}}",
+			"Description": "The Standard Industrial Classification (SIC) code is a numbering system established by the Office of Management and Budget that identifies companies by industry. It is used to promote the comparability of economic statistics from various facets of the U.S. economy. \n\nThe SIC Major Group.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "SicMajorGroupCode",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"SicMajorGroupCode\",\"type\":\"decimal(2,0)\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SicMajorGroupName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SicMajorGroupDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SicDivisionCode\",\"type\":\"decimal(2,0)\",\"nullable\":false,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "2c55cbdf-4010-4ccb-a60f-a9579f41b13a",
+		"Description": "The Standard Industrial Classification (SIC) code is a numbering system established by the Office of Management and Budget that identifies companies by industry. It is used to promote the comparability of economic statistics from various facets of the U.S. economy. \n\nThe SIC Major Group."
+	},
+	"type": "TABLE"
+}

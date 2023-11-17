@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mmigrdmddx",
+	"properties": {
+		"Name": "relationship-mmigrdmddx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "RetailProduct",
+		"ToTableName": "CustomerAccountProductDistributionChannel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"RetailProduct.cdm.json/RetailProduct\",\"toEntity\":\"CustomerAccountProductDistributionChannel.cdm.json/CustomerAccountProductDistributionChannel\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "17088de7-9a58-4cfa-9979-a86d0ac3ae04"
+	},
+	"type": "RELATIONSHIP"
+}

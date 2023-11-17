@@ -1,0 +1,149 @@
+{
+	"name": "PriceListType",
+	"properties": {
+		"Name": "PriceListType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PriceListTypeId",
+					"Description": "The unique identifier of a Price List Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PriceListType.cdm.json/PriceListType",
+						"Name": "PriceListTypeId"
+					}
+				},
+				{
+					"Name": "PriceListTypeName",
+					"Description": "The name of a Price List Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PriceListType.cdm.json/PriceListType",
+						"Name": "PriceListTypeName"
+					}
+				},
+				{
+					"Name": "PriceListTypeDescription",
+					"Description": "The description of a Price List Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PriceListType.cdm.json/PriceListType",
+						"Name": "PriceListTypeDescription"
+					}
+				},
+				{
+					"Name": "PriceListForPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "PriceListType.cdm.json/PriceListType",
+						"Name": "PriceListForPartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "5dff5982-dc69-4a57-b867-040b78fd47eb",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/PriceListType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/PriceListType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PriceListTypeId\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListTypeId\"},\"PriceListTypeName\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListTypeName\"},\"PriceListTypeDescription\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListTypeDescription\"},\"PriceListForPartyId\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListForPartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"PriceListType\",\"path\":\"PriceListType.cdm.json/PriceListType\"},\"description\":\"A classification of Price Schedules based upon common characteristics, attributes, functions or marketing objectives.\\n\\nEx:\\n-  Consumer Price Schedule\\n-  Government Price Schedule\\n-  Corporate Price Schedule\\n-  Introductory Price Schedule\\n-  Standard Price Schedule\\n-  Channel Price Schedule\\n-  Wholesale Price Schedule\\n-  Employee Price Schedule\\n-  Promotional Price Schedule\\n-  Seasonal Price Schedule\\n-  Geographic Price Schedule\\n-  Domestic Price Schedule\\n-  International Price Schedule\",\"primaryKey\":[\"PriceListTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Price List Type.\",\"isNullable\":false,\"name\":\"PriceListTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Price List Type.\",\"isNullable\":true,\"name\":\"PriceListTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Price List Type.\",\"isNullable\":true,\"name\":\"PriceListTypeDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"PriceListType.cdm.json/PriceListType\",\"name\":\"PriceListForPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PriceListForPartyId\"}]}}}",
+			"Description": "A classification of Price Schedules based upon common characteristics, attributes, functions or marketing objectives.\n\nEx:\n-  Consumer Price Schedule\n-  Government Price Schedule\n-  Corporate Price Schedule\n-  Introductory Price Schedule\n-  Standard Price Schedule\n-  Channel Price Schedule\n-  Wholesale Price Schedule\n-  Employee Price Schedule\n-  Promotional Price Schedule\n-  Seasonal Price Schedule\n-  Geographic Price Schedule\n-  Domestic Price Schedule\n-  International Price Schedule",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "PriceListTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PriceListTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PriceListTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PriceListTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PriceListForPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "7a9bfee7-7ab7-44b6-aad1-4d07663e9979",
+		"Description": "A classification of Price Schedules based upon common characteristics, attributes, functions or marketing objectives.\n\nEx:\n-  Consumer Price Schedule\n-  Government Price Schedule\n-  Corporate Price Schedule\n-  Introductory Price Schedule\n-  Standard Price Schedule\n-  Channel Price Schedule\n-  Wholesale Price Schedule\n-  Employee Price Schedule\n-  Promotional Price Schedule\n-  Seasonal Price Schedule\n-  Geographic Price Schedule\n-  Domestic Price Schedule\n-  International Price Schedule"
+	},
+	"type": "TABLE"
+}

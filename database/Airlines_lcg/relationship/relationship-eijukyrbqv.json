@@ -1,0 +1,29 @@
+{
+	"name": "relationship-eijukyrbqv",
+	"properties": {
+		"Name": "relationship-eijukyrbqv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BondRiskEventType",
+		"ToTableName": "BondEventRisk",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondRiskEventTypeId",
+				"ToColumnName": "BondRiskEventTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BondRiskEventType.cdm.json/BondRiskEventType\",\"toEntity\":\"BondEventRisk.cdm.json/BondEventRisk\",\"joinPairs\":[{\"fromAttribute\":\"BondRiskEventTypeId\",\"toAttribute\":\"BondRiskEventTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b30d3aaf-80fc-472e-b6c5-ea6aad1d863b"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rbigvcqskn",
+	"properties": {
+		"Name": "relationship-rbigvcqskn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AtmPartyRelationshipType",
+		"ToTableName": "AtmRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmPartyRelationshipTypeId",
+				"ToColumnName": "AtmPartyRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AtmPartyRelationshipType.cdm.json/AtmPartyRelationshipType\",\"toEntity\":\"AtmRelatedParty.cdm.json/AtmRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"AtmPartyRelationshipTypeId\",\"toAttribute\":\"AtmPartyRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "834f36b4-e572-45c7-aa24-71e81fc25821"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wdlxftwiax",
+	"properties": {
+		"Name": "relationship-wdlxftwiax",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Atm",
+		"ToTableName": "AtmFee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AtmId",
+				"ToColumnName": "AtmId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Atm.cdm.json/Atm\",\"toEntity\":\"AtmFee.cdm.json/AtmFee\",\"joinPairs\":[{\"fromAttribute\":\"AtmId\",\"toAttribute\":\"AtmId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "29b4662a-5079-460b-83e3-6a070a33af49"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cgbmmngleh",
+	"properties": {
+		"Name": "relationship-cgbmmngleh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommunicationPriority",
+		"ToTableName": "Communication",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommunicationPriorityId",
+				"ToColumnName": "CommunicationPriorityId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommunicationPriority.cdm.json/CommunicationPriority\",\"toEntity\":\"Communication.cdm.json/Communication\",\"joinPairs\":[{\"fromAttribute\":\"CommunicationPriorityId\",\"toAttribute\":\"CommunicationPriorityId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "dd7b36c5-17e9-4dfa-9eb4-b63ea7d68fa0"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,344 @@
+{
+	"name": "CalendarDate",
+	"properties": {
+		"Name": "CalendarDate",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"Partitioning": {
+			"PartitionFunctionType": null,
+			"Keys": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CalendarId",
+					"Description": "The unique identifier of a Calendar.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date of the associated calendar.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "DayOfWeekId",
+					"Description": "The unique identifier of a Day Of Week.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "DayOfWeekId"
+					}
+				},
+				{
+					"Name": "CalendarDateStandardStartTime",
+					"Description": "The standard time that operations start on this calendar date.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarDateStandardStartTime"
+					}
+				},
+				{
+					"Name": "CalendarDateStandardEndTime",
+					"Description": "The standard time that operations end on this calendar date.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarDateStandardEndTime"
+					}
+				},
+				{
+					"Name": "HolidayIndicator",
+					"Description": "Indicates that the associated date is a holiday.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "HolidayIndicator"
+					}
+				},
+				{
+					"Name": "HolidayName",
+					"Description": "The name of the associated holiday.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "HolidayName"
+					}
+				},
+				{
+					"Name": "CalendarDayNumber",
+					"Description": "The day number associated with the calendar date.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarDayNumber"
+					}
+				},
+				{
+					"Name": "CalendarWeekId",
+					"Description": "The unique identifier of a Calendar Week.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarWeekId"
+					}
+				},
+				{
+					"Name": "CalendarMonthId",
+					"Description": "The unique identifier of a calendar month.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarMonthId"
+					}
+				},
+				{
+					"Name": "CalendarQuarterId",
+					"Description": "The unique identifier of a calendar quarter.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarQuarterId"
+					}
+				},
+				{
+					"Name": "CalendarYearId",
+					"Description": "The unique identifier of a Calendar Year.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarYearId"
+					}
+				},
+				{
+					"Name": "CalendarPeriodId",
+					"Description": "The unique identifier of a Calendar Period.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarPeriodId"
+					}
+				},
+				{
+					"Name": "CalendarDateNote",
+					"Description": "A note, comment or additional information regarding the calendar date.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CalendarDate.cdm.json/CalendarDate",
+						"Name": "CalendarDateNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "aed45535-aac8-4031-8c70-f038460cdf5e",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CalendarDate",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CalendarDate",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CalendarId\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarId\"},\"Date\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"Date\"},\"DayOfWeekId\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"DayOfWeekId\"},\"CalendarDateStandardStartTime\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDateStandardStartTime\"},\"CalendarDateStandardEndTime\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDateStandardEndTime\"},\"HolidayIndicator\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"HolidayIndicator\"},\"HolidayName\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"HolidayName\"},\"CalendarDayNumber\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDayNumber\"},\"CalendarWeekId\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarWeekId\"},\"CalendarMonthId\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarMonthId\"},\"CalendarQuarterId\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarQuarterId\"},\"CalendarYearId\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarYearId\"},\"CalendarPeriodId\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarPeriodId\"},\"CalendarDateNote\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDateNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"name\":\"CalendarDate\",\"description\":\"The details for a specific date within a calendar.\",\"baseEntityReference\":{\"name\":\"CalendarDate\",\"path\":\"CalendarDate.cdm.json/CalendarDate\"},\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar.\",\"isNullable\":false,\"name\":\"CalendarId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date of the associated calendar.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"DayOfWeekId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Day Of Week.\",\"isNullable\":true,\"name\":\"DayOfWeekId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDateStandardStartTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The standard time that operations start on this calendar date.\",\"isNullable\":true,\"name\":\"CalendarDateStandardStartTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDateStandardEndTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The standard time that operations end on this calendar date.\",\"isNullable\":true,\"name\":\"CalendarDateStandardEndTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"HolidayIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates that the associated date is a holiday.\",\"isNullable\":true,\"name\":\"HolidayIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"HolidayName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the associated holiday.\",\"isNullable\":true,\"name\":\"HolidayName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDayNumber\"},\"dataType\":\"integer\",\"description\":\"The day number associated with the calendar date.\",\"isNullable\":true,\"name\":\"CalendarDayNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarWeekId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar Week.\",\"isNullable\":true,\"name\":\"CalendarWeekId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarMonthId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a calendar month.\",\"isNullable\":true,\"name\":\"CalendarMonthId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarQuarterId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a calendar quarter.\",\"isNullable\":true,\"name\":\"CalendarQuarterId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarYearId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar Year.\",\"isNullable\":true,\"name\":\"CalendarYearId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarPeriodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Calendar Period.\",\"isNullable\":true,\"name\":\"CalendarPeriodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CalendarDate.cdm.json/CalendarDate\",\"name\":\"CalendarDateNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the calendar date.\",\"isNullable\":true,\"name\":\"CalendarDateNote\"}]},\"primaryKey\":[\"CalendarId\",\"Date\"]}}",
+			"Description": "The details for a specific date within a calendar.",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "CalendarId,Date",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CalendarId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DayOfWeekId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarDateStandardStartTime\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarDateStandardEndTime\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HolidayIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"HolidayName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarDayNumber\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarWeekId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarMonthId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarQuarterId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarYearId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarPeriodId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CalendarDateNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 3,
+		"ObjectId": "32a38493-5821-4861-977b-2b30a568b4bf",
+		"Description": "The details for a specific date within a calendar."
+	},
+	"type": "TABLE"
+}

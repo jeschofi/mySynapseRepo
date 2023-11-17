@@ -1,0 +1,29 @@
+{
+	"name": "relationship-mtvlenlucs",
+	"properties": {
+		"Name": "relationship-mtvlenlucs",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelAssortment",
+		"ToTableName": "ChannelAssortmentProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssortmentTypeId",
+				"ToColumnName": "AssortmentTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelAssortment.cdm.json/ChannelAssortment\",\"toEntity\":\"ChannelAssortmentProduct.cdm.json/ChannelAssortmentProduct\",\"joinPairs\":[{\"fromAttribute\":\"AssortmentTypeId\",\"toAttribute\":\"AssortmentTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b9ccf5db-94c6-4be5-9085-6369e4def64f"
+	},
+	"type": "RELATIONSHIP"
+}

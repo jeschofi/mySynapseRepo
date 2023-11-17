@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zytbvfvegh",
+	"properties": {
+		"Name": "relationship-zytbvfvegh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PointOfSale",
+		"ToTableName": "FuelPumpPos",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PointOfSaleId",
+				"ToColumnName": "PointOfSaleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PointOfSale.cdm.json/PointOfSale\",\"toEntity\":\"FuelPumpPos.cdm.json/FuelPumpPos\",\"joinPairs\":[{\"fromAttribute\":\"PointOfSaleId\",\"toAttribute\":\"PointOfSaleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9ccef28f-b4c6-4364-84ab-8d5eac21e618"
+	},
+	"type": "RELATIONSHIP"
+}

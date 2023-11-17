@@ -1,0 +1,418 @@
+{
+	"name": "Reading",
+	"properties": {
+		"Name": "Reading",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ReadingId",
+					"Description": "The unique identifier of a reading.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingId"
+					}
+				},
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "SensorId",
+					"Description": "The unique identifier of a sensor.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "SensorId"
+					}
+				},
+				{
+					"Name": "DeviceId",
+					"Description": "The unique identifier of a Device.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "DeviceId"
+					}
+				},
+				{
+					"Name": "ComponentId",
+					"Description": "The unique identifier of a Component.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ComponentId"
+					}
+				},
+				{
+					"Name": "ReadingTypeId",
+					"Description": "The unique identifier of a Reading Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingTypeId"
+					}
+				},
+				{
+					"Name": "ReadingStartTimestamp",
+					"Description": "The period start timestamp for which the associated reading is reported.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingStartTimestamp"
+					}
+				},
+				{
+					"Name": "ReadingEndTimestamp",
+					"Description": "The period end timestamp for which the associated reading is reported.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingEndTimestamp"
+					}
+				},
+				{
+					"Name": "ReadingValue",
+					"Description": "The value of the associated reading.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingValue"
+					}
+				},
+				{
+					"Name": "ReadingUnits",
+					"Description": "The measurement units for the associated reading.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingUnits"
+					}
+				},
+				{
+					"Name": "ReadingUnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingUnitOfMeasureId"
+					}
+				},
+				{
+					"Name": "ScheduleReadingTimestamp",
+					"Description": "The timestamp of the scheduled reading of the testing equipment of the associated reading type.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ScheduleReadingTimestamp"
+					}
+				},
+				{
+					"Name": "ReadingStatusId",
+					"Description": "The unique identifier of a Reading Status.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingStatusId"
+					}
+				},
+				{
+					"Name": "ReadingModeId",
+					"Description": "The unique identifier of a Reading Mode.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingModeId"
+					}
+				},
+				{
+					"Name": "ReadingResultTypeId",
+					"Description": "The unique identifier of a Reading Result Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingResultTypeId"
+					}
+				},
+				{
+					"Name": "PiPointId",
+					"Description": "The unique identifier of a PI Point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "PiPointId"
+					}
+				},
+				{
+					"Name": "ReadingSourceTypeId",
+					"Description": "The unique identifier of a reading source type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingSourceTypeId"
+					}
+				},
+				{
+					"Name": "ReadingNote",
+					"Description": "A note, comment or additional information regarding the reading.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Reading.cdm.json/Reading",
+						"Name": "ReadingNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f385822d-31ef-443d-b49f-c93219acfe63",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Reading",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Reading",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ReadingId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingId\"},\"AssetId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"AssetId\"},\"SensorId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"SensorId\"},\"DeviceId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"DeviceId\"},\"ComponentId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ComponentId\"},\"ReadingTypeId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingTypeId\"},\"ReadingStartTimestamp\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingStartTimestamp\"},\"ReadingEndTimestamp\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingEndTimestamp\"},\"ReadingValue\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingValue\"},\"ReadingUnits\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingUnits\"},\"ReadingUnitOfMeasureId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingUnitOfMeasureId\"},\"ScheduleReadingTimestamp\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ScheduleReadingTimestamp\"},\"ReadingStatusId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingStatusId\"},\"ReadingModeId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingModeId\"},\"ReadingResultTypeId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingResultTypeId\"},\"PiPointId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"PiPointId\"},\"ReadingSourceTypeId\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingSourceTypeId\"},\"ReadingNote\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Reading\",\"path\":\"Reading.cdm.json/Reading\"},\"description\":\"The reading associated with a device or asset.\",\"primaryKey\":[\"ReadingId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a reading.\",\"isNullable\":false,\"name\":\"ReadingId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":true,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"SensorId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a sensor.\",\"isNullable\":true,\"name\":\"SensorId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"DeviceId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Device.\",\"isNullable\":true,\"name\":\"DeviceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ComponentId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Component.\",\"isNullable\":true,\"name\":\"ComponentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Reading Type.\",\"isNullable\":false,\"name\":\"ReadingTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the associated reading is reported.\",\"isNullable\":false,\"name\":\"ReadingStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp for which the associated reading is reported.\",\"isNullable\":true,\"name\":\"ReadingEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingValue\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The value of the associated reading.\",\"isNullable\":true,\"scale\":8,\"name\":\"ReadingValue\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingUnits\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The measurement units for the associated reading.\",\"isNullable\":true,\"scale\":8,\"name\":\"ReadingUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingUnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"ReadingUnitOfMeasureId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ScheduleReadingTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the scheduled reading of the testing equipment of the associated reading type.\",\"isNullable\":true,\"name\":\"ScheduleReadingTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingStatusId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Reading Status.\",\"isNullable\":true,\"name\":\"ReadingStatusId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingModeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Reading Mode.\",\"isNullable\":true,\"name\":\"ReadingModeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingResultTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Reading Result Type.\",\"isNullable\":true,\"name\":\"ReadingResultTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"PiPointId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a PI Point.\",\"isNullable\":true,\"name\":\"PiPointId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingSourceTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a reading source type.\",\"isNullable\":true,\"name\":\"ReadingSourceTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Reading.cdm.json/Reading\",\"name\":\"ReadingNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the reading.\",\"isNullable\":true,\"name\":\"ReadingNote\"}]}}}",
+			"Description": "The reading associated with a device or asset.",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#003C96\"}",
+			"PrimaryKeys": "ReadingId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ReadingId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SensorId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"DeviceId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ComponentId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ReadingStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ReadingEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingValue\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingUnits\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingUnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ScheduleReadingTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingStatusId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingModeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingResultTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PiPointId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingSourceTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ReadingNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "74571021-9497-4ed8-ae41-3bb52e26cb9e",
+		"Description": "The reading associated with a device or asset."
+	},
+	"type": "TABLE"
+}

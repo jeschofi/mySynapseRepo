@@ -1,0 +1,29 @@
+{
+	"name": "relationship-japuvizkyc",
+	"properties": {
+		"Name": "relationship-japuvizkyc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PromotionType",
+		"ToTableName": "Promotion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PromotionTypeId",
+				"ToColumnName": "PromotionTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PromotionType.cdm.json/PromotionType\",\"toEntity\":\"Promotion.cdm.json/Promotion\",\"joinPairs\":[{\"fromAttribute\":\"PromotionTypeId\",\"toAttribute\":\"PromotionTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3e58da42-1277-4f7a-a96c-e95b73c436f2"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iqowrurzte",
+	"properties": {
+		"Name": "relationship-iqowrurzte",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarQuarter",
+		"ToTableName": "CalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarQuarterId",
+				"ToColumnName": "CalendarQuarterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"toEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"CalendarQuarterId\",\"toAttribute\":\"CalendarQuarterId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9458b82a-3933-4229-8a55-3cf42ce62416"
+	},
+	"type": "RELATIONSHIP"
+}

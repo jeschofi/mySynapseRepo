@@ -1,0 +1,29 @@
+{
+	"name": "relationship-thehzlmrno",
+	"properties": {
+		"Name": "relationship-thehzlmrno",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayBin",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BinPeriodStartDate",
+				"ToColumnName": "BinPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"BinPeriodStartDate\",\"toAttribute\":\"BinPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "917e2358-8438-4437-99e0-79171b995751"
+	},
+	"type": "RELATIONSHIP"
+}

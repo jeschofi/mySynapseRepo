@@ -1,0 +1,225 @@
+{
+	"name": "LicensingOrganization",
+	"properties": {
+		"Name": "LicensingOrganization",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "LicensingOrganizationId",
+					"Description": "The unique identifier of a Licensing Organization.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "LicensingOrganizationId"
+					}
+				},
+				{
+					"Name": "LicensingOrganizationName",
+					"Description": "The name of a Licensing Organization.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "LicensingOrganizationName"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "LicensingOrganizationTelephoneNumber",
+					"Description": "The Licensing Organization telephone number.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 15,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "LicensingOrganizationTelephoneNumber"
+					}
+				},
+				{
+					"Name": "LicensingOrganizationFaxNumber",
+					"Description": "The Licensing Organization fax number.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 15,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "LicensingOrganizationFaxNumber"
+					}
+				},
+				{
+					"Name": "LicensingOrganizationEmailAddress",
+					"Description": "The Licensing Organization email address.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "LicensingOrganizationEmailAddress"
+					}
+				},
+				{
+					"Name": "LicensingOrganizationWebsiteUrl",
+					"Description": "The Licensing Organization website URL.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2083,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "LicensingOrganizationWebsiteUrl"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "LicensingOrganization.cdm.json/LicensingOrganization",
+						"Name": "PartyId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "52b47ed3-6aa7-4d0d-950d-cb92f1c59af0",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/LicensingOrganization",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/LicensingOrganization",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"LicensingOrganizationId\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationId\"},\"LicensingOrganizationName\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationName\"},\"LocationId\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LocationId\"},\"LicensingOrganizationTelephoneNumber\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationTelephoneNumber\"},\"LicensingOrganizationFaxNumber\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationFaxNumber\"},\"LicensingOrganizationEmailAddress\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationEmailAddress\"},\"LicensingOrganizationWebsiteUrl\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationWebsiteUrl\"},\"PartyId\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"PartyId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"LicensingOrganization\",\"path\":\"LicensingOrganization.cdm.json/LicensingOrganization\"},\"description\":\"The organization that provides the associated licensing.\\n\\nEx:\\nAlabama\\n\\nAlabama Board of Nursing\\nRSA Plaza, Suite 250\\n770 Washington Ave.\\nMontgomery, Alabama 36104\\n(334) 242-4060\\n\\nMailing Address:\\nP.O. Box 303900\\nMontgomery, Alabama 36130-3900\\n\\nAlaska\\n\\nAlaska Board of Nursing\\nRobert B. Atwood Building\\n550 W. 7th Ave., Suite 1500\\nAnchorage, Alaska 99501-3567\\n(907) 269-8161\\n\\nArizona\\n\\nArizona State Board of Nursing\\n1651 E. Morten, Suite 210\\nPhoenix, Arizona 85020\\n(602) 889-5150\",\"primaryKey\":[\"LicensingOrganizationId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Licensing Organization.\",\"isNullable\":false,\"name\":\"LicensingOrganizationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Licensing Organization.\",\"isNullable\":true,\"name\":\"LicensingOrganizationName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationTelephoneNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":15,\"description\":\"The Licensing Organization telephone number.\",\"isNullable\":true,\"scale\":0,\"name\":\"LicensingOrganizationTelephoneNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationFaxNumber\"},\"dataType\":\"decimal\",\"dataTypeLength\":15,\"description\":\"The Licensing Organization fax number.\",\"isNullable\":true,\"scale\":0,\"name\":\"LicensingOrganizationFaxNumber\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationEmailAddress\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The Licensing Organization email address.\",\"isNullable\":true,\"name\":\"LicensingOrganizationEmailAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"LicensingOrganizationWebsiteUrl\"},\"dataType\":\"string\",\"dataTypeLength\":2083,\"description\":\"The Licensing Organization website URL.\",\"isNullable\":true,\"name\":\"LicensingOrganizationWebsiteUrl\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PartyId\"}]}}}",
+			"Description": "The organization that provides the associated licensing.\n\nEx:\nAlabama\n\nAlabama Board of Nursing\nRSA Plaza, Suite 250\n770 Washington Ave.\nMontgomery, Alabama 36104\n(334) 242-4060\n\nMailing Address:\nP.O. Box 303900\nMontgomery, Alabama 36130-3900\n\nAlaska\n\nAlaska Board of Nursing\nRobert B. Atwood Building\n550 W. 7th Ave., Suite 1500\nAnchorage, Alaska 99501-3567\n(907) 269-8161\n\nArizona\n\nArizona State Board of Nursing\n1651 E. Morten, Suite 210\nPhoenix, Arizona 85020\n(602) 889-5150",
+			"DisplayFolderInfo": "{\"name\":\"Human Resources & Payroll\",\"colorCode\":\"#630454\"}",
+			"PrimaryKeys": "LicensingOrganizationId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"LicensingOrganizationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LicensingOrganizationName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LicensingOrganizationTelephoneNumber\",\"type\":\"decimal(15,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LicensingOrganizationFaxNumber\",\"type\":\"decimal(15,0)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LicensingOrganizationEmailAddress\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LicensingOrganizationWebsiteUrl\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "12240749-46fa-413c-a38e-0c489f937c67",
+		"Description": "The organization that provides the associated licensing.\n\nEx:\nAlabama\n\nAlabama Board of Nursing\nRSA Plaza, Suite 250\n770 Washington Ave.\nMontgomery, Alabama 36104\n(334) 242-4060\n\nMailing Address:\nP.O. Box 303900\nMontgomery, Alabama 36130-3900\n\nAlaska\n\nAlaska Board of Nursing\nRobert B. Atwood Building\n550 W. 7th Ave., Suite 1500\nAnchorage, Alaska 99501-3567\n(907) 269-8161\n\nArizona\n\nArizona State Board of Nursing\n1651 E. Morten, Suite 210\nPhoenix, Arizona 85020\n(602) 889-5150"
+	},
+	"type": "TABLE"
+}

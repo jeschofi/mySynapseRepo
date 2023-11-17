@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vklogaffvw",
+	"properties": {
+		"Name": "relationship-vklogaffvw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarPeriod",
+		"ToTableName": "CalendarDate",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarPeriodId",
+				"ToColumnName": "CalendarPeriodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarPeriod.cdm.json/CalendarPeriod\",\"toEntity\":\"CalendarDate.cdm.json/CalendarDate\",\"joinPairs\":[{\"fromAttribute\":\"CalendarPeriodId\",\"toAttribute\":\"CalendarPeriodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ccc1ee39-a481-4317-b698-25fd2109ec8d"
+	},
+	"type": "RELATIONSHIP"
+}

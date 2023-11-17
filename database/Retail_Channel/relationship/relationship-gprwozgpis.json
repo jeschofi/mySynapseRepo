@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gprwozgpis",
+	"properties": {
+		"Name": "relationship-gprwozgpis",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommunicationMethod",
+		"ToTableName": "Communication",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommunicationMethodId",
+				"ToColumnName": "CommunicationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommunicationMethod.cdm.json/CommunicationMethod\",\"toEntity\":\"Communication.cdm.json/Communication\",\"joinPairs\":[{\"fromAttribute\":\"CommunicationMethodId\",\"toAttribute\":\"CommunicationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7870bacc-35e9-4f71-a41d-4211fbf1d297"
+	},
+	"type": "RELATIONSHIP"
+}

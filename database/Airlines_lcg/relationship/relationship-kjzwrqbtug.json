@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kjzwrqbtug",
+	"properties": {
+		"Name": "relationship-kjzwrqbtug",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Party",
+		"ToTableName": "BadDebtWriteOff",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "PartyId",
+				"ToColumnName": "PartyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Party.cdm.json/Party\",\"toEntity\":\"BadDebtWriteOff.cdm.json/BadDebtWriteOff\",\"joinPairs\":[{\"fromAttribute\":\"PartyId\",\"toAttribute\":\"PartyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "cd1f09c4-4132-4976-ba4c-c7ce36e51d6b"
+	},
+	"type": "RELATIONSHIP"
+}

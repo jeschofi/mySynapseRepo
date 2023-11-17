@@ -1,0 +1,189 @@
+{
+	"name": "AtmLocation",
+	"properties": {
+		"Name": "AtmLocation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AtmId",
+					"Description": "The unique identifier of an ATM.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocation.cdm.json/AtmLocation",
+						"Name": "AtmId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the ATM location is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocation.cdm.json/AtmLocation",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the ATM location is valid.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocation.cdm.json/AtmLocation",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocation.cdm.json/AtmLocation",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "AtmLocationTypeId",
+					"Description": "The unique identifier of the ATM Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocation.cdm.json/AtmLocation",
+						"Name": "AtmLocationTypeId"
+					}
+				},
+				{
+					"Name": "AtmLocationNote",
+					"Description": "A note, comment or additional information regarding an ATM location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AtmLocation.cdm.json/AtmLocation",
+						"Name": "AtmLocationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "a3771dc6-9753-4050-b048-5116ed719098",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmLocation",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/AtmLocation",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AtmId\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"AtmId\"},\"PeriodStartDate\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"PeriodEndDate\"},\"LocationId\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"LocationId\"},\"AtmLocationTypeId\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"AtmLocationTypeId\"},\"AtmLocationNote\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"AtmLocationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AtmLocation\",\"path\":\"AtmLocation.cdm.json/AtmLocation\"},\"description\":\"The location of an ATM, which is many cases is a  financial institution, bank, retail, airport or similar location at which one or more ATM's are located.\",\"primaryKey\":[\"AtmId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"AtmId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an ATM.\",\"isNullable\":false,\"name\":\"AtmId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the ATM location is valid.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the ATM location is valid.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"AtmLocationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the ATM Location Type.\",\"isNullable\":true,\"name\":\"AtmLocationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AtmLocation.cdm.json/AtmLocation\",\"name\":\"AtmLocationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding an ATM location.\",\"isNullable\":true,\"name\":\"AtmLocationNote\"}]}}}",
+			"Description": "The location of an ATM, which is many cases is a  financial institution, bank, retail, airport or similar location at which one or more ATM's are located.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "AtmId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AtmId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AtmLocationTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AtmLocationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "3258ea18-034e-473a-9162-7e758e32b2fb",
+		"Description": "The location of an ATM, which is many cases is a  financial institution, bank, retail, airport or similar location at which one or more ATM's are located."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,301 @@
+{
+	"name": "StorageContainer",
+	"properties": {
+		"Name": "StorageContainer",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StorageContainerId",
+					"Description": "The unique identifier of a Storage Container.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "StorageContainerId"
+					}
+				},
+				{
+					"Name": "StorageContainerTypeId",
+					"Description": "The unique identifier of a storage container type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "StorageContainerTypeId"
+					}
+				},
+				{
+					"Name": "LocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "LocationId"
+					}
+				},
+				{
+					"Name": "WarehouseId",
+					"Description": "The unique identifier of a Warehouse.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "WarehouseId"
+					}
+				},
+				{
+					"Name": "StorageLength",
+					"Description": "The length of the storage expressed in meters.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "StorageLength"
+					}
+				},
+				{
+					"Name": "StorageWidth",
+					"Description": "The width of the storage expressed in meters.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "StorageWidth"
+					}
+				},
+				{
+					"Name": "StorageHeight",
+					"Description": "The height of the storage expressed in meters.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "StorageHeight"
+					}
+				},
+				{
+					"Name": "StorageShellThickness",
+					"Description": "The thickness of the storage expressed in millimeters.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "StorageShellThickness"
+					}
+				},
+				{
+					"Name": "CycleRate",
+					"Description": "The Cycle rate is the average number of times a reservoir's working gas volume can be turned over during a specific period of time.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "CycleRate"
+					}
+				},
+				{
+					"Name": "CycleRateUnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "CycleRateUnitOfMeasureId"
+					}
+				},
+				{
+					"Name": "StorageContainerNote",
+					"Description": "A note, comment or additional information regarding the storage container.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "StorageContainerNote"
+					}
+				},
+				{
+					"Name": "ShippingLocationId",
+					"Description": "The unique identifier of a Shipping Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainer.cdm.json/StorageContainer",
+						"Name": "ShippingLocationId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0d77a3de-c2bc-4d6f-9b7f-4121fd086710",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StorageContainer",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StorageContainer",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StorageContainerId\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageContainerId\"},\"StorageContainerTypeId\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageContainerTypeId\"},\"LocationId\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"LocationId\"},\"WarehouseId\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"WarehouseId\"},\"StorageLength\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageLength\"},\"StorageWidth\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageWidth\"},\"StorageHeight\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageHeight\"},\"StorageShellThickness\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageShellThickness\"},\"CycleRate\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"CycleRate\"},\"CycleRateUnitOfMeasureId\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"CycleRateUnitOfMeasureId\"},\"StorageContainerNote\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageContainerNote\"},\"ShippingLocationId\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"ShippingLocationId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StorageContainer\",\"path\":\"StorageContainer.cdm.json/StorageContainer\"},\"description\":\"A component capable of storing a commodity.\",\"primaryKey\":[\"StorageContainerId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageContainerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Storage Container.\",\"isNullable\":false,\"name\":\"StorageContainerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageContainerTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a storage container type.\",\"isNullable\":true,\"name\":\"StorageContainerTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"LocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"LocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"WarehouseId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Warehouse.\",\"isNullable\":true,\"name\":\"WarehouseId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageLength\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The length of the storage expressed in meters.\",\"isNullable\":true,\"scale\":8,\"name\":\"StorageLength\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageWidth\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The width of the storage expressed in meters.\",\"isNullable\":true,\"scale\":8,\"name\":\"StorageWidth\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageHeight\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The height of the storage expressed in meters.\",\"isNullable\":true,\"scale\":8,\"name\":\"StorageHeight\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageShellThickness\"},\"dataType\":\"integer\",\"description\":\"The thickness of the storage expressed in millimeters.\",\"isNullable\":true,\"name\":\"StorageShellThickness\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"CycleRate\"},\"dataType\":\"integer\",\"description\":\"The Cycle rate is the average number of times a reservoir's working gas volume can be turned over during a specific period of time.\",\"isNullable\":true,\"name\":\"CycleRate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"CycleRateUnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"CycleRateUnitOfMeasureId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"StorageContainerNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the storage container.\",\"isNullable\":true,\"name\":\"StorageContainerNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainer.cdm.json/StorageContainer\",\"name\":\"ShippingLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Shipping Location.\",\"isNullable\":true,\"name\":\"ShippingLocationId\"}]}}}",
+			"Description": "A component capable of storing a commodity.",
+			"DisplayFolderInfo": "{\"name\":\"Network\",\"colorCode\":\"#0E3D73\"}",
+			"PrimaryKeys": "StorageContainerId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StorageContainerId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StorageContainerTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WarehouseId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StorageLength\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StorageWidth\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StorageHeight\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StorageShellThickness\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CycleRate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CycleRateUnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StorageContainerNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ShippingLocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "7ca06d89-c71b-42ce-bad2-8727e8b9d4fb",
+		"Description": "A component capable of storing a commodity."
+	},
+	"type": "TABLE"
+}

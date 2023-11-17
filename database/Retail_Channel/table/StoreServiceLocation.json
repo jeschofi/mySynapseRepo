@@ -1,0 +1,303 @@
+{
+	"name": "StoreServiceLocation",
+	"properties": {
+		"Name": "StoreServiceLocation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "ServiceLocationId",
+					"Description": "The unique identifier of a service location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "ServiceLocationId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp of the store / service location relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp of the store / service location relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "StoreServiceLocationName",
+					"Description": "The name of the Store Service Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "StoreServiceLocationName"
+					}
+				},
+				{
+					"Name": "StoreServiceLocationDescription",
+					"Description": "The description of the Store Service Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "StoreServiceLocationDescription"
+					}
+				},
+				{
+					"Name": "StoreServiceLocationTypeId",
+					"Description": "The unique identifier of a Store Service Location Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "StoreServiceLocationTypeId"
+					}
+				},
+				{
+					"Name": "NwLocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "NwLocationId"
+					}
+				},
+				{
+					"Name": "SeLocationId",
+					"Description": "The unique identifier of a Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "SeLocationId"
+					}
+				},
+				{
+					"Name": "GrossFloorArea",
+					"Description": "The total floor area of the Store Service Location including display and support areas such as stock keeping, dressing rooms and building functions.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "GrossFloorArea"
+					}
+				},
+				{
+					"Name": "NonsellingArea",
+					"Description": "The total non-selling square footage of the associated Store Service Location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "NonsellingArea"
+					}
+				},
+				{
+					"Name": "AvailableSellingArea",
+					"Description": "The total selling area within the Store Service Location expressed in square footage.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocation.cdm.json/StoreServiceLocation",
+						"Name": "AvailableSellingArea"
+					}
+				}
+			],
+			"ColumnSetEntityName": "6b11c5f0-c420-4dc6-bed9-da60f02eadb6",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreServiceLocation",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreServiceLocation",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreId\"},\"ServiceLocationId\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"ServiceLocationId\"},\"PeriodStartTimestamp\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"PeriodEndTimestamp\"},\"StoreServiceLocationName\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreServiceLocationName\"},\"StoreServiceLocationDescription\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreServiceLocationDescription\"},\"StoreServiceLocationTypeId\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreServiceLocationTypeId\"},\"NwLocationId\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"NwLocationId\"},\"SeLocationId\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"SeLocationId\"},\"GrossFloorArea\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"GrossFloorArea\"},\"NonsellingArea\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"NonsellingArea\"},\"AvailableSellingArea\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"AvailableSellingArea\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreServiceLocation\",\"path\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\"},\"description\":\"A Service Location that can be found within a Store.\",\"primaryKey\":[\"StoreId\",\"ServiceLocationId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"ServiceLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a service location.\",\"isNullable\":false,\"name\":\"ServiceLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp of the store / service location relationship.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp of the store / service location relationship.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreServiceLocationName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Store Service Location.\",\"isNullable\":true,\"name\":\"StoreServiceLocationName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreServiceLocationDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Store Service Location.\",\"isNullable\":true,\"name\":\"StoreServiceLocationDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"StoreServiceLocationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store Service Location Type.\",\"isNullable\":true,\"name\":\"StoreServiceLocationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"NwLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"NwLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"SeLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Location.\",\"isNullable\":true,\"name\":\"SeLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"GrossFloorArea\"},\"dataType\":\"integer\",\"description\":\"The total floor area of the Store Service Location including display and support areas such as stock keeping, dressing rooms and building functions.\",\"isNullable\":true,\"name\":\"GrossFloorArea\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"NonsellingArea\"},\"dataType\":\"integer\",\"description\":\"The total non-selling square footage of the associated Store Service Location.\",\"isNullable\":true,\"name\":\"NonsellingArea\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocation.cdm.json/StoreServiceLocation\",\"name\":\"AvailableSellingArea\"},\"dataType\":\"integer\",\"description\":\"The total selling area within the Store Service Location expressed in square footage.\",\"isNullable\":true,\"name\":\"AvailableSellingArea\"}]}}}",
+			"Description": "A Service Location that can be found within a Store.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,ServiceLocationId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ServiceLocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreServiceLocationName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreServiceLocationDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreServiceLocationTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NwLocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SeLocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GrossFloorArea\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NonsellingArea\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AvailableSellingArea\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "55bb680f-e8c6-4313-a72b-2dd25e72c0f0",
+		"Description": "A Service Location that can be found within a Store."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pvthzireza",
+	"properties": {
+		"Name": "relationship-pvthzireza",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DisplayType",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DisplayTypeId",
+				"ToColumnName": "DisplayTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DisplayType.cdm.json/DisplayType\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"DisplayTypeId\",\"toAttribute\":\"DisplayTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d289e934-a1b4-4afa-8734-4f7b6d2f2b63"
+	},
+	"type": "RELATIONSHIP"
+}

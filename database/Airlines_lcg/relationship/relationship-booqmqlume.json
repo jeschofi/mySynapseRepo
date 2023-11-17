@@ -1,0 +1,29 @@
+{
+	"name": "relationship-booqmqlume",
+	"properties": {
+		"Name": "relationship-booqmqlume",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FinancialProduct",
+		"ToTableName": "FinancialProductIssuedByLegalEntity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FinancialProductId",
+				"ToColumnName": "FinancialProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FinancialProduct.cdm.json/FinancialProduct\",\"toEntity\":\"FinancialProductIssuedByLegalEntity.cdm.json/FinancialProductIssuedByLegalEntity\",\"joinPairs\":[{\"fromAttribute\":\"FinancialProductId\",\"toAttribute\":\"FinancialProductId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b33d2459-f0a4-4da5-8401-d72a20e06f62"
+	},
+	"type": "RELATIONSHIP"
+}

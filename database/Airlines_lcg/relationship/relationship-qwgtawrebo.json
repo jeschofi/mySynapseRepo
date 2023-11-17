@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qwgtawrebo",
+	"properties": {
+		"Name": "relationship-qwgtawrebo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssetClass",
+		"ToTableName": "Asset",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetClassId",
+				"ToColumnName": "AssetClassId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssetClass.cdm.json/AssetClass\",\"toEntity\":\"Asset.cdm.json/Asset\",\"joinPairs\":[{\"fromAttribute\":\"AssetClassId\",\"toAttribute\":\"AssetClassId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "6dbc8562-8506-4bc0-b168-84fa302071d7"
+	},
+	"type": "RELATIONSHIP"
+}

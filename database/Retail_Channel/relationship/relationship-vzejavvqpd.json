@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vzejavvqpd",
+	"properties": {
+		"Name": "relationship-vzejavvqpd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShopperSession",
+		"ToTableName": "ShopperSessionTransaction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShopperSessionId",
+				"ToColumnName": "ShopperSessionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShopperSession.cdm.json/ShopperSession\",\"toEntity\":\"ShopperSessionTransaction.cdm.json/ShopperSessionTransaction\",\"joinPairs\":[{\"fromAttribute\":\"ShopperSessionId\",\"toAttribute\":\"ShopperSessionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8afea2d7-0593-4da0-bf7c-b5db78c093b6"
+	},
+	"type": "RELATIONSHIP"
+}

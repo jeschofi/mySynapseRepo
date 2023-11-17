@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zvnynfidwt",
+	"properties": {
+		"Name": "relationship-zvnynfidwt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ResponsibilityCenterType",
+		"ToTableName": "ResponsibilityCenter",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ResponsibilityCenterTypeId",
+				"ToColumnName": "ResponsibilityCenterTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ResponsibilityCenterType.cdm.json/ResponsibilityCenterType\",\"toEntity\":\"ResponsibilityCenter.cdm.json/ResponsibilityCenter\",\"joinPairs\":[{\"fromAttribute\":\"ResponsibilityCenterTypeId\",\"toAttribute\":\"ResponsibilityCenterTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7e7fede4-2bec-4645-9c38-522c4fe2ceea"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wpahmwfvur",
+	"properties": {
+		"Name": "relationship-wpahmwfvur",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ExchangeRateType",
+		"ToTableName": "IsoCurrencyConversion",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ExchangeRateTypeId",
+				"ToColumnName": "ExchangeRateTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ExchangeRateType.cdm.json/ExchangeRateType\",\"toEntity\":\"IsoCurrencyConversion.cdm.json/IsoCurrencyConversion\",\"joinPairs\":[{\"fromAttribute\":\"ExchangeRateTypeId\",\"toAttribute\":\"ExchangeRateTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "96608693-9eb0-4eac-b149-da1583b852d1"
+	},
+	"type": "RELATIONSHIP"
+}

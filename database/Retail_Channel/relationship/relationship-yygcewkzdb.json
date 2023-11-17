@@ -1,0 +1,29 @@
+{
+	"name": "relationship-yygcewkzdb",
+	"properties": {
+		"Name": "relationship-yygcewkzdb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AssortmentType",
+		"ToTableName": "ChannelTypeAssortment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssortmentTypeId",
+				"ToColumnName": "AssortmentTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AssortmentType.cdm.json/AssortmentType\",\"toEntity\":\"ChannelTypeAssortment.cdm.json/ChannelTypeAssortment\",\"joinPairs\":[{\"fromAttribute\":\"AssortmentTypeId\",\"toAttribute\":\"AssortmentTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ad77dde9-4df2-4394-800d-31b32e7f64cb"
+	},
+	"type": "RELATIONSHIP"
+}

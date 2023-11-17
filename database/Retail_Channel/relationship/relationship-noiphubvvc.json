@@ -1,0 +1,29 @@
+{
+	"name": "relationship-noiphubvvc",
+	"properties": {
+		"Name": "relationship-noiphubvvc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Territory",
+		"ToTableName": "Channel",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TerritoryId",
+				"ToColumnName": "TerritoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Territory.cdm.json/Territory\",\"toEntity\":\"Channel.cdm.json/Channel\",\"joinPairs\":[{\"fromAttribute\":\"TerritoryId\",\"toAttribute\":\"TerritoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "87eba254-f13c-44c5-b9ec-797cc80fcf05"
+	},
+	"type": "RELATIONSHIP"
+}

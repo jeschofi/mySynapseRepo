@@ -1,0 +1,29 @@
+{
+	"name": "relationship-tdkxeqbakc",
+	"properties": {
+		"Name": "relationship-tdkxeqbakc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LevelOfPrecision",
+		"ToTableName": "StatementOfComprehensiveIncome",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LevelOfPrecisionId",
+				"ToColumnName": "EarningsPerShareLevelOfPrecisionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LevelOfPrecision.cdm.json/LevelOfPrecision\",\"toEntity\":\"StatementOfComprehensiveIncome.cdm.json/StatementOfComprehensiveIncome\",\"joinPairs\":[{\"fromAttribute\":\"LevelOfPrecisionId\",\"toAttribute\":\"EarningsPerShareLevelOfPrecisionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b15d7f60-eb5e-4afb-be45-504f00f31d99"
+	},
+	"type": "RELATIONSHIP"
+}

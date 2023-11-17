@@ -1,0 +1,208 @@
+{
+	"name": "StorageContainerAvailableStorage",
+	"properties": {
+		"Name": "StorageContainerAvailableStorage",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StorageContainerId",
+					"Description": "The unique identifier of a Storage Container.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage",
+						"Name": "StorageContainerId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "AvailableStorageUnits",
+					"Description": "The units associated with the available storage.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage",
+						"Name": "AvailableStorageUnits"
+					}
+				},
+				{
+					"Name": "AvailableStorageUomId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage",
+						"Name": "AvailableStorageUomId"
+					}
+				},
+				{
+					"Name": "StorageContainerAvailableStorageNote",
+					"Description": "A note, comment or additional information regarding the storage container available storage.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage",
+						"Name": "StorageContainerAvailableStorageNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "ebe670e8-a502-4c7c-bf0e-d520daf23207",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StorageContainerAvailableStorage",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StorageContainerAvailableStorage",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StorageContainerId\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"StorageContainerId\"},\"ProductId\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"ProductId\"},\"PeriodStartTimestamp\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"PeriodEndTimestamp\"},\"AvailableStorageUnits\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"AvailableStorageUnits\"},\"AvailableStorageUomId\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"AvailableStorageUomId\"},\"StorageContainerAvailableStorageNote\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"StorageContainerAvailableStorageNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StorageContainerAvailableStorage\",\"path\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\"},\"description\":\"The available storage associated with the Product for the period.\",\"primaryKey\":[\"StorageContainerId\",\"ProductId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"StorageContainerId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Storage Container.\",\"isNullable\":false,\"name\":\"StorageContainerId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"AvailableStorageUnits\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The units associated with the available storage.\",\"isNullable\":true,\"scale\":8,\"name\":\"AvailableStorageUnits\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"AvailableStorageUomId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"AvailableStorageUomId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StorageContainerAvailableStorage.cdm.json/StorageContainerAvailableStorage\",\"name\":\"StorageContainerAvailableStorageNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the storage container available storage.\",\"isNullable\":true,\"name\":\"StorageContainerAvailableStorageNote\"}]}}}",
+			"Description": "The available storage associated with the Product for the period.",
+			"DisplayFolderInfo": "{\"name\":\"Network\",\"colorCode\":\"#0E3D73\"}",
+			"PrimaryKeys": "StorageContainerId,ProductId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StorageContainerId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AvailableStorageUnits\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AvailableStorageUomId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StorageContainerAvailableStorageNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "19ecebe5-db19-4f29-a57f-9ea88f392fe2",
+		"Description": "The available storage associated with the Product for the period."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "ChannelClassification",
+	"properties": {
+		"Name": "ChannelClassification",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelClassificationId",
+					"Description": "The unique identifier of a Channel Classification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelClassification.cdm.json/ChannelClassification",
+						"Name": "ChannelClassificationId"
+					}
+				},
+				{
+					"Name": "ChannelClassificationName",
+					"Description": "The name of a Channel Classification.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelClassification.cdm.json/ChannelClassification",
+						"Name": "ChannelClassificationName"
+					}
+				},
+				{
+					"Name": "ChannelClassificationDescription",
+					"Description": "The description of a Channel Classification.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelClassification.cdm.json/ChannelClassification",
+						"Name": "ChannelClassificationDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "837e6b7e-1f3e-4295-87a8-9d2b8efd6c50",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelClassification",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelClassification",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelClassificationId\":{\"entity\":\"ChannelClassification.cdm.json/ChannelClassification\",\"name\":\"ChannelClassificationId\"},\"ChannelClassificationName\":{\"entity\":\"ChannelClassification.cdm.json/ChannelClassification\",\"name\":\"ChannelClassificationName\"},\"ChannelClassificationDescription\":{\"entity\":\"ChannelClassification.cdm.json/ChannelClassification\",\"name\":\"ChannelClassificationDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelClassification\",\"path\":\"ChannelClassification.cdm.json/ChannelClassification\"},\"description\":\"A classification of channel types.\\n\\nEx.:\\n- Retail Store\\n- Online Store\\n- Distribution Centre\\n- Broker\\n- Agency\\n- Carrier\",\"primaryKey\":[\"ChannelClassificationId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelClassification.cdm.json/ChannelClassification\",\"name\":\"ChannelClassificationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel Classification.\",\"isNullable\":false,\"name\":\"ChannelClassificationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelClassification.cdm.json/ChannelClassification\",\"name\":\"ChannelClassificationName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Channel Classification.\",\"isNullable\":true,\"name\":\"ChannelClassificationName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelClassification.cdm.json/ChannelClassification\",\"name\":\"ChannelClassificationDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Channel Classification.\",\"isNullable\":true,\"name\":\"ChannelClassificationDescription\"}]}}}",
+			"Description": "A classification of channel types.\n\nEx.:\n- Retail Store\n- Online Store\n- Distribution Centre\n- Broker\n- Agency\n- Carrier",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelClassificationId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelClassificationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelClassificationName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ChannelClassificationDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "df175968-c6f5-42ab-b44e-0007bcb1c3c4",
+		"Description": "A classification of channel types.\n\nEx.:\n- Retail Store\n- Online Store\n- Distribution Centre\n- Broker\n- Agency\n- Carrier"
+	},
+	"type": "TABLE"
+}

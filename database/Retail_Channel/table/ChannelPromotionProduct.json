@@ -1,0 +1,189 @@
+{
+	"name": "ChannelPromotionProduct",
+	"properties": {
+		"Name": "ChannelPromotionProduct",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPromotionProduct.cdm.json/ChannelPromotionProduct",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "PromotionId",
+					"Description": "The unique identifier of a Promotion.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPromotionProduct.cdm.json/ChannelPromotionProduct",
+						"Name": "PromotionId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPromotionProduct.cdm.json/ChannelPromotionProduct",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The effective start or period start date for the associated offering promotion.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPromotionProduct.cdm.json/ChannelPromotionProduct",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The effective end or period end date for the associated offering promotion.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPromotionProduct.cdm.json/ChannelPromotionProduct",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PromotionNote",
+					"Description": "A comment, note or additional information regarding the associated offering promotion.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelPromotionProduct.cdm.json/ChannelPromotionProduct",
+						"Name": "PromotionNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4f946212-3af9-404d-bef0-faf87906584f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelPromotionProduct",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelPromotionProduct",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"ChannelId\"},\"PromotionId\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PromotionId\"},\"ProductId\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"ProductId\"},\"PeriodStartDate\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PeriodStartDate\"},\"PeriodEndDate\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PeriodEndDate\"},\"PromotionNote\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PromotionNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelPromotionProduct\",\"path\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\"},\"description\":\"The Product(s) offered by Channel in conjunction with Promotion(s) for the period indicated.\",\"primaryKey\":[\"ChannelId\",\"PromotionId\",\"ProductId\",\"PeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PromotionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Promotion.\",\"isNullable\":false,\"name\":\"PromotionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The effective start or period start date for the associated offering promotion.\",\"isNullable\":false,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The effective end or period end date for the associated offering promotion.\",\"isNullable\":true,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelPromotionProduct.cdm.json/ChannelPromotionProduct\",\"name\":\"PromotionNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A comment, note or additional information regarding the associated offering promotion.\",\"isNullable\":true,\"name\":\"PromotionNote\"}]}}}",
+			"Description": "The Product(s) offered by Channel in conjunction with Promotion(s) for the period indicated.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,PromotionId,ProductId,PeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PromotionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PromotionNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "5edfa7d0-347a-4783-ab27-310ccd2966b0",
+		"Description": "The Product(s) offered by Channel in conjunction with Promotion(s) for the period indicated."
+	},
+	"type": "TABLE"
+}

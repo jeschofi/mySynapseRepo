@@ -1,0 +1,418 @@
+{
+	"name": "StoreDisplaySection",
+	"properties": {
+		"Name": "StoreDisplaySection",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "SectionId",
+					"Description": "The unique identifier of a Row.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionId"
+					}
+				},
+				{
+					"Name": "SectionPeriodStartDate",
+					"Description": "The period start date for which the store display section is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionPeriodStartDate"
+					}
+				},
+				{
+					"Name": "SectionPeriodEndDate",
+					"Description": "The period end date until which the store display section is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionPeriodEndDate"
+					}
+				},
+				{
+					"Name": "AisleId",
+					"Description": "The unique identifier of an Aisle.\n\nAn Aisle is the space between storage devices that is used by material handlers for access.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "AisleId"
+					}
+				},
+				{
+					"Name": "AislePeriodStartDate",
+					"Description": "The period start date for which the store store display aisle is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "AislePeriodStartDate"
+					}
+				},
+				{
+					"Name": "SectionName",
+					"Description": "The name of the Section.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionName"
+					}
+				},
+				{
+					"Name": "LocationAddress",
+					"Description": "A unique address within a Warehouse that may identify a Building, Storeroom, Area, Aisle, Shelf, Tier, Bin etc.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 512,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "LocationAddress"
+					}
+				},
+				{
+					"Name": "FloorLocationXCoordinate",
+					"Description": "The floor location x-coordinate of the Row center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "FloorLocationXCoordinate"
+					}
+				},
+				{
+					"Name": "FloorLocationYCoordinate",
+					"Description": "The floor location y-coordinate of the Row center point.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "FloorLocationYCoordinate"
+					}
+				},
+				{
+					"Name": "SectionRotationX",
+					"Description": "Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\n\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionRotationX"
+					}
+				},
+				{
+					"Name": "SectionRotationY",
+					"Description": "Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \n\nSince the Store Display Section is directly on the floor, it's base plane would always match the base plane of the floor, so the Rotation Y would be 0.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionRotationY"
+					}
+				},
+				{
+					"Name": "SectionRotationZ",
+					"Description": "Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.\n\n Since the Store Display Section is directly on the floor, it's base plane would always match the base plane of the floor, so the Rotation Z would be 0.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionRotationZ"
+					}
+				},
+				{
+					"Name": "SectionLength",
+					"Description": "The length of the section measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionLength"
+					}
+				},
+				{
+					"Name": "SectionWidth",
+					"Description": "The width of the section measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionWidth"
+					}
+				},
+				{
+					"Name": "SectionHeight",
+					"Description": "The height of the section measured in the unit of measure specified by the Unit of Measure ID.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 8,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "SectionHeight"
+					}
+				},
+				{
+					"Name": "UnitOfMeasureId",
+					"Description": "The unique identifier of a Unit Of Measure.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "UnitOfMeasureId"
+					}
+				},
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreDisplaySection.cdm.json/StoreDisplaySection",
+						"Name": "AssetId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "2b353af9-2e19-4857-8193-3bfd28e8299a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplaySection",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreDisplaySection",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"StoreId\"},\"SectionId\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionId\"},\"SectionPeriodStartDate\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionPeriodStartDate\"},\"SectionPeriodEndDate\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionPeriodEndDate\"},\"AisleId\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"AisleId\"},\"AislePeriodStartDate\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"AislePeriodStartDate\"},\"SectionName\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionName\"},\"LocationAddress\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"LocationAddress\"},\"FloorLocationXCoordinate\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"FloorLocationXCoordinate\"},\"FloorLocationYCoordinate\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"FloorLocationYCoordinate\"},\"SectionRotationX\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionRotationX\"},\"SectionRotationY\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionRotationY\"},\"SectionRotationZ\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionRotationZ\"},\"SectionLength\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionLength\"},\"SectionWidth\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionWidth\"},\"SectionHeight\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionHeight\"},\"UnitOfMeasureId\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"UnitOfMeasureId\"},\"AssetId\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"AssetId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreDisplaySection\",\"path\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\"},\"description\":\"A grocery store/department aisle is divided into Rows.\",\"primaryKey\":[\"StoreId\",\"SectionId\",\"SectionPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Row.\",\"isNullable\":false,\"name\":\"SectionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the store display section is available for merchandising.\",\"isNullable\":false,\"name\":\"SectionPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date until which the store display section is available for merchandising.\",\"isNullable\":true,\"name\":\"SectionPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"AisleId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Aisle.\\n\\nAn Aisle is the space between storage devices that is used by material handlers for access.\",\"isNullable\":false,\"name\":\"AisleId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"AislePeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the store store display aisle is available for merchandising.\",\"isNullable\":false,\"name\":\"AislePeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Section.\",\"isNullable\":true,\"name\":\"SectionName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"LocationAddress\"},\"dataType\":\"string\",\"dataTypeLength\":512,\"description\":\"A unique address within a Warehouse that may identify a Building, Storeroom, Area, Aisle, Shelf, Tier, Bin etc.\",\"isNullable\":false,\"name\":\"LocationAddress\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"FloorLocationXCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location x-coordinate of the Row center point.\",\"isNullable\":true,\"name\":\"FloorLocationXCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"FloorLocationYCoordinate\"},\"dataType\":\"integer\",\"description\":\"The floor location y-coordinate of the Row center point.\",\"isNullable\":true,\"name\":\"FloorLocationYCoordinate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionRotationX\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation X is the amount of rotation (in degrees) relative to the X axis of the Store Floor.  The rotation point is the center of the object which is aligned with the Floor Location X,Y coordinate.\\n\\nRotation angle is usually defined according to the right-hand rule. Namely, the angle is a positive value when the rotation appears clockwise when looking in the positive direction of the axis, and negative values when the rotation appears counter-clockwise.\",\"isNullable\":true,\"scale\":8,\"name\":\"SectionRotationX\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionRotationY\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Y is the amount of rotation (in degrees) relative to the Y axis of the object.  The Y axis refers to vertical position (perpendicular to the base).  A positive rotation would mean that the front of the object's base plane is higher than the back, whereas a negative value indicates the front of the object's base plane is lower than the back.  \\n\\nSince the Store Display Section is directly on the floor, it's base plane would always match the base plane of the floor, so the Rotation Y would be 0.\",\"isNullable\":true,\"scale\":8,\"name\":\"SectionRotationY\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionRotationZ\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"Rotation Z is the amount of rotation (in degrees) relative to the Z axis of the object.  The Z axis refers to the rotational axis or rotational centerline of the object.  A positive rotation would mean that one side of the object's base plane is higher than the other,  whereas a negative value indicates the opposite side is higher.  In other words, it is leaning to the left or to the right.\\n\\n Since the Store Display Section is directly on the floor, it's base plane would always match the base plane of the floor, so the Rotation Z would be 0.\",\"isNullable\":true,\"scale\":8,\"name\":\"SectionRotationZ\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionLength\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The length of the section measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"scale\":8,\"name\":\"SectionLength\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionWidth\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The width of the section measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"scale\":8,\"name\":\"SectionWidth\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"SectionHeight\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The height of the section measured in the unit of measure specified by the Unit of Measure ID.\",\"isNullable\":true,\"scale\":8,\"name\":\"SectionHeight\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"UnitOfMeasureId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Unit Of Measure.\",\"isNullable\":true,\"name\":\"UnitOfMeasureId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":true,\"name\":\"AssetId\"}]}}}",
+			"Description": "A grocery store/department aisle is divided into Rows.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,SectionId,SectionPeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SectionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SectionPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SectionPeriodEndDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AisleId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"AislePeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SectionName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LocationAddress\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FloorLocationXCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FloorLocationYCoordinate\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SectionRotationX\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SectionRotationY\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SectionRotationZ\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SectionLength\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SectionWidth\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SectionHeight\",\"type\":\"decimal(18,8)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"UnitOfMeasureId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "6b21f7c5-3f3c-4c35-bc12-d8e177661e8f",
+		"Description": "A grocery store/department aisle is divided into Rows."
+	},
+	"type": "TABLE"
+}

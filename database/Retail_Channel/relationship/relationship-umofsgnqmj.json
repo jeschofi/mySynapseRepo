@@ -1,0 +1,29 @@
+{
+	"name": "relationship-umofsgnqmj",
+	"properties": {
+		"Name": "relationship-umofsgnqmj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Communication",
+		"ToTableName": "VisitCommunication",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommunicationId",
+				"ToColumnName": "CommunicationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Communication.cdm.json/Communication\",\"toEntity\":\"VisitCommunication.cdm.json/VisitCommunication\",\"joinPairs\":[{\"fromAttribute\":\"CommunicationId\",\"toAttribute\":\"CommunicationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d3a7928f-7bb1-4b45-8662-ef42932836db"
+	},
+	"type": "RELATIONSHIP"
+}

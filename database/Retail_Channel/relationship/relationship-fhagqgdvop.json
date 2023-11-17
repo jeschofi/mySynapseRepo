@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fhagqgdvop",
+	"properties": {
+		"Name": "relationship-fhagqgdvop",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreCategory",
+		"ToTableName": "StoreCategoryProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StoreCategoryId",
+				"ToColumnName": "StoreCategoryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreCategory.cdm.json/StoreCategory\",\"toEntity\":\"StoreCategoryProduct.cdm.json/StoreCategoryProduct\",\"joinPairs\":[{\"fromAttribute\":\"StoreCategoryId\",\"toAttribute\":\"StoreCategoryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "ee6dde1c-ecc2-418e-b14b-b790e5d70117"
+	},
+	"type": "RELATIONSHIP"
+}

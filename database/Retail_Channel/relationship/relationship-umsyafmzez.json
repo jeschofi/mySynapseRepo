@@ -1,0 +1,29 @@
+{
+	"name": "relationship-umsyafmzez",
+	"properties": {
+		"Name": "relationship-umsyafmzez",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayArea",
+		"ToTableName": "StoreDisplayAisle",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AreaId",
+				"ToColumnName": "AreaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayArea.cdm.json/StoreDisplayArea\",\"toEntity\":\"StoreDisplayAisle.cdm.json/StoreDisplayAisle\",\"joinPairs\":[{\"fromAttribute\":\"AreaId\",\"toAttribute\":\"AreaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "950f1920-6e58-4ae2-aae1-3f83eb23c02f"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ashidppdqt",
+	"properties": {
+		"Name": "relationship-ashidppdqt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BondPayFrequency",
+		"ToTableName": "Bond",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondPayFrequencyId",
+				"ToColumnName": "BondPayFrequencyId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BondPayFrequency.cdm.json/BondPayFrequency\",\"toEntity\":\"Bond.cdm.json/Bond\",\"joinPairs\":[{\"fromAttribute\":\"BondPayFrequencyId\",\"toAttribute\":\"BondPayFrequencyId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "57af0e2e-66cb-4136-9132-f3b87be92273"
+	},
+	"type": "RELATIONSHIP"
+}

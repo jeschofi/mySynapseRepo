@@ -1,0 +1,189 @@
+{
+	"name": "RelatedBrand",
+	"properties": {
+		"Name": "RelatedBrand",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "BrandId",
+					"Description": "The unique identifier of a Brand.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedBrand.cdm.json/RelatedBrand",
+						"Name": "BrandId"
+					}
+				},
+				{
+					"Name": "RelatedBrandId",
+					"Description": "The unique identifier of a Brand.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedBrand.cdm.json/RelatedBrand",
+						"Name": "RelatedBrandId"
+					}
+				},
+				{
+					"Name": "BrandRelationshipTypeId",
+					"Description": "The unique identifier of a Brand Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedBrand.cdm.json/RelatedBrand",
+						"Name": "BrandRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp that the brands were related.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedBrand.cdm.json/RelatedBrand",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp that the brands were related.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedBrand.cdm.json/RelatedBrand",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "BrandRelationshipNote",
+					"Description": "A note, comment or additional information regarding the Brand relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedBrand.cdm.json/RelatedBrand",
+						"Name": "BrandRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "af36a38c-f269-4d95-b5ae-8783e73398c8",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedBrand",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedBrand",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"BrandId\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"BrandId\"},\"RelatedBrandId\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"RelatedBrandId\"},\"BrandRelationshipTypeId\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"BrandRelationshipTypeId\"},\"PeriodStartTimestamp\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"PeriodEndTimestamp\"},\"BrandRelationshipNote\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"BrandRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedBrand\",\"path\":\"RelatedBrand.cdm.json/RelatedBrand\"},\"description\":\"The relationship between brands.\",\"primaryKey\":[\"BrandId\",\"RelatedBrandId\",\"BrandRelationshipTypeId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"BrandId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Brand.\",\"isNullable\":false,\"name\":\"BrandId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"RelatedBrandId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Brand.\",\"isNullable\":false,\"name\":\"RelatedBrandId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"BrandRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Brand Relationship Type.\",\"isNullable\":false,\"name\":\"BrandRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp that the brands were related.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp that the brands were related.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedBrand.cdm.json/RelatedBrand\",\"name\":\"BrandRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Brand relationship.\",\"isNullable\":true,\"name\":\"BrandRelationshipNote\"}]}}}",
+			"Description": "The relationship between brands.",
+			"DisplayFolderInfo": "{\"name\":\"Product\",\"colorCode\":\"#BD4B37\"}",
+			"PrimaryKeys": "BrandId,RelatedBrandId,BrandRelationshipTypeId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"BrandId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedBrandId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"BrandRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BrandRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "7323965a-faf9-45e5-8292-9a1dc12e3f71",
+		"Description": "The relationship between brands."
+	},
+	"type": "TABLE"
+}

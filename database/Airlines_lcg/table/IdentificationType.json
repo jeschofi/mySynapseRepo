@@ -1,0 +1,136 @@
+{
+	"name": "IdentificationType",
+	"properties": {
+		"Name": "IdentificationType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IdentificationTypeId",
+					"Description": "The unique identifier of an Identification Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationType.cdm.json/IdentificationType",
+						"Name": "IdentificationTypeId"
+					}
+				},
+				{
+					"Name": "IdentificationTypeName",
+					"Description": "The name of an Identification Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationType.cdm.json/IdentificationType",
+						"Name": "IdentificationTypeName"
+					}
+				},
+				{
+					"Name": "IdentificationTypeDescription",
+					"Description": "The description of an Identification Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "IdentificationType.cdm.json/IdentificationType",
+						"Name": "IdentificationTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9c4dd06f-8af9-45ed-93c7-96643ca11c7a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/IdentificationType",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/IdentificationType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IdentificationTypeId\":{\"entity\":\"IdentificationType.cdm.json/IdentificationType\",\"name\":\"IdentificationTypeId\"},\"IdentificationTypeName\":{\"entity\":\"IdentificationType.cdm.json/IdentificationType\",\"name\":\"IdentificationTypeName\"},\"IdentificationTypeDescription\":{\"entity\":\"IdentificationType.cdm.json/IdentificationType\",\"name\":\"IdentificationTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"IdentificationType\",\"path\":\"IdentificationType.cdm.json/IdentificationType\"},\"description\":\"A type of identification.\\n\\nEx:\\n- Company Issued\\n- Passport\\n- VISA\\n- Drivers License\\n- Social Security Number (SSN)\\n- Individual Taxpayer Identification Number (ITIN)\\n- Country Tax Number\\n- State Tax Number\\n- National Tax Number\\n- Country Corporation Number\\n- Medicare Health Insurance Card Number\\n- Medicaid ID Number\\n- Military ID Number\\n- Known Traveler / PASS ID\\n- Redress Number\\n- Employer Identification Number (EIN)\",\"primaryKey\":[\"IdentificationTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationType.cdm.json/IdentificationType\",\"name\":\"IdentificationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Identification Type.\",\"isNullable\":false,\"name\":\"IdentificationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationType.cdm.json/IdentificationType\",\"name\":\"IdentificationTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of an Identification Type.\",\"isNullable\":true,\"name\":\"IdentificationTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"IdentificationType.cdm.json/IdentificationType\",\"name\":\"IdentificationTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of an Identification Type.\",\"isNullable\":true,\"name\":\"IdentificationTypeDescription\"}]}}}",
+			"Description": "A type of identification.\n\nEx:\n- Company Issued\n- Passport\n- VISA\n- Drivers License\n- Social Security Number (SSN)\n- Individual Taxpayer Identification Number (ITIN)\n- Country Tax Number\n- State Tax Number\n- National Tax Number\n- Country Corporation Number\n- Medicare Health Insurance Card Number\n- Medicaid ID Number\n- Military ID Number\n- Known Traveler / PASS ID\n- Redress Number\n- Employer Identification Number (EIN)",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#003C96\"}",
+			"PrimaryKeys": "IdentificationTypeId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IdentificationTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IdentificationTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "3c4e14af-8534-458a-a011-b684f51564db",
+		"Description": "A type of identification.\n\nEx:\n- Company Issued\n- Passport\n- VISA\n- Drivers License\n- Social Security Number (SSN)\n- Individual Taxpayer Identification Number (ITIN)\n- Country Tax Number\n- State Tax Number\n- National Tax Number\n- Country Corporation Number\n- Medicare Health Insurance Card Number\n- Medicaid ID Number\n- Military ID Number\n- Known Traveler / PASS ID\n- Redress Number\n- Employer Identification Number (EIN)"
+	},
+	"type": "TABLE"
+}

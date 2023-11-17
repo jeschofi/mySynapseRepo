@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ptvnvrwxde",
+	"properties": {
+		"Name": "relationship-ptvnvrwxde",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Incentive",
+		"ToTableName": "ChannelIncentiveAward",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IncentiveId",
+				"ToColumnName": "IncentiveId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Incentive.cdm.json/Incentive\",\"toEntity\":\"ChannelIncentiveAward.cdm.json/ChannelIncentiveAward\",\"joinPairs\":[{\"fromAttribute\":\"IncentiveId\",\"toAttribute\":\"IncentiveId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3dc40f5d-93b2-41e2-81fb-6e8a910da4e3"
+	},
+	"type": "RELATIONSHIP"
+}

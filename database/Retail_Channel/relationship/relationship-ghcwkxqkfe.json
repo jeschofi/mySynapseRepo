@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ghcwkxqkfe",
+	"properties": {
+		"Name": "relationship-ghcwkxqkfe",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayShelf",
+		"ToTableName": "StoreDisplayBin",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShelfPeriodStartDate",
+				"ToColumnName": "ShelfPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"toEntity\":\"StoreDisplayBin.cdm.json/StoreDisplayBin\",\"joinPairs\":[{\"fromAttribute\":\"ShelfPeriodStartDate\",\"toAttribute\":\"ShelfPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "358bfff0-d4bc-4aab-9bac-9ac971538ca7"
+	},
+	"type": "RELATIONSHIP"
+}

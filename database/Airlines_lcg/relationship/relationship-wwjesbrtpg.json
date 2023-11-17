@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wwjesbrtpg",
+	"properties": {
+		"Name": "relationship-wwjesbrtpg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "WriteOffMethod",
+		"ToTableName": "BadDebtWriteOff",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "WriteOffMethodId",
+				"ToColumnName": "WriteOffMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"toEntity\":\"BadDebtWriteOff.cdm.json/BadDebtWriteOff\",\"joinPairs\":[{\"fromAttribute\":\"WriteOffMethodId\",\"toAttribute\":\"WriteOffMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f0302c0d-3553-4948-b29f-7751c53894f0"
+	},
+	"type": "RELATIONSHIP"
+}

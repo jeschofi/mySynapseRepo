@@ -1,0 +1,175 @@
+{
+	"name": "AssetSalvageValue",
+	"properties": {
+		"Name": "AssetSalvageValue",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetSalvageValue.cdm.json/AssetSalvageValue",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "Date",
+					"Description": "The date that the salvage value of the asset is determined.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetSalvageValue.cdm.json/AssetSalvageValue",
+						"Name": "Date"
+					}
+				},
+				{
+					"Name": "SalvageValueAmount",
+					"Description": "The salvage value of the asset as of the associated date.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetSalvageValue.cdm.json/AssetSalvageValue",
+						"Name": "SalvageValueAmount"
+					}
+				},
+				{
+					"Name": "SalvageNote",
+					"Description": "Notes, comments or additional information regarding the asset salvage value.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetSalvageValue.cdm.json/AssetSalvageValue",
+						"Name": "SalvageNote"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "AssetSalvageValue.cdm.json/AssetSalvageValue",
+						"Name": "IsoCurrencyCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "3fd4734e-73f0-4e16-ba99-13779dc39532",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetSalvageValue",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/AssetSalvageValue",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"AssetId\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"AssetId\"},\"Date\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"Date\"},\"SalvageValueAmount\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"SalvageValueAmount\"},\"SalvageNote\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"SalvageNote\"},\"IsoCurrencyCode\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"IsoCurrencyCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"AssetSalvageValue\",\"path\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\"},\"description\":\"The anticipated or expected price for a fixed asset no longer needed in business operations, which is also known as 'scrap value' as of a specific date.\\n\\nIn determining depreciation expense, salvage value is subtracted from cost.\\n\\nSALVAGE VALUE is: a) Realizable value of a fixed asset after deducting costs associated with its sale; b) Scrap value or the value to a junk dealer; or c) The amount remaining after all depreciation has been deducted from the original cost of a depreciable asset.\",\"primaryKey\":[\"AssetId\",\"Date\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":false,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"Date\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The date that the salvage value of the asset is determined.\",\"isNullable\":false,\"name\":\"Date\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"SalvageValueAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The salvage value of the asset as of the associated date.\",\"isNullable\":true,\"scale\":2,\"name\":\"SalvageValueAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"SalvageNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the asset salvage value.\",\"isNullable\":true,\"name\":\"SalvageNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"AssetSalvageValue.cdm.json/AssetSalvageValue\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":true,\"name\":\"IsoCurrencyCode\"}]}}}",
+			"Description": "The anticipated or expected price for a fixed asset no longer needed in business operations, which is also known as 'scrap value' as of a specific date.\n\nIn determining depreciation expense, salvage value is subtracted from cost.\n\nSALVAGE VALUE is: a) Realizable value of a fixed asset after deducting costs associated with its sale; b) Scrap value or the value to a junk dealer; or c) The amount remaining after all depreciation has been deducted from the original cost of a depreciable asset.",
+			"DisplayFolderInfo": "{\"name\":\"Property & Equipment\",\"colorCode\":\"#1C508C\"}",
+			"PrimaryKeys": "AssetId,Date",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Date\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"SalvageValueAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"SalvageNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "641c6da9-5e13-43d9-b668-33db4a4b94ed",
+		"Description": "The anticipated or expected price for a fixed asset no longer needed in business operations, which is also known as 'scrap value' as of a specific date.\n\nIn determining depreciation expense, salvage value is subtracted from cost.\n\nSALVAGE VALUE is: a) Realizable value of a fixed asset after deducting costs associated with its sale; b) Scrap value or the value to a junk dealer; or c) The amount remaining after all depreciation has been deducted from the original cost of a depreciable asset."
+	},
+	"type": "TABLE"
+}

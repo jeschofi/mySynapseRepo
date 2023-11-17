@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gogqinldsd",
+	"properties": {
+		"Name": "relationship-gogqinldsd",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AccountingFrameworkStandard",
+		"ToTableName": "AccountingPolicy",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AccountingFrameworkStandardId",
+				"ToColumnName": "AccountingFrameworkStandardId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AccountingFrameworkStandard.cdm.json/AccountingFrameworkStandard\",\"toEntity\":\"AccountingPolicy.cdm.json/AccountingPolicy\",\"joinPairs\":[{\"fromAttribute\":\"AccountingFrameworkStandardId\",\"toAttribute\":\"AccountingFrameworkStandardId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c370e338-ba43-4563-a557-cb3a5e4bb389"
+	},
+	"type": "RELATIONSHIP"
+}

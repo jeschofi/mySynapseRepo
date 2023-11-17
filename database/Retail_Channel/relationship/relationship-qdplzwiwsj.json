@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qdplzwiwsj",
+	"properties": {
+		"Name": "relationship-qdplzwiwsj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "FranchiseeType",
+		"ToTableName": "Franchisee",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "FranchiseeTypeId",
+				"ToColumnName": "FranchiseeTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"FranchiseeType.cdm.json/FranchiseeType\",\"toEntity\":\"Franchisee.cdm.json/Franchisee\",\"joinPairs\":[{\"fromAttribute\":\"FranchiseeTypeId\",\"toAttribute\":\"FranchiseeTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "86b71501-bc67-4e8f-abed-20f246459ffd"
+	},
+	"type": "RELATIONSHIP"
+}

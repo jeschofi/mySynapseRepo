@@ -1,0 +1,29 @@
+{
+	"name": "relationship-bgidshoood",
+	"properties": {
+		"Name": "relationship-bgidshoood",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ProductGroup",
+		"ToTableName": "ProductGroupSizeClass",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductGroupId",
+				"ToColumnName": "ProductGroupId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ProductGroup.cdm.json/ProductGroup\",\"toEntity\":\"ProductGroupSizeClass.cdm.json/ProductGroupSizeClass\",\"joinPairs\":[{\"fromAttribute\":\"ProductGroupId\",\"toAttribute\":\"ProductGroupId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "530cbe7e-2119-4ec1-b374-0f12a180b7ae"
+	},
+	"type": "RELATIONSHIP"
+}

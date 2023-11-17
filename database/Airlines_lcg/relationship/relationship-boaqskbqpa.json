@@ -1,0 +1,29 @@
+{
+	"name": "relationship-boaqskbqpa",
+	"properties": {
+		"Name": "relationship-boaqskbqpa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerType",
+		"ToTableName": "Ledger",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerTypeId",
+				"ToColumnName": "LedgerTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerType.cdm.json/LedgerType\",\"toEntity\":\"Ledger.cdm.json/Ledger\",\"joinPairs\":[{\"fromAttribute\":\"LedgerTypeId\",\"toAttribute\":\"LedgerTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2f78dff0-800d-46b0-9fc1-ffba873bac6a"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qlbkygtmtt",
+	"properties": {
+		"Name": "relationship-qlbkygtmtt",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "PartyEarnedCommission",
+		"ToTableName": "PartyEarnedCommissionPayment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionId",
+				"ToColumnName": "CommissionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"PartyEarnedCommission.cdm.json/PartyEarnedCommission\",\"toEntity\":\"PartyEarnedCommissionPayment.cdm.json/PartyEarnedCommissionPayment\",\"joinPairs\":[{\"fromAttribute\":\"CommissionId\",\"toAttribute\":\"CommissionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "100eae24-c79a-4d20-9a73-77602425bc43"
+	},
+	"type": "RELATIONSHIP"
+}

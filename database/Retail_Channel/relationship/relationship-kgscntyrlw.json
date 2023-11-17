@@ -1,0 +1,29 @@
+{
+	"name": "relationship-kgscntyrlw",
+	"properties": {
+		"Name": "relationship-kgscntyrlw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplaySection",
+		"ToTableName": "StoreDisplayShelf",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SectionPeriodStartDate",
+				"ToColumnName": "SectionPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplaySection.cdm.json/StoreDisplaySection\",\"toEntity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"joinPairs\":[{\"fromAttribute\":\"SectionPeriodStartDate\",\"toAttribute\":\"SectionPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "350fed81-f54f-44d5-87ca-7a78f3b97ccb"
+	},
+	"type": "RELATIONSHIP"
+}

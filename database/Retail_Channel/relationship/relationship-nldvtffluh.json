@@ -1,0 +1,29 @@
+{
+	"name": "relationship-nldvtffluh",
+	"properties": {
+		"Name": "relationship-nldvtffluh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "TransactionPartyRelationshipType",
+		"ToTableName": "TransactionRelatedParty",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TransactionPartyRelationshipTypeId",
+				"ToColumnName": "TransactionPartyRelationshipTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"TransactionPartyRelationshipType.cdm.json/TransactionPartyRelationshipType\",\"toEntity\":\"TransactionRelatedParty.cdm.json/TransactionRelatedParty\",\"joinPairs\":[{\"fromAttribute\":\"TransactionPartyRelationshipTypeId\",\"toAttribute\":\"TransactionPartyRelationshipTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7412ff38-3ee5-44c5-ab01-4ab97c1abeb0"
+	},
+	"type": "RELATIONSHIP"
+}

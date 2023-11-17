@@ -1,0 +1,311 @@
+{
+	"name": "Identification",
+	"properties": {
+		"Name": "Identification",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "IdentificationId",
+					"Description": "The unique identifier of the identification.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationId"
+					}
+				},
+				{
+					"Name": "IdentificationValue",
+					"Description": "The unique identifier of the associated Identification from the perspective of the Issuing Party.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationValue"
+					}
+				},
+				{
+					"Name": "IdentificationDescription",
+					"Description": "The description of the identification.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationDescription"
+					}
+				},
+				{
+					"Name": "IdentificationTypeId",
+					"Description": "The unique identifier of an Identification Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationTypeId"
+					}
+				},
+				{
+					"Name": "IdentificationFormId",
+					"Description": "The unique identifier of an Identification Form.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationFormId"
+					}
+				},
+				{
+					"Name": "IssuingPartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IssuingPartyId"
+					}
+				},
+				{
+					"Name": "CountryId",
+					"Description": "The unique identifier of the Country.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "CountryId"
+					}
+				},
+				{
+					"Name": "IdentificationIssuedTimestamp",
+					"Description": "The timestamp the identification was issued.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationIssuedTimestamp"
+					}
+				},
+				{
+					"Name": "IdentificationExpiryTimestamp",
+					"Description": "The timestamp the identification is effective until.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationExpiryTimestamp"
+					}
+				},
+				{
+					"Name": "IdentificationCreationTimestamp",
+					"Description": "The timestamp the identification was created.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationCreationTimestamp"
+					}
+				},
+				{
+					"Name": "IdentificationDestroyedTimestamp",
+					"Description": "The timestamp the identification was destroyed.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationDestroyedTimestamp"
+					}
+				},
+				{
+					"Name": "IdentificationNote",
+					"Description": "A note, comment or additional information regarding the identification.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Identification.cdm.json/Identification",
+						"Name": "IdentificationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "04f180f0-414e-4c75-b600-986f62699e8d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/Identification",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/Identification",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"IdentificationId\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationId\"},\"IdentificationValue\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationValue\"},\"IdentificationDescription\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationDescription\"},\"IdentificationTypeId\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationTypeId\"},\"IdentificationFormId\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationFormId\"},\"IssuingPartyId\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IssuingPartyId\"},\"CountryId\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"CountryId\"},\"IdentificationIssuedTimestamp\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationIssuedTimestamp\"},\"IdentificationExpiryTimestamp\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationExpiryTimestamp\"},\"IdentificationCreationTimestamp\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationCreationTimestamp\"},\"IdentificationDestroyedTimestamp\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationDestroyedTimestamp\"},\"IdentificationNote\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Identification\",\"path\":\"Identification.cdm.json/Identification\"},\"description\":\"Identification is used to identify individuals as well as equipment. \\n\\nIdentification can be composed of one or more components. Identification can include a combination of photograph, barcode, magnetic strip, RFID, IR.\\n\\nSome forms of identification such as a token or device may be worn for tracking purposes.\",\"primaryKey\":[\"IdentificationId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the identification.\",\"isNullable\":false,\"name\":\"IdentificationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationValue\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The unique identifier of the associated Identification from the perspective of the Issuing Party.\",\"isNullable\":true,\"name\":\"IdentificationValue\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the identification.\",\"isNullable\":true,\"name\":\"IdentificationDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Identification Type.\",\"isNullable\":true,\"name\":\"IdentificationTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationFormId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of an Identification Form.\",\"isNullable\":true,\"name\":\"IdentificationFormId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IssuingPartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"IssuingPartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"CountryId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of the Country.\",\"isNullable\":true,\"name\":\"CountryId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationIssuedTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp the identification was issued.\",\"isNullable\":true,\"name\":\"IdentificationIssuedTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationExpiryTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp the identification is effective until.\",\"isNullable\":true,\"name\":\"IdentificationExpiryTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationCreationTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp the identification was created.\",\"isNullable\":true,\"name\":\"IdentificationCreationTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationDestroyedTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp the identification was destroyed.\",\"isNullable\":true,\"name\":\"IdentificationDestroyedTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Identification.cdm.json/Identification\",\"name\":\"IdentificationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the identification.\",\"isNullable\":true,\"name\":\"IdentificationNote\"}]}}}",
+			"Description": "Identification is used to identify individuals as well as equipment. \n\nIdentification can be composed of one or more components. Identification can include a combination of photograph, barcode, magnetic strip, RFID, IR.\n\nSome forms of identification such as a token or device may be worn for tracking purposes.",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#003C96\"}",
+			"PrimaryKeys": "IdentificationId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"IdentificationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"IdentificationValue\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationFormId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IssuingPartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CountryId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationIssuedTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationExpiryTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationCreationTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationDestroyedTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IdentificationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "c224e415-8591-41c1-baa2-752bf7ca199b",
+		"Description": "Identification is used to identify individuals as well as equipment. \n\nIdentification can be composed of one or more components. Identification can include a combination of photograph, barcode, magnetic strip, RFID, IR.\n\nSome forms of identification such as a token or device may be worn for tracking purposes."
+	},
+	"type": "TABLE"
+}

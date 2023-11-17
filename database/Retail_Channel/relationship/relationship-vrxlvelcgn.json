@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vrxlvelcgn",
+	"properties": {
+		"Name": "relationship-vrxlvelcgn",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ServiceLocation",
+		"ToTableName": "PointOfSale",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ServiceLocationId",
+				"ToColumnName": "ServiceLocationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ServiceLocation.cdm.json/ServiceLocation\",\"toEntity\":\"PointOfSale.cdm.json/PointOfSale\",\"joinPairs\":[{\"fromAttribute\":\"ServiceLocationId\",\"toAttribute\":\"ServiceLocationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7c0ebebb-9f28-4355-8aac-3560c86a0986"
+	},
+	"type": "RELATIONSHIP"
+}

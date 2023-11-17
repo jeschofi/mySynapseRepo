@@ -1,0 +1,130 @@
+{
+	"name": "TelephoneNumberType",
+	"properties": {
+		"Name": "TelephoneNumberType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TelephoneNumberTypeId",
+					"Description": "The unique identifier of a Telephone Number Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TelephoneNumberType.cdm.json/TelephoneNumberType",
+						"Name": "TelephoneNumberTypeId"
+					}
+				},
+				{
+					"Name": "TelephoneNumberTypeName",
+					"Description": "The name of a Telephone Number Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TelephoneNumberType.cdm.json/TelephoneNumberType",
+						"Name": "TelephoneNumberTypeName"
+					}
+				},
+				{
+					"Name": "TelephoneNumberTypeDescription",
+					"Description": "The description of a Telephone Number Type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TelephoneNumberType.cdm.json/TelephoneNumberType",
+						"Name": "TelephoneNumberTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0ef6b470-a7d5-4638-83ba-c87b29604acd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/TelephoneNumberType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/TelephoneNumberType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TelephoneNumberTypeId\":{\"entity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"name\":\"TelephoneNumberTypeId\"},\"TelephoneNumberTypeName\":{\"entity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"name\":\"TelephoneNumberTypeName\"},\"TelephoneNumberTypeDescription\":{\"entity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"name\":\"TelephoneNumberTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TelephoneNumberType\",\"path\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\"},\"description\":\"The type of telephone number:\\n\\nEx:\\nINDIVIDUAL\\n- Primary Residence\\n- Alternate\\n- Mobile\\n- Business\\n- Emergency Contact\\n- Vacation Residence\\n\\nLEGAL ENTITY\\n- Headquarters\\n- Boston Office\\n- Support\\n- Marketing\\n- Legal\\n- Emergency\",\"primaryKey\":[\"TelephoneNumberTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"name\":\"TelephoneNumberTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Telephone Number Type.\",\"isNullable\":false,\"name\":\"TelephoneNumberTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"name\":\"TelephoneNumberTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Telephone Number Type.\",\"isNullable\":true,\"name\":\"TelephoneNumberTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TelephoneNumberType.cdm.json/TelephoneNumberType\",\"name\":\"TelephoneNumberTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Telephone Number Type.\",\"isNullable\":true,\"name\":\"TelephoneNumberTypeDescription\"}]}}}",
+			"Description": "The type of telephone number:\n\nEx:\nINDIVIDUAL\n- Primary Residence\n- Alternate\n- Mobile\n- Business\n- Emergency Contact\n- Vacation Residence\n\nLEGAL ENTITY\n- Headquarters\n- Boston Office\n- Support\n- Marketing\n- Legal\n- Emergency",
+			"DisplayFolderInfo": "{\"name\":\"Party\",\"colorCode\":\"#7D0F6C\"}",
+			"PrimaryKeys": "TelephoneNumberTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TelephoneNumberTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TelephoneNumberTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TelephoneNumberTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "74e5808a-cc73-4885-8d94-11de34338d46",
+		"Description": "The type of telephone number:\n\nEx:\nINDIVIDUAL\n- Primary Residence\n- Alternate\n- Mobile\n- Business\n- Emergency Contact\n- Vacation Residence\n\nLEGAL ENTITY\n- Headquarters\n- Boston Office\n- Support\n- Marketing\n- Legal\n- Emergency"
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qwoejgarqw",
+	"properties": {
+		"Name": "relationship-qwoejgarqw",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "BondStatus",
+		"ToTableName": "Bond",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "BondStatusId",
+				"ToColumnName": "BondStatusId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"BondStatus.cdm.json/BondStatus\",\"toEntity\":\"Bond.cdm.json/Bond\",\"joinPairs\":[{\"fromAttribute\":\"BondStatusId\",\"toAttribute\":\"BondStatusId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "bea89e4d-4932-467c-bf81-e44162bdff26"
+	},
+	"type": "RELATIONSHIP"
+}

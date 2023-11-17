@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fdyajzjgft",
+	"properties": {
+		"Name": "relationship-fdyajzjgft",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDisplayLocationItemInventory",
+		"ToTableName": "ItemDisplayInteraction",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DisplayLocationPeriodStartDate",
+				"ToColumnName": "DisplayLocationPeriodStartDate"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDisplayLocationItemInventory.cdm.json/StoreDisplayLocationItemInventory\",\"toEntity\":\"ItemDisplayInteraction.cdm.json/ItemDisplayInteraction\",\"joinPairs\":[{\"fromAttribute\":\"DisplayLocationPeriodStartDate\",\"toAttribute\":\"DisplayLocationPeriodStartDate\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a1fcdaa8-4fd5-4d68-b93e-f418542f126e"
+	},
+	"type": "RELATIONSHIP"
+}

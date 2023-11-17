@@ -1,0 +1,29 @@
+{
+	"name": "relationship-rmipuixmpa",
+	"properties": {
+		"Name": "relationship-rmipuixmpa",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarQuarter",
+		"ToTableName": "CalendarPeriod",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarQuarterId",
+				"ToColumnName": "CalendarQuarterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"toEntity\":\"CalendarPeriod.cdm.json/CalendarPeriod\",\"joinPairs\":[{\"fromAttribute\":\"CalendarQuarterId\",\"toAttribute\":\"CalendarQuarterId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "51de19f6-8cb6-4cec-8472-886e8c24b581"
+	},
+	"type": "RELATIONSHIP"
+}

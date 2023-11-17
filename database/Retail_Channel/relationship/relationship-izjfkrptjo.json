@@ -1,0 +1,29 @@
+{
+	"name": "relationship-izjfkrptjo",
+	"properties": {
+		"Name": "relationship-izjfkrptjo",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Department",
+		"ToTableName": "StoreDepartment",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepartmentId",
+				"ToColumnName": "DepartmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Department.cdm.json/Department\",\"toEntity\":\"StoreDepartment.cdm.json/StoreDepartment\",\"joinPairs\":[{\"fromAttribute\":\"DepartmentId\",\"toAttribute\":\"DepartmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "99691f26-7c8f-48d5-ba47-cc7e97db0123"
+	},
+	"type": "RELATIONSHIP"
+}

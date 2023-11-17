@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hikjqineld",
+	"properties": {
+		"Name": "relationship-hikjqineld",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "StoreDepartment",
+		"ToTableName": "StoreDisplayLocation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DepartmentId",
+				"ToColumnName": "DepartmentId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"StoreDepartment.cdm.json/StoreDepartment\",\"toEntity\":\"StoreDisplayLocation.cdm.json/StoreDisplayLocation\",\"joinPairs\":[{\"fromAttribute\":\"DepartmentId\",\"toAttribute\":\"DepartmentId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "72ac454f-6f9f-49b6-b0e1-432bf5637f22"
+	},
+	"type": "RELATIONSHIP"
+}

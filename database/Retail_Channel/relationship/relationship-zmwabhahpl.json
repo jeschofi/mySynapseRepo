@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zmwabhahpl",
+	"properties": {
+		"Name": "relationship-zmwabhahpl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CalendarQuarter",
+		"ToTableName": "CalendarWeek",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CalendarQuarterId",
+				"ToColumnName": "CalendarQuarterId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CalendarQuarter.cdm.json/CalendarQuarter\",\"toEntity\":\"CalendarWeek.cdm.json/CalendarWeek\",\"joinPairs\":[{\"fromAttribute\":\"CalendarQuarterId\",\"toAttribute\":\"CalendarQuarterId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "88877876-1ce0-4258-84e5-f40873f0a570"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-vayptltugy",
+	"properties": {
+		"Name": "relationship-vayptltugy",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ShopperSession",
+		"ToTableName": "ShopperPosition",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ShopperSessionId",
+				"ToColumnName": "ShopperSessionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ShopperSession.cdm.json/ShopperSession\",\"toEntity\":\"ShopperPosition.cdm.json/ShopperPosition\",\"joinPairs\":[{\"fromAttribute\":\"ShopperSessionId\",\"toAttribute\":\"ShopperSessionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d668dd4e-171e-436e-80ca-b387001505c0"
+	},
+	"type": "RELATIONSHIP"
+}

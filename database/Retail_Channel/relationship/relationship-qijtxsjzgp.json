@@ -1,0 +1,29 @@
+{
+	"name": "relationship-qijtxsjzgp",
+	"properties": {
+		"Name": "relationship-qijtxsjzgp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Country",
+		"ToTableName": "RetailProduct",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CountryId",
+				"ToColumnName": "PrimaryCountryOfOriginCountryId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Country.cdm.json/Country\",\"toEntity\":\"RetailProduct.cdm.json/RetailProduct\",\"joinPairs\":[{\"fromAttribute\":\"CountryId\",\"toAttribute\":\"PrimaryCountryOfOriginCountryId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "f35d44cc-4df1-42ab-af11-05e32c0589a1"
+	},
+	"type": "RELATIONSHIP"
+}

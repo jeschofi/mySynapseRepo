@@ -1,0 +1,29 @@
+{
+	"name": "relationship-iyjujqvpyb",
+	"properties": {
+		"Name": "relationship-iyjujqvpyb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LedgerAccountBalanceType",
+		"ToTableName": "LedgerAccountBalance",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LedgerAccountBalanceTypeId",
+				"ToColumnName": "LedgerAccountBalanceTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LedgerAccountBalanceType.cdm.json/LedgerAccountBalanceType\",\"toEntity\":\"LedgerAccountBalance.cdm.json/LedgerAccountBalance\",\"joinPairs\":[{\"fromAttribute\":\"LedgerAccountBalanceTypeId\",\"toAttribute\":\"LedgerAccountBalanceTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "752073c6-28ee-4ac9-84a9-d859abdfa97a"
+	},
+	"type": "RELATIONSHIP"
+}

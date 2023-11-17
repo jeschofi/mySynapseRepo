@@ -1,0 +1,29 @@
+{
+	"name": "relationship-phzdlcgdkx",
+	"properties": {
+		"Name": "relationship-phzdlcgdkx",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Asset",
+		"ToTableName": "StoreDisplayShelf",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "AssetId",
+				"ToColumnName": "AssetId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Asset.cdm.json/Asset\",\"toEntity\":\"StoreDisplayShelf.cdm.json/StoreDisplayShelf\",\"joinPairs\":[{\"fromAttribute\":\"AssetId\",\"toAttribute\":\"AssetId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "8f7833a4-e79d-46c9-9472-d4d4e58beb8e"
+	},
+	"type": "RELATIONSHIP"
+}

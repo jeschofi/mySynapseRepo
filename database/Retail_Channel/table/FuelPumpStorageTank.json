@@ -1,0 +1,170 @@
+{
+	"name": "FuelPumpStorageTank",
+	"properties": {
+		"Name": "FuelPumpStorageTank",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FuelPumpId",
+					"Description": "The unique identifier of a Fuel Pump.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpStorageTank.cdm.json/FuelPumpStorageTank",
+						"Name": "FuelPumpId"
+					}
+				},
+				{
+					"Name": "StorageTankId",
+					"Description": "The unique identifier of a Storage Tank.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpStorageTank.cdm.json/FuelPumpStorageTank",
+						"Name": "StorageTankId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp for which the fuel pump uses the associated storage tank.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpStorageTank.cdm.json/FuelPumpStorageTank",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period start timestamp for which the fuel pump uses the associated storage tank.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpStorageTank.cdm.json/FuelPumpStorageTank",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "FuelPumpStorageTankNote",
+					"Description": "A note, comment or additional information regarding the Fuel Pump Storage Tank.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPumpStorageTank.cdm.json/FuelPumpStorageTank",
+						"Name": "FuelPumpStorageTankNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "9bd52030-b2f0-4321-b1c8-30a183ca8352",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FuelPumpStorageTank",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FuelPumpStorageTank",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FuelPumpId\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"FuelPumpId\"},\"StorageTankId\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"StorageTankId\"},\"PeriodStartTimestamp\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"PeriodEndTimestamp\"},\"FuelPumpStorageTankNote\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"FuelPumpStorageTankNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FuelPumpStorageTank\",\"path\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\"},\"description\":\"A storage tank that is used by a fuel pump.\",\"primaryKey\":[\"FuelPumpId\",\"StorageTankId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"FuelPumpId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Fuel Pump.\",\"isNullable\":false,\"name\":\"FuelPumpId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"StorageTankId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Storage Tank.\",\"isNullable\":false,\"name\":\"StorageTankId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the fuel pump uses the associated storage tank.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the fuel pump uses the associated storage tank.\",\"isNullable\":false,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPumpStorageTank.cdm.json/FuelPumpStorageTank\",\"name\":\"FuelPumpStorageTankNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the Fuel Pump Storage Tank.\",\"isNullable\":true,\"name\":\"FuelPumpStorageTankNote\"}]}}}",
+			"Description": "A storage tank that is used by a fuel pump.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "FuelPumpId,StorageTankId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FuelPumpId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StorageTankId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FuelPumpStorageTankNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "5e78058a-f370-43f7-979c-c1c067497df2",
+		"Description": "A storage tank that is used by a fuel pump."
+	},
+	"type": "TABLE"
+}

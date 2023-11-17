@@ -1,0 +1,29 @@
+{
+	"name": "relationship-yfgqgtigsl",
+	"properties": {
+		"Name": "relationship-yfgqgtigsl",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelCapacityType",
+		"ToTableName": "ChannelCapacity",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelCapacityTypeId",
+				"ToColumnName": "ChannelCapacityTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelCapacityType.cdm.json/ChannelCapacityType\",\"toEntity\":\"ChannelCapacity.cdm.json/ChannelCapacity\",\"joinPairs\":[{\"fromAttribute\":\"ChannelCapacityTypeId\",\"toAttribute\":\"ChannelCapacityTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "26f1fc71-576b-4054-945a-a10062f3d5f1"
+	},
+	"type": "RELATIONSHIP"
+}

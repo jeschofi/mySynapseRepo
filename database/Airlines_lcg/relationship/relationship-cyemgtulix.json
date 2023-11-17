@@ -1,0 +1,29 @@
+{
+	"name": "relationship-cyemgtulix",
+	"properties": {
+		"Name": "relationship-cyemgtulix",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommonStock",
+		"ToTableName": "ContributedCapital",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "StockId",
+				"ToColumnName": "StockId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommonStock.cdm.json/CommonStock\",\"toEntity\":\"ContributedCapital.cdm.json/ContributedCapital\",\"joinPairs\":[{\"fromAttribute\":\"StockId\",\"toAttribute\":\"StockId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "efd05a7a-2a6d-4cc3-9505-150f921be773"
+	},
+	"type": "RELATIONSHIP"
+}

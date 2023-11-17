@@ -1,0 +1,136 @@
+{
+	"name": "TaxBasis",
+	"properties": {
+		"Name": "TaxBasis",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "TaxBasisId",
+					"Description": "The unique identifier of a Tax Basis.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxBasis.cdm.json/TaxBasis",
+						"Name": "TaxBasisId"
+					}
+				},
+				{
+					"Name": "TaxBasisName",
+					"Description": "The name of a Tax Basis.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxBasis.cdm.json/TaxBasis",
+						"Name": "TaxBasisName"
+					}
+				},
+				{
+					"Name": "TaxBasisDescription",
+					"Description": "The description of a Tax Basis.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "TaxBasis.cdm.json/TaxBasis",
+						"Name": "TaxBasisDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "abd52b97-f1cb-4be7-8d44-de3a241c1b6d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/TaxBasis",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/TaxBasis",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"TaxBasisId\":{\"entity\":\"TaxBasis.cdm.json/TaxBasis\",\"name\":\"TaxBasisId\"},\"TaxBasisName\":{\"entity\":\"TaxBasis.cdm.json/TaxBasis\",\"name\":\"TaxBasisName\"},\"TaxBasisDescription\":{\"entity\":\"TaxBasis.cdm.json/TaxBasis\",\"name\":\"TaxBasisDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"TaxBasis\",\"path\":\"TaxBasis.cdm.json/TaxBasis\"},\"description\":\"The basis by which revenues are considered:\\n\\nEx:\\n- Cash, revenues are considered earned at the time they are received in cash and expenses are considered to be incurred at the time cash is disbursed in their payment.\\n\\n- Accrual, revenues are credited to the period in which they are earned regardless of when payment is received.\",\"primaryKey\":[\"TaxBasisId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxBasis.cdm.json/TaxBasis\",\"name\":\"TaxBasisId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Tax Basis.\",\"isNullable\":false,\"name\":\"TaxBasisId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxBasis.cdm.json/TaxBasis\",\"name\":\"TaxBasisName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a Tax Basis.\",\"isNullable\":true,\"name\":\"TaxBasisName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"TaxBasis.cdm.json/TaxBasis\",\"name\":\"TaxBasisDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a Tax Basis.\",\"isNullable\":true,\"name\":\"TaxBasisDescription\"}]}}}",
+			"Description": "The basis by which revenues are considered:\n\nEx:\n- Cash, revenues are considered earned at the time they are received in cash and expenses are considered to be incurred at the time cash is disbursed in their payment.\n\n- Accrual, revenues are credited to the period in which they are earned regardless of when payment is received.",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "TaxBasisId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"TaxBasisId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TaxBasisName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TaxBasisDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "d1ed7577-6d5b-4061-9b2a-01bae8089300",
+		"Description": "The basis by which revenues are considered:\n\nEx:\n- Cash, revenues are considered earned at the time they are received in cash and expenses are considered to be incurred at the time cash is disbursed in their payment.\n\n- Accrual, revenues are credited to the period in which they are earned regardless of when payment is received."
+	},
+	"type": "TABLE"
+}

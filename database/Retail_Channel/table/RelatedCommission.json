@@ -1,0 +1,149 @@
+{
+	"name": "RelatedCommission",
+	"properties": {
+		"Name": "RelatedCommission",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CommissionId",
+					"Description": "The unique identifier of a Commission.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCommission.cdm.json/RelatedCommission",
+						"Name": "CommissionId"
+					}
+				},
+				{
+					"Name": "RelatedCommissionId",
+					"Description": "The unique identifier of a Commission.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCommission.cdm.json/RelatedCommission",
+						"Name": "RelatedCommissionId"
+					}
+				},
+				{
+					"Name": "CommissionRelationshipTypeId",
+					"Description": "The unique identifier of a Commission Relationship Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCommission.cdm.json/RelatedCommission",
+						"Name": "CommissionRelationshipTypeId"
+					}
+				},
+				{
+					"Name": "CommissionRelationshipNote",
+					"Description": "Notes, comments or additional information regarding the Commission relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "RelatedCommission.cdm.json/RelatedCommission",
+						"Name": "CommissionRelationshipNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "10c4ceee-194f-42dc-a144-41fd2458577f",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedCommission",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/RelatedCommission",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CommissionId\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"CommissionId\"},\"RelatedCommissionId\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"RelatedCommissionId\"},\"CommissionRelationshipTypeId\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"CommissionRelationshipTypeId\"},\"CommissionRelationshipNote\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"CommissionRelationshipNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"RelatedCommission\",\"path\":\"RelatedCommission.cdm.json/RelatedCommission\"},\"description\":\"The relationship of two or more commissions.\",\"primaryKey\":[\"CommissionId\",\"RelatedCommissionId\",\"CommissionRelationshipTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"CommissionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission.\",\"isNullable\":false,\"name\":\"CommissionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"RelatedCommissionId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission.\",\"isNullable\":false,\"name\":\"RelatedCommissionId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"CommissionRelationshipTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Commission Relationship Type.\",\"isNullable\":false,\"name\":\"CommissionRelationshipTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"RelatedCommission.cdm.json/RelatedCommission\",\"name\":\"CommissionRelationshipNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"Notes, comments or additional information regarding the Commission relationship.\",\"isNullable\":true,\"name\":\"CommissionRelationshipNote\"}]}}}",
+			"Description": "The relationship of two or more commissions.",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "CommissionId,RelatedCommissionId,CommissionRelationshipTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CommissionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"RelatedCommissionId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionRelationshipTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"CommissionRelationshipNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "8240fbbc-b4dc-456f-bcbb-8d2f204176d1",
+		"Description": "The relationship of two or more commissions."
+	},
+	"type": "TABLE"
+}

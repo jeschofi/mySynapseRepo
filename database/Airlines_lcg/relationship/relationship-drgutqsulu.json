@@ -1,0 +1,29 @@
+{
+	"name": "relationship-drgutqsulu",
+	"properties": {
+		"Name": "relationship-drgutqsulu",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CashFlowStatementPreparationMethod",
+		"ToTableName": "CashFlowStatement",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CashFlowStatementPreparationMethodId",
+				"ToColumnName": "CashFlowStatementPreparationMethodId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CashFlowStatementPreparationMethod.cdm.json/CashFlowStatementPreparationMethod\",\"toEntity\":\"CashFlowStatement.cdm.json/CashFlowStatement\",\"joinPairs\":[{\"fromAttribute\":\"CashFlowStatementPreparationMethodId\",\"toAttribute\":\"CashFlowStatementPreparationMethodId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b64f9016-c3a8-4b67-b950-ba91a8959e32"
+	},
+	"type": "RELATIONSHIP"
+}

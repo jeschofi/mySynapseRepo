@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zftqphzvra",
+	"properties": {
+		"Name": "relationship-zftqphzvra",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "GeographicArea",
+		"ToTableName": "ChannelGeographicResponsibility",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "GeographicAreaId",
+				"ToColumnName": "GeographicAreaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"GeographicArea.cdm.json/GeographicArea\",\"toEntity\":\"ChannelGeographicResponsibility.cdm.json/ChannelGeographicResponsibility\",\"joinPairs\":[{\"fromAttribute\":\"GeographicAreaId\",\"toAttribute\":\"GeographicAreaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "3ce94e94-6089-46c6-909c-d98e4a192203"
+	},
+	"type": "RELATIONSHIP"
+}

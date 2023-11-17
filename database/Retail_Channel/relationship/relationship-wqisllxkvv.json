@@ -1,0 +1,29 @@
+{
+	"name": "relationship-wqisllxkvv",
+	"properties": {
+		"Name": "relationship-wqisllxkvv",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "ChannelRegistrationStatusType",
+		"ToTableName": "ChannelRegistration",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ChannelRegistrationStatusTypeId",
+				"ToColumnName": "ChannelRegistrationStatusTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"ChannelRegistrationStatusType.cdm.json/ChannelRegistrationStatusType\",\"toEntity\":\"ChannelRegistration.cdm.json/ChannelRegistration\",\"joinPairs\":[{\"fromAttribute\":\"ChannelRegistrationStatusTypeId\",\"toAttribute\":\"ChannelRegistrationStatusTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "9e6a70ae-866e-4feb-809b-0de981525348"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "StoreAmenityType",
+	"properties": {
+		"Name": "StoreAmenityType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreAmenityTypeId",
+					"Description": "The unique identifier of a store amenity type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreAmenityType.cdm.json/StoreAmenityType",
+						"Name": "StoreAmenityTypeId"
+					}
+				},
+				{
+					"Name": "StoreAmenityTypeName",
+					"Description": "The name of a store amenity type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreAmenityType.cdm.json/StoreAmenityType",
+						"Name": "StoreAmenityTypeName"
+					}
+				},
+				{
+					"Name": "StoreAmenityTypeDescription",
+					"Description": "The description of a store amenity type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreAmenityType.cdm.json/StoreAmenityType",
+						"Name": "StoreAmenityTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "fe258265-3eba-44cc-bd9b-1ec39ee67f67",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreAmenityType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreAmenityType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreAmenityTypeId\":{\"entity\":\"StoreAmenityType.cdm.json/StoreAmenityType\",\"name\":\"StoreAmenityTypeId\"},\"StoreAmenityTypeName\":{\"entity\":\"StoreAmenityType.cdm.json/StoreAmenityType\",\"name\":\"StoreAmenityTypeName\"},\"StoreAmenityTypeDescription\":{\"entity\":\"StoreAmenityType.cdm.json/StoreAmenityType\",\"name\":\"StoreAmenityTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreAmenityType\",\"path\":\"StoreAmenityType.cdm.json/StoreAmenityType\"},\"description\":\"A service or item offered to patrons of a store at no extra cost. \\n\\nAn amenity provided by a store.\\n\\nEx:\\n- Accessible bathroom\\n- Accessible Parking\\n- Wi-Fi access\",\"primaryKey\":[\"StoreAmenityTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreAmenityType.cdm.json/StoreAmenityType\",\"name\":\"StoreAmenityTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a store amenity type.\",\"isNullable\":false,\"name\":\"StoreAmenityTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreAmenityType.cdm.json/StoreAmenityType\",\"name\":\"StoreAmenityTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a store amenity type.\",\"isNullable\":true,\"name\":\"StoreAmenityTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreAmenityType.cdm.json/StoreAmenityType\",\"name\":\"StoreAmenityTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a store amenity type.\",\"isNullable\":true,\"name\":\"StoreAmenityTypeDescription\"}]}}}",
+			"Description": "A service or item offered to patrons of a store at no extra cost. \n\nAn amenity provided by a store.\n\nEx:\n- Accessible bathroom\n- Accessible Parking\n- Wi-Fi access",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreAmenityTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreAmenityTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreAmenityTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreAmenityTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "eb46eccb-5459-470f-8e88-c29f849f90cc",
+		"Description": "A service or item offered to patrons of a store at no extra cost. \n\nAn amenity provided by a store.\n\nEx:\n- Accessible bathroom\n- Accessible Parking\n- Wi-Fi access"
+	},
+	"type": "TABLE"
+}

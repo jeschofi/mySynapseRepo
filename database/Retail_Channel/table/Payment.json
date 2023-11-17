@@ -1,0 +1,474 @@
+{
+	"name": "Payment",
+	"properties": {
+		"Name": "Payment",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "PaymentId",
+					"Description": "The unique identifier of a Payment.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentId"
+					}
+				},
+				{
+					"Name": "PaymentTimestamp",
+					"Description": "The timestamp of the payment.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentTimestamp"
+					}
+				},
+				{
+					"Name": "PaymentAmount",
+					"Description": "The amount of the payment.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentAmount"
+					}
+				},
+				{
+					"Name": "ForeignCurrencyAmount",
+					"Description": "The amount in foreign currency received. The Convert-From Currency.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "ForeignCurrencyAmount"
+					}
+				},
+				{
+					"Name": "PaymentCardAuthorizationCode",
+					"Description": "An Authorization Code is generally a five or six character code sent by the issuing bank indicated at the end of either a Successful Sales Transaction Response or a Declined Sales Transaction Response in the course of a typical merchant credit card transaction.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 16,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentCardAuthorizationCode"
+					}
+				},
+				{
+					"Name": "PaymentNote",
+					"Description": "A note, comment or additional information regarding the payment.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentNote"
+					}
+				},
+				{
+					"Name": "PartialPaymentIndicator",
+					"Description": "Indicates a partial payment.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PartialPaymentIndicator"
+					}
+				},
+				{
+					"Name": "FullPaymentIndicator",
+					"Description": "Indicates a full payment.",
+					"OriginDataTypeName": {
+						"TypeName": "boolean",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "boolean"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "FullPaymentIndicator"
+					}
+				},
+				{
+					"Name": "PaymentStatusTypeId",
+					"Description": "The unique identifier of a Payment Status Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentStatusTypeId"
+					}
+				},
+				{
+					"Name": "PaymentMethodId",
+					"Description": "The unique identifier of a Payment Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentMethodId"
+					}
+				},
+				{
+					"Name": "GiftCardId",
+					"Description": "The unique identifier of a Gift Card.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "GiftCardId"
+					}
+				},
+				{
+					"Name": "LoyaltyCardId",
+					"Description": "The unique identifier of a Loyalty Card.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "LoyaltyCardId"
+					}
+				},
+				{
+					"Name": "ConvertFromIsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "ConvertFromIsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "ConvertToIsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "ConvertToIsoCurrencyCode"
+					}
+				},
+				{
+					"Name": "ExchangeRateTypeId",
+					"Description": "The unique identifier of a Exchange Rate Type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "ExchangeRateTypeId"
+					}
+				},
+				{
+					"Name": "CurrencyConversionTimestamp",
+					"Description": "The timestamp for which the currency conversion is provided.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "CurrencyConversionTimestamp"
+					}
+				},
+				{
+					"Name": "PartyId",
+					"Description": "The unique identifier of a Party.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PartyId"
+					}
+				},
+				{
+					"Name": "PosDeviceId",
+					"Description": "The unique identifier of a POS Device.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PosDeviceId"
+					}
+				},
+				{
+					"Name": "BankAccountId",
+					"Description": "The unique identifier of a Bank Account.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "BankAccountId"
+					}
+				},
+				{
+					"Name": "PaymentCardId",
+					"Description": "The unique identifier of a Payment Card.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentCardId"
+					}
+				},
+				{
+					"Name": "PaymentCardAcquisitionMethodId",
+					"Description": "The unique identifier of a Payment Card Acquisition Method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "Payment.cdm.json/Payment",
+						"Name": "PaymentCardAcquisitionMethodId"
+					}
+				}
+			],
+			"ColumnSetEntityName": "94ee0523-5bf5-4fca-995d-2cd3ddff7146",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Payment",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/Payment",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"PaymentId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentId\"},\"PaymentTimestamp\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentTimestamp\"},\"PaymentAmount\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentAmount\"},\"ForeignCurrencyAmount\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ForeignCurrencyAmount\"},\"PaymentCardAuthorizationCode\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentCardAuthorizationCode\"},\"PaymentNote\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentNote\"},\"PartialPaymentIndicator\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PartialPaymentIndicator\"},\"FullPaymentIndicator\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"FullPaymentIndicator\"},\"PaymentStatusTypeId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentStatusTypeId\"},\"PaymentMethodId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentMethodId\"},\"GiftCardId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"GiftCardId\"},\"LoyaltyCardId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"LoyaltyCardId\"},\"ConvertFromIsoCurrencyCode\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ConvertFromIsoCurrencyCode\"},\"ConvertToIsoCurrencyCode\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ConvertToIsoCurrencyCode\"},\"ExchangeRateTypeId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ExchangeRateTypeId\"},\"CurrencyConversionTimestamp\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"CurrencyConversionTimestamp\"},\"PartyId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PartyId\"},\"PosDeviceId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PosDeviceId\"},\"BankAccountId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"BankAccountId\"},\"PaymentCardId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentCardId\"},\"PaymentCardAcquisitionMethodId\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentCardAcquisitionMethodId\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"Payment\",\"path\":\"Payment.cdm.json/Payment\"},\"description\":\"A payment made towards an outstanding premium or invoice.\",\"primaryKey\":[\"PaymentId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Payment.\",\"isNullable\":false,\"name\":\"PaymentId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp of the payment.\",\"isNullable\":true,\"name\":\"PaymentTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of the payment.\",\"isNullable\":true,\"scale\":2,\"name\":\"PaymentAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ForeignCurrencyAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount in foreign currency received. The Convert-From Currency.\",\"isNullable\":true,\"scale\":2,\"name\":\"ForeignCurrencyAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentCardAuthorizationCode\"},\"dataType\":\"string\",\"dataTypeLength\":16,\"description\":\"An Authorization Code is generally a five or six character code sent by the issuing bank indicated at the end of either a Successful Sales Transaction Response or a Declined Sales Transaction Response in the course of a typical merchant credit card transaction.\",\"isNullable\":true,\"name\":\"PaymentCardAuthorizationCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the payment.\",\"isNullable\":true,\"name\":\"PaymentNote\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PartialPaymentIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates a partial payment.\",\"isNullable\":true,\"name\":\"PartialPaymentIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"FullPaymentIndicator\"},\"dataType\":\"boolean\",\"description\":\"Indicates a full payment.\",\"isNullable\":true,\"name\":\"FullPaymentIndicator\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentStatusTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Payment Status Type.\",\"isNullable\":true,\"name\":\"PaymentStatusTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Payment Method.\",\"isNullable\":true,\"name\":\"PaymentMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"GiftCardId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Gift Card.\",\"isNullable\":true,\"name\":\"GiftCardId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"LoyaltyCardId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Loyalty Card.\",\"isNullable\":true,\"name\":\"LoyaltyCardId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ConvertFromIsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":true,\"name\":\"ConvertFromIsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ConvertToIsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\",\"isNullable\":true,\"name\":\"ConvertToIsoCurrencyCode\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"ExchangeRateTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Exchange Rate Type.\",\"isNullable\":true,\"name\":\"ExchangeRateTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"CurrencyConversionTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp for which the currency conversion is provided.\",\"isNullable\":true,\"name\":\"CurrencyConversionTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PartyId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Party.\",\"isNullable\":true,\"name\":\"PartyId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PosDeviceId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a POS Device.\",\"isNullable\":true,\"name\":\"PosDeviceId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"BankAccountId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Bank Account.\",\"isNullable\":true,\"name\":\"BankAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentCardId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Payment Card.\",\"isNullable\":true,\"name\":\"PaymentCardId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"Payment.cdm.json/Payment\",\"name\":\"PaymentCardAcquisitionMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Payment Card Acquisition Method.\",\"isNullable\":true,\"name\":\"PaymentCardAcquisitionMethodId\"}]}}}",
+			"Description": "A payment made towards an outstanding premium or invoice.",
+			"DisplayFolderInfo": "{\"name\":\"Transaction\",\"colorCode\":\"#F775C5\"}",
+			"PrimaryKeys": "PaymentId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"PaymentId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PaymentTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ForeignCurrencyAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentCardAuthorizationCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartialPaymentIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FullPaymentIndicator\",\"type\":\"boolean\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentStatusTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentMethodId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"GiftCardId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"LoyaltyCardId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ConvertFromIsoCurrencyCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ConvertToIsoCurrencyCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ExchangeRateTypeId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"CurrencyConversionTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PartyId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PosDeviceId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"BankAccountId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentCardId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PaymentCardAcquisitionMethodId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "52e5d456-f7b9-4e9e-bc8b-de2a9d8b2f9f",
+		"Description": "A payment made towards an outstanding premium or invoice."
+	},
+	"type": "TABLE"
+}

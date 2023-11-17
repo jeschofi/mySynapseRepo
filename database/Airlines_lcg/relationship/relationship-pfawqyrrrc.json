@@ -1,0 +1,29 @@
+{
+	"name": "relationship-pfawqyrrrc",
+	"properties": {
+		"Name": "relationship-pfawqyrrrc",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Invoice",
+		"ToTableName": "SourceDocument",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "InvoiceId",
+				"ToColumnName": "InvoiceId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Invoice.cdm.json/Invoice\",\"toEntity\":\"SourceDocument.cdm.json/SourceDocument\",\"joinPairs\":[{\"fromAttribute\":\"InvoiceId\",\"toAttribute\":\"InvoiceId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "a08d514f-05a3-42d5-8ac5-b72c63176519"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-hokkwqeocb",
+	"properties": {
+		"Name": "relationship-hokkwqeocb",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "JournalType",
+		"ToTableName": "Journal",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "JournalTypeId",
+				"ToColumnName": "JournalTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"JournalType.cdm.json/JournalType\",\"toEntity\":\"Journal.cdm.json/Journal\",\"joinPairs\":[{\"fromAttribute\":\"JournalTypeId\",\"toAttribute\":\"JournalTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "29bfb315-05c9-49d4-ad21-3c5d5fbf888d"
+	},
+	"type": "RELATIONSHIP"
+}

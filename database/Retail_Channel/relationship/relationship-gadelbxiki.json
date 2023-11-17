@@ -1,0 +1,29 @@
+{
+	"name": "relationship-gadelbxiki",
+	"properties": {
+		"Name": "relationship-gadelbxiki",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "DayOfWeek",
+		"ToTableName": "ChannelHoursOfOperation",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "DayOfWeekId",
+				"ToColumnName": "DayOfWeekId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"DayOfWeek.cdm.json/DayOfWeek\",\"toEntity\":\"ChannelHoursOfOperation.cdm.json/ChannelHoursOfOperation\",\"joinPairs\":[{\"fromAttribute\":\"DayOfWeekId\",\"toAttribute\":\"DayOfWeekId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "94df90bd-ef54-4bc5-b50c-bd80733d6c7f"
+	},
+	"type": "RELATIONSHIP"
+}

@@ -1,0 +1,130 @@
+{
+	"name": "FranchiseeType",
+	"properties": {
+		"Name": "FranchiseeType",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FranchiseeTypeId",
+					"Description": "The unique identifier of a franchisee type.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseeType.cdm.json/FranchiseeType",
+						"Name": "FranchiseeTypeId"
+					}
+				},
+				{
+					"Name": "FranchiseeTypeName",
+					"Description": "The name of a franchisee type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseeType.cdm.json/FranchiseeType",
+						"Name": "FranchiseeTypeName"
+					}
+				},
+				{
+					"Name": "FranchiseeTypeDescription",
+					"Description": "The description of a franchisee type.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FranchiseeType.cdm.json/FranchiseeType",
+						"Name": "FranchiseeTypeDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "f472d65f-bcff-4174-908b-1a27f72d93fd",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FranchiseeType",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FranchiseeType",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FranchiseeTypeId\":{\"entity\":\"FranchiseeType.cdm.json/FranchiseeType\",\"name\":\"FranchiseeTypeId\"},\"FranchiseeTypeName\":{\"entity\":\"FranchiseeType.cdm.json/FranchiseeType\",\"name\":\"FranchiseeTypeName\"},\"FranchiseeTypeDescription\":{\"entity\":\"FranchiseeType.cdm.json/FranchiseeType\",\"name\":\"FranchiseeTypeDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FranchiseeType\",\"path\":\"FranchiseeType.cdm.json/FranchiseeType\"},\"description\":\"The type of franchisee.\\n\\nEx:\\n- Single-unit\\n- Multi-unit\\n- Area-development\\n\\nwhere:\\n\\nSingle-Unit Franchise Ownership\\nThe most common type of franchise ownership is one that is offered as a single-unit franchise. This type of franchisee purchases the right to own and operate one franchise location. Most entrepreneurs who invest in a franchise---whether as a business format franchisee, a product franchisee or a manufacturer franchisee---buy into the franchise as this type of franchise owner.\\n\\nMulti-Unit & Area Development Franchise Ownership\\nAggressive or experienced franchisees may opt for a more involved type of franchise ownership such as multi-unit franchise ownership or area development franchise ownership. The two types of franchise ownership types are similar in that the franchise owner has more to manage than a single-unit franchise owner and they differ only in how and what is managed. The multi-unit franchise owner manages multiple franchise locations while the area development franchise owner typically owns a single franchise that has the right to do business across a vast area---multiple cities or states, for instance.\",\"primaryKey\":[\"FranchiseeTypeId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseeType.cdm.json/FranchiseeType\",\"name\":\"FranchiseeTypeId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a franchisee type.\",\"isNullable\":false,\"name\":\"FranchiseeTypeId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseeType.cdm.json/FranchiseeType\",\"name\":\"FranchiseeTypeName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a franchisee type.\",\"isNullable\":true,\"name\":\"FranchiseeTypeName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FranchiseeType.cdm.json/FranchiseeType\",\"name\":\"FranchiseeTypeDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a franchisee type.\",\"isNullable\":true,\"name\":\"FranchiseeTypeDescription\"}]}}}",
+			"Description": "The type of franchisee.\n\nEx:\n- Single-unit\n- Multi-unit\n- Area-development\n\nwhere:\n\nSingle-Unit Franchise Ownership\nThe most common type of franchise ownership is one that is offered as a single-unit franchise. This type of franchisee purchases the right to own and operate one franchise location. Most entrepreneurs who invest in a franchise---whether as a business format franchisee, a product franchisee or a manufacturer franchisee---buy into the franchise as this type of franchise owner.\n\nMulti-Unit & Area Development Franchise Ownership\nAggressive or experienced franchisees may opt for a more involved type of franchise ownership such as multi-unit franchise ownership or area development franchise ownership. The two types of franchise ownership types are similar in that the franchise owner has more to manage than a single-unit franchise owner and they differ only in how and what is managed. The multi-unit franchise owner manages multiple franchise locations while the area development franchise owner typically owns a single franchise that has the right to do business across a vast area---multiple cities or states, for instance.",
+			"DisplayFolderInfo": "{\"name\":\"Legal Entity\",\"colorCode\":\"#034736\"}",
+			"PrimaryKeys": "FranchiseeTypeId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FranchiseeTypeId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FranchiseeTypeName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FranchiseeTypeDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "7a1325db-50ac-4329-8967-588a1737e6cb",
+		"Description": "The type of franchisee.\n\nEx:\n- Single-unit\n- Multi-unit\n- Area-development\n\nwhere:\n\nSingle-Unit Franchise Ownership\nThe most common type of franchise ownership is one that is offered as a single-unit franchise. This type of franchisee purchases the right to own and operate one franchise location. Most entrepreneurs who invest in a franchise---whether as a business format franchisee, a product franchisee or a manufacturer franchisee---buy into the franchise as this type of franchise owner.\n\nMulti-Unit & Area Development Franchise Ownership\nAggressive or experienced franchisees may opt for a more involved type of franchise ownership such as multi-unit franchise ownership or area development franchise ownership. The two types of franchise ownership types are similar in that the franchise owner has more to manage than a single-unit franchise owner and they differ only in how and what is managed. The multi-unit franchise owner manages multiple franchise locations while the area development franchise owner typically owns a single franchise that has the right to do business across a vast area---multiple cities or states, for instance."
+	},
+	"type": "TABLE"
+}

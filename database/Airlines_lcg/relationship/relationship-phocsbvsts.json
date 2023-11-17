@@ -1,0 +1,29 @@
+{
+	"name": "relationship-phocsbvsts",
+	"properties": {
+		"Name": "relationship-phocsbvsts",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "InterestRateType",
+		"ToTableName": "Bond",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "InterestRateTypeId",
+				"ToColumnName": "InterestRateTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"InterestRateType.cdm.json/InterestRateType\",\"toEntity\":\"Bond.cdm.json/Bond\",\"joinPairs\":[{\"fromAttribute\":\"InterestRateTypeId\",\"toAttribute\":\"InterestRateTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "c8175497-7867-44e1-9bc8-801a7547b5d5"
+	},
+	"type": "RELATIONSHIP"
+}

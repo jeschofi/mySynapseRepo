@@ -1,0 +1,247 @@
+{
+	"name": "ProductStoreDisplayLocation",
+	"properties": {
+		"Name": "ProductStoreDisplayLocation",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "DisplayLocationId",
+					"Description": "The unique identifier of a display location within a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "DisplayLocationId"
+					}
+				},
+				{
+					"Name": "DisplayLocationPeriodStartDate",
+					"Description": "The period start date for which the Store Display Location is available for merchandising.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "DisplayLocationPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ProductStoreDisplayLocationPeriodStartDate",
+					"Description": "The period start date for which the Product is displayed at  the Store Display Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "ProductStoreDisplayLocationPeriodStartDate"
+					}
+				},
+				{
+					"Name": "ProductStoreDisplayLocationPeriodEndDate",
+					"Description": "The period end date for which the Product is displayed at  the Store Display Location.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "ProductStoreDisplayLocationPeriodEndDate"
+					}
+				},
+				{
+					"Name": "ProductStoreDisplayLocationPlanQuantity",
+					"Description": "The plan quantity of product at the store display location as of the associated timestamp.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "ProductStoreDisplayLocationPlanQuantity"
+					}
+				},
+				{
+					"Name": "ProductStoreDisplayLocationMaximumQuantity",
+					"Description": "The maximum quantity of a product that should be on display at the specific store display location as of the associated timestamp.  This could be due to space constraints, aesthetic factors so that displays don't look overcrowded, or other factors.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "ProductStoreDisplayLocationMaximumQuantity"
+					}
+				},
+				{
+					"Name": "ProductStoreDisplayLocationNote",
+					"Description": "A note, comment or additional information regarding the product store display location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation",
+						"Name": "ProductStoreDisplayLocationNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "4406a41c-7cbe-45b5-a343-83342a8df88d",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductStoreDisplayLocation",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ProductStoreDisplayLocation",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ProductId\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductId\"},\"StoreId\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"StoreId\"},\"DisplayLocationId\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"DisplayLocationId\"},\"DisplayLocationPeriodStartDate\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"DisplayLocationPeriodStartDate\"},\"ProductStoreDisplayLocationPeriodStartDate\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationPeriodStartDate\"},\"ProductStoreDisplayLocationPeriodEndDate\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationPeriodEndDate\"},\"ProductStoreDisplayLocationPlanQuantity\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationPlanQuantity\"},\"ProductStoreDisplayLocationMaximumQuantity\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationMaximumQuantity\"},\"ProductStoreDisplayLocationNote\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ProductStoreDisplayLocation\",\"path\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\"},\"description\":\"The location in a store that a product is placed.\",\"primaryKey\":[\"ProductId\",\"StoreId\",\"DisplayLocationId\",\"DisplayLocationPeriodStartDate\",\"ProductStoreDisplayLocationPeriodStartDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"DisplayLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a display location within a Store.\",\"isNullable\":false,\"name\":\"DisplayLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"DisplayLocationPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Store Display Location is available for merchandising.\",\"isNullable\":false,\"name\":\"DisplayLocationPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationPeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the Product is displayed at  the Store Display Location.\",\"isNullable\":false,\"name\":\"ProductStoreDisplayLocationPeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationPeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the Product is displayed at  the Store Display Location.\",\"isNullable\":false,\"name\":\"ProductStoreDisplayLocationPeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationPlanQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The plan quantity of product at the store display location as of the associated timestamp.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProductStoreDisplayLocationPlanQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationMaximumQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The maximum quantity of a product that should be on display at the specific store display location as of the associated timestamp.  This could be due to space constraints, aesthetic factors so that displays don't look overcrowded, or other factors.\",\"isNullable\":true,\"scale\":2,\"name\":\"ProductStoreDisplayLocationMaximumQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ProductStoreDisplayLocation.cdm.json/ProductStoreDisplayLocation\",\"name\":\"ProductStoreDisplayLocationNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding the product store display location.\",\"isNullable\":true,\"name\":\"ProductStoreDisplayLocationNote\"}]}}}",
+			"Description": "The location in a store that a product is placed.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ProductId,StoreId,DisplayLocationId,DisplayLocationPeriodStartDate,ProductStoreDisplayLocationPeriodStartDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DisplayLocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DisplayLocationPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductStoreDisplayLocationPeriodStartDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductStoreDisplayLocationPeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductStoreDisplayLocationPlanQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductStoreDisplayLocationMaximumQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ProductStoreDisplayLocationNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "74b618f2-d748-482d-8976-5c73bbb0f0b2",
+		"Description": "The location in a store that a product is placed."
+	},
+	"type": "TABLE"
+}

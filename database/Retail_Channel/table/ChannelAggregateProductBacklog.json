@@ -1,0 +1,188 @@
+{
+	"name": "ChannelAggregateProductBacklog",
+	"properties": {
+		"Name": "ChannelAggregateProductBacklog",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "Timestamp",
+					"Description": "The timestamp that the associated information is reported, recorded or effective as-of.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog",
+						"Name": "Timestamp"
+					}
+				},
+				{
+					"Name": "TotalBacklogProductUnitsQuantity",
+					"Description": "The total quantity of Product on backlog for the associated date.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog",
+						"Name": "TotalBacklogProductUnitsQuantity"
+					}
+				},
+				{
+					"Name": "TotalBacklogProductUnitsValuationAmount",
+					"Description": "The total valuation of Product on backlog during the associated period and valued at actual invoiced price.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog",
+						"Name": "TotalBacklogProductUnitsValuationAmount"
+					}
+				},
+				{
+					"Name": "IsoCurrencyCode",
+					"Description": "The ISO 4217 currency code.\n\nEx:\nCurrency Code = AED\nCurrency Name = Dirham\nCountry Name = United Arab Emirates",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 3,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog",
+						"Name": "IsoCurrencyCode"
+					}
+				}
+			],
+			"ColumnSetEntityName": "d909bc35-f8dd-434b-9457-460725957b16",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelAggregateProductBacklog",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/ChannelAggregateProductBacklog",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"ChannelId\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"ChannelId\"},\"ProductId\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"ProductId\"},\"Timestamp\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"Timestamp\"},\"TotalBacklogProductUnitsQuantity\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"TotalBacklogProductUnitsQuantity\"},\"TotalBacklogProductUnitsValuationAmount\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"TotalBacklogProductUnitsValuationAmount\"},\"IsoCurrencyCode\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"IsoCurrencyCode\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"ChannelAggregateProductBacklog\",\"path\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\"},\"description\":\"The total Product backlog expressed in terms of unit quantity and backlog valuation for the associated timestamp.\\n\\nBacklog represents products sold to customers that cannot be invoiced because the product is not available in inventory or for delivery to the customer.   In this case backlog are summarized for a product across all customers.\",\"primaryKey\":[\"ChannelId\",\"ProductId\",\"Timestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"Timestamp\"},\"dataType\":\"timestamp\",\"description\":\"The timestamp that the associated information is reported, recorded or effective as-of.\",\"isNullable\":false,\"name\":\"Timestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"TotalBacklogProductUnitsQuantity\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total quantity of Product on backlog for the associated date.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalBacklogProductUnitsQuantity\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"TotalBacklogProductUnitsValuationAmount\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The total valuation of Product on backlog during the associated period and valued at actual invoiced price.\",\"isNullable\":true,\"scale\":2,\"name\":\"TotalBacklogProductUnitsValuationAmount\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"ChannelAggregateProductBacklog.cdm.json/ChannelAggregateProductBacklog\",\"name\":\"IsoCurrencyCode\"},\"dataType\":\"string\",\"dataTypeLength\":3,\"description\":\"The ISO 4217 currency code.\\n\\nEx:\\nCurrency Code = AED\\nCurrency Name = Dirham\\nCountry Name = United Arab Emirates\",\"isNullable\":true,\"name\":\"IsoCurrencyCode\"}]}}}",
+			"Description": "The total Product backlog expressed in terms of unit quantity and backlog valuation for the associated timestamp.\n\nBacklog represents products sold to customers that cannot be invoiced because the product is not available in inventory or for delivery to the customer.   In this case backlog are summarized for a product across all customers.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "ChannelId,ProductId,Timestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"Timestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"TotalBacklogProductUnitsQuantity\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"TotalBacklogProductUnitsValuationAmount\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}},{\"name\":\"IsoCurrencyCode\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "c320db05-3da8-4744-b133-6b697b9159a2",
+		"Description": "The total Product backlog expressed in terms of unit quantity and backlog valuation for the associated timestamp.\n\nBacklog represents products sold to customers that cannot be invoiced because the product is not available in inventory or for delivery to the customer.   In this case backlog are summarized for a product across all customers."
+	},
+	"type": "TABLE"
+}

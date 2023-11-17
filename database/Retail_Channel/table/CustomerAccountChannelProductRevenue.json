@@ -1,0 +1,227 @@
+{
+	"name": "CustomerAccountChannelProductRevenue",
+	"properties": {
+		"Name": "CustomerAccountChannelProductRevenue",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "CustomerAccountId",
+					"Description": "The unique identifier of a Customer Account.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "CustomerAccountId"
+					}
+				},
+				{
+					"Name": "ChannelId",
+					"Description": "The unique identifier of a Channel.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "ChannelId"
+					}
+				},
+				{
+					"Name": "ProductId",
+					"Description": "The unique identifier of a Product.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "ProductId"
+					}
+				},
+				{
+					"Name": "PeriodEndDate",
+					"Description": "The period end date for which the information is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "PeriodEndDate"
+					}
+				},
+				{
+					"Name": "PeriodStartDate",
+					"Description": "The period start date for which the information is calculated.",
+					"OriginDataTypeName": {
+						"TypeName": "date",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"DateFormat": "YYYY-MM-DD",
+							"HIVE_TYPE_STRING": "date"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "PeriodStartDate"
+					}
+				},
+				{
+					"Name": "NumberOfProductChannelTransactions",
+					"Description": "The number of product channel transactions for the period.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "NumberOfProductChannelTransactions"
+					}
+				},
+				{
+					"Name": "NumberOfProductUnitsTransacted",
+					"Description": "The number of units of products or services transacted.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "NumberOfProductUnitsTransacted"
+					}
+				},
+				{
+					"Name": "AmountOfProductChannelTransactions",
+					"Description": "The amount of value of product channel transactions for the period.",
+					"OriginDataTypeName": {
+						"TypeName": "decimal",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 18,
+						"Scale": 2,
+						"Properties": {
+							"HIVE_TYPE_STRING": "decimal"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue",
+						"Name": "AmountOfProductChannelTransactions"
+					}
+				}
+			],
+			"ColumnSetEntityName": "c526ed2b-6c2e-4e34-8d0b-a262ef62f32a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerAccountChannelProductRevenue",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/CustomerAccountChannelProductRevenue",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"CustomerAccountId\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"CustomerAccountId\"},\"ChannelId\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"ChannelId\"},\"ProductId\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"ProductId\"},\"PeriodEndDate\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"PeriodEndDate\"},\"PeriodStartDate\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"PeriodStartDate\"},\"NumberOfProductChannelTransactions\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"NumberOfProductChannelTransactions\"},\"NumberOfProductUnitsTransacted\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"NumberOfProductUnitsTransacted\"},\"AmountOfProductChannelTransactions\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"AmountOfProductChannelTransactions\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"CustomerAccountChannelProductRevenue\",\"path\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\"},\"description\":\"A summary of customer account channel product transactions for the associated period.\",\"primaryKey\":[\"CustomerAccountId\",\"ChannelId\",\"ProductId\",\"PeriodEndDate\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"CustomerAccountId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Customer Account.\",\"isNullable\":false,\"name\":\"CustomerAccountId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"ChannelId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Channel.\",\"isNullable\":false,\"name\":\"ChannelId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"ProductId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of a Product.\",\"isNullable\":false,\"name\":\"ProductId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"PeriodEndDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period end date for which the information is calculated.\",\"isNullable\":false,\"name\":\"PeriodEndDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"PeriodStartDate\"},\"dataType\":\"date\",\"dateFormat\":\"YYYY-MM-DD\",\"description\":\"The period start date for which the information is calculated.\",\"isNullable\":true,\"name\":\"PeriodStartDate\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"NumberOfProductChannelTransactions\"},\"dataType\":\"integer\",\"description\":\"The number of product channel transactions for the period.\",\"isNullable\":true,\"name\":\"NumberOfProductChannelTransactions\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"NumberOfProductUnitsTransacted\"},\"dataType\":\"integer\",\"description\":\"The number of units of products or services transacted.\",\"isNullable\":true,\"name\":\"NumberOfProductUnitsTransacted\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"CustomerAccountChannelProductRevenue.cdm.json/CustomerAccountChannelProductRevenue\",\"name\":\"AmountOfProductChannelTransactions\"},\"dataType\":\"decimal\",\"dataTypeLength\":18,\"description\":\"The amount of value of product channel transactions for the period.\",\"isNullable\":true,\"scale\":2,\"name\":\"AmountOfProductChannelTransactions\"}]}}}",
+			"Description": "A summary of customer account channel product transactions for the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "CustomerAccountId,ChannelId,ProductId,PeriodEndDate",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"CustomerAccountId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ChannelId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ProductId\",\"type\":\"long\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndDate\",\"type\":\"date\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartDate\",\"type\":\"date\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NumberOfProductChannelTransactions\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"NumberOfProductUnitsTransacted\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AmountOfProductChannelTransactions\",\"type\":\"decimal(18,2)\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "d29587a1-27ba-43f7-b5fe-9c2e49a47e7a",
+		"Description": "A summary of customer account channel product transactions for the associated period."
+	},
+	"type": "TABLE"
+}

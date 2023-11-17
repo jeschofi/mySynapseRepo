@@ -1,0 +1,29 @@
+{
+	"name": "relationship-dsrtturczp",
+	"properties": {
+		"Name": "relationship-dsrtturczp",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SourceDocumentType",
+		"ToTableName": "SourceDocument",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SourceDocumentTypeId",
+				"ToColumnName": "SourceDocumentTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SourceDocumentType.cdm.json/SourceDocumentType\",\"toEntity\":\"SourceDocument.cdm.json/SourceDocument\",\"joinPairs\":[{\"fromAttribute\":\"SourceDocumentTypeId\",\"toAttribute\":\"SourceDocumentTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "52e8e2d3-7c4d-4354-ab00-dfbfc6d1ca39"
+	},
+	"type": "RELATIONSHIP"
+}

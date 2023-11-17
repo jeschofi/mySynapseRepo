@@ -1,0 +1,136 @@
+{
+	"name": "WriteOffMethod",
+	"properties": {
+		"Name": "WriteOffMethod",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Airlines_lcg",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "WriteOffMethodId",
+					"Description": "The unique identifier of a write-off method.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffMethod.cdm.json/WriteOffMethod",
+						"Name": "WriteOffMethodId"
+					}
+				},
+				{
+					"Name": "WriteOffMethodName",
+					"Description": "The name of a write-off method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffMethod.cdm.json/WriteOffMethod",
+						"Name": "WriteOffMethodName"
+					}
+				},
+				{
+					"Name": "WriteOffMethodDescription",
+					"Description": "The description of a write-off method.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "WriteOffMethod.cdm.json/WriteOffMethod",
+						"Name": "WriteOffMethodDescription"
+					}
+				}
+			],
+			"ColumnSetEntityName": "cadf92c3-0317-42b9-85b7-6322da51bb0a",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/WriteOffMethod",
+					"delimiter": ",",
+					"firstRowAsHeader": "false",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"escape": "\\",
+					"quote": "\"",
+					"FormatTypeSetToDatabaseDefault": true,
+					"header": "false"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Airlines_lcg/WriteOffMethod",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"WriteOffMethodId\":{\"entity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"name\":\"WriteOffMethodId\"},\"WriteOffMethodName\":{\"entity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"name\":\"WriteOffMethodName\"},\"WriteOffMethodDescription\":{\"entity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"name\":\"WriteOffMethodDescription\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"WriteOffMethod\",\"path\":\"WriteOffMethod.cdm.json/WriteOffMethod\"},\"description\":\"There are three methods that are used to recognize customer obligations that are uncollectible:\\n\\n1. - Direct Write-off Method\\n2 -  Net Sales Method\\n3 -  Aging of Accounts Receivable Method\",\"primaryKey\":[\"WriteOffMethodId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"name\":\"WriteOffMethodId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a write-off method.\",\"isNullable\":false,\"name\":\"WriteOffMethodId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"name\":\"WriteOffMethodName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of a write-off method.\",\"isNullable\":true,\"name\":\"WriteOffMethodName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"WriteOffMethod.cdm.json/WriteOffMethod\",\"name\":\"WriteOffMethodDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of a write-off method.\",\"isNullable\":true,\"name\":\"WriteOffMethodDescription\"}]}}}",
+			"Description": "There are three methods that are used to recognize customer obligations that are uncollectible:\n\n1. - Direct Write-off Method\n2 -  Net Sales Method\n3 -  Aging of Accounts Receivable Method",
+			"DisplayFolderInfo": "{\"name\":\"Accounting & Financial Reporting\",\"colorCode\":\"#0078D4\"}",
+			"PrimaryKeys": "WriteOffMethodId",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"WriteOffMethodId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"WriteOffMethodName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"WriteOffMethodDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "516b9fbc-976d-4f25-9098-ee436d05207f",
+		"Description": "There are three methods that are used to recognize customer obligations that are uncollectible:\n\n1. - Direct Write-off Method\n2 -  Net Sales Method\n3 -  Aging of Accounts Receivable Method"
+	},
+	"type": "TABLE"
+}

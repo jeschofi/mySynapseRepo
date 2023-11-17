@@ -1,0 +1,29 @@
+{
+	"name": "relationship-lwhtypapop",
+	"properties": {
+		"Name": "relationship-lwhtypapop",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "IncentiveType",
+		"ToTableName": "Incentive",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "IncentiveTypeId",
+				"ToColumnName": "IncentiveTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"IncentiveType.cdm.json/IncentiveType\",\"toEntity\":\"Incentive.cdm.json/Incentive\",\"joinPairs\":[{\"fromAttribute\":\"IncentiveTypeId\",\"toAttribute\":\"IncentiveTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "d23475e6-ca79-46c8-855f-ca9b4f0fab84"
+	},
+	"type": "RELATIONSHIP"
+}

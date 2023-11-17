@@ -1,0 +1,29 @@
+{
+	"name": "relationship-zfqylumnni",
+	"properties": {
+		"Name": "relationship-zfqylumnni",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Territory",
+		"ToTableName": "Store",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TerritoryId",
+				"ToColumnName": "RegionId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Territory.cdm.json/Territory\",\"toEntity\":\"Store.cdm.json/Store\",\"joinPairs\":[{\"fromAttribute\":\"TerritoryId\",\"toAttribute\":\"RegionId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "2e1688be-0650-436e-a6c5-3c8caaddf0f3"
+	},
+	"type": "RELATIONSHIP"
+}

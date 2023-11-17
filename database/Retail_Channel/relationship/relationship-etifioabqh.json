@@ -1,0 +1,29 @@
+{
+	"name": "relationship-etifioabqh",
+	"properties": {
+		"Name": "relationship-etifioabqh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "SicIndustryGroup",
+		"ToTableName": "SicIndustry",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "SicIndustryGroupCode",
+				"ToColumnName": "SicIndustryGroupCode"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"SicIndustryGroup.cdm.json/SicIndustryGroup\",\"toEntity\":\"SicIndustry.cdm.json/SicIndustry\",\"joinPairs\":[{\"fromAttribute\":\"SicIndustryGroupCode\",\"toAttribute\":\"SicIndustryGroupCode\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "771e8c4d-52d9-4894-b951-4b714c34e5d3"
+	},
+	"type": "RELATIONSHIP"
+}

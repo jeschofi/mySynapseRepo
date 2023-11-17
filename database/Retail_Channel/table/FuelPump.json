@@ -1,0 +1,207 @@
+{
+	"name": "FuelPump",
+	"properties": {
+		"Name": "FuelPump",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "FuelPumpId",
+					"Description": "The unique identifier of a Fuel Pump.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPump.cdm.json/FuelPump",
+						"Name": "FuelPumpId"
+					}
+				},
+				{
+					"Name": "FuelPumpName",
+					"Description": "The name of the Fuel Pump Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPump.cdm.json/FuelPump",
+						"Name": "FuelPumpName"
+					}
+				},
+				{
+					"Name": "FuelPumpDescription",
+					"Description": "The description of the Fuel Pump Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPump.cdm.json/FuelPump",
+						"Name": "FuelPumpDescription"
+					}
+				},
+				{
+					"Name": "AssetId",
+					"Description": "The unique identifier of an Asset.",
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPump.cdm.json/FuelPump",
+						"Name": "AssetId"
+					}
+				},
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPump.cdm.json/FuelPump",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "ServiceLocationId",
+					"Description": "The unique identifier of a service location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPump.cdm.json/FuelPump",
+						"Name": "ServiceLocationId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp of the store / service location relationship.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "FuelPump.cdm.json/FuelPump",
+						"Name": "PeriodStartTimestamp"
+					}
+				}
+			],
+			"ColumnSetEntityName": "0b8287ca-02e7-4871-82cc-4ec4b99b27a4",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FuelPump",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/FuelPump",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"FuelPumpId\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"FuelPumpId\"},\"FuelPumpName\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"FuelPumpName\"},\"FuelPumpDescription\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"FuelPumpDescription\"},\"AssetId\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"AssetId\"},\"StoreId\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"StoreId\"},\"ServiceLocationId\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"ServiceLocationId\"},\"PeriodStartTimestamp\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"PeriodStartTimestamp\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"FuelPump\",\"path\":\"FuelPump.cdm.json/FuelPump\"},\"description\":\"A Fuel Pump that is located at a Store Service Location.\",\"primaryKey\":[\"FuelPumpId\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"FuelPumpId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Fuel Pump.\",\"isNullable\":false,\"name\":\"FuelPumpId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"FuelPumpName\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The name of the Fuel Pump Location.\",\"isNullable\":true,\"name\":\"FuelPumpName\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"FuelPumpDescription\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"The description of the Fuel Pump Location.\",\"isNullable\":true,\"name\":\"FuelPumpDescription\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"AssetId\"},\"dataType\":\"long\",\"description\":\"The unique identifier of an Asset.\",\"isNullable\":true,\"name\":\"AssetId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":true,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"ServiceLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a service location.\",\"isNullable\":true,\"name\":\"ServiceLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"FuelPump.cdm.json/FuelPump\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp of the store / service location relationship.\",\"isNullable\":true,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"}]}}}",
+			"Description": "A Fuel Pump that is located at a Store Service Location.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "FuelPumpId",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"FuelPumpId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"FuelPumpName\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"FuelPumpDescription\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"AssetId\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"ServiceLocationId\",\"type\":\"integer\",\"nullable\":true,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "c3520d2b-c686-41a1-b491-d2f42f078d25",
+		"Description": "A Fuel Pump that is located at a Store Service Location."
+	},
+	"type": "TABLE"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "relationship-jxuwrvyzqh",
+	"properties": {
+		"Name": "relationship-jxuwrvyzqh",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CommissionSchedule",
+		"ToTableName": "ChannelProductCommissionSchedule",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CommissionScheduleId",
+				"ToColumnName": "CommissionScheduleId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CommissionSchedule.cdm.json/CommissionSchedule\",\"toEntity\":\"ChannelProductCommissionSchedule.cdm.json/ChannelProductCommissionSchedule\",\"joinPairs\":[{\"fromAttribute\":\"CommissionScheduleId\",\"toAttribute\":\"CommissionScheduleId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "7d153ecd-9f04-41a6-bda0-21338c38b67e"
+	},
+	"type": "RELATIONSHIP"
+}

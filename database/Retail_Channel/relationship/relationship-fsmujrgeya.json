@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fsmujrgeya",
+	"properties": {
+		"Name": "relationship-fsmujrgeya",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "MarketingProgramType",
+		"ToTableName": "MarketingProgram",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "MarketingProgramTypeId",
+				"ToColumnName": "MarketingProgramTypeId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"MarketingProgramType.cdm.json/MarketingProgramType\",\"toEntity\":\"MarketingProgram.cdm.json/MarketingProgram\",\"joinPairs\":[{\"fromAttribute\":\"MarketingProgramTypeId\",\"toAttribute\":\"MarketingProgramTypeId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "b540eec7-1d1d-4a4d-a39c-e4fe426c11ff"
+	},
+	"type": "RELATIONSHIP"
+}

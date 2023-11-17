@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ziryrrlnwr",
+	"properties": {
+		"Name": "relationship-ziryrrlnwr",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "Territory",
+		"ToTableName": "Store",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "TerritoryId",
+				"ToColumnName": "AreaId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"Territory.cdm.json/Territory\",\"toEntity\":\"Store.cdm.json/Store\",\"joinPairs\":[{\"fromAttribute\":\"TerritoryId\",\"toAttribute\":\"AreaId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "89c22270-fc8e-44d8-8bec-b4f5b24c1e2e"
+	},
+	"type": "RELATIONSHIP"
+}

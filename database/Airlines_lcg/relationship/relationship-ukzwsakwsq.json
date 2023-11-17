@@ -1,0 +1,29 @@
+{
+	"name": "relationship-ukzwsakwsq",
+	"properties": {
+		"Name": "relationship-ukzwsakwsq",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Airlines_lcg"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "CreditRatingAgencyRating",
+		"ToTableName": "FinancialProductRating",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "CreditRatingAgencyRatingId",
+				"ToColumnName": "CreditRatingAgencyRatingId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"CreditRatingAgencyRating.cdm.json/CreditRatingAgencyRating\",\"toEntity\":\"FinancialProductRating.cdm.json/FinancialProductRating\",\"joinPairs\":[{\"fromAttribute\":\"CreditRatingAgencyRatingId\",\"toAttribute\":\"CreditRatingAgencyRatingId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "304ff302-1bf8-4fee-a72d-3c0d0a9240f7"
+	},
+	"type": "RELATIONSHIP"
+}

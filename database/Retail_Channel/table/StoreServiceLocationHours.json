@@ -1,0 +1,227 @@
+{
+	"name": "StoreServiceLocationHours",
+	"properties": {
+		"Name": "StoreServiceLocationHours",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "Retail_Channel",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "StoreId",
+					"Description": "The unique identifier of a Store.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "StoreId"
+					}
+				},
+				{
+					"Name": "ServiceLocationId",
+					"Description": "The unique identifier of a service location.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "ServiceLocationId"
+					}
+				},
+				{
+					"Name": "DayOfWeekId",
+					"Description": "The unique identifier of a Day Of Week.",
+					"OriginDataTypeName": {
+						"TypeName": "integer",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "integer"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "DayOfWeekId"
+					}
+				},
+				{
+					"Name": "PeriodStartTimestamp",
+					"Description": "The period start timestamp for which the store hours of operation are valid.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "PeriodStartTimestamp"
+					}
+				},
+				{
+					"Name": "PeriodEndTimestamp",
+					"Description": "The period end timestamp during which the service location hours were in effect.",
+					"OriginDataTypeName": {
+						"TypeName": "timestamp",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"TimestampFormat": "YYYY-MM-DD HH:MM:SS.fffffffff",
+							"HIVE_TYPE_STRING": "timestamp"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "PeriodEndTimestamp"
+					}
+				},
+				{
+					"Name": "OperationStartTime",
+					"Description": "The starting or opening time of operation for the Store Service Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "OperationStartTime"
+					}
+				},
+				{
+					"Name": "OperationEndTime",
+					"Description": "The closing or ending time of operation for the Store Service Location.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": false,
+						"Length": 256,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "OperationEndTime"
+					}
+				},
+				{
+					"Name": "StoreServiceLocationHoursNote",
+					"Description": "A note, comment or additional information regarding a store service location hours.",
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 2048,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					},
+					"BaseAttributeReference": {
+						"Entity": "StoreServiceLocationHours.cdm.json/StoreServiceLocationHours",
+						"Name": "StoreServiceLocationHoursNote"
+					}
+				}
+			],
+			"ColumnSetEntityName": "1a3eec1a-0234-4afc-83b4-bc4ecc9e45d7",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "delta",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreServiceLocationHours",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": true
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://jeschofi-fs@jeschofi.dfs.core.windows.net/Retail_Channel/StoreServiceLocationHours",
+				"Properties": {
+					"LinkedServiceName": "jeschofi-wks-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": true
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{\"StoreId\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"StoreId\"},\"ServiceLocationId\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"ServiceLocationId\"},\"DayOfWeekId\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"DayOfWeekId\"},\"PeriodStartTimestamp\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"PeriodStartTimestamp\"},\"PeriodEndTimestamp\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"PeriodEndTimestamp\"},\"OperationStartTime\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"OperationStartTime\"},\"OperationEndTime\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"OperationEndTime\"},\"StoreServiceLocationHoursNote\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"StoreServiceLocationHoursNote\"}}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"DerivedModelEntityInfo": "{\"entityDirectives\":{\"baseEntityReference\":{\"name\":\"StoreServiceLocationHours\",\"path\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\"},\"description\":\"The hours of operation of the service location for the associated period.\",\"primaryKey\":[\"StoreId\",\"ServiceLocationId\",\"DayOfWeekId\",\"PeriodStartTimestamp\"],\"projectionInfo\":{\"attributes\":[{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"StoreId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Store.\",\"isNullable\":false,\"name\":\"StoreId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"ServiceLocationId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a service location.\",\"isNullable\":false,\"name\":\"ServiceLocationId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"DayOfWeekId\"},\"dataType\":\"integer\",\"description\":\"The unique identifier of a Day Of Week.\",\"isNullable\":false,\"name\":\"DayOfWeekId\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"PeriodStartTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period start timestamp for which the store hours of operation are valid.\",\"isNullable\":false,\"name\":\"PeriodStartTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"PeriodEndTimestamp\"},\"dataType\":\"timestamp\",\"description\":\"The period end timestamp during which the service location hours were in effect.\",\"isNullable\":true,\"name\":\"PeriodEndTimestamp\",\"timestampFormat\":\"YYYY-MM-DD HH:MM:SS.fffffffff\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"OperationStartTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The starting or opening time of operation for the Store Service Location.\",\"isNullable\":false,\"name\":\"OperationStartTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"OperationEndTime\"},\"dataType\":\"string\",\"dataTypeLength\":256,\"description\":\"The closing or ending time of operation for the Store Service Location.\",\"isNullable\":false,\"name\":\"OperationEndTime\"},{\"type\":\"Existing\",\"attributeReference\":{\"entity\":\"StoreServiceLocationHours.cdm.json/StoreServiceLocationHours\",\"name\":\"StoreServiceLocationHoursNote\"},\"dataType\":\"string\",\"dataTypeLength\":2048,\"description\":\"A note, comment or additional information regarding a store service location hours.\",\"isNullable\":true,\"name\":\"StoreServiceLocationHoursNote\"}]}}}",
+			"Description": "The hours of operation of the service location for the associated period.",
+			"DisplayFolderInfo": "{\"name\":\"Channel\",\"colorCode\":\"#001D3F\"}",
+			"PrimaryKeys": "StoreId,ServiceLocationId,DayOfWeekId,PeriodStartTimestamp",
+			"spark.sql.sources.provider": "delta",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"StoreId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"ServiceLocationId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"DayOfWeekId\",\"type\":\"integer\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodStartTimestamp\",\"type\":\"timestamp\",\"nullable\":false,\"metadata\":{}},{\"name\":\"PeriodEndTimestamp\",\"type\":\"timestamp\",\"nullable\":true,\"metadata\":{}},{\"name\":\"OperationStartTime\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"OperationEndTime\",\"type\":\"string\",\"nullable\":false,\"metadata\":{}},{\"name\":\"StoreServiceLocationHoursNote\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 2,
+		"ObjectId": "a5873bd9-1612-4eda-a133-725bdaca6280",
+		"Description": "The hours of operation of the service location for the associated period."
+	},
+	"type": "TABLE"
+}

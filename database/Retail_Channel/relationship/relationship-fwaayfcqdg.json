@@ -1,0 +1,29 @@
+{
+	"name": "relationship-fwaayfcqdg",
+	"properties": {
+		"Name": "relationship-fwaayfcqdg",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Retail_Channel"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "LicensingOrganization",
+		"ToTableName": "ChannelLicense",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "LicensingOrganizationId",
+				"ToColumnName": "LicensingOrganizationId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"LicensingOrganization.cdm.json/LicensingOrganization\",\"toEntity\":\"ChannelLicense.cdm.json/ChannelLicense\",\"joinPairs\":[{\"fromAttribute\":\"LicensingOrganizationId\",\"toAttribute\":\"LicensingOrganizationId\"}]}}"
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "43e3c212-2855-4279-850d-a88522ba4a6a"
+	},
+	"type": "RELATIONSHIP"
+}
