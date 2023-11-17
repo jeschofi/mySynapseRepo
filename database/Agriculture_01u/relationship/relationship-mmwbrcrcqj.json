@@ -1,0 +1,26 @@
+{
+	"name": "relationship-mmwbrcrcqj",
+	"properties": {
+		"Name": "relationship-mmwbrcrcqj",
+		"EntityType": "RELATIONSHIP",
+		"Namespace": {
+			"DatabaseName": "Agriculture_01u"
+		},
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"FromTableName": "AgricultureProduct",
+		"ToTableName": "Item",
+		"ColumnRelationshipInformations": [
+			{
+				"FromColumnName": "ProductId",
+				"ToColumnName": "ProductId"
+			}
+		],
+		"RelationshipType": 0,
+		"Properties": {
+			"DerivedModelRelationshipInfo": "{\"baseRelationship\":{\"fromEntity\":\"AgricultureProduct.cdm.json/AgricultureProduct\",\"toEntity\":\"Item.cdm.json/Item\",\"joinPairs\":[{\"fromAttribute\":\"ProductId\",\"toAttribute\":\"ProductId\"}]}}"
+		}
+	},
+	"type": "RELATIONSHIP"
+}
